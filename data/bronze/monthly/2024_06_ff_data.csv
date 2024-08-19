@@ -1,0 +1,370 @@
+date,time,currency,impact,event,actual,forecast,previous
+Jun 1,5:15am,USD,yellow,FOMC Member Bostic Speaks,N/A,N/A,N/A
+Jun 3,All Day,NZD,gray,Bank Holiday,N/A,N/A,N/A
+Jun 3,6:50am,JPY,yellow,Capital Spending q/y,6.8%,12.2%,16.4%
+Jun 3,7:30am,JPY,yellow,Final Manufacturing PMI,50.4,50.5,50.5
+Jun 3,8:00am,AUD,yellow,MI Inflation Gauge m/m,0.3%,N/A,0.1%
+Jun 3,8:45am,CNY,yellow,Caixin Manufacturing PMI,51.7,51.6,51.4
+Jun 3,1:30pm,AUD,yellow,Commodity Prices y/y,-4.2%,N/A,-12.1%
+Jun 3,2:15pm,EUR,yellow,Spanish Manufacturing PMI,54.0,52.5,52.2
+Jun 3,2:30pm,CHF,yellow,Manufacturing PMI,46.4,45.4,41.4
+Jun 3,2:45pm,EUR,yellow,Italian Manufacturing PMI,45.6,47.9,47.3
+Jun 3,2:50pm,EUR,yellow,French Final Manufacturing PMI,46.4,46.7,46.7
+Jun 3,2:55pm,EUR,yellow,German Final Manufacturing PMI,45.4,45.4,45.4
+Jun 3,3:00pm,EUR,yellow,Final Manufacturing PMI,47.3,47.4,47.4
+Jun 3,3:30pm,GBP,yellow,Final Manufacturing PMI,51.2,51.3,51.3
+Jun 3,8:30pm,CAD,yellow,Manufacturing PMI,49.3,N/A,49.4
+Jun 3,8:45pm,USD,red,Final Manufacturing PMI,51.3,50.9,50.9
+Jun 3,9:00pm,USD,red,ISM Manufacturing PMI,48.7,49.8,49.2
+Jun 3,9:00pm,USD,orange,ISM Manufacturing Prices,57.0,60.0,60.9
+Jun 3,9:00pm,USD,yellow,Construction Spending m/m,-0.1%,0.2%,-0.2%
+Jun 3,All Day,USD,yellow,Wards Total Vehicle Sales,15.9M,15.8M,15.7M
+Jun 4,6:01am,GBP,yellow,BRC Retail Sales Monitor y/y,0.4%,1.2%,-4.4%
+Jun 4,6:50am,JPY,yellow,Monetary Base y/y,0.9%,2.2%,2.1%
+Jun 4,8:30am,AUD,yellow,Company Operating Profits q/q,-2.5%,-0.9%,7.1%
+Jun 4,8:30am,AUD,yellow,Current Account,-4.9B,5.6B,2.7B
+Jun 4,10:35am,JPY,yellow,10-y Bond Auction,1.05|3.7,N/A,0.86|3.2
+Jun 4,1:30pm,CHF,red,CPI m/m,0.3%,0.3%,0.3%
+Jun 4,1:45pm,EUR,yellow,French Gov Budget Balance,-91.6B,N/A,-52.8B
+Jun 4,2:00pm,EUR,yellow,Spanish Unemployment Change,-58.7K,-55.4K,-60.5K
+Jun 4,2:55pm,EUR,yellow,German Unemployment Change,25K,7K,10K
+Jun 4,9:00pm,USD,red,JOLTS Job Openings,8.06M,8.37M,8.36M
+Jun 4,9:00pm,USD,yellow,Factory Orders m/m,0.7%,0.7%,0.8%
+Jun 4,9:02pm,USD,yellow,RCM/TIPP Economic Optimism,40.5,45.2,41.8
+Jun 4,10:11pm,NZD,yellow,GDT Price Index,1.7%,N/A,3.3%
+Jun 5,5:45am,NZD,yellow,Overseas Trade Index q/q,5.1%,3.1%,-7.8%
+Jun 5,6:30am,JPY,yellow,Average Cash Earnings y/y,2.1%,1.7%,1.0%
+Jun 5,8:30am,AUD,red,GDP q/q,0.1%,0.2%,0.3%
+Jun 5,8:45am,CNY,yellow,Caixin Services PMI,54.0,52.5,52.5
+Jun 5,1:45pm,EUR,yellow,French Industrial Production m/m,0.5%,0.3%,-0.2%
+Jun 5,2:15pm,EUR,yellow,Spanish Services PMI,56.9,56.5,56.2
+Jun 5,2:45pm,EUR,yellow,Italian Services PMI,54.2,54.4,54.3
+Jun 5,2:50pm,EUR,yellow,French Final Services PMI,49.3,49.4,49.4
+Jun 5,2:55pm,EUR,yellow,German Final Services PMI,54.2,53.9,53.9
+Jun 5,3:00pm,EUR,yellow,Final Services PMI,53.2,53.3,53.3
+Jun 5,3:30pm,GBP,yellow,Final Services PMI,52.9,52.9,52.9
+Jun 5,4:00pm,EUR,yellow,PPI m/m,-1.0%,-0.6%,-0.5%
+Jun 5,7:15pm,USD,red,ADP Non-Farm Employment Change,152K,173K,188K
+Jun 5,7:30pm,CAD,yellow,Labor Productivity q/q,-0.3%,-0.2%,0.2%
+Jun 5,8:45pm,CAD,red,BOC Rate Statement,N/A,N/A,N/A
+Jun 5,8:45pm,CAD,red,Overnight Rate,4.75%,4.75%,5.00%
+Jun 5,8:45pm,USD,orange,Final Services PMI,54.8,54.8,54.8
+Jun 5,9:00pm,USD,red,ISM Services PMI,53.8,51.0,49.4
+Jun 5,9:30pm,CAD,red,BOC Press Conference,N/A,N/A,N/A
+Jun 5,9:30pm,USD,yellow,Crude Oil Inventories,1.2M,-2.1M,-4.2M
+Jun 6,8:00am,NZD,yellow,ANZ Commodity Prices m/m,1.1%,N/A,0.5%
+Jun 6,8:30am,AUD,yellow,Goods Trade Balance,6.55B,5.37B,4.84B
+Jun 6,10:35am,JPY,yellow,30-y Bond Auction,2.16|3.6,N/A,1.99|3.2
+Jun 6,12:45pm,CHF,yellow,Unemployment Rate,2.4%,2.3%,2.3%
+Jun 6,1:00pm,EUR,yellow,German Factory Orders m/m,-0.2%,0.6%,-0.4%
+Jun 6,3:00pm,EUR,yellow,Italian Retail Sales m/m,-0.1%,0.3%,0.0%
+Jun 6,3:30pm,GBP,orange,Construction PMI,54.7,52.5,53.0
+Jun 6,3:58pm,EUR,yellow,French 10-y Bond Auction,3.05|2.0,N/A,3.03|2.2
+Jun 6,4:00pm,EUR,yellow,Retail Sales m/m,-0.5%,-0.2%,0.7%
+Jun 6,Day 1,EUR,orange,European Parliamentary Elections,N/A,N/A,N/A
+Jun 6,6:30pm,USD,yellow,Challenger Job Cuts y/y,-20.3%,N/A,-3.3%
+Jun 6,7:15pm,EUR,red,Main Refinancing Rate,4.25%,4.25%,4.50%
+Jun 6,7:15pm,EUR,red,Monetary Policy Statement,N/A,N/A,N/A
+Jun 6,7:30pm,CAD,yellow,Trade Balance,-1.0B,-1.2B,-2.0B
+Jun 6,7:30pm,USD,red,Unemployment Claims,229K,220K,221K
+Jun 6,7:30pm,USD,yellow,Revised Nonfarm Productivity q/q,0.2%,0.1%,0.3%
+Jun 6,7:30pm,USD,yellow,Revised Unit Labor Costs q/q,4.0%,4.8%,4.7%
+Jun 6,7:30pm,USD,yellow,Trade Balance,-74.6B,-76.2B,-68.6B
+Jun 6,7:45pm,EUR,red,ECB Press Conference,N/A,N/A,N/A
+Jun 6,9:00pm,CAD,orange,Ivey PMI,52.0,65.2,63.0
+Jun 6,9:30pm,USD,yellow,Natural Gas Storage,98B,89B,84B
+Jun 7,5:45am,NZD,yellow,Manufacturing Sales q/q,0.7%,N/A,-0.5%
+Jun 7,6:30am,JPY,yellow,Household Spending y/y,0.5%,0.6%,-1.2%
+Jun 7,10:00am,AUD,yellow,RBA Deputy Gov Hauser Speaks,N/A,N/A,N/A
+Jun 7,10:03am,CNY,yellow,Trade Balance,586B,523B,513B
+Jun 7,10:04am,CNY,yellow,USD-Denominated Trade Balance,82.6B,72.2B,72.4B
+Jun 7,12:00pm,JPY,yellow,Leading Indicators,111.6%,111.6%,112.2%
+Jun 7,1:00pm,EUR,yellow,German Industrial Production m/m,-0.1%,0.1%,-0.4%
+Jun 7,1:00pm,EUR,yellow,German Trade Balance,22.1B,22.6B,22.2B
+Jun 7,1:00pm,GBP,yellow,Halifax HPI m/m,-0.1%,0.3%,0.0%
+Jun 7,1:45pm,EUR,yellow,French Trade Balance,-7.6B,-5.4B,-5.4B
+Jun 7,2:00pm,CHF,yellow,Foreign Currency Reserves,718B,N/A,720B
+Jun 7,2:00pm,EUR,yellow,German Buba President Nagel Speaks,N/A,N/A,N/A
+Jun 7,4:00pm,EUR,yellow,Final Employment Change q/q,0.3%,0.3%,0.3%
+Jun 7,4:00pm,EUR,yellow,Revised GDP q/q,0.3%,0.3%,0.3%
+Jun 7,5:03pm,EUR,yellow,German Buba Monthly Report,N/A,N/A,N/A
+Jun 7,Day 2,EUR,orange,European Parliamentary Elections,N/A,N/A,N/A
+Jun 7,7:30pm,CAD,red,Employment Change,26.7K,24.8K,90.4K
+Jun 7,7:30pm,CAD,red,Unemployment Rate,6.2%,6.2%,6.1%
+Jun 7,7:30pm,CAD,yellow,Capacity Utilization Rate,78.5%,78.8%,78.6%
+Jun 7,7:30pm,USD,red,Average Hourly Earnings m/m,0.4%,0.3%,0.2%
+Jun 7,7:30pm,USD,red,Non-Farm Employment Change,272K,182K,165K
+Jun 7,7:30pm,USD,red,Unemployment Rate,4.0%,3.9%,3.9%
+Jun 7,9:00pm,USD,yellow,Final Wholesale Inventories m/m,0.1%,0.2%,0.2%
+Jun 7,11:00pm,USD,yellow,FOMC Member Cook Speaks,N/A,N/A,N/A
+Jun 8,2:00am,USD,yellow,Consumer Credit m/m,6.4B,9.3B,-1.1B
+Jun 8,Day 3,EUR,orange,European Parliamentary Elections,N/A,N/A,N/A
+Jun 9,Day 4,EUR,red,European Parliamentary Elections,N/A,N/A,N/A
+Jun 10,All Day,AUD,gray,Bank Holiday,N/A,N/A,N/A
+Jun 10,6:50am,JPY,yellow,Bank Lending y/y,3.0%,3.1%,3.1%
+Jun 10,6:50am,JPY,yellow,Current Account,2.52T,2.09T,2.01T
+Jun 10,6:50am,JPY,yellow,Final GDP Price Index y/y,3.4%,3.6%,3.6%
+Jun 10,6:50am,JPY,yellow,Final GDP q/q,-0.5%,-0.5%,-0.5%
+Jun 10,All Day,CNY,gray,Bank Holiday,N/A,N/A,N/A
+Jun 10,12:00pm,JPY,yellow,Economy Watchers Sentiment,45.7,48.6,47.4
+Jun 10,2:00pm,CHF,yellow,SECO Consumer Climate,-38,-37,-38
+Jun 10,3:00pm,EUR,yellow,Italian Industrial Production m/m,-1.0%,0.3%,-0.5%
+Jun 10,3:30pm,EUR,yellow,Sentix Investor Confidence,0.3,-1.5,-3.6
+Jun 10,4:30pm,EUR,yellow,German Buba President Nagel Speaks,N/A,N/A,N/A
+Jun 11,6:50am,JPY,yellow,M2 Money Stock y/y,1.9%,2.1%,2.2%
+Jun 11,8:30am,AUD,yellow,NAB Business Confidence,-3,N/A,2
+Jun 11,12:58pm,JPY,yellow,Prelim Machine Tool Orders y/y,4.2%,N/A,-8.9%
+Jun 11,1:00pm,GBP,red,Claimant Count Change,50.4K,10.2K,8.4K
+Jun 11,1:00pm,GBP,orange,Average Earnings Index 3m/y,5.9%,5.7%,5.9%
+Jun 11,1:00pm,GBP,yellow,Unemployment Rate,4.4%,4.3%,4.3%
+Jun 11,5:00pm,USD,yellow,NFIB Small Business Index,90.5,89.8,89.7
+Jun 11,7:30pm,CAD,yellow,Building Permits m/m,20.5%,4.9%,-12.3%
+Jun 11,8:30pm,GBP,yellow,CB Leading Index m/m,-0.1%,N/A,-0.1%
+Jun 12,12:01am,USD,orange,10-y Bond Auction,4.44|2.7,N/A,4.48|2.5
+Jun 12,5:45am,NZD,yellow,Visitor Arrivals m/m,-9.4%,N/A,9.7%
+Jun 12,6:50am,JPY,yellow,PPI y/y,2.4%,2.0%,1.1%
+Jun 12,8:30am,CNY,orange,CPI y/y,0.3%,0.4%,0.3%
+Jun 12,8:30am,CNY,orange,PPI y/y,-1.4%,-1.5%,-2.5%
+Jun 12,1:00pm,EUR,yellow,German Final CPI m/m,0.1%,0.1%,0.1%
+Jun 12,1:00pm,GBP,red,GDP m/m,0.0%,0.0%,0.4%
+Jun 12,1:00pm,GBP,yellow,Construction Output m/m,-1.4%,0.1%,-0.4%
+Jun 12,1:00pm,GBP,yellow,Goods Trade Balance,-19.6B,-14.2B,-14.0B
+Jun 12,1:00pm,GBP,yellow,Index of Services 3m/3m,0.9%,0.8%,0.7%
+Jun 12,1:00pm,GBP,yellow,Industrial Production m/m,-0.9%,-0.1%,0.2%
+Jun 12,1:00pm,GBP,yellow,Manufacturing Production m/m,-1.4%,-0.2%,0.3%
+Jun 12,All Day,EUR,yellow,Eurogroup Meetings,N/A,N/A,N/A
+Jun 12,4:33pm,EUR,yellow,German 10-y Bond Auction,2.60|2.0,N/A,2.53|2.8
+Jun 12,6:01pm,GBP,yellow,NIESR GDP Estimate,0.7%,N/A,0.7%
+Jun 12,7:30pm,USD,red,Core CPI m/m,0.2%,0.3%,0.3%
+Jun 12,7:30pm,USD,red,CPI m/m,0.0%,0.1%,0.3%
+Jun 12,7:30pm,USD,red,CPI y/y,3.3%,3.4%,3.4%
+Jun 12,9:30pm,USD,yellow,Crude Oil Inventories,3.7M,-1.2M,1.2M
+Jun 13,1:00am,USD,red,Federal Funds Rate,5.50%,5.50%,5.50%
+Jun 13,1:00am,USD,red,FOMC Economic Projections,N/A,N/A,N/A
+Jun 13,1:00am,USD,red,FOMC Statement,N/A,N/A,N/A
+Jun 13,1:00am,USD,yellow,Federal Budget Balance,-347.1B,-279.6B,209.5B
+Jun 13,1:30am,USD,red,FOMC Press Conference,N/A,N/A,N/A
+Jun 13,2:15am,CAD,red,BOC Gov Macklem Speaks,N/A,N/A,N/A
+Jun 13,2:30am,EUR,yellow,German Buba President Nagel Speaks,N/A,N/A,N/A
+Jun 13,6:01am,GBP,yellow,RICS House Price Balance,-17%,-5%,-7%
+Jun 13,6:50am,JPY,yellow,BSI Manufacturing Index,-1.0,-5.2,-6.7
+Jun 13,8:30am,AUD,red,Employment Change,39.7K,30.5K,37.4K
+Jun 13,8:30am,AUD,red,Unemployment Rate,4.0%,4.0%,4.1%
+Jun 13,1:00pm,EUR,yellow,German WPI m/m,0.1%,0.3%,0.4%
+Jun 13,1:30pm,CHF,yellow,PPI m/m,-0.3%,0.5%,0.6%
+Jun 13,3:00pm,EUR,yellow,Italian Quarterly Unemployment Rate,7.2%,7.4%,7.4%
+Jun 13,4:00pm,EUR,yellow,Industrial Production m/m,-0.1%,0.1%,0.5%
+Jun 13,7:30pm,USD,red,Core PPI m/m,0.0%,0.3%,0.5%
+Jun 13,7:30pm,USD,red,PPI m/m,-0.2%,0.1%,0.5%
+Jun 13,7:30pm,USD,red,Unemployment Claims,242K,225K,229K
+Jun 13,8:35pm,CAD,yellow,Gov Council Member Kozicki Speaks,N/A,N/A,N/A
+Jun 13,9:30pm,USD,yellow,Natural Gas Storage,74B,73B,98B
+Jun 13,11:00pm,USD,orange,Treasury Sec Yellen Speaks,N/A,N/A,N/A
+Jun 13,11:00pm,USD,yellow,FOMC Member Williams Speaks,N/A,N/A,N/A
+Jun 14,12:00am,CAD,red,BOC Gov Macklem Speaks,N/A,N/A,N/A
+Jun 14,12:01am,USD,orange,30-y Bond Auction,4.40|2.5,N/A,4.64|2.4
+Jun 14,5:30am,NZD,yellow,BusinessNZ Manufacturing Index,47.2,N/A,48.8
+Jun 14,5:45am,NZD,yellow,FPI m/m,-0.2%,N/A,0.6%
+Jun 14,10:23am,JPY,red,BOJ Policy Rate,<0.10%,<0.10%,<0.10%
+Jun 14,10:23am,JPY,red,Monetary Policy Statement,N/A,N/A,N/A
+Jun 14,11:29am,JPY,yellow,Revised Industrial Production m/m,-0.9%,-0.1%,-0.1%
+Jun 14,11:30am,JPY,yellow,Tertiary Industry Activity m/m,1.9%,0.4%,-2.3%
+Jun 14,1:30pm,JPY,red,BOJ Press Conference,N/A,N/A,N/A
+Jun 14,1:45pm,EUR,yellow,French Final CPI m/m,0.0%,0.0%,0.0%
+Jun 14,3:00pm,EUR,yellow,Italian Trade Balance,4.81B,4.25B,4.30B
+Jun 14,3:30pm,GBP,yellow,Consumer Inflation Expectations,2.8%,N/A,3.0%
+Jun 14,4:00pm,EUR,yellow,Trade Balance,19.4B,17.0B,17.2B
+Jun 14,4:02pm,CNY,yellow,M2 Money Supply y/y,7.0%,7.1%,7.2%
+Jun 14,4:03pm,CNY,orange,New Loans,950B,2250B,730B
+Jun 14,7:30pm,CAD,yellow,Manufacturing Sales m/m,1.1%,1.3%,-1.8%
+Jun 14,7:30pm,CAD,yellow,Wholesale Sales m/m,2.4%,2.6%,-1.3%
+Jun 14,7:30pm,USD,yellow,Import Prices m/m,-0.4%,0.0%,0.9%
+Jun 14,9:00pm,USD,red,Prelim UoM Consumer Sentiment,65.6,72.1,69.1
+Jun 14,9:00pm,USD,orange,Prelim UoM Inflation Expectations,3.3%,N/A,3.3%
+Jun 15,12:30am,EUR,orange,ECB President Lagarde Speaks,N/A,N/A,N/A
+Jun 15,6:00am,USD,yellow,FOMC Member Cook Speaks,N/A,N/A,N/A
+Jun 17,5:30am,NZD,yellow,BusinessNZ Services Index,43.0,N/A,46.6
+Jun 17,6:01am,GBP,yellow,Rightmove HPI m/m,0.0%,N/A,0.8%
+Jun 17,6:50am,JPY,yellow,Core Machinery Orders m/m,-2.9%,-2.9%,2.9%
+Jun 17,8:30am,AUD,yellow,ANZ Job Advertisements m/m,-2.1%,N/A,-2.3%
+Jun 17,8:30am,CNY,yellow,New Home Prices m/m,-0.71%,N/A,-0.58%
+Jun 17,9:00am,CNY,orange,Industrial Production y/y,5.6%,6.2%,6.7%
+Jun 17,9:00am,CNY,orange,Retail Sales y/y,3.7%,3.0%,2.3%
+Jun 17,9:00am,CNY,yellow,Fixed Asset Investment ytd/y,4.0%,4.2%,4.2%
+Jun 17,9:00am,CNY,yellow,NBS Press Conference,N/A,N/A,N/A
+Jun 17,9:00am,CNY,yellow,Unemployment Rate,5.0%,5.0%,5.0%
+Jun 17,2:00pm,CHF,yellow,SECO Economic Forecasts,N/A,N/A,N/A
+Jun 17,7:15pm,CAD,yellow,Housing Starts,265K,247K,241K
+Jun 17,7:30pm,CAD,yellow,Foreign Securities Purchases,41.16B,12.30B,14.38B
+Jun 17,7:30pm,USD,red,Empire State Manufacturing Index,-6.0,-12.5,-15.6
+Jun 18,4:00am,NZD,yellow,Westpac Consumer Sentiment,82.2,N/A,93.2
+Jun 18,8:00am,USD,yellow,FOMC Member Cook Speaks,N/A,N/A,N/A
+Jun 18,11:30am,AUD,red,Cash Rate,4.35%,4.35%,4.35%
+Jun 18,11:30am,AUD,red,RBA Rate Statement,N/A,N/A,N/A
+Jun 18,12:30pm,AUD,orange,RBA Press Conference,N/A,N/A,N/A
+Jun 18,4:00pm,EUR,yellow,Final Core CPI y/y,2.9%,2.9%,2.9%
+Jun 18,4:00pm,EUR,yellow,Final CPI y/y,2.6%,2.6%,2.6%
+Jun 18,4:00pm,EUR,yellow,ZEW Economic Sentiment,51.3,47.8,47.0
+Jun 18,4:00pm,EUR,yellow,German ZEW Economic Sentiment,47.5,49.6,47.1
+Jun 18,7:30pm,USD,red,Core Retail Sales m/m,-0.1%,0.2%,-0.1%
+Jun 18,7:30pm,USD,red,Retail Sales m/m,0.1%,0.3%,-0.2%
+Jun 18,8:15pm,USD,orange,Industrial Production m/m,0.9%,0.3%,0.0%
+Jun 18,8:15pm,USD,yellow,Capacity Utilization Rate,78.7%,78.6%,78.2%
+Jun 18,9:00pm,USD,yellow,Business Inventories m/m,0.3%,0.3%,-0.1%
+Jun 18,9:00pm,USD,yellow,FOMC Member Barkin Speaks,N/A,N/A,N/A
+Jun 18,9:30pm,AUD,yellow,CB Leading Index m/m,-0.3%,N/A,-0.3%
+Jun 18,10:09pm,NZD,yellow,GDT Price Index,-0.5%,N/A,1.7%
+Jun 19,12:00am,USD,yellow,FOMC Member Kugler Speaks,N/A,N/A,N/A
+Jun 19,3:00am,USD,yellow,TIC Long-Term Purchases,123.1B,69.3B,102.6B
+Jun 19,5:45am,NZD,yellow,Current Account,-4.36B,-4.69B,-7.98B
+Jun 19,6:50am,JPY,yellow,Monetary Policy Meeting Minutes,N/A,N/A,N/A
+Jun 19,6:50am,JPY,yellow,Trade Balance,-0.62T,-0.64T,-0.58T
+Jun 19,1:00pm,GBP,red,CPI y/y,2.0%,2.0%,2.3%
+Jun 19,1:00pm,GBP,yellow,Core CPI y/y,3.5%,3.5%,3.9%
+Jun 19,1:00pm,GBP,yellow,PPI Input m/m,0.0%,-0.3%,0.8%
+Jun 19,1:00pm,GBP,yellow,PPI Output m/m,-0.1%,0.1%,0.3%
+Jun 19,1:00pm,GBP,yellow,RPI y/y,3.0%,3.1%,3.3%
+Jun 19,3:00pm,EUR,yellow,Current Account,38.6B,35.2B,35.8B
+Jun 19,3:30pm,GBP,yellow,HPI y/y,1.1%,2.0%,0.9%
+Jun 19,4:36pm,EUR,yellow,German 30-y Bond Auction,2.54|1.6,N/A,2.62|3.1
+Jun 19,All Day,USD,gray,Bank Holiday,N/A,N/A,N/A
+Jun 19,9:00pm,USD,yellow,NAHB Housing Market Index,43,45,45
+Jun 20,12:30am,CAD,yellow,BOC Summary of Deliberations,N/A,N/A,N/A
+Jun 20,5:45am,NZD,red,GDP q/q,0.2%,0.1%,-0.1%
+Jun 20,8:15am,CNY,orange,1-y Loan Prime Rate,3.45%,3.45%,3.45%
+Jun 20,8:15am,CNY,orange,5-y Loan Prime Rate,3.95%,3.95%,3.95%
+Jun 20,11:30am,CHF,yellow,SNB Financial Stability Report,N/A,N/A,N/A
+Jun 20,1:00pm,CHF,yellow,Trade Balance,5.81B,3.84B,4.34B
+Jun 20,1:00pm,EUR,yellow,German PPI m/m,0.0%,0.1%,0.2%
+Jun 20,2:30pm,CHF,red,SNB Monetary Policy Assessment,N/A,N/A,N/A
+Jun 20,2:30pm,CHF,red,SNB Policy Rate,1.25%,1.50%,1.50%
+Jun 20,3:00pm,CHF,red,SNB Press Conference,N/A,N/A,N/A
+Jun 20,3:00pm,EUR,yellow,ECB Economic Bulletin,N/A,N/A,N/A
+Jun 20,3:45pm,EUR,yellow,Spanish 10-y Bond Auction,3.35|1.7,N/A,3.25|1.8
+Jun 20,6:00pm,GBP,red,Monetary Policy Summary,N/A,N/A,N/A
+Jun 20,6:00pm,GBP,red,MPC Official Bank Rate Votes,0-2-7,0-2-7,0-2-7
+Jun 20,6:00pm,GBP,red,Official Bank Rate,5.25%,5.25%,5.25%
+Jun 20,7:30pm,CAD,yellow,NHPI m/m,0.2%,0.2%,0.2%
+Jun 20,7:30pm,USD,red,Unemployment Claims,238K,235K,243K
+Jun 20,7:30pm,USD,orange,Building Permits,1.39M,1.45M,1.44M
+Jun 20,7:30pm,USD,orange,Philly Fed Manufacturing Index,1.3,4.8,4.5
+Jun 20,7:30pm,USD,yellow,Current Account,-238B,-207B,-222B
+Jun 20,7:30pm,USD,yellow,Housing Starts,1.28M,1.37M,1.35M
+Jun 20,9:00pm,EUR,yellow,Consumer Confidence,-14,-14,-14
+Jun 20,10:00pm,USD,yellow,Crude Oil Inventories,-2.5M,-2.8M,3.7M
+Jun 21,2:30am,USD,yellow,FOMC Member Barkin Speaks,N/A,N/A,N/A
+Jun 21,3:00am,USD,red,Treasury Currency Report,N/A,N/A,N/A
+Jun 21,6:00am,AUD,yellow,Flash Manufacturing PMI,47.5,N/A,49.7
+Jun 21,6:00am,AUD,yellow,Flash Services PMI,51.0,N/A,52.5
+Jun 21,6:01am,GBP,yellow,GfK Consumer Confidence,-14,-16,-17
+Jun 21,6:30am,JPY,yellow,National Core CPI y/y,2.5%,2.6%,2.2%
+Jun 21,7:30am,JPY,yellow,Flash Manufacturing PMI,50.1,50.6,50.4
+Jun 21,1:00pm,GBP,red,Retail Sales m/m,2.9%,1.6%,-1.8%
+Jun 21,1:00pm,GBP,yellow,Public Sector Net Borrowing,14.1B,14.5B,17.5B
+Jun 21,2:00pm,EUR,yellow,German Buba President Nagel Speaks,N/A,N/A,N/A
+Jun 21,2:15pm,EUR,red,French Flash Manufacturing PMI,45.3,46.8,46.4
+Jun 21,2:15pm,EUR,red,French Flash Services PMI,48.8,50.0,49.3
+Jun 21,2:30pm,EUR,red,German Flash Manufacturing PMI,43.4,46.4,45.4
+Jun 21,2:30pm,EUR,red,German Flash Services PMI,53.5,54.4,54.2
+Jun 21,3:00pm,EUR,orange,Flash Manufacturing PMI,45.6,48.0,47.3
+Jun 21,3:00pm,EUR,orange,Flash Services PMI,52.6,53.5,53.2
+Jun 21,3:30pm,GBP,red,Flash Manufacturing PMI,51.4,51.3,51.2
+Jun 21,3:30pm,GBP,red,Flash Services PMI,51.2,53.0,52.9
+Jun 21,All Day,EUR,yellow,ECOFIN Meetings,N/A,N/A,N/A
+Jun 21,7:26pm,CNY,yellow,Foreign Direct Investment ytd/y,-28.2%,N/A,-27.9%
+Jun 21,7:30pm,CAD,orange,Core Retail Sales m/m,1.8%,0.5%,-0.8%
+Jun 21,7:30pm,CAD,orange,Retail Sales m/m,0.7%,0.7%,-0.3%
+Jun 21,7:30pm,CAD,yellow,IPPI m/m,0.0%,0.4%,1.4%
+Jun 21,7:30pm,CAD,yellow,RMPI m/m,-1.0%,-0.6%,5.3%
+Jun 21,8:45pm,USD,red,Flash Manufacturing PMI,51.7,51.0,51.3
+Jun 21,8:45pm,USD,red,Flash Services PMI,55.1,53.4,54.8
+Jun 21,9:00pm,USD,orange,Existing Home Sales,4.11M,4.08M,4.14M
+Jun 21,9:00pm,USD,yellow,CB Leading Index m/m,-0.5%,-0.4%,-0.6%
+Jun 21,9:30pm,USD,yellow,Natural Gas Storage,71B,69B,74B
+Jun 24,5:45am,NZD,yellow,Trade Balance,204M,155M,-3M
+Jun 24,6:50am,JPY,yellow,BOJ Summary of Opinions,N/A,N/A,N/A
+Jun 24,10:00am,NZD,yellow,Credit Card Spending y/y,0.0%,N/A,-0.8%
+Jun 24,2:00pm,USD,orange,FOMC Member Waller Speaks,N/A,N/A,N/A
+Jun 24,3:00pm,EUR,orange,German ifo Business Climate,88.6,89.4,89.3
+Jun 24,5:00pm,GBP,yellow,CBI Industrial Order Expectations,-18,-26,-33
+Jun 24,5:10pm,EUR,yellow,German Buba President Nagel Speaks,N/A,N/A,N/A
+Jun 24,7:58pm,EUR,yellow,Belgian NBB Business Climate,-11.1,-10.2,-11.0
+Jun 25,12:30am,CAD,red,BOC Gov Macklem Speaks,N/A,N/A,N/A
+Jun 25,1:00am,USD,yellow,FOMC Member Daly Speaks,N/A,N/A,N/A
+Jun 25,6:50am,JPY,yellow,SPPI y/y,2.5%,3.0%,2.7%
+Jun 25,7:30am,AUD,yellow,Westpac Consumer Sentiment,1.7%,N/A,-0.3%
+Jun 25,12:00pm,JPY,yellow,BOJ Core CPI y/y,2.1%,1.9%,1.8%
+Jun 25,6:00pm,USD,yellow,FOMC Member Bowman Speaks,N/A,N/A,N/A
+Jun 25,7:30pm,CAD,red,CPI m/m,0.6%,0.3%,0.5%
+Jun 25,7:30pm,CAD,red,Median CPI y/y,2.8%,2.6%,2.6%
+Jun 25,7:30pm,CAD,red,Trimmed CPI y/y,2.9%,2.8%,2.8%
+Jun 25,7:30pm,CAD,orange,Common CPI y/y,2.4%,2.6%,2.6%
+Jun 25,7:32pm,CAD,yellow,Core CPI m/m,0.6%,N/A,0.2%
+Jun 25,8:00pm,USD,orange,S&P/CS Composite-20 HPI y/y,7.2%,7.0%,7.5%
+Jun 25,8:00pm,USD,yellow,HPI m/m,0.2%,0.3%,0.0%
+Jun 25,8:59pm,USD,orange,Richmond Manufacturing Index,-10,-3,0
+Jun 25,9:00pm,USD,red,CB Consumer Confidence,100.4,100.0,101.3
+Jun 25,11:00pm,USD,yellow,FOMC Member Cook Speaks,N/A,N/A,N/A
+Jun 26,12:15am,EUR,yellow,German Buba President Nagel Speaks,N/A,N/A,N/A
+Jun 26,1:10am,USD,yellow,FOMC Member Bowman Speaks,N/A,N/A,N/A
+Jun 26,6:35am,AUD,yellow,RBA Assist Gov Kent Speaks,N/A,N/A,N/A
+Jun 26,7:30am,AUD,yellow,MI Leading Index m/m,0.0%,N/A,0.0%
+Jun 26,8:30am,AUD,red,CPI y/y,4.0%,3.8%,3.6%
+Jun 26,1:00pm,EUR,yellow,German GfK Consumer Climate,-21.8,-19.4,-21.0
+Jun 26,3:00pm,CHF,yellow,UBS Economic Expectations,17.5,N/A,18.2
+Jun 26,5:00pm,GBP,yellow,CBI Realized Sales,-24,1,8
+Jun 26,8:00pm,CHF,yellow,SNB Quarterly Bulletin,N/A,N/A,N/A
+Jun 26,8:00pm,CNY,yellow,CB Leading Index m/m,-0.5%,N/A,-0.3%
+Jun 26,9:00pm,USD,red,New Home Sales,619K,636K,698K
+Jun 26,9:30pm,USD,yellow,Crude Oil Inventories,3.6M,-2.6M,-2.5M
+Jun 27,3:30am,USD,yellow,Bank Stress Test Results,N/A,N/A,N/A
+Jun 27,6:50am,JPY,yellow,Retail Sales y/y,3.0%,2.0%,2.0%
+Jun 27,8:00am,AUD,yellow,MI Inflation Expectations,4.4%,N/A,4.1%
+Jun 27,8:00am,NZD,yellow,ANZ Business Confidence,6.1,N/A,11.2
+Jun 27,9:00am,NZD,orange,RBNZ Statement of Intent,N/A,N/A,N/A
+Jun 27,3:00pm,EUR,yellow,M3 Money Supply y/y,1.6%,1.5%,1.3%
+Jun 27,3:00pm,EUR,yellow,Private Loans y/y,0.3%,0.3%,0.2%
+Jun 27,4:09pm,EUR,yellow,Italian 10-y Bond Auction,4.01|1.4,N/A,3.97|1.5
+Jun 27,4:30pm,GBP,red,BOE Gov Bailey Speaks,N/A,N/A,N/A
+Jun 27,4:30pm,GBP,yellow,BOE Financial Stability Report,N/A,N/A,N/A
+Jun 27,4:30pm,GBP,yellow,FPC Meeting Minutes,N/A,N/A,N/A
+Jun 27,4:30pm,GBP,yellow,FPC Statement,N/A,N/A,N/A
+Jun 27,5:00pm,AUD,yellow,RBA Deputy Gov Hauser Speaks,N/A,N/A,N/A
+Jun 27,7:30pm,USD,red,Final GDP q/q,1.4%,1.4%,1.3%
+Jun 27,7:30pm,USD,red,Unemployment Claims,233K,236K,239K
+Jun 27,7:30pm,USD,orange,Core Durable Goods Orders m/m,-0.1%,0.2%,0.4%
+Jun 27,7:30pm,USD,orange,Durable Goods Orders m/m,0.1%,-0.5%,0.6%
+Jun 27,7:30pm,USD,orange,Final GDP Price Index q/q,3.1%,3.0%,3.0%
+Jun 27,7:30pm,USD,yellow,Goods Trade Balance,-100.6B,-96.0B,-98.0B
+Jun 27,7:30pm,USD,yellow,Prelim Wholesale Inventories m/m,0.6%,0.1%,0.1%
+Jun 27,9:00pm,USD,red,Pending Home Sales m/m,-2.1%,0.6%,-7.7%
+Jun 27,9:30pm,USD,yellow,Natural Gas Storage,52B,53B,71B
+Jun 28,All Day,NZD,gray,Bank Holiday,N/A,N/A,N/A
+Jun 28,6:30am,JPY,orange,Tokyo Core CPI y/y,2.1%,2.0%,1.9%
+Jun 28,6:30am,JPY,yellow,Unemployment Rate,2.6%,2.6%,2.6%
+Jun 28,6:50am,JPY,yellow,Prelim Industrial Production m/m,2.8%,2.0%,-0.9%
+Jun 28,8:00am,USD,orange,President Biden Speaks,N/A,N/A,N/A
+Jun 28,8:30am,AUD,yellow,Private Sector Credit m/m,0.4%,0.4%,0.5%
+Jun 28,12:00pm,JPY,yellow,Housing Starts y/y,-5.3%,-6.1%,13.9%
+Jun 28,1:00pm,EUR,yellow,German Import Prices m/m,0.0%,0.2%,0.7%
+Jun 28,1:00pm,GBP,yellow,Current Account,-21.0B,-17.7B,-21.2B
+Jun 28,1:00pm,GBP,yellow,Final GDP q/q,0.7%,0.6%,0.6%
+Jun 28,1:00pm,GBP,yellow,Revised Business Investment q/q,0.5%,0.9%,0.9%
+Jun 28,1:45pm,EUR,orange,French Prelim CPI m/m,0.1%,0.1%,0.0%
+Jun 28,1:45pm,EUR,yellow,French Consumer Spending m/m,1.5%,0.2%,-0.9%
+Jun 28,2:00pm,CHF,yellow,KOF Economic Barometer,102.7,101.0,102.2
+Jun 28,2:00pm,EUR,orange,Spanish Flash CPI y/y,3.4%,3.4%,3.6%
+Jun 28,2:55pm,EUR,yellow,German Unemployment Change,19K,14K,25K
+Jun 28,4:00pm,EUR,yellow,Italian Prelim CPI m/m,0.1%,0.2%,0.2%
+Jun 28,5:00pm,USD,yellow,FOMC Member Barkin Speaks,N/A,N/A,N/A
+Jun 28,7:30pm,CAD,red,GDP m/m,0.3%,0.3%,0.0%
+Jun 28,7:30pm,USD,red,Core PCE Price Index m/m,0.1%,0.1%,0.3%
+Jun 28,7:30pm,USD,yellow,Personal Income m/m,0.5%,0.4%,0.3%
+Jun 28,7:30pm,USD,yellow,Personal Spending m/m,0.2%,0.3%,0.1%
+Jun 28,8:45pm,USD,orange,Chicago PMI,47.4,39.7,35.4
+Jun 28,9:00pm,USD,orange,Revised UoM Consumer Sentiment,68.2,65.9,65.6
+Jun 28,9:00pm,USD,yellow,Revised UoM Inflation Expectations,3.0%,N/A,3.3%
+Jun 28,11:00pm,USD,yellow,FOMC Member Bowman Speaks,N/A,N/A,N/A
+Jun 30,8:30am,CNY,red,Manufacturing PMI,49.5,49.5,49.5
+Jun 30,8:30am,CNY,orange,Non-Manufacturing PMI,50.5,51.1,51.1
+Jun 30,All Day,EUR,red,French Parliamentary Elections,N/A,N/A,N/A

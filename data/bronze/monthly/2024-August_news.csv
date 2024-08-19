@@ -1,0 +1,127 @@
+date,time,currency,impact,event
+Aug 1,1:00am,USD,red,Federal Funds Rate
+Aug 1,1:00am,USD,red,FOMC Statement
+Aug 1,1:30am,USD,red,FOMC Press Conference
+Aug 1,All Day,CHF,gray,Bank Holiday
+Aug 1,6:00pm,GBP,red,BOE Monetary Policy Report
+Aug 1,6:00pm,GBP,red,Monetary Policy Summary
+Aug 1,6:00pm,GBP,red,MPC Official Bank Rate Votes
+Aug 1,6:00pm,GBP,red,Official Bank Rate
+Aug 1,6:30pm,GBP,red,BOE Gov Bailey Speaks
+Aug 1,7:30pm,USD,red,Unemployment Claims
+Aug 1,8:45pm,USD,orange,Final Manufacturing PMI
+Aug 1,9:00pm,USD,red,ISM Manufacturing PMI
+Aug 1,9:00pm,USD,orange,ISM Manufacturing Prices
+Aug 1,11:15pm,GBP,orange,MPC Member Pill Speaks
+Aug 2,1:30pm,CHF,red,CPI m/m
+Aug 2,7:30pm,USD,red,Average Hourly Earnings m/m
+Aug 2,7:30pm,USD,red,Non-Farm Employment Change
+Aug 2,7:30pm,USD,red,Unemployment Rate
+Aug 5,All Day,AUD,gray,Bank Holiday
+Aug 5,All Day,CAD,gray,Bank Holiday
+Aug 5,8:45pm,USD,orange,Final Services PMI
+Aug 5,9:00pm,USD,red,ISM Services PMI
+Aug 6,11:30am,AUD,red,Cash Rate
+Aug 6,11:30am,AUD,red,RBA Monetary Policy Statement
+Aug 6,11:30am,AUD,red,RBA Rate Statement
+Aug 6,12:30pm,AUD,orange,RBA Press Conference
+Aug 6,3:30pm,GBP,orange,Construction PMI
+Aug 7,5:45am,NZD,red,Employment Change q/q
+Aug 7,5:45am,NZD,red,Unemployment Rate
+Aug 7,9:00pm,CAD,orange,Ivey PMI
+Aug 8,12:01am,USD,orange,10-y Bond Auction
+Aug 8,9:40am,AUD,red,RBA Gov Bullock Speaks
+Aug 8,10:00am,NZD,red,Inflation Expectations q/q
+Aug 8,7:30pm,USD,red,Unemployment Claims
+Aug 9,12:01am,USD,orange,30-y Bond Auction
+Aug 9,8:30am,CNY,orange,CPI y/y
+Aug 9,8:30am,CNY,orange,PPI y/y
+Aug 9,7:30pm,CAD,red,Employment Change
+Aug 9,7:30pm,CAD,red,Unemployment Rate
+Aug 12,All Day,JPY,gray,Bank Holiday
+Aug 13,8:30am,AUD,red,Wage Price Index q/q
+Aug 13,1:00pm,GBP,red,Claimant Count Change
+Aug 13,1:00pm,GBP,orange,Average Earnings Index 3m/y
+Aug 13,4:03pm,CNY,orange,New Loans
+Aug 13,7:30pm,USD,red,Core PPI m/m
+Aug 13,7:30pm,USD,red,PPI m/m
+Aug 14,9:00am,NZD,red,Official Cash Rate
+Aug 14,9:00am,NZD,red,RBNZ Monetary Policy Statement
+Aug 14,9:00am,NZD,red,RBNZ Rate Statement
+Aug 14,10:00am,NZD,orange,RBNZ Press Conference
+Aug 14,1:00pm,GBP,red,CPI y/y
+Aug 14,7:30pm,USD,red,Core CPI m/m
+Aug 14,7:30pm,USD,red,CPI m/m
+Aug 14,7:30pm,USD,red,CPI y/y
+Aug 15,1:00am,NZD,orange,RBNZ Gov Orr Speaks
+Aug 15,2:30am,NZD,orange,RBNZ Gov Orr Speaks
+Aug 15,6:10am,NZD,orange,RBNZ Gov Orr Speaks
+Aug 15,8:30am,AUD,red,Employment Change
+Aug 15,8:30am,AUD,red,Unemployment Rate
+Aug 15,9:00am,CNY,orange,Industrial Production y/y
+Aug 15,9:00am,CNY,orange,Retail Sales y/y
+Aug 15,1:00pm,GBP,red,GDP m/m
+Aug 15,1:00pm,GBP,orange,Prelim GDP q/q
+Aug 15,All Day,EUR,gray,French Bank Holiday
+Aug 15,All Day,EUR,gray,Italian Bank Holiday
+Aug 15,7:30pm,USD,red,Core Retail Sales m/m
+Aug 15,7:30pm,USD,red,Retail Sales m/m
+Aug 15,7:30pm,USD,red,Unemployment Claims
+Aug 15,7:30pm,USD,orange,Empire State Manufacturing Index
+Aug 15,7:30pm,USD,orange,Philly Fed Manufacturing Index
+Aug 16,6:30am,AUD,red,RBA Gov Bullock Speaks
+Aug 16,9:30am,NZD,orange,RBNZ Gov Orr Speaks
+Aug 16,1:00pm,GBP,red,Retail Sales m/m
+Aug 16,7:30pm,USD,orange,Building Permits
+Aug 16,9:00pm,USD,orange,Prelim UoM Consumer Sentiment
+Aug 16,9:00pm,USD,orange,Prelim UoM Inflation Expectations
+Aug 19,Tentative,GBP,orange,Monetary Policy Report Hearings
+Aug 20,8:15am,CNY,orange,1-y Loan Prime Rate
+Aug 20,8:15am,CNY,orange,5-y Loan Prime Rate
+Aug 20,8:30am,AUD,orange,Monetary Policy Meeting Minutes
+Aug 20,7:30pm,CAD,red,CPI m/m
+Aug 20,7:30pm,CAD,red,Median CPI y/y
+Aug 20,7:30pm,CAD,red,Trimmed CPI y/y
+Aug 20,7:30pm,CAD,orange,Common CPI y/y
+Aug 22,1:00am,USD,red,FOMC Meeting Minutes
+Aug 22,2:15pm,EUR,red,French Flash Manufacturing PMI
+Aug 22,2:15pm,EUR,red,French Flash Services PMI
+Aug 22,2:30pm,EUR,red,German Flash Manufacturing PMI
+Aug 22,2:30pm,EUR,red,German Flash Services PMI
+Aug 22,3:00pm,EUR,orange,Flash Manufacturing PMI
+Aug 22,3:00pm,EUR,orange,Flash Services PMI
+Aug 22,3:30pm,GBP,red,Flash Manufacturing PMI
+Aug 22,3:30pm,GBP,red,Flash Services PMI
+Aug 22,7:30pm,USD,red,Unemployment Claims
+Aug 22,8:45pm,USD,red,Flash Manufacturing PMI
+Aug 22,8:45pm,USD,red,Flash Services PMI
+Aug 22,9:00pm,USD,orange,Existing Home Sales
+Aug 23,5:45am,NZD,orange,Retail Sales q/q
+Aug 23,7:30pm,CAD,red,Core Retail Sales m/m
+Aug 23,7:30pm,CAD,red,Retail Sales m/m
+Aug 23,9:00pm,USD,orange,New Home Sales
+Aug 24,2:00am,GBP,red,BOE Gov Bailey Speaks
+Aug 26,All Day,GBP,gray,Bank Holiday
+Aug 26,3:00pm,EUR,orange,German ifo Business Climate
+Aug 26,7:30pm,USD,orange,Core Durable Goods Orders m/m
+Aug 26,7:30pm,USD,orange,Durable Goods Orders m/m
+Aug 27,8:00pm,USD,orange,S&P/CS Composite-20 HPI y/y
+Aug 27,9:00pm,USD,red,CB Consumer Confidence
+Aug 27,9:00pm,USD,orange,Richmond Manufacturing Index
+Aug 28,8:30am,AUD,red,CPI y/y
+Aug 29,1:29pm,EUR,red,German Prelim CPI m/m
+Aug 29,2:00pm,EUR,orange,Spanish Flash CPI y/y
+Aug 29,7:30pm,USD,red,Prelim GDP q/q
+Aug 29,7:30pm,USD,red,Unemployment Claims
+Aug 29,7:30pm,USD,orange,Prelim GDP Price Index q/q
+Aug 29,9:00pm,USD,orange,Pending Home Sales m/m
+Aug 30,6:30am,JPY,orange,Tokyo Core CPI y/y
+Aug 30,8:30am,AUD,orange,Retail Sales m/m
+Aug 30,8:30am,CNY,red,Manufacturing PMI
+Aug 30,8:30am,CNY,orange,Non-Manufacturing PMI
+Aug 30,4:00pm,EUR,red,Core CPI Flash Estimate y/y
+Aug 30,4:00pm,EUR,red,CPI Flash Estimate y/y
+Aug 30,7:30pm,CAD,red,GDP m/m
+Aug 30,7:30pm,USD,red,Core PCE Price Index m/m
+Aug 30,8:45pm,USD,orange,Chicago PMI
+Aug 30,9:00pm,USD,orange,Revised UoM Consumer Sentiment

@@ -1,0 +1,29 @@
+# Python
+*.pyc
+__pycache__/
+
+# Virtual Environment
+.venv/
+venv/
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+
+# Backup files
+*.bak
+*.swp
+
+# ignore dir
+forex_factory_calendar_news_scraper-main/
