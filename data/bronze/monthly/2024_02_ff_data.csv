@@ -1,0 +1,393 @@
+date,time,currency,impact,event,actual,forecast,previous
+Feb 1,2:00am,USD,red,Federal Funds Rate,5.50%,5.50%,5.50%
+Feb 1,2:00am,USD,red,FOMC Statement,N/A,N/A,N/A
+Feb 1,2:30am,USD,red,FOMC Press Conference,N/A,N/A,N/A
+Feb 1,7:30am,AUD,yellow,Building Approvals m/m,-9.5%,0.5%,0.3%
+Feb 1,7:30am,AUD,yellow,Import Prices q/q,1.1%,0.6%,0.8%
+Feb 1,7:30am,AUD,yellow,NAB Quarterly Business Confidence,-6,N/A,-1
+Feb 1,7:30am,JPY,yellow,Final Manufacturing PMI,48.0,48.0,48.0
+Feb 1,8:45am,CNY,orange,Caixin Manufacturing PMI,50.8,50.8,50.8
+Feb 1,10:35am,JPY,yellow,10-y Bond Auction,0.74|3.6,N/A,0.60|2.9
+Feb 1,12:30pm,AUD,yellow,Commodity Prices y/y,-10.4%,N/A,-11.2%
+Feb 1,3:00pm,EUR,orange,ECB President Lagarde Speaks,N/A,N/A,N/A
+Feb 1,3:15pm,EUR,yellow,Spanish Manufacturing PMI,49.2,47.9,46.2
+Feb 1,3:30pm,CHF,yellow,Manufacturing PMI,43.1,44.5,43.0
+Feb 1,3:45pm,EUR,yellow,Italian Manufacturing PMI,48.5,47.0,45.3
+Feb 1,3:50pm,EUR,yellow,French Final Manufacturing PMI,43.1,43.2,43.2
+Feb 1,3:55pm,EUR,yellow,German Final Manufacturing PMI,45.5,45.4,45.4
+Feb 1,4:00pm,EUR,yellow,Final Manufacturing PMI,46.6,46.6,46.6
+Feb 1,4:30pm,GBP,yellow,Final Manufacturing PMI,47.0,47.3,47.3
+Feb 1,4:45pm,EUR,yellow,Spanish 10-y Bond Auction,3.17|1.8,N/A,3.61|2.2
+Feb 1,5:00pm,EUR,orange,Core CPI Flash Estimate y/y,3.3%,3.2%,3.4%
+Feb 1,5:00pm,EUR,orange,CPI Flash Estimate y/y,2.8%,2.7%,2.9%
+Feb 1,5:00pm,EUR,yellow,Italian Prelim CPI m/m,0.3%,0.5%,0.2%
+Feb 1,5:00pm,EUR,yellow,Unemployment Rate,6.4%,6.4%,6.4%
+Feb 1,5:01pm,EUR,yellow,French 10-y Bond Auction,2.70|1.9,N/A,2.59|1.8
+Feb 1,7:00pm,GBP,red,BOE Monetary Policy Report,N/A,N/A,N/A
+Feb 1,7:00pm,GBP,red,Monetary Policy Summary,N/A,N/A,N/A
+Feb 1,7:00pm,GBP,red,MPC Official Bank Rate Votes,2-1-6,2-0-7,3-0-6
+Feb 1,7:00pm,GBP,red,Official Bank Rate,5.25%,5.25%,5.25%
+Feb 1,7:30pm,GBP,red,BOE Gov Bailey Speaks,N/A,N/A,N/A
+Feb 1,7:30pm,USD,yellow,Challenger Job Cuts y/y,-20.0%,N/A,-20.2%
+Feb 1,8:30pm,USD,red,Unemployment Claims,224K,213K,215K
+Feb 1,8:30pm,USD,yellow,Prelim Nonfarm Productivity q/q,3.2%,2.4%,5.2%
+Feb 1,8:30pm,USD,yellow,Prelim Unit Labor Costs q/q,0.5%,1.3%,-1.2%
+Feb 1,9:30pm,CAD,yellow,Manufacturing PMI,48.3,N/A,45.4
+Feb 1,9:45pm,USD,yellow,Final Manufacturing PMI,50.7,50.3,50.3
+Feb 1,10:00pm,USD,red,ISM Manufacturing PMI,49.1,47.2,47.4
+Feb 1,10:00pm,USD,orange,ISM Manufacturing Prices,52.9,46.0,45.2
+Feb 1,10:00pm,USD,yellow,Construction Spending m/m,0.9%,0.5%,0.9%
+Feb 1,All Day,USD,yellow,Wards Total Vehicle Sales,15.0M,15.7M,15.8M
+Feb 1,10:30pm,USD,yellow,Natural Gas Storage,-197B,-202B,-326B
+Feb 1,11:30pm,CAD,red,BOC Gov Macklem Speaks,N/A,N/A,N/A
+Feb 2,4:45am,NZD,yellow,Building Consents m/m,3.7%,N/A,-10.6%
+Feb 2,6:50am,JPY,yellow,Monetary Base y/y,4.8%,7.5%,7.8%
+Feb 2,7:30am,AUD,yellow,PPI q/q,0.9%,1.9%,1.8%
+Feb 2,2:45pm,EUR,yellow,French Gov Budget Balance,-173.3B,N/A,-198.0B
+Feb 2,2:45pm,EUR,yellow,French Industrial Production m/m,1.1%,0.2%,0.5%
+Feb 2,3:00pm,EUR,yellow,Spanish Unemployment Change,60.4K,-38.6K,-27.4K
+Feb 2,7:15pm,GBP,yellow,MPC Member Pill Speaks,N/A,N/A,N/A
+Feb 2,8:30pm,USD,red,Average Hourly Earnings m/m,0.6%,0.3%,0.4%
+Feb 2,8:30pm,USD,red,Non-Farm Employment Change,353K,187K,333K
+Feb 2,8:30pm,USD,red,Unemployment Rate,3.7%,3.8%,3.7%
+Feb 2,10:00pm,USD,red,Revised UoM Consumer Sentiment,79.0,78.9,78.8
+Feb 2,10:00pm,USD,yellow,Factory Orders m/m,0.2%,0.3%,2.6%
+Feb 2,10:00pm,USD,yellow,Revised UoM Inflation Expectations,2.9%,N/A,2.9%
+Feb 5,7:00am,AUD,yellow,MI Inflation Gauge m/m,0.3%,N/A,1.0%
+Feb 5,7:00am,NZD,yellow,ANZ Commodity Prices m/m,2.2%,N/A,2.4%
+Feb 5,7:00am,USD,red,Fed Chair Powell Speaks,N/A,N/A,N/A
+Feb 5,7:30am,AUD,yellow,ANZ Job Advertisements m/m,1.7%,N/A,0.6%
+Feb 5,7:30am,AUD,yellow,Goods Trade Balance,10.96B,10.51B,11.76B
+Feb 5,8:45am,CNY,orange,Caixin Services PMI,52.7,53.0,52.9
+Feb 5,2:00pm,EUR,yellow,German Trade Balance,22.2B,19.0B,20.7B
+Feb 5,3:15pm,EUR,yellow,Spanish Services PMI,52.1,52.2,51.5
+Feb 5,3:45pm,EUR,yellow,Italian Services PMI,51.2,50.7,49.8
+Feb 5,3:50pm,EUR,yellow,French Final Services PMI,45.4,45.0,45.0
+Feb 5,3:55pm,EUR,yellow,German Final Services PMI,47.7,47.6,47.6
+Feb 5,4:00pm,EUR,yellow,Final Services PMI,48.4,48.4,48.4
+Feb 5,4:30pm,EUR,yellow,Sentix Investor Confidence,-12.9,-15.0,-15.8
+Feb 5,4:30pm,GBP,yellow,Final Services PMI,54.3,53.8,53.8
+Feb 5,5:00pm,EUR,yellow,PPI m/m,-0.8%,-0.8%,-0.3%
+Feb 5,9:45pm,USD,yellow,Final Services PMI,52.5,52.9,52.9
+Feb 5,10:00pm,USD,red,ISM Services PMI,53.4,52.0,50.6
+Feb 6,12:30am,GBP,yellow,MPC Member Pill Speaks,N/A,N/A,N/A
+Feb 6,2:00am,USD,yellow,FOMC Member Bostic Speaks,N/A,N/A,N/A
+Feb 6,2:00am,USD,yellow,Loan Officer Survey,N/A,N/A,N/A
+Feb 6,All Day,NZD,gray,Bank Holiday,N/A,N/A,N/A
+Feb 6,6:30am,JPY,yellow,Average Cash Earnings y/y,1.0%,1.3%,0.7%
+Feb 6,6:30am,JPY,yellow,Household Spending y/y,-2.5%,-2.0%,-2.9%
+Feb 6,7:01am,GBP,yellow,BRC Retail Sales Monitor y/y,1.4%,1.2%,1.9%
+Feb 6,10:30am,AUD,red,Cash Rate,4.35%,4.35%,4.35%
+Feb 6,10:30am,AUD,red,RBA Rate Statement,N/A,N/A,N/A
+Feb 6,10:30am,AUD,orange,RBA Monetary Policy Statement,N/A,N/A,N/A
+Feb 6,11:30am,AUD,red,RBA Press Conference,N/A,N/A,N/A
+Feb 6,2:00pm,EUR,yellow,German Factory Orders m/m,8.9%,-0.1%,0.0%
+Feb 6,4:30pm,GBP,orange,Construction PMI,48.8,47.2,46.8
+Feb 6,5:00pm,EUR,yellow,Retail Sales m/m,-1.1%,-0.9%,0.3%
+Feb 6,8:30pm,CAD,yellow,Building Permits m/m,-14.0%,1.8%,-5.0%
+Feb 6,10:00pm,CAD,orange,Ivey PMI,56.5,55.0,56.3
+Feb 6,10:06pm,USD,yellow,RCM/TIPP Economic Optimism,44.0,47.2,44.7
+Feb 6,10:19pm,NZD,yellow,GDT Price Index,4.2%,N/A,2.3%
+Feb 7,12:00am,USD,orange,FOMC Member Mester Speaks,N/A,N/A,N/A
+Feb 7,12:45am,CAD,red,BOC Gov Macklem Speaks,N/A,N/A,N/A
+Feb 7,4:45am,NZD,red,Employment Change q/q,0.4%,0.3%,-0.1%
+Feb 7,4:45am,NZD,red,Unemployment Rate,4.0%,4.3%,3.9%
+Feb 7,4:45am,NZD,yellow,Labor Cost Index q/q,1.0%,0.8%,0.8%
+Feb 7,10:35am,JPY,yellow,30-y Bond Auction,1.79|3.2,N/A,1.63|3.0
+Feb 7,12:00pm,JPY,yellow,Leading Indicators,110.0%,109.4%,108.1%
+Feb 7,1:45pm,CHF,yellow,Unemployment Rate,2.2%,2.2%,2.2%
+Feb 7,2:00pm,EUR,yellow,German Industrial Production m/m,-1.6%,-0.4%,-0.2%
+Feb 7,2:00pm,GBP,yellow,Halifax HPI m/m,1.3%,0.8%,1.1%
+Feb 7,2:45pm,EUR,yellow,French Prelim Private Payrolls q/q,0.0%,-0.1%,0.1%
+Feb 7,2:45pm,EUR,yellow,French Trade Balance,-6.8B,-6.0B,-5.9B
+Feb 7,3:00pm,CHF,orange,Foreign Currency Reserves,662B,N/A,654B
+Feb 7,3:40pm,GBP,yellow,MPC Member Breeden Speaks,N/A,N/A,N/A
+Feb 7,4:00pm,EUR,yellow,Italian Retail Sales m/m,-0.1%,0.2%,0.3%
+Feb 7,8:30pm,CAD,yellow,Trade Balance,-0.3B,1.1B,1.1B
+Feb 7,8:30pm,USD,yellow,Trade Balance,-62.2B,-62.0B,-61.9B
+Feb 7,10:30pm,USD,yellow,Crude Oil Inventories,5.5M,1.7M,1.2M
+Feb 7,11:00pm,USD,orange,FOMC Member Kugler Speaks,N/A,N/A,N/A
+Feb 8,12:30am,USD,orange,FOMC Member Barkin Speaks,N/A,N/A,N/A
+Feb 8,1:01am,USD,orange,10-y Bond Auction,4.09|2.6,N/A,4.02|2.6
+Feb 8,1:30am,CAD,yellow,BOC Summary of Deliberations,N/A,N/A,N/A
+Feb 8,2:00am,USD,yellow,FOMC Member Bowman Speaks,N/A,N/A,N/A
+Feb 8,3:00am,USD,yellow,Consumer Credit m/m,1.6B,14.9B,23.5B
+Feb 8,6:50am,JPY,yellow,Bank Lending y/y,3.1%,3.2%,3.0%
+Feb 8,6:50am,JPY,yellow,Current Account,1.81T,1.93T,1.89T
+Feb 8,7:01am,GBP,yellow,RICS House Price Balance,-18%,-22%,-29%
+Feb 8,8:30am,CNY,orange,CPI y/y,-0.8%,-0.5%,-0.3%
+Feb 8,8:30am,CNY,orange,PPI y/y,-2.5%,-2.6%,-2.7%
+Feb 8,12:00pm,JPY,yellow,Economy Watchers Sentiment,50.2,50.3,50.7
+Feb 8,4:00pm,EUR,yellow,ECB Economic Bulletin,N/A,N/A,N/A
+Feb 8,8:30pm,USD,red,Unemployment Claims,218K,221K,227K
+Feb 8,8:30pm,USD,orange,FOMC Member Barkin Speaks,N/A,N/A,N/A
+Feb 8,10:00pm,GBP,yellow,MPC Member Mann Speaks,N/A,N/A,N/A
+Feb 8,10:00pm,USD,yellow,Final Wholesale Inventories m/m,0.4%,0.4%,0.4%
+Feb 8,10:00pm,USD,yellow,Mortgage Delinquencies,3.88%,N/A,3.62%
+Feb 8,10:30pm,USD,yellow,Natural Gas Storage,-75B,-73B,-197B
+Feb 9,12:05am,USD,orange,FOMC Member Barkin Speaks,N/A,N/A,N/A
+Feb 9,1:01am,USD,orange,30-y Bond Auction,4.36|2.4,N/A,4.23|2.4
+Feb 9,5:30am,AUD,red,RBA Gov Bullock Speaks,N/A,N/A,N/A
+Feb 9,6:50am,JPY,yellow,M2 Money Stock y/y,2.4%,2.2%,2.3%
+Feb 9,2:00pm,CNY,orange,New Loans,4920B,3490B,1170B
+Feb 9,2:00pm,CNY,yellow,M2 Money Supply y/y,8.7%,9.4%,9.7%
+Feb 9,2:00pm,EUR,yellow,German Final CPI m/m,0.2%,0.2%,0.2%
+Feb 9,4:00pm,EUR,yellow,Italian Industrial Production m/m,1.1%,0.8%,-1.3%
+Feb 9,5:30pm,EUR,yellow,German Buba President Nagel Speaks,N/A,N/A,N/A
+Feb 9,8:30pm,CAD,red,Employment Change,37.3K,16.0K,0.1K
+Feb 9,8:30pm,CAD,red,Unemployment Rate,5.7%,5.9%,5.8%
+Feb 12,All Day,JPY,gray,Bank Holiday,N/A,N/A,N/A
+Feb 12,7:30am,NZD,orange,RBNZ Gov Orr Speaks,N/A,N/A,N/A
+Feb 12,All Day,CNY,gray,Bank Holiday,N/A,N/A,N/A
+Feb 12,9:20pm,USD,yellow,FOMC Member Bowman Speaks,N/A,N/A,N/A
+Feb 12,9:45pm,USD,yellow,Cleveland Fed Inflation Expectations,3.4%,N/A,4.2%
+Feb 13,12:00am,USD,orange,FOMC Member Barkin Speaks,N/A,N/A,N/A
+Feb 13,1:00am,GBP,red,BOE Gov Bailey Speaks,N/A,N/A,N/A
+Feb 13,2:00am,USD,yellow,Federal Budget Balance,-21.9B,-39.3B,-129.4B
+Feb 13,6:30am,AUD,yellow,Westpac Consumer Sentiment,6.2%,N/A,-1.3%
+Feb 13,6:50am,JPY,yellow,PPI y/y,0.2%,0.1%,0.2%
+Feb 13,7:30am,AUD,yellow,NAB Business Confidence,1,N/A,0
+Feb 13,All Day,CNY,gray,Bank Holiday,N/A,N/A,N/A
+Feb 13,9:20am,NZD,red,Inflation Expectations q/q,2.50%,N/A,2.76%
+Feb 13,12:58pm,JPY,yellow,Prelim Machine Tool Orders y/y,-14.1%,N/A,-9.6%
+Feb 13,2:00pm,GBP,red,Claimant Count Change,14.1K,15.2K,5.5K
+Feb 13,2:00pm,GBP,orange,Average Earnings Index 3m/y,5.8%,5.6%,6.7%
+Feb 13,2:00pm,GBP,yellow,Unemployment Rate,3.8%,4.0%,4.2%
+Feb 13,2:30pm,CHF,red,CPI m/m,0.2%,0.6%,0.0%
+Feb 13,5:00pm,EUR,yellow,ZEW Economic Sentiment,25.0,20.1,22.7
+Feb 13,5:00pm,EUR,yellow,German ZEW Economic Sentiment,19.9,17.4,15.2
+Feb 13,6:00pm,USD,yellow,NFIB Small Business Index,89.9,92.3,91.9
+Feb 13,8:30pm,USD,red,Core CPI m/m,0.4%,0.3%,0.3%
+Feb 13,8:30pm,USD,red,CPI m/m,0.3%,0.2%,0.3%
+Feb 13,8:30pm,USD,red,CPI y/y,3.1%,2.9%,3.4%
+Feb 14,4:45am,NZD,yellow,FPI m/m,0.9%,N/A,-0.1%
+Feb 14,All Day,CNY,gray,Bank Holiday,N/A,N/A,N/A
+Feb 14,2:00pm,GBP,red,CPI y/y,4.0%,4.1%,4.0%
+Feb 14,2:00pm,GBP,yellow,Core CPI y/y,5.1%,5.2%,5.1%
+Feb 14,2:00pm,GBP,yellow,PPI Input m/m,-0.8%,0.1%,-0.4%
+Feb 14,2:00pm,GBP,yellow,PPI Output m/m,-0.2%,-0.2%,-0.5%
+Feb 14,2:00pm,GBP,yellow,RPI y/y,4.9%,5.1%,5.2%
+Feb 14,4:30pm,GBP,yellow,HPI y/y,-1.4%,-1.8%,-2.3%
+Feb 14,5:00pm,EUR,yellow,Flash Employment Change q/q,0.3%,0.3%,0.2%
+Feb 14,5:00pm,EUR,yellow,Flash GDP q/q,0.0%,0.0%,0.0%
+Feb 14,5:00pm,EUR,yellow,Industrial Production m/m,2.6%,-0.2%,0.4%
+Feb 14,5:33pm,EUR,yellow,German 30-y Bond Auction,2.53|2.8,N/A,2.45|2.5
+Feb 14,6:33pm,GBP,yellow,10-y Bond Auction,4.13|3.1,N/A,3.97|3.1
+Feb 14,9:30pm,GBP,yellow,CB Leading Index m/m,-0.1%,N/A,-0.3%
+Feb 14,10:00pm,GBP,red,BOE Gov Bailey Speaks,N/A,N/A,N/A
+Feb 14,10:30pm,USD,yellow,Crude Oil Inventories,12.0M,3.3M,5.5M
+Feb 15,12:00am,EUR,yellow,German Buba President Nagel Speaks,N/A,N/A,N/A
+Feb 15,2:30am,CAD,yellow,Gov Council Member Mendes Speaks,N/A,N/A,N/A
+Feb 15,4:00am,USD,yellow,FOMC Member Barr Speaks,N/A,N/A,N/A
+Feb 15,4:45am,NZD,yellow,Visitor Arrivals m/m,-2.2%,N/A,-1.6%
+Feb 15,5:00am,AUD,red,RBA Gov Bullock Speaks,N/A,N/A,N/A
+Feb 15,6:50am,JPY,yellow,Prelim GDP Price Index y/y,3.8%,4.0%,5.3%
+Feb 15,6:50am,JPY,yellow,Prelim GDP q/q,-0.1%,0.2%,-0.7%
+Feb 15,7:00am,AUD,yellow,MI Inflation Expectations,4.5%,N/A,4.5%
+Feb 15,7:30am,AUD,red,Employment Change,0.5K,26.4K,-62.7K
+Feb 15,7:30am,AUD,red,Unemployment Rate,4.1%,4.0%,3.9%
+Feb 15,All Day,CNY,gray,Bank Holiday,N/A,N/A,N/A
+Feb 15,11:30am,JPY,yellow,Revised Industrial Production m/m,1.4%,1.8%,1.8%
+Feb 15,2:00pm,GBP,red,GDP m/m,-0.1%,-0.2%,0.2%
+Feb 15,2:00pm,GBP,orange,Prelim GDP q/q,-0.3%,-0.1%,-0.1%
+Feb 15,2:00pm,GBP,yellow,Construction Output m/m,-0.5%,-0.1%,-0.7%
+Feb 15,2:00pm,GBP,yellow,Goods Trade Balance,-14.0B,-15.0B,-15.1B
+Feb 15,2:00pm,GBP,yellow,Index of Services 3m/3m,-0.2%,0.1%,-0.2%
+Feb 15,2:00pm,GBP,yellow,Industrial Production m/m,0.6%,-0.1%,0.5%
+Feb 15,2:00pm,GBP,yellow,Manufacturing Production m/m,0.8%,-0.1%,0.8%
+Feb 15,2:00pm,GBP,yellow,Prelim Business Investment q/q,1.5%,-0.1%,-3.2%
+Feb 15,2:30pm,CHF,yellow,PPI m/m,-0.5%,-0.2%,-0.6%
+Feb 15,3:00pm,CHF,yellow,SECO Consumer Climate,-41,-33,-40
+Feb 15,3:00pm,EUR,orange,ECB President Lagarde Speaks,N/A,N/A,N/A
+Feb 15,4:00pm,EUR,yellow,Italian Trade Balance,5.61B,3.65B,3.88B
+Feb 15,4:46pm,EUR,yellow,Spanish 10-y Bond Auction,3.14|1.9,N/A,3.17|1.8
+Feb 15,5:00pm,EUR,yellow,EU Economic Forecasts,N/A,N/A,N/A
+Feb 15,5:00pm,EUR,yellow,Trade Balance,13.0B,15.7B,15.1B
+Feb 15,7:22pm,GBP,yellow,NIESR GDP Estimate,-0.1%,N/A,-0.3%
+Feb 15,8:00pm,GBP,yellow,MPC Member Greene Speaks,N/A,N/A,N/A
+Feb 15,8:15pm,CAD,yellow,Housing Starts,224K,236K,249K
+Feb 15,8:30pm,CAD,yellow,Manufacturing Sales m/m,-0.7%,-0.5%,1.5%
+Feb 15,8:30pm,USD,red,Core Retail Sales m/m,-0.6%,0.2%,0.4%
+Feb 15,8:30pm,USD,red,Empire State Manufacturing Index,-2.4,-13.7,-43.7
+Feb 15,8:30pm,USD,red,Retail Sales m/m,-0.8%,-0.2%,0.4%
+Feb 15,8:30pm,USD,red,Unemployment Claims,212K,219K,220K
+Feb 15,8:30pm,USD,orange,Philly Fed Manufacturing Index,5.2,-8.0,-10.6
+Feb 15,8:30pm,USD,yellow,Import Prices m/m,0.8%,0.0%,-0.7%
+Feb 15,8:50pm,GBP,yellow,MPC Member Mann Speaks,N/A,N/A,N/A
+Feb 15,9:15pm,USD,orange,Industrial Production m/m,-0.1%,0.2%,0.0%
+Feb 15,9:15pm,USD,yellow,Capacity Utilization Rate,78.5%,78.8%,78.7%
+Feb 15,10:00pm,USD,yellow,Business Inventories m/m,0.4%,0.4%,-0.1%
+Feb 15,10:00pm,USD,yellow,NAHB Housing Market Index,48,46,44
+Feb 15,10:30pm,AUD,yellow,CB Leading Index m/m,0.3%,N/A,0.0%
+Feb 15,10:30pm,USD,yellow,Natural Gas Storage,-49B,-67B,-75B
+Feb 16,1:00am,EUR,yellow,German Buba President Nagel Speaks,N/A,N/A,N/A
+Feb 16,1:15am,USD,orange,FOMC Member Waller Speaks,N/A,N/A,N/A
+Feb 16,1:40am,NZD,orange,RBNZ Gov Orr Speaks,N/A,N/A,N/A
+Feb 16,4:00am,USD,yellow,TIC Long-Term Purchases,160.2B,42.6B,99.7B
+Feb 16,4:30am,NZD,yellow,BusinessNZ Manufacturing Index,47.3,N/A,43.4
+Feb 16,7:00am,USD,yellow,FOMC Member Bostic Speaks,N/A,N/A,N/A
+Feb 16,All Day,CNY,gray,Bank Holiday,N/A,N/A,N/A
+Feb 16,11:30am,JPY,yellow,Tertiary Industry Activity m/m,0.7%,0.2%,-1.4%
+Feb 16,2:00pm,EUR,yellow,German WPI m/m,0.1%,-0.4%,-0.6%
+Feb 16,2:00pm,GBP,red,Retail Sales m/m,3.4%,1.5%,-3.3%
+Feb 16,2:45pm,EUR,yellow,French Final CPI m/m,-0.2%,-0.2%,-0.2%
+Feb 16,8:30pm,CAD,yellow,Foreign Securities Purchases,10.44B,-6.45B,11.31B
+Feb 16,8:30pm,CAD,yellow,Wholesale Sales m/m,0.3%,0.7%,0.9%
+Feb 16,8:30pm,USD,red,Core PPI m/m,0.5%,0.1%,-0.1%
+Feb 16,8:30pm,USD,red,PPI m/m,0.3%,0.1%,-0.1%
+Feb 16,8:30pm,USD,orange,Building Permits,1.47M,1.51M,1.49M
+Feb 16,8:30pm,USD,yellow,Housing Starts,1.33M,1.45M,1.56M
+Feb 16,9:10pm,USD,yellow,FOMC Member Barr Speaks,N/A,N/A,N/A
+Feb 16,10:00pm,USD,red,Prelim UoM Consumer Sentiment,79.6,80.0,79.0
+Feb 16,10:00pm,USD,orange,Prelim UoM Inflation Expectations,3.0%,N/A,2.9%
+Feb 17,12:45am,USD,yellow,FOMC Member Daly Speaks,N/A,N/A,N/A
+Feb 17,2:40am,GBP,yellow,MPC Member Pill Speaks,N/A,N/A,N/A
+Feb 19,4:30am,NZD,yellow,BusinessNZ Services Index,52.1,N/A,48.8
+Feb 19,6:50am,JPY,yellow,Core Machinery Orders m/m,2.7%,2.7%,-4.9%
+Feb 19,7:01am,GBP,yellow,Rightmove HPI m/m,0.9%,N/A,1.3%
+Feb 19,6:00pm,EUR,yellow,German Buba Monthly Report,N/A,N/A,N/A
+Feb 19,All Day,CAD,gray,Bank Holiday,N/A,N/A,N/A
+Feb 19,All Day,USD,gray,Bank Holiday,N/A,N/A,N/A
+Feb 19,8:30pm,CAD,yellow,IPPI m/m,-0.1%,-0.1%,-1.6%
+Feb 19,8:30pm,CAD,yellow,RMPI m/m,1.2%,0.7%,-4.9%
+Feb 20,7:30am,AUD,red,Monetary Policy Meeting Minutes,N/A,N/A,N/A
+Feb 20,8:15am,CNY,orange,1-y Loan Prime Rate,3.45%,3.45%,3.45%
+Feb 20,8:15am,CNY,orange,5-y Loan Prime Rate,3.95%,4.10%,4.20%
+Feb 20,2:00pm,CHF,yellow,Trade Balance,4.74B,2.35B,1.27B
+Feb 20,4:00pm,EUR,yellow,Current Account,31.9B,20.3B,22.5B
+Feb 20,5:15pm,GBP,orange,Monetary Policy Report Hearings,N/A,N/A,N/A
+Feb 20,8:30pm,CAD,red,CPI m/m,0.0%,0.4%,-0.3%
+Feb 20,8:30pm,CAD,red,Median CPI y/y,3.3%,3.6%,3.5%
+Feb 20,8:30pm,CAD,red,Trimmed CPI y/y,3.4%,3.6%,3.7%
+Feb 20,8:30pm,CAD,orange,Common CPI y/y,3.4%,3.8%,3.9%
+Feb 20,8:30pm,CAD,yellow,Core CPI m/m,0.1%,N/A,-0.5%
+Feb 20,9:36pm,NZD,yellow,GDT Price Index,0.5%,N/A,4.2%
+Feb 20,10:00pm,USD,yellow,CB Leading Index m/m,-0.4%,-0.3%,-0.2%
+Feb 21,4:45am,NZD,yellow,PPI Input q/q,0.9%,0.5%,1.2%
+Feb 21,4:45am,NZD,yellow,PPI Output q/q,0.7%,0.4%,0.8%
+Feb 21,6:30am,AUD,yellow,MI Leading Index m/m,-0.1%,N/A,0.0%
+Feb 21,6:50am,JPY,yellow,Trade Balance,0.24T,-0.23T,-0.44T
+Feb 21,7:30am,AUD,red,Wage Price Index q/q,0.9%,0.9%,1.3%
+Feb 21,2:00pm,GBP,yellow,Public Sector Net Borrowing,-17.6B,-18.4B,6.5B
+Feb 21,5:35pm,EUR,yellow,German 10-y Bond Auction,2.38|2.1,N/A,2.23|1.8
+Feb 21,6:00pm,GBP,yellow,CBI Industrial Order Expectations,-20,-27,-30
+Feb 21,8:00pm,USD,yellow,FOMC Member Bostic Speaks,N/A,N/A,N/A
+Feb 21,8:30pm,CAD,yellow,NHPI m/m,-0.1%,0.1%,0.0%
+Feb 21,9:00pm,GBP,yellow,MPC Member Dhingra Speaks,N/A,N/A,N/A
+Feb 21,9:10pm,USD,orange,FOMC Member Barkin Speaks,N/A,N/A,N/A
+Feb 21,10:00pm,EUR,yellow,Consumer Confidence,-16,-16,-16
+Feb 22,1:00am,USD,yellow,FOMC Member Bowman Speaks,N/A,N/A,N/A
+Feb 22,2:00am,USD,red,FOMC Meeting Minutes,N/A,N/A,N/A
+Feb 22,4:45am,NZD,yellow,Trade Balance,-976M,-200M,-368M
+Feb 22,5:00am,AUD,yellow,Flash Manufacturing PMI,47.7,N/A,50.1
+Feb 22,5:00am,AUD,yellow,Flash Services PMI,52.8,N/A,49.1
+Feb 22,7:30am,JPY,yellow,Flash Manufacturing PMI,47.2,48.2,48.0
+Feb 22,9:05am,NZD,yellow,Credit Card Spending y/y,-0.3%,N/A,4.3%
+Feb 22,1:30pm,GBP,yellow,MPC Member Greene Speaks,N/A,N/A,N/A
+Feb 22,3:15pm,EUR,red,French Flash Manufacturing PMI,46.8,43.5,43.1
+Feb 22,3:15pm,EUR,red,French Flash Services PMI,48.0,45.7,45.4
+Feb 22,3:30pm,EUR,red,German Flash Manufacturing PMI,42.3,46.1,45.5
+Feb 22,3:30pm,EUR,red,German Flash Services PMI,48.2,48.0,47.7
+Feb 22,4:00pm,EUR,orange,Flash Manufacturing PMI,46.1,47.0,46.6
+Feb 22,4:00pm,EUR,orange,Flash Services PMI,50.0,48.8,48.4
+Feb 22,4:30pm,GBP,red,Flash Manufacturing PMI,47.1,47.5,47.0
+Feb 22,4:30pm,GBP,red,Flash Services PMI,54.3,54.2,54.3
+Feb 22,5:00pm,EUR,yellow,Final Core CPI y/y,3.3%,3.3%,3.3%
+Feb 22,5:00pm,EUR,yellow,Final CPI y/y,2.8%,2.8%,2.8%
+Feb 22,Day 1,EUR,yellow,ECOFIN Meetings,N/A,N/A,N/A
+Feb 22,7:30pm,EUR,yellow,ECB Monetary Policy Meeting Accounts,N/A,N/A,N/A
+Feb 22,8:30pm,CAD,orange,Core Retail Sales m/m,0.6%,0.7%,-0.4%
+Feb 22,8:30pm,CAD,orange,Retail Sales m/m,0.9%,0.8%,0.0%
+Feb 22,8:30pm,USD,red,Unemployment Claims,201K,217K,213K
+Feb 22,9:00pm,CNY,yellow,CB Leading Index m/m,-0.1%,N/A,-0.3%
+Feb 22,9:45pm,USD,red,Flash Manufacturing PMI,51.5,50.5,50.7
+Feb 22,9:45pm,USD,red,Flash Services PMI,51.3,52.4,52.5
+Feb 22,10:00pm,USD,orange,Existing Home Sales,4.00M,3.96M,3.88M
+Feb 22,10:00pm,USD,yellow,FOMC Member Jefferson Speaks,N/A,N/A,N/A
+Feb 22,10:30pm,USD,yellow,Natural Gas Storage,-60B,-59B,-49B
+Feb 22,11:00pm,USD,yellow,Crude Oil Inventories,3.5M,3.9M,12.0M
+Feb 23,4:45am,NZD,orange,Retail Sales q/q,-1.9%,-0.2%,-0.8%
+Feb 23,4:45am,NZD,yellow,Core Retail Sales q/q,-1.7%,-0.1%,0.4%
+Feb 23,5:00am,USD,yellow,FOMC Member Cook Speaks,N/A,N/A,N/A
+Feb 23,All Day,JPY,gray,Bank Holiday,N/A,N/A,N/A
+Feb 23,7:01am,GBP,yellow,GfK Consumer Confidence,-21,-18,-19
+Feb 23,7:35am,USD,orange,FOMC Member Waller Speaks,N/A,N/A,N/A
+Feb 23,8:30am,CNY,yellow,New Home Prices m/m,-0.37%,N/A,-0.45%
+Feb 23,2:00pm,EUR,yellow,German Final GDP q/q,-0.3%,-0.3%,-0.3%
+Feb 23,3:00pm,GBP,yellow,MPC Member Greene Speaks,N/A,N/A,N/A
+Feb 23,3:30pm,CHF,yellow,Gov Board Member Schlegel Speaks,N/A,N/A,N/A
+Feb 23,3:33pm,CNY,yellow,Foreign Direct Investment ytd/y,-11.7%,N/A,-8.0%
+Feb 23,4:00pm,EUR,orange,German ifo Business Climate,85.5,85.5,85.2
+Feb 23,5:00pm,EUR,yellow,German Buba President Nagel Speaks,N/A,N/A,N/A
+Feb 23,Day 2,EUR,yellow,ECOFIN Meetings,N/A,N/A,N/A
+Feb 23,All Day,EUR,yellow,Eurogroup Meetings,N/A,N/A,N/A
+Feb 23,8:30pm,CAD,yellow,Corporate Profits q/q,2.7%,N/A,4.7%
+Feb 23,8:56pm,EUR,yellow,Belgian NBB Business Climate,-12.8,-16.0,-16.4
+Feb 24,Day 3,EUR,yellow,ECOFIN Meetings,N/A,N/A,N/A
+Feb 26,6:50am,JPY,yellow,SPPI y/y,2.1%,2.4%,2.4%
+Feb 26,4:00pm,GBP,yellow,MPC Member Breeden Speaks,N/A,N/A,N/A
+Feb 26,6:00pm,GBP,yellow,CBI Realized Sales,-7,-33,-50
+Feb 26,6:00pm,GBP,yellow,MPC Member Pill Speaks,N/A,N/A,N/A
+Feb 26,10:00pm,USD,orange,New Home Sales,661K,680K,651K
+Feb 26,11:00pm,EUR,orange,ECB President Lagarde Speaks,N/A,N/A,N/A
+Feb 27,6:30am,JPY,yellow,National Core CPI y/y,2.0%,1.9%,2.3%
+Feb 27,7:01am,GBP,yellow,BRC Shop Price Index y/y,2.5%,N/A,2.9%
+Feb 27,2:00pm,EUR,yellow,German GfK Consumer Climate,-29.0,-29.0,-29.6
+Feb 27,4:00pm,EUR,yellow,M3 Money Supply y/y,0.1%,0.3%,0.2%
+Feb 27,4:00pm,EUR,yellow,Private Loans y/y,0.3%,0.4%,0.4%
+Feb 27,8:30pm,USD,red,Durable Goods Orders m/m,-6.1%,-4.9%,-0.3%
+Feb 27,8:30pm,USD,orange,Core Durable Goods Orders m/m,-0.3%,0.2%,0.5%
+Feb 27,8:40pm,GBP,yellow,MPC Member Ramsden Speaks,N/A,N/A,N/A
+Feb 27,9:00pm,USD,orange,S&P/CS Composite-20 HPI y/y,6.1%,6.0%,5.4%
+Feb 27,9:00pm,USD,yellow,HPI m/m,0.1%,0.3%,0.4%
+Feb 27,9:05pm,USD,yellow,FOMC Member Barr Speaks,N/A,N/A,N/A
+Feb 27,9:59pm,USD,orange,Richmond Manufacturing Index,-5,-4,-15
+Feb 27,10:00pm,USD,red,CB Consumer Confidence,106.7,114.8,110.9
+Feb 28,7:30am,AUD,red,CPI y/y,3.4%,3.6%,3.4%
+Feb 28,7:30am,AUD,yellow,Construction Work Done q/q,0.7%,0.6%,1.4%
+Feb 28,8:00am,NZD,red,Official Cash Rate,5.50%,5.50%,5.50%
+Feb 28,8:00am,NZD,red,RBNZ Monetary Policy Statement,N/A,N/A,N/A
+Feb 28,8:00am,NZD,red,RBNZ Rate Statement,N/A,N/A,N/A
+Feb 28,9:00am,NZD,orange,RBNZ Press Conference,N/A,N/A,N/A
+Feb 28,4:00pm,CHF,yellow,UBS Economic Expectations,10.2,N/A,-19.5
+Feb 28,5:19pm,EUR,yellow,Italian 10-y Bond Auction,3.91|1.4,N/A,3.69|1.7
+Feb 28,8:30pm,CAD,yellow,Current Account,-1.6B,-1.9B,-4.7B
+Feb 28,8:30pm,USD,red,Prelim GDP q/q,3.2%,3.3%,3.3%
+Feb 28,8:30pm,USD,orange,Prelim GDP Price Index q/q,1.6%,1.5%,1.5%
+Feb 28,8:30pm,USD,yellow,Goods Trade Balance,-90.2B,-88.4B,-87.9B
+Feb 28,8:30pm,USD,yellow,Prelim Wholesale Inventories m/m,-0.1%,0.1%,0.4%
+Feb 28,10:30pm,GBP,yellow,MPC Member Mann Speaks,N/A,N/A,N/A
+Feb 28,10:30pm,USD,yellow,Crude Oil Inventories,4.2M,3.1M,3.5M
+Feb 29,12:00am,USD,yellow,FOMC Member Bostic Speaks,N/A,N/A,N/A
+Feb 29,12:45am,USD,yellow,FOMC Member Williams Speaks,N/A,N/A,N/A
+Feb 29,2:10am,NZD,orange,RBNZ Gov Orr Speaks,N/A,N/A,N/A
+Feb 29,6:50am,JPY,yellow,Prelim Industrial Production m/m,-7.5%,-6.7%,1.4%
+Feb 29,6:50am,JPY,yellow,Retail Sales y/y,2.3%,2.0%,2.3%
+Feb 29,7:00am,NZD,yellow,ANZ Business Confidence,34.7,N/A,36.6
+Feb 29,7:30am,AUD,orange,Retail Sales m/m,1.1%,1.6%,-2.1%
+Feb 29,7:30am,AUD,yellow,Private Capital Expenditure q/q,0.8%,0.4%,0.3%
+Feb 29,7:30am,AUD,yellow,Private Sector Credit m/m,0.4%,0.4%,0.4%
+Feb 29,12:00pm,JPY,yellow,Housing Starts y/y,-7.5%,-7.6%,-4.0%
+Feb 29,12:02pm,JPY,yellow,BOJ Core CPI y/y,2.6%,2.3%,2.6%
+Feb 29,1:30pm,EUR,yellow,French Final Private Payrolls q/q,-0.1%,0.0%,0.0%
+Feb 29,2:00pm,EUR,yellow,German Retail Sales m/m,-0.4%,0.5%,-0.5%
+Feb 29,All Day,EUR,red,German Prelim CPI m/m,0.4%,0.5%,0.2%
+Feb 29,2:45pm,EUR,yellow,French Consumer Spending m/m,-0.3%,-0.1%,0.3%
+Feb 29,2:45pm,EUR,yellow,French Prelim CPI m/m,0.8%,0.7%,-0.2%
+Feb 29,2:45pm,EUR,yellow,French Prelim GDP q/q,0.1%,0.0%,0.0%
+Feb 29,3:00pm,CHF,orange,GDP q/q,0.3%,0.1%,0.3%
+Feb 29,3:00pm,CHF,yellow,KOF Economic Barometer,101.6,101.6,102.5
+Feb 29,3:00pm,EUR,orange,Spanish Flash CPI y/y,2.8%,2.8%,3.4%
+Feb 29,3:55pm,EUR,yellow,German Unemployment Change,11K,6K,1K
+Feb 29,4:30pm,GBP,yellow,M4 Money Supply m/m,-0.1%,0.3%,0.5%
+Feb 29,4:30pm,GBP,yellow,Mortgage Approvals,55K,52K,52K
+Feb 29,4:30pm,GBP,yellow,Net Lending to Individuals m/m,0.8B,1.9B,0.4B
+Feb 29,8:30pm,CAD,red,GDP m/m,0.0%,0.2%,0.2%
+Feb 29,8:30pm,USD,red,Core PCE Price Index m/m,0.4%,0.4%,0.1%
+Feb 29,8:30pm,USD,red,Unemployment Claims,215K,209K,202K
+Feb 29,8:30pm,USD,yellow,Personal Income m/m,1.0%,0.4%,0.3%
+Feb 29,8:30pm,USD,yellow,Personal Spending m/m,0.2%,0.2%,0.7%
+Feb 29,9:45pm,USD,orange,Chicago PMI,44.0,48.1,46.0
+Feb 29,10:00pm,USD,orange,Pending Home Sales m/m,-4.9%,1.4%,5.7%
+Feb 29,10:30pm,USD,yellow,Natural Gas Storage,-96B,-86B,-60B
+Feb 29,10:50pm,USD,yellow,FOMC Member Bostic Speaks,N/A,N/A,N/A
