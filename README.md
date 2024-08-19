@@ -13,45 +13,44 @@ This project focuses on two key goals:
 
 ### Project Phases for Task 1: ETL (Extract, Transform, Load)
 
-Based on the current structure of your project and the tasks you want to accomplish, here’s how you can break down the ETL process into phases. I'll also clarify which phase you're currently in and suggest the next steps.
+This project is structured to efficiently manage the ETL process, converting raw financial calendar data into a structured format suitable for analysis and reporting. The ETL process is broken down into several key phases:
 
 #### **Phase 1: Data Ingestion (Extract)**
-- **Objective:** Collect raw data from the source (e.g., Forex Factory).
-- **Current Status:** You've likely completed this phase since you have multiple CSV files stored in the `bronze/monthly` folder. These represent the raw, unprocessed data.
+- **Objective:** Collect raw data from the source, such as Forex Factory, and store it in the raw data layer (`bronze` layer).
+- **Current Status:** The project currently contains raw data files in the `data/bronze/monthly` folder, indicating that data ingestion has been successfully implemented.
 - **Next Steps:**
-  - Refactor the code used for extraction into a script under `scripts/extract`.
-  - Ensure that the extraction process is automated to fetch new data regularly (e.g., monthly, weekly).
+  - Refactor the extraction logic into a dedicated script under `scripts/extract`.
+  - Automate the extraction process to fetch new data at regular intervals (e.g., monthly or weekly).
 
 #### **Phase 2: Data Transformation**
-- **Objective:** Clean, filter, and transform the raw data into a structured format.
-- **Current Status:** Based on the description, you're currently in this phase, working within a single notebook that handles the entire ETL process.
+- **Objective:** Clean, filter, and transform the raw data to prepare it for analysis. This includes filtering for relevant currencies, handling missing values, and formatting dates.
+- **Current Status:** Transformation logic is currently implemented within a single notebook. This phase is in progress.
 - **Next Steps:**
-  - **Modularize the Code:** Break down the transformation code into smaller functions or scripts. These should be placed under `scripts/transform`.
-    - Example: Create separate functions/scripts for filtering data, handling missing values, and transforming dates/times.
-  - **Process Automation:** Ensure that each step in the transformation process can be executed automatically (without manual intervention).
-  - **Intermediate Data Storage:** After transformation, save the data into an intermediate stage, typically referred to as the `silver` layer. You already have this set up with folders like `silver/monthly` and `silver/weekly`.
+  - Modularize the transformation code by breaking it down into smaller, reusable functions or scripts. These scripts should be stored in the `scripts/transform` directory.
+  - Automate the transformation steps, ensuring they can be executed independently and efficiently.
+  - Store the transformed data in the intermediate `silver` layer, which is already set up with directories such as `silver/monthly` and `silver/weekly`.
 
 #### **Phase 3: Data Loading**
-- **Objective:** Load the transformed data into the final storage or analysis destination.
-- **Current Status:** It seems you may have started on this phase, given the `final_transformed_data.csv` in the `silver` directory.
+- **Objective:** Load the transformed data into the final storage or destination for analysis, visualization, or reporting.
+- **Current Status:** The project includes a `final_transformed_data.csv` file in the `silver` directory, indicating the beginning of this phase.
 - **Next Steps:**
-  - **Final Transformation:** Ensure the data is in its final format for analysis or reporting. This could involve aggregating monthly data or filtering for specific events.
-  - **Data Export:** Save the final datasets in the appropriate format (e.g., CSV, database) in the `silver` layer or directly into the `gold` layer if you intend to create one.
-  - **Scripts Organization:** Move the data loading logic into `scripts/load` to keep it modular and maintainable.
+  - Finalize the data transformation, ensuring the dataset is ready for analysis or integration into tools such as Google Sheets or a data warehouse.
+  - Save the final data products in the `silver` layer or prepare for a `gold` layer if necessary.
+  - Organize the data loading scripts within the `scripts/load` directory for better maintainability.
 
 #### **Phase 4: Validation and Testing**
-- **Objective:** Ensure that the ETL process is working correctly.
-- **Current Status:** This phase may not be fully addressed yet.
+- **Objective:** Validate the ETL pipeline to ensure it processes data accurately and reliably.
+- **Current Status:** The validation phase has not been fully implemented yet.
 - **Next Steps:**
-  - **Unit Testing:** Develop unit tests for each function, especially for transformations, to ensure they behave as expected. Place these tests in the `tests` directory.
-  - **Data Validation:** Implement checks to verify the accuracy and completeness of the data at each stage.
+  - Develop unit tests for each transformation function to verify correctness. Store these tests in the `tests` directory.
+  - Implement data validation checks at each stage of the ETL pipeline to ensure data quality.
 
-### Summary of the Current Phase and Next Steps
+### Summary of Current Phase and Next Steps
 
-**Current Phase:** You are primarily in **Phase 2 (Data Transformation)** but have elements of **Phase 1 (Data Ingestion)** and **Phase 3 (Data Loading)** in progress.
+**Current Phase:** The project is primarily in **Phase 2 (Data Transformation)**, with initial steps completed in **Phase 1 (Data Ingestion)** and **Phase 3 (Data Loading)**.
 
 **Next Steps:**
-1. **Refactor your Notebook into Modular Scripts:** Break down your existing notebook into separate scripts for extraction, transformation, and loading.
-2. **Organize Your Scripts:** Place each script in the relevant folder (`scripts/extract`, `scripts/transform`, `scripts/load`).
-3. **Automation:** Ensure that each step can be executed automatically, possibly through a main script or scheduler.
-4. **Testing:** Begin writing tests to validate each part of your ETL pipeline.
+1. **Refactor the existing notebook into modular scripts**, distributing them across `scripts/extract`, `scripts/transform`, and `scripts/load`.
+2. **Automate the ETL pipeline** to ensure each step is executable independently and seamlessly.
+3. **Enhance testing and validation** by implementing unit tests and data validation checks to ensure the pipeline's accuracy and robustness.
+
