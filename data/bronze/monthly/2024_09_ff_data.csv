@@ -1,0 +1,351 @@
+date,time,currency,impact,event,actual,forecast,previous
+Sep 2,6:50am,JPY,yellow,Capital Spending q/y,7.4%,9.6%,6.8%
+Sep 2,7:30am,JPY,yellow,Final Manufacturing PMI,49.8,49.5,49.5
+Sep 2,8:00am,AUD,yellow,MI Inflation Gauge m/m,-0.1%,N/A,0.4%
+Sep 2,8:30am,AUD,yellow,ANZ Job Advertisements m/m,-2.1%,N/A,-2.7%
+Sep 2,8:30am,AUD,yellow,Building Approvals m/m,10.4%,2.4%,-6.4%
+Sep 2,8:30am,AUD,yellow,Company Operating Profits q/q,-5.3%,-0.6%,-2.5%
+Sep 2,8:45am,CNY,yellow,Caixin Manufacturing PMI,50.4,50.0,49.8
+Sep 2,1:30pm,CHF,yellow,Retail Sales y/y,2.7%,-0.2%,-2.6%
+Sep 2,1:32pm,AUD,yellow,Commodity Prices y/y,-5.2%,N/A,-4.2%
+Sep 2,2:15pm,EUR,yellow,Spanish Manufacturing PMI,50.5,51.4,51.0
+Sep 2,2:30pm,CHF,yellow,Manufacturing PMI,49.0,43.7,43.5
+Sep 2,2:45pm,EUR,yellow,Italian Manufacturing PMI,49.4,48.0,47.4
+Sep 2,2:50pm,EUR,yellow,French Final Manufacturing PMI,43.9,42.1,42.1
+Sep 2,2:55pm,EUR,yellow,German Final Manufacturing PMI,42.4,42.1,42.1
+Sep 2,3:00pm,EUR,yellow,Final Manufacturing PMI,45.8,45.6,45.6
+Sep 2,3:30pm,GBP,yellow,Final Manufacturing PMI,52.5,52.5,52.5
+Sep 2,All Day,CAD,gray,Bank Holiday,N/A,N/A,N/A
+Sep 2,All Day,USD,gray,Bank Holiday,N/A,N/A,N/A
+Sep 3,5:45am,NZD,yellow,Overseas Trade Index q/q,2.1%,2.6%,5.1%
+Sep 3,6:01am,GBP,yellow,BRC Retail Sales Monitor y/y,0.8%,N/A,0.3%
+Sep 3,6:50am,JPY,yellow,Monetary Base y/y,0.6%,0.6%,1.0%
+Sep 3,8:30am,AUD,yellow,Current Account,-10.7B,-4.5B,-6.3B
+Sep 3,10:35am,JPY,yellow,10-y Bond Auction,0.92|3.2,N/A,0.93|3.0
+Sep 3,1:30pm,CHF,red,CPI m/m,0.0%,0.1%,-0.2%
+Sep 3,1:45pm,EUR,yellow,French Gov Budget Balance,-156.9B,N/A,-103.5B
+Sep 3,2:00pm,CHF,orange,GDP q/q,0.7%,0.5%,0.5%
+Sep 3,2:00pm,EUR,yellow,Spanish Unemployment Change,21.9K,34.3K,-10.8K
+Sep 3,8:30pm,CAD,yellow,Manufacturing PMI,49.5,N/A,47.8
+Sep 3,8:45pm,USD,yellow,Final Manufacturing PMI,47.9,48.1,48.0
+Sep 3,9:00pm,USD,red,ISM Manufacturing PMI,47.2,47.5,46.8
+Sep 3,9:00pm,USD,orange,ISM Manufacturing Prices,54.0,52.1,52.9
+Sep 3,9:00pm,USD,yellow,Construction Spending m/m,-0.3%,0.1%,0.0%
+Sep 3,9:07pm,USD,yellow,RCM/TIPP Economic Optimism,46.1,46.2,44.5
+Sep 3,10:54pm,NZD,yellow,GDT Price Index,-0.4%,N/A,5.5%
+Sep 3,11:45pm,EUR,yellow,German Buba President Nagel Speaks,N/A,N/A,N/A
+Sep 4,8:00am,NZD,yellow,ANZ Commodity Prices m/m,2.1%,N/A,-1.7%
+Sep 4,8:30am,AUD,red,GDP q/q,0.2%,0.2%,0.2%
+Sep 4,8:45am,CNY,yellow,Caixin Services PMI,51.6,51.9,52.1
+Sep 4,2:15pm,EUR,yellow,Spanish Services PMI,54.6,54.8,53.9
+Sep 4,2:45pm,EUR,yellow,Italian Services PMI,51.4,52.5,51.7
+Sep 4,2:50pm,EUR,yellow,French Final Services PMI,55.0,55.0,55.0
+Sep 4,2:55pm,EUR,yellow,German Final Services PMI,51.2,51.4,51.4
+Sep 4,3:00pm,EUR,yellow,Final Services PMI,52.9,53.3,53.3
+Sep 4,3:30pm,GBP,yellow,Final Services PMI,53.7,53.3,53.3
+Sep 4,4:00pm,EUR,yellow,PPI m/m,0.8%,0.3%,0.6%
+Sep 4,7:30pm,CAD,yellow,Trade Balance,N/A,0.7B,0.6B
+Sep 4,7:30pm,USD,yellow,Trade Balance,N/A,-78.8B,-73.1B
+Sep 4,8:45pm,CAD,red,BOC Rate Statement,N/A,N/A,N/A
+Sep 4,8:45pm,CAD,red,Overnight Rate,N/A,4.25%,4.50%
+Sep 4,9:00pm,USD,red,JOLTS Job Openings,N/A,8.09M,8.18M
+Sep 4,9:00pm,USD,yellow,Factory Orders m/m,N/A,4.7%,-3.3%
+Sep 4,All Day,USD,yellow,Wards Total Vehicle Sales,N/A,15.4M,15.8M
+Sep 4,9:30pm,CAD,red,BOC Press Conference,N/A,N/A,N/A
+Sep 5,1:00am,USD,yellow,Beige Book,N/A,N/A,N/A
+Sep 5,6:30am,JPY,yellow,Average Cash Earnings y/y,N/A,3.0%,4.5%
+Sep 5,8:30am,AUD,yellow,Goods Trade Balance,N/A,5.05B,5.59B
+Sep 5,9:00am,AUD,red,RBA Gov Bullock Speaks,N/A,N/A,N/A
+Sep 5,10:35am,JPY,yellow,30-y Bond Auction,N/A,N/A,2.23|3.5
+Sep 5,12:45pm,CHF,yellow,Unemployment Rate,N/A,2.5%,2.5%
+Sep 5,1:00pm,EUR,yellow,German Factory Orders m/m,N/A,-1.6%,3.9%
+Sep 5,3:30pm,GBP,orange,Construction PMI,N/A,54.6,55.3
+Sep 5,4:00pm,AUD,yellow,RBA Gov Bullock Speaks,N/A,N/A,N/A
+Sep 5,4:00pm,EUR,yellow,Retail Sales m/m,N/A,0.1%,-0.3%
+Sep 5,Tentative,EUR,yellow,Spanish 10-y Bond Auction,N/A,N/A,3.11|1.5
+Sep 5,Tentative,EUR,yellow,French 10-y Bond Auction,N/A,N/A,3.01|2.2
+Sep 5,6:30pm,USD,yellow,Challenger Job Cuts y/y,N/A,N/A,9.2%
+Sep 5,7:15pm,USD,red,ADP Non-Farm Employment Change,N/A,143K,122K
+Sep 5,7:30pm,CAD,yellow,Labor Productivity q/q,N/A,-0.1%,-0.3%
+Sep 5,7:30pm,USD,red,Unemployment Claims,N/A,231K,231K
+Sep 5,7:30pm,USD,yellow,Revised Nonfarm Productivity q/q,N/A,2.4%,2.3%
+Sep 5,7:30pm,USD,yellow,Revised Unit Labor Costs q/q,N/A,0.8%,0.9%
+Sep 5,8:45pm,USD,orange,Final Services PMI,N/A,55.0,55.2
+Sep 5,9:00pm,USD,red,ISM Services PMI,N/A,51.2,51.4
+Sep 5,9:30pm,USD,yellow,Natural Gas Storage,N/A,N/A,35B
+Sep 5,10:00pm,USD,orange,Crude Oil Inventories,N/A,N/A,-0.8M
+Sep 6,6:30am,JPY,yellow,Household Spending y/y,N/A,1.2%,-1.4%
+Sep 6,12:00pm,JPY,yellow,Leading Indicators,N/A,109.4%,109.0%
+Sep 6,1:00pm,EUR,yellow,German Industrial Production m/m,N/A,-0.4%,1.4%
+Sep 6,1:00pm,EUR,yellow,German Trade Balance,N/A,21.0B,20.4B
+Sep 6,1:00pm,GBP,yellow,Halifax HPI m/m,N/A,0.2%,0.8%
+Sep 6,1:45pm,EUR,yellow,French Industrial Production m/m,N/A,-0.3%,0.8%
+Sep 6,1:45pm,EUR,yellow,French Trade Balance,N/A,-6.5B,-6.1B
+Sep 6,2:00pm,CHF,yellow,Foreign Currency Reserves,N/A,N/A,704B
+Sep 6,2:00pm,CHF,yellow,SECO Consumer Climate,N/A,-33,-32
+Sep 6,3:00pm,EUR,yellow,Italian Retail Sales m/m,N/A,0.1%,-0.2%
+Sep 6,4:00pm,EUR,yellow,Final Employment Change q/q,N/A,0.2%,0.2%
+Sep 6,4:00pm,EUR,yellow,Revised GDP q/q,N/A,0.3%,0.3%
+Sep 6,7:30pm,CAD,red,Employment Change,N/A,25.6K,-2.8K
+Sep 6,7:30pm,CAD,red,Unemployment Rate,N/A,6.5%,6.4%
+Sep 6,7:30pm,USD,red,Average Hourly Earnings m/m,N/A,0.3%,0.2%
+Sep 6,7:30pm,USD,red,Non-Farm Employment Change,N/A,164K,114K
+Sep 6,7:30pm,USD,red,Unemployment Rate,N/A,4.2%,4.3%
+Sep 6,7:45pm,USD,orange,FOMC Member Williams Speaks,N/A,N/A,N/A
+Sep 6,9:00pm,CAD,orange,Ivey PMI,N/A,55.3,57.6
+Sep 6,10:00pm,USD,red,FOMC Member Waller Speaks,N/A,N/A,N/A
+Sep 9,6:50am,JPY,yellow,Bank Lending y/y,N/A,N/A,3.2%
+Sep 9,6:50am,JPY,yellow,Current Account,N/A,N/A,1.78T
+Sep 9,6:50am,JPY,yellow,Final GDP Price Index y/y,N/A,N/A,3.0%
+Sep 9,6:50am,JPY,yellow,Final GDP q/q,N/A,N/A,0.8%
+Sep 9,8:30am,CNY,orange,CPI y/y,N/A,N/A,0.5%
+Sep 9,8:30am,CNY,orange,PPI y/y,N/A,N/A,-0.8%
+Sep 9,12:00pm,JPY,yellow,Economy Watchers Sentiment,N/A,N/A,47.5
+Sep 9,3:30pm,EUR,yellow,Sentix Investor Confidence,N/A,N/A,-13.9
+Sep 9,9:00pm,USD,yellow,Final Wholesale Inventories m/m,N/A,N/A,0.3%
+Sep 10,2:00am,USD,yellow,Consumer Credit m/m,N/A,N/A,8.9B
+Sep 10,5:45am,NZD,yellow,Manufacturing Sales q/q,N/A,N/A,0.7%
+Sep 10,6:50am,JPY,yellow,M2 Money Stock y/y,N/A,N/A,1.4%
+Sep 10,7:30am,AUD,yellow,Westpac Consumer Sentiment,N/A,N/A,2.8%
+Sep 10,8:30am,AUD,yellow,NAB Business Confidence,N/A,N/A,1
+Sep 10,Tentative,CNY,yellow,Trade Balance,N/A,N/A,602B
+Sep 10,Tentative,CNY,yellow,USD-Denominated Trade Balance,N/A,N/A,84.7B
+Sep 10,1:00pm,EUR,yellow,German Final CPI m/m,N/A,N/A,-0.1%
+Sep 10,1:00pm,GBP,red,Claimant Count Change,N/A,N/A,135.0K
+Sep 10,1:00pm,GBP,orange,Average Earnings Index 3m/y,N/A,N/A,4.5%
+Sep 10,1:00pm,GBP,yellow,Unemployment Rate,N/A,N/A,4.2%
+Sep 10,1:00pm,JPY,yellow,Prelim Machine Tool Orders y/y,N/A,N/A,8.4%
+Sep 10,3:00pm,EUR,yellow,Italian Industrial Production m/m,N/A,N/A,0.5%
+Sep 10,10th-15th,CNY,orange,New Loans,N/A,N/A,260B
+Sep 10,10th-15th,CNY,yellow,M2 Money Supply y/y,N/A,N/A,6.3%
+Sep 10,4:00pm,EUR,yellow,EU Economic Forecasts,N/A,N/A,N/A
+Sep 10,5:00pm,USD,yellow,NFIB Small Business Index,N/A,N/A,93.7
+Sep 11,1:00pm,GBP,red,GDP m/m,N/A,N/A,0.0%
+Sep 11,1:00pm,GBP,yellow,Construction Output m/m,N/A,N/A,0.5%
+Sep 11,1:00pm,GBP,yellow,Goods Trade Balance,N/A,N/A,-18.9B
+Sep 11,1:00pm,GBP,yellow,Index of Services 3m/3m,N/A,N/A,0.8%
+Sep 11,1:00pm,GBP,yellow,Industrial Production m/m,N/A,N/A,0.8%
+Sep 11,1:00pm,GBP,yellow,Manufacturing Production m/m,N/A,N/A,1.1%
+Sep 11,All Day,EUR,yellow,Eurogroup Meetings,N/A,N/A,N/A
+Sep 11,Tentative,GBP,yellow,10-y Bond Auction,N/A,N/A,N/A
+Sep 11,Tentative,EUR,yellow,German 10-y Bond Auction,N/A,N/A,2.22|2.0
+Sep 11,Tentative,GBP,yellow,NIESR GDP Estimate,N/A,N/A,0.5%
+Sep 11,7:30pm,USD,red,Core CPI m/m,N/A,N/A,0.2%
+Sep 11,7:30pm,USD,red,CPI m/m,N/A,N/A,0.2%
+Sep 11,7:30pm,USD,red,CPI y/y,N/A,N/A,2.9%
+Sep 11,8:30pm,GBP,yellow,CB Leading Index m/m,N/A,N/A,-0.1%
+Sep 11,9:30pm,USD,orange,Crude Oil Inventories,N/A,N/A,N/A
+Sep 12,12:01am,USD,yellow,10-y Bond Auction,N/A,N/A,3.96|2.3
+Sep 12,5:45am,NZD,yellow,FPI m/m,N/A,N/A,N/A
+Sep 12,5:45am,NZD,yellow,Visitor Arrivals m/m,N/A,N/A,-0.2%
+Sep 12,6:01am,GBP,yellow,RICS House Price Balance,N/A,N/A,-19%
+Sep 12,6:50am,JPY,yellow,BSI Manufacturing Index,N/A,N/A,-1.0
+Sep 12,6:50am,JPY,yellow,PPI y/y,N/A,N/A,3.0%
+Sep 12,8:00am,AUD,yellow,MI Inflation Expectations,N/A,N/A,4.5%
+Sep 12,1:00pm,EUR,yellow,German WPI m/m,N/A,N/A,N/A
+Sep 12,3:00pm,EUR,yellow,Italian Quarterly Unemployment Rate,N/A,N/A,7.2%
+Sep 12,All Day,EUR,yellow,ECOFIN Meetings,N/A,N/A,N/A
+Sep 12,Tentative,EUR,yellow,German 30-y Bond Auction,N/A,N/A,N/A
+Sep 12,Tentative,GBP,yellow,BOE Quarterly Bulletin,N/A,N/A,N/A
+Sep 12,7:15pm,EUR,red,Main Refinancing Rate,N/A,N/A,4.25%
+Sep 12,7:15pm,EUR,red,Monetary Policy Statement,N/A,N/A,N/A
+Sep 12,7:30pm,CAD,yellow,Building Permits m/m,N/A,N/A,-13.9%
+Sep 12,7:30pm,USD,red,Core PPI m/m,N/A,N/A,0.0%
+Sep 12,7:30pm,USD,red,PPI m/m,N/A,N/A,0.1%
+Sep 12,7:30pm,USD,red,Unemployment Claims,N/A,N/A,N/A
+Sep 12,7:45pm,EUR,red,ECB Press Conference,N/A,N/A,N/A
+Sep 12,Tentative,GBP,orange,Monetary Policy Report Hearings,N/A,N/A,N/A
+Sep 12,9:30pm,USD,yellow,Natural Gas Storage,N/A,N/A,N/A
+Sep 13,12:01am,USD,orange,30-y Bond Auction,N/A,N/A,4.31|2.3
+Sep 13,1:00am,USD,yellow,Federal Budget Balance,N/A,N/A,-243.7B
+Sep 13,5:30am,NZD,yellow,BusinessNZ Manufacturing Index,N/A,N/A,44.0
+Sep 13,6:50am,JPY,yellow,Core Machinery Orders m/m,N/A,N/A,N/A
+Sep 13,11:30am,JPY,yellow,Revised Industrial Production m/m,N/A,N/A,2.8%
+Sep 13,1:45pm,EUR,yellow,French Final CPI m/m,N/A,N/A,0.6%
+Sep 13,3:30pm,GBP,yellow,Consumer Inflation Expectations,N/A,N/A,2.8%
+Sep 13,4:00pm,EUR,yellow,Industrial Production m/m,N/A,N/A,-0.1%
+Sep 13,7:30pm,CAD,yellow,Capacity Utilization Rate,N/A,N/A,78.5%
+Sep 13,7:30pm,CAD,yellow,Wholesale Sales m/m,N/A,N/A,-0.6%
+Sep 13,7:30pm,USD,yellow,Import Prices m/m,N/A,N/A,0.1%
+Sep 13,9:00pm,USD,orange,Prelim UoM Consumer Sentiment,N/A,N/A,67.9
+Sep 13,9:00pm,USD,orange,Prelim UoM Inflation Expectations,N/A,N/A,2.8%
+Sep 14,8:30am,CNY,yellow,New Home Prices m/m,N/A,N/A,-0.65%
+Sep 16,5:30am,NZD,yellow,BusinessNZ Services Index,N/A,N/A,N/A
+Sep 16,All Day,JPY,gray,Bank Holiday,N/A,N/A,N/A
+Sep 16,6:01am,GBP,yellow,Rightmove HPI m/m,N/A,N/A,N/A
+Sep 16,All Day,CNY,gray,Bank Holiday,N/A,N/A,N/A
+Sep 16,Tentative,CNY,yellow,Foreign Direct Investment ytd/y,N/A,N/A,N/A
+Sep 16,1:30pm,CHF,yellow,PPI m/m,N/A,N/A,N/A
+Sep 16,3:00pm,EUR,yellow,Italian Trade Balance,N/A,N/A,N/A
+Sep 16,4:00pm,EUR,yellow,Trade Balance,N/A,N/A,N/A
+Sep 16,7:30pm,CAD,yellow,Manufacturing Sales m/m,N/A,N/A,N/A
+Sep 16,7:30pm,USD,orange,Empire State Manufacturing Index,N/A,N/A,N/A
+Sep 17,All Day,CNY,gray,Bank Holiday,N/A,N/A,N/A
+Sep 17,11:30am,JPY,yellow,Tertiary Industry Activity m/m,N/A,N/A,N/A
+Sep 17,4:00pm,EUR,orange,German ZEW Economic Sentiment,N/A,N/A,N/A
+Sep 17,4:00pm,EUR,yellow,ZEW Economic Sentiment,N/A,N/A,N/A
+Sep 17,Tentative,GBP,yellow,30-y Bond Auction,N/A,N/A,N/A
+Sep 17,7:15pm,CAD,yellow,Housing Starts,N/A,N/A,N/A
+Sep 17,7:30pm,CAD,red,CPI m/m,N/A,N/A,N/A
+Sep 17,7:30pm,CAD,red,Median CPI y/y,N/A,N/A,N/A
+Sep 17,7:30pm,CAD,red,Trimmed CPI y/y,N/A,N/A,N/A
+Sep 17,7:30pm,CAD,orange,Common CPI y/y,N/A,N/A,N/A
+Sep 17,7:30pm,CAD,yellow,Core CPI m/m,N/A,N/A,N/A
+Sep 17,7:30pm,USD,red,Core Retail Sales m/m,N/A,N/A,N/A
+Sep 17,7:30pm,USD,red,Retail Sales m/m,N/A,N/A,N/A
+Sep 17,8:15pm,USD,yellow,Capacity Utilization Rate,N/A,N/A,N/A
+Sep 17,8:15pm,USD,yellow,Industrial Production m/m,N/A,N/A,N/A
+Sep 17,9:00pm,USD,yellow,Business Inventories m/m,N/A,N/A,N/A
+Sep 17,9:00pm,USD,yellow,NAHB Housing Market Index,N/A,N/A,N/A
+Sep 17,9:30pm,AUD,yellow,CB Leading Index m/m,N/A,N/A,N/A
+Sep 17,Tentative,NZD,yellow,GDT Price Index,N/A,N/A,N/A
+Sep 18,5:45am,NZD,yellow,Current Account,N/A,N/A,N/A
+Sep 18,7:30am,AUD,yellow,MI Leading Index m/m,N/A,N/A,N/A
+Sep 18,1:00pm,GBP,red,CPI y/y,N/A,N/A,N/A
+Sep 18,1:00pm,GBP,yellow,Core CPI y/y,N/A,N/A,N/A
+Sep 18,1:00pm,GBP,yellow,PPI Input m/m,N/A,N/A,N/A
+Sep 18,1:00pm,GBP,yellow,PPI Output m/m,N/A,N/A,N/A
+Sep 18,1:00pm,GBP,yellow,RPI y/y,N/A,N/A,N/A
+Sep 18,3:30pm,GBP,yellow,HPI y/y,N/A,N/A,N/A
+Sep 18,4:00pm,EUR,yellow,Final Core CPI y/y,N/A,N/A,N/A
+Sep 18,4:00pm,EUR,yellow,Final CPI y/y,N/A,N/A,N/A
+Sep 18,7:30pm,CAD,yellow,Foreign Securities Purchases,N/A,N/A,N/A
+Sep 18,7:30pm,USD,orange,Building Permits,N/A,N/A,N/A
+Sep 18,7:30pm,USD,yellow,Housing Starts,N/A,N/A,N/A
+Sep 18,9:30pm,USD,yellow,Crude Oil Inventories,N/A,N/A,N/A
+Sep 19,12:30am,CAD,yellow,BOC Summary of Deliberations,N/A,N/A,N/A
+Sep 19,1:00am,USD,red,Federal Funds Rate,N/A,N/A,N/A
+Sep 19,1:00am,USD,red,FOMC Economic Projections,N/A,N/A,N/A
+Sep 19,1:00am,USD,red,FOMC Statement,N/A,N/A,N/A
+Sep 19,1:30am,USD,red,FOMC Press Conference,N/A,N/A,N/A
+Sep 19,3:00am,USD,yellow,TIC Long-Term Purchases,N/A,N/A,N/A
+Sep 19,5:45am,NZD,red,GDP q/q,N/A,N/A,N/A
+Sep 19,8:30am,AUD,red,Employment Change,N/A,N/A,N/A
+Sep 19,8:30am,AUD,red,Unemployment Rate,N/A,N/A,N/A
+Sep 19,Tentative,GBP,yellow,Bank Stress Test Results,N/A,N/A,N/A
+Sep 19,2:00pm,CHF,yellow,SECO Economic Forecasts,N/A,N/A,N/A
+Sep 19,3:00pm,EUR,orange,German ifo Business Climate,N/A,N/A,N/A
+Sep 19,3:00pm,EUR,yellow,Current Account,N/A,N/A,N/A
+Sep 19,5:00pm,GBP,yellow,CBI Industrial Order Expectations,N/A,N/A,N/A
+Sep 19,6:00pm,GBP,red,Monetary Policy Summary,N/A,N/A,N/A
+Sep 19,6:00pm,GBP,red,MPC Official Bank Rate Votes,N/A,N/A,N/A
+Sep 19,6:00pm,GBP,red,Official Bank Rate,N/A,N/A,N/A
+Sep 19,Tentative,GBP,yellow,BOE Inflation Letter,N/A,N/A,N/A
+Sep 19,7:30pm,CAD,yellow,NHPI m/m,N/A,N/A,N/A
+Sep 19,7:30pm,USD,red,Unemployment Claims,N/A,N/A,N/A
+Sep 19,7:30pm,USD,orange,Philly Fed Manufacturing Index,N/A,N/A,N/A
+Sep 19,7:30pm,USD,yellow,Current Account,N/A,N/A,N/A
+Sep 19,9:00pm,USD,orange,Existing Home Sales,N/A,N/A,N/A
+Sep 19,9:00pm,USD,yellow,CB Leading Index m/m,N/A,N/A,N/A
+Sep 19,9:30pm,USD,yellow,Natural Gas Storage,N/A,N/A,N/A
+Sep 20,4:00am,NZD,yellow,Westpac Consumer Sentiment,N/A,N/A,N/A
+Sep 20,6:01am,GBP,yellow,GfK Consumer Confidence,N/A,N/A,N/A
+Sep 20,6:30am,JPY,yellow,National Core CPI y/y,N/A,N/A,N/A
+Sep 20,6:50am,JPY,yellow,Trade Balance,N/A,N/A,N/A
+Sep 20,8:15am,CNY,orange,1-y Loan Prime Rate,N/A,N/A,N/A
+Sep 20,8:15am,CNY,orange,5-y Loan Prime Rate,N/A,N/A,N/A
+Sep 20,9:00am,CNY,orange,Industrial Production y/y,N/A,N/A,N/A
+Sep 20,9:00am,CNY,orange,Retail Sales y/y,N/A,N/A,N/A
+Sep 20,9:00am,CNY,yellow,Fixed Asset Investment ytd/y,N/A,N/A,N/A
+Sep 20,9:00am,CNY,yellow,NBS Press Conference,N/A,N/A,N/A
+Sep 20,9:00am,CNY,yellow,Unemployment Rate,N/A,N/A,N/A
+Sep 20,Tentative,JPY,red,BOJ Policy Rate,N/A,N/A,N/A
+Sep 20,Tentative,JPY,red,Monetary Policy Statement,N/A,N/A,N/A
+Sep 20,10:00am,NZD,yellow,Credit Card Spending y/y,N/A,N/A,N/A
+Sep 20,Tentative,JPY,red,BOJ Press Conference,N/A,N/A,N/A
+Sep 20,1:00pm,CHF,yellow,Trade Balance,N/A,N/A,N/A
+Sep 20,1:00pm,EUR,yellow,German PPI m/m,N/A,N/A,N/A
+Sep 20,1:00pm,GBP,red,Retail Sales m/m,N/A,N/A,N/A
+Sep 20,1:00pm,GBP,yellow,Public Sector Net Borrowing,N/A,N/A,N/A
+Sep 20,7:30pm,CAD,red,Core Retail Sales m/m,N/A,N/A,N/A
+Sep 20,7:30pm,CAD,red,Retail Sales m/m,N/A,N/A,N/A
+Sep 20,7:30pm,CAD,yellow,IPPI m/m,N/A,N/A,N/A
+Sep 20,7:30pm,CAD,yellow,RMPI m/m,N/A,N/A,N/A
+Sep 20,9:00pm,EUR,yellow,Consumer Confidence,N/A,N/A,N/A
+Sep 23,5:45am,NZD,yellow,Trade Balance,N/A,N/A,N/A
+Sep 23,6:00am,AUD,yellow,Flash Manufacturing PMI,N/A,N/A,N/A
+Sep 23,6:00am,AUD,yellow,Flash Services PMI,N/A,N/A,N/A
+Sep 23,All Day,JPY,gray,Bank Holiday,N/A,N/A,N/A
+Sep 23,2:15pm,EUR,red,French Flash Manufacturing PMI,N/A,N/A,N/A
+Sep 23,2:15pm,EUR,red,French Flash Services PMI,N/A,N/A,N/A
+Sep 23,2:30pm,EUR,red,German Flash Manufacturing PMI,N/A,N/A,N/A
+Sep 23,2:30pm,EUR,red,German Flash Services PMI,N/A,N/A,N/A
+Sep 23,3:00pm,EUR,orange,Flash Manufacturing PMI,N/A,N/A,N/A
+Sep 23,3:00pm,EUR,orange,Flash Services PMI,N/A,N/A,N/A
+Sep 23,3:30pm,GBP,red,Flash Manufacturing PMI,N/A,N/A,N/A
+Sep 23,3:30pm,GBP,red,Flash Services PMI,N/A,N/A,N/A
+Sep 23,Tentative,EUR,yellow,German Buba Monthly Report,N/A,N/A,N/A
+Sep 23,8:45pm,USD,red,Flash Manufacturing PMI,N/A,N/A,N/A
+Sep 23,8:45pm,USD,red,Flash Services PMI,N/A,N/A,N/A
+Sep 24,7:30am,JPY,yellow,Flash Manufacturing PMI,N/A,N/A,N/A
+Sep 24,11:30am,AUD,red,Cash Rate,N/A,N/A,N/A
+Sep 24,11:30am,AUD,red,RBA Rate Statement,N/A,N/A,N/A
+Sep 24,12:00pm,JPY,yellow,BOJ Core CPI y/y,N/A,N/A,N/A
+Sep 24,12:30pm,AUD,orange,RBA Press Conference,N/A,N/A,N/A
+Sep 24,5:00pm,GBP,yellow,CBI Realized Sales,N/A,N/A,N/A
+Sep 24,8:00pm,EUR,yellow,Belgian NBB Business Climate,N/A,N/A,N/A
+Sep 24,8:00pm,USD,orange,S&P/CS Composite-20 HPI y/y,N/A,N/A,N/A
+Sep 24,8:00pm,USD,yellow,HPI m/m,N/A,N/A,N/A
+Sep 24,9:00pm,USD,red,CB Consumer Confidence,N/A,N/A,N/A
+Sep 24,9:00pm,USD,orange,Richmond Manufacturing Index,N/A,N/A,N/A
+Sep 25,8:30am,AUD,red,CPI y/y,N/A,N/A,N/A
+Sep 25,3:00pm,CHF,yellow,UBS Economic Expectations,N/A,N/A,N/A
+Sep 25,8:00pm,CNY,yellow,CB Leading Index m/m,N/A,N/A,N/A
+Sep 25,9:00pm,USD,orange,New Home Sales,N/A,N/A,N/A
+Sep 25,9:30pm,USD,yellow,Crude Oil Inventories,N/A,N/A,N/A
+Sep 26,6:50am,JPY,yellow,Monetary Policy Meeting Minutes,N/A,N/A,N/A
+Sep 26,6:50am,JPY,yellow,SPPI y/y,N/A,N/A,N/A
+Sep 26,1:00pm,EUR,yellow,German GfK Consumer Climate,N/A,N/A,N/A
+Sep 26,Tentative,GBP,yellow,Nationwide HPI m/m,N/A,N/A,N/A
+Sep 26,2:00pm,CHF,yellow,KOF Economic Barometer,N/A,N/A,N/A
+Sep 26,2:30pm,CHF,red,SNB Monetary Policy Assessment,N/A,N/A,N/A
+Sep 26,2:30pm,CHF,red,SNB Policy Rate,N/A,N/A,N/A
+Sep 26,2:55pm,EUR,yellow,German Unemployment Change,N/A,N/A,N/A
+Sep 26,3:00pm,CHF,red,SNB Press Conference,N/A,N/A,N/A
+Sep 26,3:00pm,EUR,yellow,ECB Economic Bulletin,N/A,N/A,N/A
+Sep 26,3:00pm,EUR,yellow,M3 Money Supply y/y,N/A,N/A,N/A
+Sep 26,3:00pm,EUR,yellow,Private Loans y/y,N/A,N/A,N/A
+Sep 26,4:00pm,EUR,yellow,Italian Prelim CPI m/m,N/A,N/A,N/A
+Sep 26,Tentative,EUR,yellow,Italian 10-y Bond Auction,N/A,N/A,N/A
+Sep 26,7:30pm,USD,red,Final GDP q/q,N/A,N/A,N/A
+Sep 26,7:30pm,USD,red,Unemployment Claims,N/A,N/A,N/A
+Sep 26,7:30pm,USD,orange,Core Durable Goods Orders m/m,N/A,N/A,N/A
+Sep 26,7:30pm,USD,orange,Durable Goods Orders m/m,N/A,N/A,N/A
+Sep 26,7:30pm,USD,orange,Final GDP Price Index q/q,N/A,N/A,N/A
+Sep 26,9:00pm,USD,orange,Pending Home Sales m/m,N/A,N/A,N/A
+Sep 26,9:30pm,USD,yellow,Natural Gas Storage,N/A,N/A,N/A
+Sep 27,6:30am,JPY,orange,Tokyo Core CPI y/y,N/A,N/A,N/A
+Sep 27,8:30am,AUD,yellow,RBA Financial Stability Review,N/A,N/A,N/A
+Sep 27,1:30pm,CHF,yellow,Retail Sales y/y,N/A,N/A,N/A
+Sep 27,2:00pm,EUR,orange,Spanish Flash CPI y/y,N/A,N/A,N/A
+Sep 27,7:30pm,CAD,red,GDP m/m,N/A,N/A,N/A
+Sep 27,7:30pm,USD,red,Core PCE Price Index m/m,N/A,N/A,N/A
+Sep 27,7:30pm,USD,yellow,Goods Trade Balance,N/A,N/A,N/A
+Sep 27,7:30pm,USD,yellow,Personal Income m/m,N/A,N/A,N/A
+Sep 27,7:30pm,USD,yellow,Personal Spending m/m,N/A,N/A,N/A
+Sep 27,7:30pm,USD,yellow,Prelim Wholesale Inventories m/m,N/A,N/A,N/A
+Sep 27,9:00pm,USD,orange,Revised UoM Consumer Sentiment,N/A,N/A,N/A
+Sep 27,9:00pm,USD,yellow,Revised UoM Inflation Expectations,N/A,N/A,N/A
+Sep 28,9:00pm,NZD,gray,Daylight Saving Time Shift,N/A,N/A,N/A
+Sep 30,6:30am,JPY,yellow,Unemployment Rate,N/A,N/A,N/A
+Sep 30,6:50am,JPY,yellow,Prelim Industrial Production m/m,N/A,N/A,N/A
+Sep 30,6:50am,JPY,yellow,Retail Sales y/y,N/A,N/A,N/A
+Sep 30,7:00am,NZD,orange,ANZ Business Confidence,N/A,N/A,N/A
+Sep 30,8:30am,AUD,yellow,Private Sector Credit m/m,N/A,N/A,N/A
+Sep 30,8:30am,CNY,red,Manufacturing PMI,N/A,N/A,N/A
+Sep 30,8:30am,CNY,orange,Non-Manufacturing PMI,N/A,N/A,N/A
+Sep 30,12:00pm,JPY,yellow,Consumer Confidence,N/A,N/A,N/A
+Sep 30,12:00pm,JPY,yellow,Housing Starts y/y,N/A,N/A,N/A
+Sep 30,1:00pm,EUR,yellow,German Import Prices m/m,N/A,N/A,N/A
+Sep 30,1:00pm,EUR,yellow,German Retail Sales m/m,N/A,N/A,N/A
+Sep 30,1:00pm,GBP,yellow,Current Account,N/A,N/A,N/A
+Sep 30,1:00pm,GBP,yellow,Final GDP q/q,N/A,N/A,N/A
+Sep 30,1:00pm,GBP,yellow,Revised Business Investment q/q,N/A,N/A,N/A
+Sep 30,All Day,EUR,red,German Prelim CPI m/m,N/A,N/A,N/A
+Sep 30,1:45pm,EUR,yellow,French Prelim CPI m/m,N/A,N/A,N/A
+Sep 30,3:00pm,EUR,yellow,Italian Monthly Unemployment Rate,N/A,N/A,N/A
+Sep 30,3:30pm,GBP,yellow,M4 Money Supply m/m,N/A,N/A,N/A
+Sep 30,3:30pm,GBP,yellow,Mortgage Approvals,N/A,N/A,N/A
+Sep 30,3:30pm,GBP,yellow,Net Lending to Individuals m/m,N/A,N/A,N/A
+Sep 30,All Day,CAD,gray,Bank Holiday,N/A,N/A,N/A
+Sep 30,8:45pm,USD,orange,Chicago PMI,N/A,N/A,N/A

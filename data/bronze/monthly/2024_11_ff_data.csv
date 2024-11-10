@@ -1,0 +1,346 @@
+date,time,currency,impact,event,actual,forecast,previous
+Nov 1,Tentative,USD,orange,Treasury Currency Report,N/A,N/A,N/A
+Nov 1,4:45am,NZD,yellow,Building Consents m/m,N/A,N/A,N/A
+Nov 1,7:30am,AUD,yellow,PPI q/q,N/A,N/A,N/A
+Nov 1,7:30am,JPY,yellow,Final Manufacturing PMI,N/A,N/A,N/A
+Nov 1,8:45am,CNY,yellow,Caixin Manufacturing PMI,N/A,N/A,N/A
+Nov 1,12:30pm,AUD,yellow,Commodity Prices y/y,N/A,N/A,N/A
+Nov 1,All Day,EUR,gray,French Bank Holiday,N/A,N/A,N/A
+Nov 1,All Day,EUR,gray,Italian Bank Holiday,N/A,N/A,N/A
+Nov 1,1:45pm,EUR,yellow,French Gov Budget Balance,N/A,N/A,N/A
+Nov 1,2:15pm,EUR,yellow,Spanish Manufacturing PMI,N/A,N/A,N/A
+Nov 1,2:30pm,CHF,yellow,Manufacturing PMI,N/A,N/A,N/A
+Nov 1,2:45pm,EUR,yellow,Italian Manufacturing PMI,N/A,N/A,N/A
+Nov 1,2:50pm,EUR,yellow,French Final Manufacturing PMI,N/A,N/A,N/A
+Nov 1,2:55pm,EUR,yellow,German Final Manufacturing PMI,N/A,N/A,N/A
+Nov 1,3:00pm,EUR,yellow,Final Manufacturing PMI,N/A,N/A,N/A
+Nov 1,3:30pm,GBP,yellow,Final Manufacturing PMI,N/A,N/A,N/A
+Nov 1,7:30pm,USD,red,Average Hourly Earnings m/m,N/A,N/A,N/A
+Nov 1,7:30pm,USD,red,Non-Farm Employment Change,N/A,N/A,N/A
+Nov 1,7:30pm,USD,red,Unemployment Rate,N/A,N/A,N/A
+Nov 1,8:30pm,CAD,yellow,Manufacturing PMI,N/A,N/A,N/A
+Nov 1,8:45pm,USD,yellow,Final Manufacturing PMI,N/A,N/A,N/A
+Nov 1,9:00pm,USD,red,ISM Manufacturing PMI,N/A,N/A,N/A
+Nov 1,9:00pm,USD,orange,ISM Manufacturing Prices,N/A,N/A,N/A
+Nov 1,9:00pm,USD,yellow,Construction Spending m/m,N/A,N/A,N/A
+Nov 1,All Day,USD,yellow,Wards Total Vehicle Sales,N/A,N/A,N/A
+Nov 3,3:00pm,CAD,gray,Daylight Saving Time Shift,N/A,N/A,N/A
+Nov 3,3:00pm,USD,gray,Daylight Saving Time Shift,N/A,N/A,N/A
+Nov 4,All Day,JPY,gray,Bank Holiday,N/A,N/A,N/A
+Nov 4,7:30am,AUD,yellow,ANZ Job Advertisements m/m,N/A,N/A,N/A
+Nov 4,9:00am,AUD,yellow,MI Inflation Gauge m/m,N/A,N/A,N/A
+Nov 4,10:35am,JPY,yellow,10-y Bond Auction,N/A,N/A,N/A
+Nov 4,2:30pm,CHF,red,CPI m/m,N/A,N/A,N/A
+Nov 4,2:45pm,EUR,yellow,French Prelim Private Payrolls q/q,N/A,N/A,N/A
+Nov 4,3:00pm,EUR,yellow,Spanish Unemployment Change,N/A,N/A,N/A
+Nov 4,4:30pm,EUR,yellow,Sentix Investor Confidence,N/A,N/A,N/A
+Nov 4,All Day,EUR,yellow,Eurogroup Meetings,N/A,N/A,N/A
+Nov 4,10:00pm,USD,yellow,Factory Orders m/m,N/A,N/A,N/A
+Nov 5,Tentative,USD,yellow,Loan Officer Survey,N/A,N/A,N/A
+Nov 5,3:00am,NZD,yellow,RBNZ Financial Stability Report,N/A,N/A,N/A
+Nov 5,6:50am,JPY,yellow,Monetary Base y/y,N/A,N/A,N/A
+Nov 5,7:01am,GBP,yellow,BRC Retail Sales Monitor y/y,N/A,N/A,N/A
+Nov 5,8:45am,CNY,yellow,Caixin Services PMI,N/A,N/A,N/A
+Nov 5,9:00am,NZD,yellow,ANZ Commodity Prices m/m,N/A,N/A,N/A
+Nov 5,10:30am,AUD,red,Cash Rate,N/A,N/A,N/A
+Nov 5,10:30am,AUD,red,RBA Monetary Policy Statement,N/A,N/A,N/A
+Nov 5,10:30am,AUD,red,RBA Rate Statement,N/A,N/A,N/A
+Nov 5,11:30am,AUD,orange,RBA Press Conference,N/A,N/A,N/A
+Nov 5,1:45pm,CHF,yellow,Unemployment Rate,N/A,N/A,N/A
+Nov 5,3:15pm,EUR,yellow,Spanish Services PMI,N/A,N/A,N/A
+Nov 5,3:45pm,EUR,yellow,Italian Services PMI,N/A,N/A,N/A
+Nov 5,3:50pm,EUR,yellow,French Final Services PMI,N/A,N/A,N/A
+Nov 5,3:55pm,EUR,yellow,German Final Services PMI,N/A,N/A,N/A
+Nov 5,4:00pm,EUR,yellow,Final Services PMI,N/A,N/A,N/A
+Nov 5,4:00pm,EUR,yellow,Italian Retail Sales m/m,N/A,N/A,N/A
+Nov 5,4:30pm,GBP,yellow,Final Services PMI,N/A,N/A,N/A
+Nov 5,Tentative,EUR,yellow,Spanish 10-y Bond Auction,N/A,N/A,N/A
+Nov 5,All Day,EUR,yellow,ECOFIN Meetings,N/A,N/A,N/A
+Nov 5,Tentative,EUR,yellow,French 10-y Bond Auction,N/A,N/A,N/A
+Nov 5,8:30pm,CAD,yellow,Trade Balance,N/A,N/A,N/A
+Nov 5,8:30pm,USD,yellow,Trade Balance,N/A,N/A,N/A
+Nov 5,9:45pm,USD,orange,Final Services PMI,N/A,N/A,N/A
+Nov 5,10:00pm,USD,red,ISM Services PMI,N/A,N/A,N/A
+Nov 5,All Day,USD,red,Presidential Election,N/A,N/A,N/A
+Nov 5,All Day,USD,red,Congressional Elections,N/A,N/A,N/A
+Nov 5,Tentative,NZD,yellow,GDT Price Index,N/A,N/A,N/A
+Nov 6,1:01am,USD,yellow,10-y Bond Auction,N/A,N/A,N/A
+Nov 6,4:00am,USD,yellow,FOMC Financial Stability Report,N/A,N/A,N/A
+Nov 6,4:45am,NZD,red,Employment Change q/q,N/A,N/A,N/A
+Nov 6,4:45am,NZD,red,Unemployment Rate,N/A,N/A,N/A
+Nov 6,4:45am,NZD,yellow,Labor Cost Index q/q,N/A,N/A,N/A
+Nov 6,6:30am,JPY,yellow,Household Spending y/y,N/A,N/A,N/A
+Nov 6,6:50am,JPY,yellow,Monetary Policy Meeting Minutes,N/A,N/A,N/A
+Nov 6,12:00pm,JPY,yellow,Leading Indicators,N/A,N/A,N/A
+Nov 6,2:00pm,EUR,yellow,German Factory Orders m/m,N/A,N/A,N/A
+Nov 6,2:45pm,EUR,yellow,French Trade Balance,N/A,N/A,N/A
+Nov 6,4:30pm,GBP,orange,Construction PMI,N/A,N/A,N/A
+Nov 6,5:00pm,EUR,yellow,PPI m/m,N/A,N/A,N/A
+Nov 6,10:00pm,CAD,orange,Ivey PMI,N/A,N/A,N/A
+Nov 6,10:30pm,USD,orange,Crude Oil Inventories,N/A,N/A,N/A
+Nov 7,1:01am,USD,yellow,30-y Bond Auction,N/A,N/A,N/A
+Nov 7,1:30am,CAD,yellow,BOC Summary of Deliberations,N/A,N/A,N/A
+Nov 7,6:30am,JPY,yellow,Average Cash Earnings y/y,N/A,N/A,N/A
+Nov 7,7:01am,GBP,yellow,RICS House Price Balance,N/A,N/A,N/A
+Nov 7,9:30am,AUD,yellow,Goods Trade Balance,N/A,N/A,N/A
+Nov 7,Tentative,CNY,yellow,Trade Balance,N/A,N/A,N/A
+Nov 7,Tentative,CNY,yellow,USD-Denominated Trade Balance,N/A,N/A,N/A
+Nov 7,1:00pm,JPY,yellow,Prelim Machine Tool Orders y/y,N/A,N/A,N/A
+Nov 7,2:00pm,EUR,yellow,German Industrial Production m/m,N/A,N/A,N/A
+Nov 7,2:00pm,EUR,yellow,German Trade Balance,N/A,N/A,N/A
+Nov 7,2:00pm,GBP,yellow,Halifax HPI m/m,N/A,N/A,N/A
+Nov 7,3:00pm,CHF,yellow,Foreign Currency Reserves,N/A,N/A,N/A
+Nov 7,Tentative,CNY,orange,New Loans,N/A,N/A,N/A
+Nov 7,Tentative,CNY,yellow,M2 Money Supply y/y,N/A,N/A,N/A
+Nov 7,5:00pm,EUR,yellow,Retail Sales m/m,N/A,N/A,N/A
+Nov 7,Tentative,GBP,yellow,10-y Bond Auction,N/A,N/A,N/A
+Nov 7,7:00pm,GBP,red,BOE Monetary Policy Report,N/A,N/A,N/A
+Nov 7,7:00pm,GBP,red,Monetary Policy Summary,N/A,N/A,N/A
+Nov 7,7:00pm,GBP,red,MPC Official Bank Rate Votes,N/A,N/A,N/A
+Nov 7,7:00pm,GBP,red,Official Bank Rate,N/A,N/A,N/A
+Nov 7,Tentative,GBP,yellow,BOE Inflation Letter,N/A,N/A,N/A
+Nov 7,8:30pm,USD,red,Unemployment Claims,N/A,N/A,N/A
+Nov 7,8:30pm,USD,yellow,Prelim Nonfarm Productivity q/q,N/A,N/A,N/A
+Nov 7,8:30pm,USD,yellow,Prelim Unit Labor Costs q/q,N/A,N/A,N/A
+Nov 7,10:00pm,USD,yellow,Final Wholesale Inventories m/m,N/A,N/A,N/A
+Nov 7,Tentative,USD,yellow,Mortgage Delinquencies,N/A,N/A,N/A
+Nov 7,10:30pm,USD,yellow,Natural Gas Storage,N/A,N/A,N/A
+Nov 8,2:00am,USD,red,Federal Funds Rate,N/A,N/A,N/A
+Nov 8,2:00am,USD,red,FOMC Statement,N/A,N/A,N/A
+Nov 8,2:30am,USD,red,FOMC Press Conference,N/A,N/A,N/A
+Nov 8,3:00am,USD,yellow,Consumer Credit m/m,N/A,N/A,N/A
+Nov 8,6:50am,JPY,yellow,Bank Lending y/y,N/A,N/A,N/A
+Nov 8,6:50am,JPY,yellow,Current Account,N/A,N/A,N/A
+Nov 8,6:50am,JPY,yellow,M2 Money Stock y/y,N/A,N/A,N/A
+Nov 8,6:50am,JPY,yellow,PPI y/y,N/A,N/A,N/A
+Nov 8,8:30am,CNY,orange,CPI y/y,N/A,N/A,N/A
+Nov 8,8:30am,CNY,orange,PPI y/y,N/A,N/A,N/A
+Nov 8,10:35am,JPY,yellow,30-y Bond Auction,N/A,N/A,N/A
+Nov 8,12:00pm,JPY,yellow,Economy Watchers Sentiment,N/A,N/A,N/A
+Nov 8,3:00pm,CHF,yellow,SECO Consumer Climate,N/A,N/A,N/A
+Nov 8,4:00pm,EUR,yellow,Italian Industrial Production m/m,N/A,N/A,N/A
+Nov 8,8:30pm,CAD,red,Employment Change,N/A,N/A,N/A
+Nov 8,8:30pm,CAD,red,Unemployment Rate,N/A,N/A,N/A
+Nov 8,10:00pm,USD,orange,Prelim UoM Consumer Sentiment,N/A,N/A,N/A
+Nov 8,10:00pm,USD,orange,Prelim UoM Inflation Expectations,N/A,N/A,N/A
+Nov 11,6:50am,JPY,yellow,BOJ Summary of Opinions,N/A,N/A,N/A
+Nov 11,9:00am,NZD,red,Inflation Expectations q/q,N/A,N/A,N/A
+Nov 11,All Day,EUR,gray,French Bank Holiday,N/A,N/A,N/A
+Nov 11,2:30pm,CHF,yellow,PPI m/m,N/A,N/A,N/A
+Nov 11,2:45pm,EUR,yellow,French Industrial Production m/m,N/A,N/A,N/A
+Nov 11,4:00pm,EUR,yellow,Italian Trade Balance,N/A,N/A,N/A
+Nov 11,Tentative,EUR,yellow,German 30-y Bond Auction,N/A,N/A,N/A
+Nov 11,All Day,CAD,gray,Bank Holiday,N/A,N/A,N/A
+Nov 11,All Day,USD,gray,Bank Holiday,N/A,N/A,N/A
+Nov 11,9:30pm,GBP,yellow,CB Leading Index m/m,N/A,N/A,N/A
+Nov 11,Tentative,USD,yellow,Cleveland Fed Inflation Expectations,N/A,N/A,N/A
+Nov 12,6:30am,AUD,yellow,Westpac Consumer Sentiment,N/A,N/A,N/A
+Nov 12,9:30am,AUD,yellow,NAB Business Confidence,N/A,N/A,N/A
+Nov 12,2:00pm,EUR,yellow,German Final CPI m/m,N/A,N/A,N/A
+Nov 12,2:00pm,EUR,yellow,German WPI m/m,N/A,N/A,N/A
+Nov 12,2:00pm,GBP,red,Claimant Count Change,N/A,N/A,N/A
+Nov 12,2:00pm,GBP,orange,Average Earnings Index 3m/y,N/A,N/A,N/A
+Nov 12,2:00pm,GBP,yellow,Unemployment Rate,N/A,N/A,N/A
+Nov 12,2:45pm,EUR,yellow,French Final CPI m/m,N/A,N/A,N/A
+Nov 12,5:00pm,EUR,orange,German ZEW Economic Sentiment,N/A,N/A,N/A
+Nov 12,5:00pm,EUR,yellow,ZEW Economic Sentiment,N/A,N/A,N/A
+Nov 12,6:00pm,USD,yellow,NFIB Small Business Index,N/A,N/A,N/A
+Nov 12,8:30pm,CAD,yellow,Building Permits m/m,N/A,N/A,N/A
+Nov 12,Tentative,USD,yellow,RCM/TIPP Economic Optimism,N/A,N/A,N/A
+Nov 13,4:45am,NZD,yellow,Visitor Arrivals m/m,N/A,N/A,N/A
+Nov 13,7:30am,AUD,red,Wage Price Index q/q,N/A,N/A,N/A
+Nov 13,Tentative,CNY,yellow,Foreign Direct Investment ytd/y,N/A,N/A,N/A
+Nov 13,5:00pm,EUR,yellow,Industrial Production m/m,N/A,N/A,N/A
+Nov 13,Tentative,EUR,yellow,German 10-y Bond Auction,N/A,N/A,N/A
+Nov 13,8:30pm,USD,red,Core CPI m/m,N/A,N/A,N/A
+Nov 13,8:30pm,USD,red,CPI m/m,N/A,N/A,N/A
+Nov 13,8:30pm,USD,red,CPI y/y,N/A,N/A,N/A
+Nov 13,Tentative,GBP,orange,Monetary Policy Report Hearings,N/A,N/A,N/A
+Nov 14,2:00am,USD,yellow,Federal Budget Balance,N/A,N/A,N/A
+Nov 14,6:45am,NZD,yellow,FPI m/m,N/A,N/A,N/A
+Nov 14,7:00am,AUD,yellow,MI Inflation Expectations,N/A,N/A,N/A
+Nov 14,9:30am,AUD,red,Employment Change,N/A,N/A,N/A
+Nov 14,9:30am,AUD,red,Unemployment Rate,N/A,N/A,N/A
+Nov 14,11:30am,JPY,yellow,Revised Industrial Production m/m,N/A,N/A,N/A
+Nov 14,2:00pm,GBP,red,GDP m/m,N/A,N/A,N/A
+Nov 14,2:00pm,GBP,orange,Prelim GDP q/q,N/A,N/A,N/A
+Nov 14,2:00pm,GBP,yellow,Construction Output m/m,N/A,N/A,N/A
+Nov 14,2:00pm,GBP,yellow,Goods Trade Balance,N/A,N/A,N/A
+Nov 14,2:00pm,GBP,yellow,Index of Services 3m/3m,N/A,N/A,N/A
+Nov 14,2:00pm,GBP,yellow,Industrial Production m/m,N/A,N/A,N/A
+Nov 14,2:00pm,GBP,yellow,Manufacturing Production m/m,N/A,N/A,N/A
+Nov 14,2:00pm,GBP,yellow,Prelim Business Investment q/q,N/A,N/A,N/A
+Nov 14,5:00pm,EUR,yellow,Flash Employment Change q/q,N/A,N/A,N/A
+Nov 14,5:00pm,EUR,yellow,Flash GDP q/q,N/A,N/A,N/A
+Nov 14,7:30pm,EUR,yellow,ECB Monetary Policy Meeting Accounts,N/A,N/A,N/A
+Nov 14,Tentative,GBP,yellow,NIESR GDP Estimate,N/A,N/A,N/A
+Nov 14,8:30pm,USD,red,Core PPI m/m,N/A,N/A,N/A
+Nov 14,8:30pm,USD,red,PPI m/m,N/A,N/A,N/A
+Nov 14,8:30pm,USD,red,Unemployment Claims,N/A,N/A,N/A
+Nov 14,10:30pm,USD,yellow,Natural Gas Storage,N/A,N/A,N/A
+Nov 14,11:00pm,USD,orange,Crude Oil Inventories,N/A,N/A,N/A
+Nov 15,4:30am,NZD,yellow,BusinessNZ Manufacturing Index,N/A,N/A,N/A
+Nov 15,6:50am,JPY,yellow,Core Machinery Orders m/m,N/A,N/A,N/A
+Nov 15,6:50am,JPY,yellow,Prelim GDP Price Index y/y,N/A,N/A,N/A
+Nov 15,6:50am,JPY,yellow,Prelim GDP q/q,N/A,N/A,N/A
+Nov 15,8:30am,CNY,yellow,New Home Prices m/m,N/A,N/A,N/A
+Nov 15,9:00am,CNY,orange,Industrial Production y/y,N/A,N/A,N/A
+Nov 15,9:00am,CNY,orange,Retail Sales y/y,N/A,N/A,N/A
+Nov 15,9:00am,CNY,yellow,Fixed Asset Investment ytd/y,N/A,N/A,N/A
+Nov 15,9:00am,CNY,yellow,NBS Press Conference,N/A,N/A,N/A
+Nov 15,9:00am,CNY,yellow,Unemployment Rate,N/A,N/A,N/A
+Nov 15,11:30am,JPY,yellow,Tertiary Industry Activity m/m,N/A,N/A,N/A
+Nov 15,2:00pm,GBP,red,Retail Sales m/m,N/A,N/A,N/A
+Nov 15,5:00pm,EUR,yellow,EU Economic Forecasts,N/A,N/A,N/A
+Nov 15,8:30pm,CAD,yellow,Manufacturing Sales m/m,N/A,N/A,N/A
+Nov 15,8:30pm,CAD,yellow,Wholesale Sales m/m,N/A,N/A,N/A
+Nov 15,8:30pm,USD,red,Core Retail Sales m/m,N/A,N/A,N/A
+Nov 15,8:30pm,USD,red,Retail Sales m/m,N/A,N/A,N/A
+Nov 15,8:30pm,USD,orange,Empire State Manufacturing Index,N/A,N/A,N/A
+Nov 15,8:30pm,USD,yellow,Import Prices m/m,N/A,N/A,N/A
+Nov 15,9:15pm,USD,yellow,Capacity Utilization Rate,N/A,N/A,N/A
+Nov 15,9:15pm,USD,yellow,Industrial Production m/m,N/A,N/A,N/A
+Nov 15,10:00pm,USD,yellow,Business Inventories m/m,N/A,N/A,N/A
+Nov 15,10:30pm,AUD,yellow,CB Leading Index m/m,N/A,N/A,N/A
+Nov 18,4:30am,NZD,yellow,BusinessNZ Services Index,N/A,N/A,N/A
+Nov 18,4:45am,NZD,yellow,PPI Input q/q,N/A,N/A,N/A
+Nov 18,4:45am,NZD,yellow,PPI Output q/q,N/A,N/A,N/A
+Nov 18,7:01am,GBP,yellow,Rightmove HPI m/m,N/A,N/A,N/A
+Nov 18,5:00pm,EUR,yellow,Trade Balance,N/A,N/A,N/A
+Nov 18,Tentative,EUR,yellow,German Buba Monthly Report,N/A,N/A,N/A
+Nov 18,8:15pm,CAD,yellow,Housing Starts,N/A,N/A,N/A
+Nov 18,8:30pm,CAD,yellow,Foreign Securities Purchases,N/A,N/A,N/A
+Nov 18,10:00pm,USD,yellow,NAHB Housing Market Index,N/A,N/A,N/A
+Nov 19,4:00am,USD,yellow,TIC Long-Term Purchases,N/A,N/A,N/A
+Nov 19,7:30am,AUD,orange,Monetary Policy Meeting Minutes,N/A,N/A,N/A
+Nov 19,4:00pm,EUR,yellow,Current Account,N/A,N/A,N/A
+Nov 19,5:00pm,EUR,yellow,Final Core CPI y/y,N/A,N/A,N/A
+Nov 19,5:00pm,EUR,yellow,Final CPI y/y,N/A,N/A,N/A
+Nov 19,8:30pm,CAD,red,CPI m/m,N/A,N/A,N/A
+Nov 19,8:30pm,CAD,red,Median CPI y/y,N/A,N/A,N/A
+Nov 19,8:30pm,CAD,red,Trimmed CPI y/y,N/A,N/A,N/A
+Nov 19,8:30pm,CAD,orange,Common CPI y/y,N/A,N/A,N/A
+Nov 19,8:30pm,CAD,yellow,Core CPI m/m,N/A,N/A,N/A
+Nov 19,8:30pm,USD,orange,Building Permits,N/A,N/A,N/A
+Nov 19,8:30pm,USD,yellow,Housing Starts,N/A,N/A,N/A
+Nov 19,Tentative,NZD,yellow,GDT Price Index,N/A,N/A,N/A
+Nov 20,6:30am,AUD,yellow,MI Leading Index m/m,N/A,N/A,N/A
+Nov 20,6:50am,JPY,yellow,Trade Balance,N/A,N/A,N/A
+Nov 20,8:15am,CNY,orange,1-y Loan Prime Rate,N/A,N/A,N/A
+Nov 20,8:15am,CNY,orange,5-y Loan Prime Rate,N/A,N/A,N/A
+Nov 20,2:00pm,EUR,yellow,German PPI m/m,N/A,N/A,N/A
+Nov 20,2:00pm,GBP,red,CPI y/y,N/A,N/A,N/A
+Nov 20,2:00pm,GBP,yellow,Core CPI y/y,N/A,N/A,N/A
+Nov 20,2:00pm,GBP,yellow,PPI Input m/m,N/A,N/A,N/A
+Nov 20,2:00pm,GBP,yellow,PPI Output m/m,N/A,N/A,N/A
+Nov 20,2:00pm,GBP,yellow,RPI y/y,N/A,N/A,N/A
+Nov 20,4:00pm,CHF,yellow,UBS Economic Expectations,N/A,N/A,N/A
+Nov 20,4:00pm,EUR,orange,ECB Financial Stability Review,N/A,N/A,N/A
+Nov 20,4:30pm,GBP,yellow,HPI y/y,N/A,N/A,N/A
+Nov 20,10:30pm,USD,orange,Crude Oil Inventories,N/A,N/A,N/A
+Nov 21,9:00am,NZD,yellow,Credit Card Spending y/y,N/A,N/A,N/A
+Nov 21,2:00pm,CHF,yellow,Trade Balance,N/A,N/A,N/A
+Nov 21,2:00pm,GBP,yellow,Public Sector Net Borrowing,N/A,N/A,N/A
+Nov 21,4:00pm,EUR,orange,German ifo Business Climate,N/A,N/A,N/A
+Nov 21,6:00pm,GBP,yellow,CBI Industrial Order Expectations,N/A,N/A,N/A
+Nov 21,8:30pm,CAD,yellow,IPPI m/m,N/A,N/A,N/A
+Nov 21,8:30pm,CAD,yellow,NHPI m/m,N/A,N/A,N/A
+Nov 21,8:30pm,CAD,yellow,RMPI m/m,N/A,N/A,N/A
+Nov 21,8:30pm,USD,red,Unemployment Claims,N/A,N/A,N/A
+Nov 21,8:30pm,USD,orange,Philly Fed Manufacturing Index,N/A,N/A,N/A
+Nov 21,10:00pm,EUR,yellow,Consumer Confidence,N/A,N/A,N/A
+Nov 21,10:00pm,USD,orange,Existing Home Sales,N/A,N/A,N/A
+Nov 21,10:00pm,USD,yellow,CB Leading Index m/m,N/A,N/A,N/A
+Nov 22,5:00am,AUD,yellow,Flash Manufacturing PMI,N/A,N/A,N/A
+Nov 22,5:00am,AUD,yellow,Flash Services PMI,N/A,N/A,N/A
+Nov 22,6:30am,JPY,yellow,National Core CPI y/y,N/A,N/A,N/A
+Nov 22,7:01am,GBP,yellow,GfK Consumer Confidence,N/A,N/A,N/A
+Nov 22,7:30am,JPY,yellow,Flash Manufacturing PMI,N/A,N/A,N/A
+Nov 22,10:30am,USD,yellow,Natural Gas Storage,N/A,N/A,N/A
+Nov 22,2:00pm,EUR,yellow,German Final GDP q/q,N/A,N/A,N/A
+Nov 22,3:15pm,EUR,red,French Flash Manufacturing PMI,N/A,N/A,N/A
+Nov 22,3:15pm,EUR,red,French Flash Services PMI,N/A,N/A,N/A
+Nov 22,3:30pm,EUR,red,German Flash Manufacturing PMI,N/A,N/A,N/A
+Nov 22,3:30pm,EUR,red,German Flash Services PMI,N/A,N/A,N/A
+Nov 22,4:00pm,EUR,orange,Flash Manufacturing PMI,N/A,N/A,N/A
+Nov 22,4:00pm,EUR,orange,Flash Services PMI,N/A,N/A,N/A
+Nov 22,4:30pm,GBP,red,Flash Manufacturing PMI,N/A,N/A,N/A
+Nov 22,4:30pm,GBP,red,Flash Services PMI,N/A,N/A,N/A
+Nov 22,6:00pm,GBP,yellow,CBI Realized Sales,N/A,N/A,N/A
+Nov 22,8:30pm,CAD,red,Core Retail Sales m/m,N/A,N/A,N/A
+Nov 22,8:30pm,CAD,red,Retail Sales m/m,N/A,N/A,N/A
+Nov 22,9:45pm,USD,red,Flash Manufacturing PMI,N/A,N/A,N/A
+Nov 22,9:45pm,USD,red,Flash Services PMI,N/A,N/A,N/A
+Nov 22,10:00pm,USD,orange,Revised UoM Consumer Sentiment,N/A,N/A,N/A
+Nov 22,10:00pm,USD,yellow,Revised UoM Inflation Expectations,N/A,N/A,N/A
+Nov 25,4:45am,NZD,orange,Retail Sales q/q,N/A,N/A,N/A
+Nov 25,4:45am,NZD,yellow,Core Retail Sales q/q,N/A,N/A,N/A
+Nov 25,4:45am,NZD,yellow,Trade Balance,N/A,N/A,N/A
+Nov 25,8:30pm,CAD,yellow,Corporate Profits q/q,N/A,N/A,N/A
+Nov 25,9:00pm,CNY,yellow,CB Leading Index m/m,N/A,N/A,N/A
+Nov 25,9:00pm,EUR,yellow,Belgian NBB Business Climate,N/A,N/A,N/A
+Nov 26,6:50am,JPY,yellow,SPPI y/y,N/A,N/A,N/A
+Nov 26,12:00pm,JPY,yellow,BOJ Core CPI y/y,N/A,N/A,N/A
+Nov 26,9:00pm,USD,orange,S&P/CS Composite-20 HPI y/y,N/A,N/A,N/A
+Nov 26,9:00pm,USD,yellow,HPI m/m,N/A,N/A,N/A
+Nov 26,10:00pm,USD,red,CB Consumer Confidence,N/A,N/A,N/A
+Nov 26,10:00pm,USD,orange,New Home Sales,N/A,N/A,N/A
+Nov 26,10:00pm,USD,orange,Richmond Manufacturing Index,N/A,N/A,N/A
+Nov 27,7:01am,GBP,yellow,BRC Shop Price Index y/y,N/A,N/A,N/A
+Nov 27,7:30am,AUD,red,CPI y/y,N/A,N/A,N/A
+Nov 27,7:30am,AUD,yellow,Construction Work Done q/q,N/A,N/A,N/A
+Nov 27,8:00am,NZD,red,Official Cash Rate,N/A,N/A,N/A
+Nov 27,8:00am,NZD,red,RBNZ Monetary Policy Statement,N/A,N/A,N/A
+Nov 27,8:00am,NZD,red,RBNZ Rate Statement,N/A,N/A,N/A
+Nov 27,9:00am,NZD,red,RBNZ Press Conference,N/A,N/A,N/A
+Nov 27,2:00pm,EUR,yellow,German GfK Consumer Climate,N/A,N/A,N/A
+Nov 27,2:00pm,EUR,yellow,German Import Prices m/m,N/A,N/A,N/A
+Nov 27,Tentative,EUR,yellow,Italian 10-y Bond Auction,N/A,N/A,N/A
+Nov 27,8:30pm,USD,red,Prelim GDP q/q,N/A,N/A,N/A
+Nov 27,8:30pm,USD,red,Unemployment Claims,N/A,N/A,N/A
+Nov 27,8:30pm,USD,orange,Core Durable Goods Orders m/m,N/A,N/A,N/A
+Nov 27,8:30pm,USD,orange,Durable Goods Orders m/m,N/A,N/A,N/A
+Nov 27,8:30pm,USD,orange,Prelim GDP Price Index q/q,N/A,N/A,N/A
+Nov 27,8:30pm,USD,yellow,Goods Trade Balance,N/A,N/A,N/A
+Nov 27,8:30pm,USD,yellow,Prelim Wholesale Inventories m/m,N/A,N/A,N/A
+Nov 27,10:00pm,USD,red,Core PCE Price Index m/m,N/A,N/A,N/A
+Nov 27,10:00pm,USD,orange,Pending Home Sales m/m,N/A,N/A,N/A
+Nov 27,10:00pm,USD,yellow,Personal Income m/m,N/A,N/A,N/A
+Nov 27,10:00pm,USD,yellow,Personal Spending m/m,N/A,N/A,N/A
+Nov 27,10:30pm,USD,orange,Crude Oil Inventories,N/A,N/A,N/A
+Nov 28,12:00am,USD,yellow,Natural Gas Storage,N/A,N/A,N/A
+Nov 28,2:00am,USD,red,FOMC Meeting Minutes,N/A,N/A,N/A
+Nov 28,7:30am,AUD,yellow,Private Capital Expenditure q/q,N/A,N/A,N/A
+Nov 28,12:00pm,JPY,yellow,Consumer Confidence,N/A,N/A,N/A
+Nov 28,2:00pm,EUR,yellow,German Retail Sales m/m,N/A,N/A,N/A
+Nov 28,Tentative,GBP,yellow,Nationwide HPI m/m,N/A,N/A,N/A
+Nov 28,All Day,EUR,red,German Prelim CPI m/m,N/A,N/A,N/A
+Nov 28,2:45pm,EUR,yellow,French Consumer Spending m/m,N/A,N/A,N/A
+Nov 28,2:45pm,EUR,yellow,French Prelim CPI m/m,N/A,N/A,N/A
+Nov 28,3:00pm,CHF,orange,GDP q/q,N/A,N/A,N/A
+Nov 28,3:00pm,CHF,yellow,KOF Economic Barometer,N/A,N/A,N/A
+Nov 28,3:00pm,EUR,orange,Spanish Flash CPI y/y,N/A,N/A,N/A
+Nov 28,3:55pm,EUR,yellow,German Unemployment Change,N/A,N/A,N/A
+Nov 28,4:00pm,EUR,yellow,M3 Money Supply y/y,N/A,N/A,N/A
+Nov 28,4:00pm,EUR,yellow,Italian Monthly Unemployment Rate,N/A,N/A,N/A
+Nov 28,4:00pm,EUR,yellow,Private Loans y/y,N/A,N/A,N/A
+Nov 28,5:00pm,EUR,yellow,Italian Prelim CPI m/m,N/A,N/A,N/A
+Nov 28,All Day,USD,gray,Bank Holiday,N/A,N/A,N/A
+Nov 28,8:30pm,CAD,yellow,Current Account,N/A,N/A,N/A
+Nov 29,6:30am,JPY,orange,Tokyo Core CPI y/y,N/A,N/A,N/A
+Nov 29,6:50am,JPY,yellow,Prelim Industrial Production m/m,N/A,N/A,N/A
+Nov 29,6:50am,JPY,yellow,Retail Sales y/y,N/A,N/A,N/A
+Nov 29,7:00am,NZD,yellow,ANZ Business Confidence,N/A,N/A,N/A
+Nov 29,7:30am,AUD,yellow,Private Sector Credit m/m,N/A,N/A,N/A
+Nov 29,8:30am,CNY,red,Manufacturing PMI,N/A,N/A,N/A
+Nov 29,8:30am,CNY,orange,Non-Manufacturing PMI,N/A,N/A,N/A
+Nov 29,12:00pm,JPY,yellow,Housing Starts y/y,N/A,N/A,N/A
+Nov 29,2:30pm,CHF,yellow,Retail Sales y/y,N/A,N/A,N/A
+Nov 29,2:45pm,EUR,yellow,French Prelim GDP q/q,N/A,N/A,N/A
+Nov 29,4:30pm,GBP,yellow,M4 Money Supply m/m,N/A,N/A,N/A
+Nov 29,4:30pm,GBP,yellow,Mortgage Approvals,N/A,N/A,N/A
+Nov 29,4:30pm,GBP,yellow,Net Lending to Individuals m/m,N/A,N/A,N/A
+Nov 29,5:00pm,EUR,orange,Core CPI Flash Estimate y/y,N/A,N/A,N/A
+Nov 29,5:00pm,EUR,orange,CPI Flash Estimate y/y,N/A,N/A,N/A
+Nov 29,8:30pm,CAD,red,GDP m/m,N/A,N/A,N/A
+Nov 29,9:45pm,USD,orange,Chicago PMI,N/A,N/A,N/A

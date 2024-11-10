@@ -1,0 +1,446 @@
+date,time,currency,impact,event,actual,forecast,previous
+Oct 1,12:55am,USD,red,Fed Chair Powell Speaks,N/A,N/A,N/A
+Oct 1,3:10am,GBP,yellow,MPC Member Greene Speaks,N/A,N/A,N/A
+Oct 1,4:00am,NZD,orange,NZIER Business Confidence,-1,N/A,-44
+Oct 1,4:45am,NZD,yellow,Building Consents m/m,-5.3%,N/A,26.4%
+Oct 1,6:01am,GBP,yellow,BRC Shop Price Index y/y,-0.6%,-0.3%,-0.3%
+Oct 1,6:30am,JPY,yellow,Unemployment Rate,2.5%,2.6%,2.7%
+Oct 1,6:50am,JPY,yellow,BOJ Summary of Opinions,N/A,N/A,N/A
+Oct 1,6:50am,JPY,yellow,Tankan Manufacturing Index,13,12,13
+Oct 1,6:50am,JPY,yellow,Tankan Non-Manufacturing Index,34,32,33
+Oct 1,All Day,CNY,gray,Bank Holiday,N/A,N/A,N/A
+Oct 1,7:30am,JPY,yellow,Final Manufacturing PMI,49.7,49.6,49.6
+Oct 1,8:30am,AUD,orange,Retail Sales m/m,0.7%,0.4%,0.1%
+Oct 1,8:30am,AUD,yellow,Building Approvals m/m,-6.1%,-4.3%,11.0%
+Oct 1,1:30pm,AUD,yellow,Commodity Prices y/y,-10.1%,N/A,-6.0%
+Oct 1,1:30pm,CHF,yellow,Retail Sales y/y,3.2%,2.6%,2.9%
+Oct 1,2:00pm,EUR,yellow,German Buba President Nagel Speaks,N/A,N/A,N/A
+Oct 1,2:15pm,EUR,yellow,Spanish Manufacturing PMI,53.0,50.2,50.5
+Oct 1,2:30pm,CHF,yellow,Manufacturing PMI,49.9,47.9,49.0
+Oct 1,2:45pm,EUR,yellow,Italian Manufacturing PMI,48.3,49.0,49.4
+Oct 1,2:50pm,EUR,yellow,French Final Manufacturing PMI,44.6,44.0,44.0
+Oct 1,2:55pm,EUR,yellow,German Final Manufacturing PMI,40.6,40.3,40.3
+Oct 1,3:00pm,EUR,yellow,Final Manufacturing PMI,45.0,44.8,44.8
+Oct 1,3:30pm,GBP,yellow,Final Manufacturing PMI,51.5,51.5,51.5
+Oct 1,4:00pm,EUR,red,Core CPI Flash Estimate y/y,2.7%,2.7%,2.8%
+Oct 1,4:00pm,EUR,red,CPI Flash Estimate y/y,1.8%,1.8%,2.2%
+Oct 1,8:30pm,CAD,yellow,Manufacturing PMI,50.4,N/A,49.5
+Oct 1,8:45pm,USD,orange,Final Manufacturing PMI,47.3,47.0,47.0
+Oct 1,9:00pm,GBP,yellow,MPC Member Pill Speaks,N/A,N/A,N/A
+Oct 1,9:00pm,USD,red,ISM Manufacturing PMI,47.2,47.6,47.2
+Oct 1,9:00pm,USD,red,JOLTS Job Openings,8.04M,7.64M,7.71M
+Oct 1,9:00pm,USD,orange,ISM Manufacturing Prices,48.3,53.5,54.0
+Oct 1,9:00pm,USD,yellow,Construction Spending m/m,-0.1%,0.2%,-0.5%
+Oct 1,All Day,USD,yellow,Wards Total Vehicle Sales,15.8M,15.6M,15.1M
+Oct 1,10:00pm,USD,yellow,FOMC Member Bostic Speaks,N/A,N/A,N/A
+Oct 1,10:10pm,USD,yellow,FOMC Member Cook Speaks,N/A,N/A,N/A
+Oct 1,10:15pm,CHF,red,SNB Chairman Schlegel Speaks,N/A,N/A,N/A
+Oct 1,10:17pm,NZD,yellow,GDT Price Index,1.2%,N/A,0.8%
+Oct 2,5:15am,USD,yellow,FOMC Member Barkin Speaks,N/A,N/A,N/A
+Oct 2,5:15am,USD,yellow,FOMC Member Bostic Speaks,N/A,N/A,N/A
+Oct 2,5:15am,USD,yellow,FOMC Member Collins Speaks,N/A,N/A,N/A
+Oct 2,6:50am,JPY,yellow,Monetary Base y/y,-0.1%,0.8%,0.6%
+Oct 2,All Day,CNY,gray,Bank Holiday,N/A,N/A,N/A
+Oct 2,12:00pm,JPY,yellow,Consumer Confidence,36.9,37.1,36.7
+Oct 2,2:00pm,EUR,yellow,Spanish Unemployment Change,3.2K,12.1K,21.9K
+Oct 2,2:48pm,EUR,yellow,French Gov Budget Balance,-171.9B,N/A,-156.9B
+Oct 2,3:00pm,EUR,yellow,Italian Monthly Unemployment Rate,6.2%,6.5%,6.4%
+Oct 2,4:00pm,EUR,yellow,Unemployment Rate,6.4%,6.4%,6.4%
+Oct 2,4:30pm,GBP,yellow,FPC Meeting Minutes,N/A,N/A,N/A
+Oct 2,4:30pm,GBP,yellow,FPC Statement,N/A,N/A,N/A
+Oct 2,4:32pm,EUR,yellow,German 10-y Bond Auction,2.08|2.0,N/A,2.11|2.1
+Oct 2,7:15pm,USD,red,ADP Non-Farm Employment Change,143K,124K,103K
+Oct 2,8:00pm,CHF,yellow,SNB Quarterly Bulletin,N/A,N/A,N/A
+Oct 2,8:00pm,USD,yellow,FOMC Member Hammack Speaks,N/A,N/A,N/A
+Oct 2,9:05pm,USD,yellow,FOMC Member Musalem Speaks,N/A,N/A,N/A
+Oct 2,9:30pm,USD,orange,Crude Oil Inventories,3.9M,-1.5M,-4.5M
+Oct 2,10:00pm,USD,yellow,FOMC Member Bowman Speaks,N/A,N/A,N/A
+Oct 2,11:15pm,USD,yellow,FOMC Member Barkin Speaks,N/A,N/A,N/A
+Oct 3,7:00am,NZD,yellow,ANZ Commodity Prices m/m,1.8%,N/A,2.1%
+Oct 3,All Day,CNY,gray,Bank Holiday,N/A,N/A,N/A
+Oct 3,8:30am,AUD,yellow,Goods Trade Balance,5.64B,5.51B,5.64B
+Oct 3,10:35am,JPY,yellow,10-y Bond Auction,0.87|3.5,N/A,0.92|3.2
+Oct 3,All Day,EUR,gray,German Bank Holiday,N/A,N/A,N/A
+Oct 3,1:30pm,CHF,red,CPI m/m,-0.3%,-0.1%,0.0%
+Oct 3,2:15pm,EUR,yellow,Spanish Services PMI,57.0,54.0,54.6
+Oct 3,2:45pm,EUR,yellow,Italian Services PMI,50.5,51.2,51.4
+Oct 3,2:50pm,EUR,yellow,French Final Services PMI,49.6,48.3,48.3
+Oct 3,2:55pm,EUR,yellow,German Final Services PMI,50.6,50.6,50.6
+Oct 3,3:00pm,EUR,yellow,Final Services PMI,51.4,50.5,50.5
+Oct 3,3:30pm,GBP,yellow,Final Services PMI,52.4,52.8,52.8
+Oct 3,3:59pm,EUR,yellow,French 10-y Bond Auction,2.92|2.1,N/A,2.95|2.2
+Oct 3,4:00pm,EUR,yellow,PPI m/m,0.6%,0.4%,0.7%
+Oct 3,6:30pm,USD,yellow,Challenger Job Cuts y/y,53.4%,N/A,1.0%
+Oct 3,7:30pm,USD,red,Unemployment Claims,225K,222K,219K
+Oct 3,8:45pm,USD,orange,Final Services PMI,55.2,55.4,55.4
+Oct 3,9:00pm,USD,red,ISM Services PMI,54.9,51.7,51.5
+Oct 3,9:00pm,USD,yellow,Factory Orders m/m,-0.2%,0.1%,4.9%
+Oct 3,9:00pm,USD,yellow,FOMC Member Schmid Speaks,N/A,N/A,N/A
+Oct 3,9:30pm,USD,yellow,Natural Gas Storage,55B,59B,47B
+Oct 3,9:40pm,USD,yellow,FOMC Member Bostic Speaks,N/A,N/A,N/A
+Oct 4,All Day,CNY,gray,Bank Holiday,N/A,N/A,N/A
+Oct 4,12:45pm,CHF,yellow,Unemployment Rate,2.6%,2.6%,2.5%
+Oct 4,1:45pm,EUR,yellow,French Industrial Production m/m,1.4%,0.3%,0.2%
+Oct 4,2:55pm,GBP,yellow,MPC Member Pill Speaks,N/A,N/A,N/A
+Oct 4,3:30pm,GBP,orange,Construction PMI,57.2,53.1,53.6
+Oct 4,3:30pm,GBP,yellow,Housing Equity Withdrawal q/q,-14.7B,-20.3B,-23.0B
+Oct 4,5:00pm,EUR,yellow,Italian Retail Sales m/m,-0.5%,0.2%,0.5%
+Oct 4,7:30pm,USD,red,Average Hourly Earnings m/m,0.4%,0.3%,0.5%
+Oct 4,7:30pm,USD,red,Non-Farm Employment Change,254K,147K,159K
+Oct 4,7:30pm,USD,red,Unemployment Rate,4.1%,4.2%,4.2%
+Oct 4,8:00pm,USD,yellow,FOMC Member Williams Speaks,N/A,N/A,N/A
+Oct 4,9:00pm,CAD,orange,Ivey PMI,53.1,50.3,48.2
+Oct 4,9:00pm,USD,yellow,FOMC Member Goolsbee Speaks,N/A,N/A,N/A
+Oct 4,9:30pm,USD,yellow,FOMC Member Goolsbee Speaks,N/A,N/A,N/A
+Oct 5,3:00am,USD,yellow,FOMC Member Goolsbee Speaks,N/A,N/A,N/A
+Oct 5,11:00pm,AUD,gray,Daylight Saving Time Shift,N/A,N/A,N/A
+Oct 7,All Day,AUD,gray,Bank Holiday,N/A,N/A,N/A
+Oct 7,7:00am,AUD,yellow,MI Inflation Gauge m/m,0.1%,N/A,-0.1%
+Oct 7,All Day,CNY,gray,Bank Holiday,N/A,N/A,N/A
+Oct 7,12:00pm,JPY,yellow,Leading Indicators,106.7%,107.2%,109.3%
+Oct 7,1:00pm,EUR,yellow,German Factory Orders m/m,-5.8%,-1.9%,3.9%
+Oct 7,1:00pm,GBP,yellow,Halifax HPI m/m,0.3%,0.2%,0.3%
+Oct 7,2:00pm,CHF,yellow,Foreign Currency Reserves,716B,N/A,694B
+Oct 7,3:30pm,EUR,yellow,Sentix Investor Confidence,-13.8,-14.6,-15.4
+Oct 7,4:00pm,EUR,yellow,Retail Sales m/m,0.2%,0.2%,0.0%
+Oct 7,All Day,EUR,yellow,Eurogroup Meetings,N/A,N/A,N/A
+Oct 7,9:30pm,EUR,yellow,German Buba President Nagel Speaks,N/A,N/A,N/A
+Oct 8,12:00am,USD,yellow,FOMC Member Bowman Speaks,N/A,N/A,N/A
+Oct 8,12:50am,USD,yellow,FOMC Member Kashkari Speaks,N/A,N/A,N/A
+Oct 8,2:00am,USD,yellow,Consumer Credit m/m,8.9B,11.8B,26.6B
+Oct 8,5:30am,USD,yellow,FOMC Member Musalem Speaks,N/A,N/A,N/A
+Oct 8,6:01am,GBP,yellow,BRC Retail Sales Monitor y/y,1.7%,0.8%,0.8%
+Oct 8,6:30am,AUD,yellow,Westpac Consumer Sentiment,6.2%,N/A,-0.5%
+Oct 8,6:30am,JPY,yellow,Average Cash Earnings y/y,3.0%,3.0%,3.4%
+Oct 8,6:30am,JPY,yellow,Household Spending y/y,-1.9%,-2.5%,0.1%
+Oct 8,6:50am,JPY,yellow,Current Account,3.02T,2.43T,2.80T
+Oct 8,7:30am,AUD,orange,Monetary Policy Meeting Minutes,N/A,N/A,N/A
+Oct 8,7:30am,AUD,yellow,ANZ Job Advertisements m/m,1.6%,N/A,-1.8%
+Oct 8,7:30am,AUD,yellow,NAB Business Confidence,-2,N/A,-5
+Oct 8,8:00am,AUD,yellow,RBA Deputy Gov Hauser Speaks,N/A,N/A,N/A
+Oct 8,10:35am,JPY,yellow,30-y Bond Auction,2.15|3.3,N/A,2.04|3.4
+Oct 8,12:00pm,JPY,yellow,Economy Watchers Sentiment,47.8,49.3,49.0
+Oct 8,1:00pm,EUR,yellow,German Industrial Production m/m,2.9%,0.8%,-2.9%
+Oct 8,1:45pm,EUR,yellow,French Trade Balance,-7.4B,-5.5B,-6.0B
+Oct 8,2:00pm,USD,yellow,FOMC Member Kugler Speaks,N/A,N/A,N/A
+Oct 8,All Day,EUR,yellow,ECOFIN Meetings,N/A,N/A,N/A
+Oct 8,5:00pm,USD,yellow,NFIB Small Business Index,91.5,92.0,91.2
+Oct 8,7:30pm,USD,yellow,Trade Balance,-70.4B,-70.1B,-78.9B
+Oct 8,8:00pm,CAD,yellow,Trade Balance,-1.1B,-0.4B,-0.3B
+Oct 8,9:00pm,USD,yellow,RCM/TIPP Economic Optimism,46.9,47.2,46.1
+Oct 8,11:45pm,USD,yellow,FOMC Member Bostic Speaks,N/A,N/A,N/A
+Oct 9,12:00am,EUR,yellow,German Buba President Nagel Speaks,N/A,N/A,N/A
+Oct 9,3:00am,USD,yellow,FOMC Member Collins Speaks,N/A,N/A,N/A
+Oct 9,6:30am,USD,yellow,FOMC Member Jefferson Speaks,N/A,N/A,N/A
+Oct 9,7:00am,AUD,yellow,RBA Assist Gov Kent Speaks,N/A,N/A,N/A
+Oct 9,8:00am,NZD,red,Official Cash Rate,4.75%,4.75%,5.25%
+Oct 9,8:00am,NZD,red,RBNZ Rate Statement,N/A,N/A,N/A
+Oct 9,12:59pm,JPY,yellow,Prelim Machine Tool Orders y/y,-6.5%,N/A,-3.5%
+Oct 9,1:00pm,EUR,yellow,German Trade Balance,22.5B,18.9B,16.9B
+Oct 9,4:08pm,GBP,yellow,10-y Bond Auction,4.17|3.3,N/A,3.76|2.8
+Oct 9,7:00pm,USD,yellow,FOMC Member Bostic Speaks,N/A,N/A,N/A
+Oct 9,8:15pm,USD,yellow,FOMC Member Logan Speaks,N/A,N/A,N/A
+Oct 9,9:00pm,USD,yellow,Final Wholesale Inventories m/m,0.1%,0.2%,0.2%
+Oct 9,9:30pm,USD,orange,Crude Oil Inventories,5.8M,2.0M,3.9M
+Oct 9,9:30pm,USD,yellow,FOMC Member Goolsbee Speaks,N/A,N/A,N/A
+Oct 9,11:30pm,USD,yellow,FOMC Member Jefferson Speaks,N/A,N/A,N/A
+Oct 10,12:01am,USD,yellow,10-y Bond Auction,4.07|2.5,N/A,3.65|2.6
+Oct 10,1:00am,USD,red,FOMC Meeting Minutes,N/A,N/A,N/A
+Oct 10,4:00am,USD,yellow,FOMC Member Collins Speaks,N/A,N/A,N/A
+Oct 10,5:00am,USD,yellow,FOMC Member Daly Speaks,N/A,N/A,N/A
+Oct 10,6:01am,GBP,yellow,RICS House Price Balance,11%,9%,0%
+Oct 10,6:50am,JPY,yellow,Bank Lending y/y,2.7%,2.9%,3.0%
+Oct 10,6:50am,JPY,yellow,PPI y/y,2.8%,2.3%,2.6%
+Oct 10,7:00am,AUD,yellow,MI Inflation Expectations,4.0%,N/A,4.4%
+Oct 10,May Data,EUR,yellow,German Retail Sales m/m,-1.4%,N/A,-1.2%
+Oct 10,June Data,EUR,yellow,German Retail Sales m/m,-1.1%,N/A,-1.4%
+Oct 10,July Data,EUR,yellow,German Retail Sales m/m,1.5%,N/A,-1.1%
+Oct 10,1:00pm,EUR,yellow,German Retail Sales m/m,1.6%,N/A,1.5%
+Oct 10,2:45pm,AUD,yellow,RBA Assist Gov Hunter Speaks,N/A,N/A,N/A
+Oct 10,3:00pm,EUR,yellow,Italian Industrial Production m/m,0.1%,0.3%,-1.0%
+Oct 10,3:30pm,GBP,yellow,BOE Credit Conditions Survey,N/A,N/A,N/A
+Oct 10,6:30pm,EUR,yellow,ECB Monetary Policy Meeting Accounts,N/A,N/A,N/A
+Oct 10,7:30pm,USD,red,Core CPI m/m,0.3%,0.2%,0.3%
+Oct 10,7:30pm,USD,red,CPI m/m,0.2%,0.1%,0.2%
+Oct 10,7:30pm,USD,red,CPI y/y,2.4%,2.3%,2.5%
+Oct 10,7:30pm,USD,red,Unemployment Claims,258K,231K,225K
+Oct 10,8:15pm,USD,yellow,FOMC Member Cook Speaks,N/A,N/A,N/A
+Oct 10,9:30pm,USD,yellow,FOMC Member Barkin Speaks,N/A,N/A,N/A
+Oct 10,9:30pm,USD,yellow,Natural Gas Storage,82B,73B,55B
+Oct 10,10:00pm,USD,yellow,FOMC Member Williams Speaks,N/A,N/A,N/A
+Oct 10,10:30pm,CHF,yellow,Gov Board Member Martin Speaks,N/A,N/A,N/A
+Oct 11,12:01am,USD,yellow,30-y Bond Auction,4.39|2.5,N/A,4.02|2.4
+Oct 11,4:30am,NZD,yellow,BusinessNZ Manufacturing Index,46.9,N/A,46.1
+Oct 11,4:45am,NZD,yellow,FPI m/m,0.5%,N/A,0.2%
+Oct 11,4:45am,NZD,yellow,Visitor Arrivals m/m,-4.3%,N/A,2.2%
+Oct 11,6:50am,JPY,yellow,M2 Money Stock y/y,1.3%,1.5%,1.3%
+Oct 11,1:00pm,EUR,yellow,German Final CPI m/m,0.0%,0.0%,0.0%
+Oct 11,1:00pm,GBP,red,GDP m/m,0.2%,0.2%,0.0%
+Oct 11,1:00pm,GBP,yellow,Construction Output m/m,0.4%,0.5%,-0.4%
+Oct 11,1:00pm,GBP,yellow,Goods Trade Balance,-15.1B,-18.8B,-18.9B
+Oct 11,1:00pm,GBP,yellow,Index of Services 3m/3m,0.1%,0.3%,0.4%
+Oct 11,1:00pm,GBP,yellow,Industrial Production m/m,0.5%,0.2%,-0.7%
+Oct 11,1:00pm,GBP,yellow,Manufacturing Production m/m,1.1%,0.3%,-1.2%
+Oct 11,2:00pm,CHF,yellow,SECO Consumer Climate,-34,-33,-35
+Oct 11,7:30pm,CAD,red,Employment Change,46.7K,29.8K,22.1K
+Oct 11,7:30pm,CAD,red,Unemployment Rate,6.5%,6.7%,6.6%
+Oct 11,7:30pm,CAD,yellow,Building Permits m/m,-7.0%,-7.5%,20.8%
+Oct 11,7:30pm,USD,red,Core PPI m/m,0.2%,0.2%,0.3%
+Oct 11,7:30pm,USD,red,PPI m/m,0.0%,0.1%,0.2%
+Oct 11,7:32pm,GBP,yellow,NIESR GDP Estimate,0.2%,N/A,0.2%
+Oct 11,8:30pm,GBP,yellow,CB Leading Index m/m,0.0%,N/A,-0.3%
+Oct 11,8:45pm,USD,yellow,FOMC Member Goolsbee Speaks,N/A,N/A,N/A
+Oct 11,9:00pm,USD,orange,Prelim UoM Consumer Sentiment,68.9,70.9,70.1
+Oct 11,9:00pm,USD,orange,Prelim UoM Inflation Expectations,2.9%,N/A,2.7%
+Oct 11,9:30pm,CAD,yellow,BOC Business Outlook Survey,N/A,N/A,N/A
+Oct 11,9:45pm,USD,yellow,FOMC Member Logan Speaks,N/A,N/A,N/A
+Oct 12,12:10am,USD,yellow,FOMC Member Bowman Speaks,N/A,N/A,N/A
+Oct 13,8:30am,CNY,orange,CPI y/y,0.4%,0.6%,0.6%
+Oct 13,8:30am,CNY,orange,PPI y/y,-2.8%,-2.5%,-1.8%
+Oct 14,3:15am,NZD,orange,RBNZ Gov Orr Speaks,N/A,N/A,N/A
+Oct 14,4:30am,NZD,yellow,BusinessNZ Services Index,45.7,N/A,45.7
+Oct 14,All Day,JPY,gray,Bank Holiday,N/A,N/A,N/A
+Oct 14,1:15pm,EUR,yellow,German Buba President Nagel Speaks,N/A,N/A,N/A
+Oct 14,1:30pm,CHF,yellow,PPI m/m,-0.1%,0.1%,0.2%
+Oct 14,1:30pm,GBP,yellow,MPC Member Dhingra Speaks,N/A,N/A,N/A
+Oct 14,3:12pm,CNY,yellow,USD-Denominated Trade Balance,81.7B,91.5B,91.0B
+Oct 14,3:13pm,CNY,yellow,Trade Balance,583B,651B,649B
+Oct 14,4:01pm,CNY,yellow,M2 Money Supply y/y,6.8%,6.4%,6.3%
+Oct 14,4:02pm,CNY,orange,New Loans,1590B,1090B,900B
+Oct 14,All Day,CAD,gray,Bank Holiday,N/A,N/A,N/A
+Oct 14,All Day,USD,gray,Bank Holiday,N/A,N/A,N/A
+Oct 14,8:00pm,USD,yellow,FOMC Member Kashkari Speaks,N/A,N/A,N/A
+Oct 15,2:00am,USD,orange,FOMC Member Waller Speaks,N/A,N/A,N/A
+Oct 15,4:00am,USD,yellow,FOMC Member Kashkari Speaks,N/A,N/A,N/A
+Oct 15,11:30am,JPY,yellow,Revised Industrial Production m/m,-3.3%,-3.3%,-3.3%
+Oct 15,1:00pm,EUR,yellow,German WPI m/m,-0.3%,0.2%,-0.8%
+Oct 15,1:00pm,GBP,red,Claimant Count Change,27.9K,20.2K,0.3K
+Oct 15,1:00pm,GBP,orange,Average Earnings Index 3m/y,3.8%,3.8%,4.1%
+Oct 15,1:00pm,GBP,yellow,Unemployment Rate,4.0%,4.1%,4.1%
+Oct 15,1:45pm,EUR,yellow,French Final CPI m/m,-1.2%,-1.2%,-1.2%
+Oct 15,4:00pm,EUR,orange,German ZEW Economic Sentiment,13.1,10.2,3.6
+Oct 15,4:00pm,EUR,yellow,Industrial Production m/m,1.8%,1.8%,-0.5%
+Oct 15,4:00pm,EUR,yellow,ZEW Economic Sentiment,20.1,16.9,9.3
+Oct 15,7:30pm,CAD,red,CPI m/m,-0.4%,-0.2%,-0.2%
+Oct 15,7:30pm,CAD,red,Median CPI y/y,2.3%,2.3%,2.3%
+Oct 15,7:30pm,CAD,red,Trimmed CPI y/y,2.4%,2.4%,2.4%
+Oct 15,7:30pm,CAD,orange,Common CPI y/y,2.1%,2.1%,1.9%
+Oct 15,7:30pm,CAD,yellow,Wholesale Sales m/m,-0.6%,-1.1%,0.3%
+Oct 15,7:30pm,USD,orange,Empire State Manufacturing Index,-11.9,3.4,11.5
+Oct 15,7:32pm,CAD,yellow,Core CPI m/m,0.0%,N/A,-0.1%
+Oct 15,9:41pm,NZD,yellow,GDT Price Index,-0.3%,N/A,1.2%
+Oct 15,10:30pm,USD,yellow,FOMC Member Daly Speaks,N/A,N/A,N/A
+Oct 16,12:00am,USD,yellow,FOMC Member Kugler Speaks,N/A,N/A,N/A
+Oct 16,4:45am,NZD,red,CPI q/q,0.6%,0.7%,0.4%
+Oct 16,5:00am,AUD,yellow,RBA Assist Gov Hunter Speaks,N/A,N/A,N/A
+Oct 16,6:30am,AUD,yellow,MI Leading Index m/m,0.0%,N/A,0.0%
+Oct 16,6:50am,JPY,yellow,Core Machinery Orders m/m,-1.9%,0.1%,-0.1%
+Oct 16,1:00pm,GBP,red,CPI y/y,1.7%,1.9%,2.2%
+Oct 16,1:00pm,GBP,yellow,Core CPI y/y,3.2%,3.4%,3.6%
+Oct 16,1:00pm,GBP,yellow,PPI Input m/m,-1.0%,-0.5%,-0.3%
+Oct 16,1:00pm,GBP,yellow,PPI Output m/m,-0.5%,-0.3%,-0.3%
+Oct 16,1:00pm,GBP,yellow,RPI y/y,2.7%,3.1%,3.5%
+Oct 16,3:30pm,GBP,yellow,HPI y/y,2.8%,2.5%,1.8%
+Oct 16,4:34pm,EUR,yellow,German 30-y Bond Auction,2.49|3.6,N/A,2.44|2.7
+Oct 16,7:15pm,CAD,yellow,Housing Starts,224K,235K,213K
+Oct 16,7:30pm,CAD,yellow,Manufacturing Sales m/m,-1.3%,-1.5%,1.1%
+Oct 16,7:30pm,USD,yellow,Import Prices m/m,-0.4%,-0.3%,-0.2%
+Oct 16,9:30pm,AUD,yellow,CB Leading Index m/m,0.0%,N/A,0.0%
+Oct 17,1:40am,EUR,orange,ECB President Lagarde Speaks,N/A,N/A,N/A
+Oct 17,6:50am,JPY,yellow,Trade Balance,-0.19T,-0.49T,-0.47T
+Oct 17,7:30am,AUD,red,Employment Change,64.1K,25.2K,42.6K
+Oct 17,7:30am,AUD,red,Unemployment Rate,4.1%,4.2%,4.1%
+Oct 17,7:30am,AUD,yellow,RBA Bulletin,N/A,N/A,N/A
+Oct 17,7:32am,AUD,yellow,NAB Quarterly Business Confidence,-6,N/A,-2
+Oct 17,11:30am,JPY,yellow,Tertiary Industry Activity m/m,-1.1%,-0.2%,2.2%
+Oct 17,1:00pm,CHF,yellow,Trade Balance,4.95B,4.85B,4.74B
+Oct 17,3:47pm,EUR,yellow,Spanish 10-y Bond Auction,2.92|1.7,N/A,3.04|2.1
+Oct 17,4:00pm,EUR,yellow,Final Core CPI y/y,2.7%,2.7%,2.7%
+Oct 17,4:00pm,EUR,yellow,Final CPI y/y,1.7%,1.8%,1.8%
+Oct 17,4:00pm,EUR,yellow,Italian Trade Balance,1.43B,5.55B,6.82B
+Oct 17,4:00pm,EUR,yellow,Trade Balance,11.0B,17.8B,13.7B
+Oct 17,7:15pm,EUR,red,Main Refinancing Rate,3.40%,3.40%,3.65%
+Oct 17,7:15pm,EUR,red,Monetary Policy Statement,N/A,N/A,N/A
+Oct 17,7:30pm,CAD,yellow,Foreign Securities Purchases,9.97B,9.50B,10.97B
+Oct 17,7:30pm,USD,red,Core Retail Sales m/m,0.5%,0.1%,0.2%
+Oct 17,7:30pm,USD,red,Retail Sales m/m,0.4%,0.3%,0.1%
+Oct 17,7:30pm,USD,red,Unemployment Claims,241K,241K,260K
+Oct 17,7:30pm,USD,orange,Philly Fed Manufacturing Index,10.3,4.2,1.7
+Oct 17,7:45pm,EUR,red,ECB Press Conference,N/A,N/A,N/A
+Oct 17,8:15pm,USD,yellow,Capacity Utilization Rate,77.5%,77.9%,77.8%
+Oct 17,8:15pm,USD,yellow,Industrial Production m/m,-0.3%,-0.1%,0.3%
+Oct 17,9:00pm,USD,yellow,Business Inventories m/m,0.3%,0.3%,0.3%
+Oct 17,9:00pm,USD,yellow,NAHB Housing Market Index,43,43,41
+Oct 17,9:30pm,USD,yellow,Natural Gas Storage,76B,80B,82B
+Oct 17,10:00pm,USD,orange,Crude Oil Inventories,-2.2M,1.8M,5.8M
+Oct 17,10:00pm,USD,yellow,FOMC Member Goolsbee Speaks,N/A,N/A,N/A
+Oct 18,2:00am,USD,orange,Treasury Sec Yellen Speaks,N/A,N/A,N/A
+Oct 18,3:00am,USD,yellow,TIC Long-Term Purchases,111.4B,58.9B,137.9B
+Oct 18,6:30am,JPY,yellow,National Core CPI y/y,2.4%,2.3%,2.8%
+Oct 18,8:30am,CNY,yellow,New Home Prices m/m,-0.71%,N/A,-0.73%
+Oct 18,9:00am,CNY,orange,GDP q/y,4.6%,4.6%,4.7%
+Oct 18,9:00am,CNY,orange,Industrial Production y/y,5.4%,4.6%,4.5%
+Oct 18,9:00am,CNY,orange,Retail Sales y/y,3.2%,2.5%,2.1%
+Oct 18,9:00am,CNY,yellow,Fixed Asset Investment ytd/y,3.4%,3.3%,3.4%
+Oct 18,9:00am,CNY,yellow,NBS Press Conference,N/A,N/A,N/A
+Oct 18,9:00am,CNY,yellow,Unemployment Rate,5.1%,5.3%,5.3%
+Oct 18,1:00pm,GBP,red,Retail Sales m/m,0.3%,-0.4%,1.0%
+Oct 18,3:00pm,EUR,yellow,Current Account,31.5B,42.2B,40.8B
+Oct 18,7:30pm,USD,orange,Building Permits,1.43M,1.45M,1.47M
+Oct 18,7:30pm,USD,yellow,Housing Starts,1.35M,1.35M,1.36M
+Oct 18,11:10pm,USD,orange,FOMC Member Waller Speaks,N/A,N/A,N/A
+Oct 18,11:30pm,USD,yellow,FOMC Member Bostic Speaks,N/A,N/A,N/A
+Oct 19,3:00am,USD,yellow,Federal Budget Balance,64.3B,43.5B,-380.1B
+Oct 21,6:01am,GBP,yellow,Rightmove HPI m/m,0.3%,N/A,0.8%
+Oct 21,8:00am,AUD,yellow,RBA Deputy Gov Hauser Speaks,N/A,N/A,N/A
+Oct 21,8:00am,CNY,orange,1-y Loan Prime Rate,3.10%,3.15%,3.35%
+Oct 21,8:00am,CNY,orange,5-y Loan Prime Rate,3.60%,3.65%,3.85%
+Oct 21,9:00am,NZD,yellow,Credit Card Spending y/y,-3.2%,N/A,-3.1%
+Oct 21,1:00pm,EUR,yellow,German PPI m/m,-0.5%,-0.2%,0.2%
+Oct 21,7:55pm,USD,yellow,FOMC Member Logan Speaks,N/A,N/A,N/A
+Oct 21,9:00pm,USD,yellow,CB Leading Index m/m,N/A,-0.3%,-0.2%
+Oct 22,12:00am,USD,yellow,FOMC Member Kashkari Speaks,N/A,N/A,N/A
+Oct 22,4:05am,USD,yellow,FOMC Member Schmid Speaks,N/A,N/A,N/A
+Oct 22,4:45am,NZD,yellow,Trade Balance,N/A,N/A,-2203M
+Oct 22,5:40am,USD,yellow,FOMC Member Daly Speaks,N/A,N/A,N/A
+Oct 22,1:00pm,GBP,yellow,Public Sector Net Borrowing,N/A,17.4B,13.7B
+Oct 22,Tentative,CNY,yellow,Foreign Direct Investment ytd/y,N/A,N/A,-31.5%
+Oct 22,7:30pm,CAD,yellow,IPPI m/m,N/A,-0.4%,-0.8%
+Oct 22,7:30pm,CAD,yellow,RMPI m/m,N/A,-1.7%,-3.1%
+Oct 22,8:15pm,GBP,yellow,MPC Member Greene Speaks,N/A,N/A,N/A
+Oct 22,8:25pm,GBP,red,BOE Gov Bailey Speaks,N/A,N/A,N/A
+Oct 22,9:00pm,USD,orange,FOMC Member Harker Speaks,N/A,N/A,N/A
+Oct 22,9:00pm,USD,orange,Richmond Manufacturing Index,N/A,-19,-21
+Oct 23,2:15am,EUR,orange,ECB President Lagarde Speaks,N/A,N/A,N/A
+Oct 23,2:15am,GBP,yellow,MPC Member Breeden Speaks,N/A,N/A,N/A
+Oct 23,Tentative,EUR,yellow,German 10-y Bond Auction,N/A,N/A,2.08|2.0
+Oct 23,8:00pm,GBP,yellow,MPC Member Breeden Speaks,N/A,N/A,N/A
+Oct 23,8:00pm,USD,yellow,FOMC Member Bowman Speaks,N/A,N/A,N/A
+Oct 23,8:45pm,CAD,red,BOC Monetary Policy Report,N/A,N/A,N/A
+Oct 23,8:45pm,CAD,red,BOC Rate Statement,N/A,N/A,N/A
+Oct 23,8:45pm,CAD,red,Overnight Rate,N/A,3.75%,4.25%
+Oct 23,9:00pm,EUR,orange,ECB President Lagarde Speaks,N/A,N/A,N/A
+Oct 23,9:00pm,EUR,yellow,Consumer Confidence,N/A,-12,-13
+Oct 23,9:00pm,USD,orange,Existing Home Sales,N/A,3.88M,3.86M
+Oct 23,9:30pm,CAD,red,BOC Press Conference,N/A,N/A,N/A
+Oct 23,9:30pm,USD,orange,Crude Oil Inventories,N/A,N/A,-2.2M
+Oct 23,11:00pm,USD,yellow,FOMC Member Barkin Speaks,N/A,N/A,N/A
+Oct 24,12:00am,NZD,orange,RBNZ Gov Orr Speaks,N/A,N/A,N/A
+Oct 24,1:00am,USD,yellow,Beige Book,N/A,N/A,N/A
+Oct 24,3:30am,GBP,red,BOE Gov Bailey Speaks,N/A,N/A,N/A
+Oct 24,5:00am,AUD,yellow,Flash Manufacturing PMI,N/A,N/A,46.7
+Oct 24,5:00am,AUD,yellow,Flash Services PMI,N/A,N/A,50.5
+Oct 24,7:30am,JPY,yellow,Flash Manufacturing PMI,N/A,49.9,49.7
+Oct 24,11:30am,AUD,yellow,RBA Annual Report,N/A,N/A,N/A
+Oct 24,2:15pm,EUR,red,French Flash Manufacturing PMI,N/A,45.1,44.6
+Oct 24,2:15pm,EUR,red,French Flash Services PMI,N/A,49.9,49.6
+Oct 24,2:30pm,EUR,red,German Flash Manufacturing PMI,N/A,40.7,40.6
+Oct 24,2:30pm,EUR,red,German Flash Services PMI,N/A,50.6,50.6
+Oct 24,3:00pm,EUR,orange,Flash Manufacturing PMI,N/A,45.1,45.0
+Oct 24,3:00pm,EUR,orange,Flash Services PMI,N/A,51.5,51.4
+Oct 24,3:30pm,GBP,red,Flash Manufacturing PMI,N/A,51.5,51.5
+Oct 24,3:30pm,GBP,red,Flash Services PMI,N/A,52.3,52.4
+Oct 24,5:00pm,GBP,yellow,CBI Industrial Order Expectations,N/A,-28,-35
+Oct 24,Tentative,EUR,yellow,German Buba Monthly Report,N/A,N/A,N/A
+Oct 24,7:30pm,USD,red,Unemployment Claims,N/A,243K,241K
+Oct 24,7:45pm,USD,yellow,FOMC Member Hammack Speaks,N/A,N/A,N/A
+Oct 24,8:00pm,GBP,yellow,MPC Member Mann Speaks,N/A,N/A,N/A
+Oct 24,Tentative,GBP,orange,Monetary Policy Report Hearings,N/A,N/A,N/A
+Oct 24,8:45pm,USD,red,Flash Manufacturing PMI,N/A,47.5,47.3
+Oct 24,8:45pm,USD,red,Flash Services PMI,N/A,55.0,55.2
+Oct 24,9:00pm,USD,orange,New Home Sales,N/A,717K,716K
+Oct 24,9:30pm,USD,yellow,Natural Gas Storage,N/A,N/A,76B
+Oct 25,6:01am,GBP,yellow,GfK Consumer Confidence,N/A,-20,-20
+Oct 25,6:30am,JPY,orange,Tokyo Core CPI y/y,N/A,1.7%,2.0%
+Oct 25,6:50am,JPY,yellow,SPPI y/y,N/A,2.7%,2.7%
+Oct 25,2:00pm,EUR,yellow,Spanish Unemployment Rate,N/A,11.4%,11.3%
+Oct 25,3:00pm,EUR,orange,German ifo Business Climate,N/A,85.6,85.4
+Oct 25,3:00pm,EUR,yellow,M3 Money Supply y/y,N/A,2.9%,2.9%
+Oct 25,3:00pm,EUR,yellow,Private Loans y/y,N/A,0.8%,0.6%
+Oct 25,7:30pm,CAD,red,Core Retail Sales m/m,N/A,0.3%,0.4%
+Oct 25,7:30pm,CAD,red,Retail Sales m/m,N/A,0.5%,0.9%
+Oct 25,7:30pm,CAD,yellow,NHPI m/m,N/A,0.2%,0.0%
+Oct 25,7:30pm,USD,orange,Core Durable Goods Orders m/m,N/A,-0.1%,0.5%
+Oct 25,7:30pm,USD,orange,Durable Goods Orders m/m,N/A,-1.1%,0.0%
+Oct 25,8:00pm,EUR,yellow,Belgian NBB Business Climate,N/A,-12.7,-13.3
+Oct 25,9:00pm,USD,orange,Revised UoM Consumer Sentiment,N/A,69.6,68.9
+Oct 25,9:00pm,USD,yellow,Revised UoM Inflation Expectations,N/A,N/A,2.9%
+Oct 26,10:20pm,GBP,orange,BOE Gov Bailey Speaks,N/A,N/A,N/A
+Oct 27,9:00am,CHF,gray,Daylight Saving Time Shift,N/A,N/A,N/A
+Oct 27,9:00am,EUR,gray,Daylight Saving Time Shift,N/A,N/A,N/A
+Oct 27,9:00am,GBP,gray,Daylight Saving Time Shift,N/A,N/A,N/A
+Oct 27,All Day,JPY,red,Lower House Elections,N/A,N/A,N/A
+Oct 28,All Day,NZD,gray,Bank Holiday,N/A,N/A,N/A
+Oct 28,5:00pm,GBP,yellow,CBI Realized Sales,N/A,N/A,N/A
+Oct 28,8:00pm,CNY,yellow,CB Leading Index m/m,N/A,N/A,N/A
+Oct 29,12:00pm,JPY,yellow,BOJ Core CPI y/y,N/A,N/A,N/A
+Oct 29,1:00pm,EUR,yellow,German GfK Consumer Climate,N/A,N/A,N/A
+Oct 29,2:00pm,CHF,yellow,KOF Economic Barometer,N/A,N/A,N/A
+Oct 29,3:30pm,GBP,yellow,M4 Money Supply m/m,N/A,N/A,N/A
+Oct 29,3:30pm,GBP,yellow,Mortgage Approvals,N/A,N/A,N/A
+Oct 29,3:30pm,GBP,yellow,Net Lending to Individuals m/m,N/A,N/A,N/A
+Oct 29,8:00pm,USD,orange,S&P/CS Composite-20 HPI y/y,N/A,N/A,N/A
+Oct 29,8:00pm,USD,yellow,HPI m/m,N/A,N/A,N/A
+Oct 29,9:00pm,USD,red,CB Consumer Confidence,N/A,N/A,N/A
+Oct 29,9:00pm,USD,red,JOLTS Job Openings,N/A,N/A,N/A
+Oct 30,6:01am,GBP,yellow,BRC Shop Price Index y/y,N/A,N/A,N/A
+Oct 30,7:00am,NZD,yellow,ANZ Business Confidence,N/A,N/A,N/A
+Oct 30,7:30am,AUD,red,CPI q/q,N/A,N/A,N/A
+Oct 30,7:30am,AUD,red,CPI y/y,N/A,N/A,N/A
+Oct 30,7:30am,AUD,red,Trimmed Mean CPI q/q,N/A,N/A,N/A
+Oct 30,1:00pm,EUR,yellow,German Import Prices m/m,N/A,N/A,N/A
+Oct 30,1:00pm,EUR,yellow,German Retail Sales m/m,N/A,N/A,N/A
+Oct 30,Tentative,GBP,yellow,Nationwide HPI m/m,N/A,N/A,N/A
+Oct 30,All Day,EUR,red,German Prelim CPI m/m,N/A,N/A,N/A
+Oct 30,1:30pm,CHF,yellow,Retail Sales y/y,N/A,N/A,N/A
+Oct 30,1:45pm,EUR,yellow,French Consumer Spending m/m,N/A,N/A,N/A
+Oct 30,2:00pm,EUR,orange,Spanish Flash CPI y/y,N/A,N/A,N/A
+Oct 30,2:55pm,EUR,yellow,German Unemployment Change,N/A,N/A,N/A
+Oct 30,3:00pm,CHF,yellow,UBS Economic Expectations,N/A,N/A,N/A
+Oct 30,3:00pm,EUR,yellow,Spanish Flash GDP q/q,N/A,N/A,0.8%
+Oct 30,3:00pm,EUR,yellow,Italian Monthly Unemployment Rate,N/A,N/A,N/A
+Oct 30,3:00pm,EUR,yellow,Italian Prelim GDP q/q,N/A,N/A,N/A
+Oct 30,4:00pm,EUR,yellow,Italian Prelim CPI m/m,N/A,N/A,N/A
+Oct 30,4:00pm,EUR,yellow,German Prelim GDP q/q,N/A,N/A,N/A
+Oct 30,Tentative,GBP,yellow,Bank Stress Test Results,N/A,N/A,N/A
+Oct 30,Tentative,EUR,yellow,Italian 10-y Bond Auction,N/A,N/A,N/A
+Oct 30,5:00pm,EUR,yellow,Prelim Flash GDP q/q,N/A,N/A,N/A
+Oct 30,Tentative,GBP,red,Annual Budget Release,N/A,N/A,N/A
+Oct 30,Tentative,GBP,orange,Autumn Forecast Statement,N/A,N/A,N/A
+Oct 30,7:15pm,USD,red,ADP Non-Farm Employment Change,N/A,N/A,N/A
+Oct 30,7:30pm,USD,red,Advance GDP q/q,N/A,N/A,N/A
+Oct 30,7:30pm,USD,orange,Advance GDP Price Index q/q,N/A,N/A,N/A
+Oct 30,7:30pm,USD,yellow,Goods Trade Balance,N/A,N/A,N/A
+Oct 30,7:30pm,USD,yellow,Prelim Wholesale Inventories m/m,N/A,N/A,N/A
+Oct 30,9:00pm,USD,orange,Pending Home Sales m/m,N/A,N/A,N/A
+Oct 30,9:30pm,USD,orange,Crude Oil Inventories,N/A,N/A,N/A
+Oct 31,6:30am,JPY,yellow,Unemployment Rate,N/A,N/A,N/A
+Oct 31,6:50am,JPY,yellow,Prelim Industrial Production m/m,N/A,N/A,N/A
+Oct 31,6:50am,JPY,yellow,Retail Sales y/y,N/A,N/A,N/A
+Oct 31,7:30am,AUD,orange,Retail Sales m/m,N/A,N/A,N/A
+Oct 31,7:30am,AUD,yellow,Building Approvals m/m,N/A,N/A,N/A
+Oct 31,7:30am,AUD,yellow,Import Prices q/q,N/A,N/A,N/A
+Oct 31,7:30am,AUD,yellow,Private Sector Credit m/m,N/A,N/A,N/A
+Oct 31,8:30am,CNY,red,Manufacturing PMI,N/A,N/A,N/A
+Oct 31,8:30am,CNY,orange,Non-Manufacturing PMI,N/A,N/A,N/A
+Oct 31,Tentative,JPY,red,BOJ Policy Rate,N/A,N/A,N/A
+Oct 31,Tentative,JPY,red,Monetary Policy Statement,N/A,N/A,N/A
+Oct 31,Tentative,JPY,red,BOJ Outlook Report,N/A,N/A,N/A
+Oct 31,12:00pm,JPY,yellow,Consumer Confidence,N/A,N/A,N/A
+Oct 31,12:00pm,JPY,yellow,Housing Starts y/y,N/A,N/A,N/A
+Oct 31,12:30pm,EUR,yellow,French Flash GDP q/q,N/A,N/A,N/A
+Oct 31,Tentative,JPY,red,BOJ Press Conference,N/A,N/A,N/A
+Oct 31,1:45pm,EUR,yellow,French Prelim CPI m/m,N/A,N/A,N/A
+Oct 31,3:00pm,EUR,yellow,ECB Economic Bulletin,N/A,N/A,N/A
+Oct 31,4:00pm,EUR,orange,Core CPI Flash Estimate y/y,N/A,N/A,N/A
+Oct 31,4:00pm,EUR,orange,CPI Flash Estimate y/y,N/A,N/A,N/A
+Oct 31,4:00pm,EUR,yellow,Unemployment Rate,N/A,N/A,N/A
+Oct 31,6:30pm,USD,yellow,Challenger Job Cuts y/y,N/A,N/A,N/A
+Oct 31,7:30pm,CAD,red,GDP m/m,N/A,N/A,N/A
+Oct 31,7:30pm,USD,red,Core PCE Price Index m/m,N/A,N/A,N/A
+Oct 31,7:30pm,USD,red,Employment Cost Index q/q,N/A,N/A,N/A
+Oct 31,7:30pm,USD,red,Unemployment Claims,N/A,N/A,N/A
+Oct 31,7:30pm,USD,yellow,Personal Income m/m,N/A,N/A,N/A
+Oct 31,7:30pm,USD,yellow,Personal Spending m/m,N/A,N/A,N/A
+Oct 31,8:45pm,USD,orange,Chicago PMI,N/A,N/A,N/A
+Oct 31,9:30pm,USD,yellow,Natural Gas Storage,N/A,N/A,N/A

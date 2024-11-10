@@ -4,7 +4,7 @@ from datetime import datetime
 def main():
     try:
         # Load the CSV file
-        file_path = '/Users/datpro/Documents/gitdatpro/ff-transform-data/forex_factory_calendar_news_scraper-main/news/2024-August_news.csv'
+        file_path = '/Users/datpro/Documents/gitdatpro/ff-transform-data/forex_factory_calendar_news_scraper-main/news/2024-September_news.csv'
         df = pd.read_csv(file_path)
         print("CSV file loaded successfully.")
 

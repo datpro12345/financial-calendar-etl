@@ -26,8 +26,8 @@
   {
    "metadata": {
     "ExecuteTime": {
-     "end_time": "2024-10-21T10:39:30.581697Z",
-     "start_time": "2024-10-21T10:39:29.906298Z"
+     "end_time": "2024-09-04T10:12:52.621410Z",
+     "start_time": "2024-09-04T10:12:52.169966Z"
     }
    },
    "cell_type": "code",
@@ -53,8 +53,8 @@
    "metadata": {
     "collapsed": true,
     "ExecuteTime": {
-     "end_time": "2024-10-21T11:05:50.608974Z",
-     "start_time": "2024-10-21T11:04:22.337135Z"
+     "end_time": "2024-09-04T10:22:58.799482Z",
+     "start_time": "2024-09-04T10:21:44.679129Z"
     }
    },
    "source": [
@@ -217,7 +217,7 @@
     "    driver = webdriver.Chrome(ChromeDriverManager().install())\n",
     "\n",
     "# URL of the page to scrape\n",
-    "url = \"https://www.forexfactory.com/calendar?month=nov.2024\"\n",
+    "url = \"https://www.forexfactory.com/calendar?month=sep.2024\"\n",
     "driver.get(url)\n",
     "\n",
     "month = datetime.now().strftime(\"%B\")\n",
@@ -277,74 +277,42 @@
      "output_type": "stream",
      "text": [
       "Save .csv successfully\n",
-      "       date       time currency  impact                           event  \\\n",
-      "0     Nov 1  Tentative      USD  orange        Treasury Currency Report   \n",
-      "1     Nov 1     4:45am      NZD  yellow           Building Consents m/m   \n",
-      "2     Nov 1     7:30am      AUD  yellow                         PPI q/q   \n",
-      "3     Nov 1     7:30am      JPY  yellow         Final Manufacturing PMI   \n",
-      "4     Nov 1     8:45am      CNY  yellow        Caixin Manufacturing PMI   \n",
-      "..      ...        ...      ...     ...                             ...   \n",
-      "340  Nov 29     4:30pm      GBP  yellow  Net Lending to Individuals m/m   \n",
-      "341  Nov 29     5:00pm      EUR  orange     Core CPI Flash Estimate y/y   \n",
-      "342  Nov 29     5:00pm      EUR  orange          CPI Flash Estimate y/y   \n",
-      "343  Nov 29     8:30pm      CAD     red                         GDP m/m   \n",
-      "344  Nov 29     9:45pm      USD  orange                     Chicago PMI   \n",
+      "       date     time currency  impact                           event actual  \\\n",
+      "0     Sep 2   6:50am      JPY  yellow            Capital Spending q/y   7.4%   \n",
+      "1     Sep 2   7:30am      JPY  yellow         Final Manufacturing PMI   49.8   \n",
+      "2     Sep 2   8:00am      AUD  yellow          MI Inflation Gauge m/m  -0.1%   \n",
+      "3     Sep 2   8:30am      AUD  yellow      ANZ Job Advertisements m/m  -2.1%   \n",
+      "4     Sep 2   8:30am      AUD  yellow          Building Approvals m/m  10.4%   \n",
+      "..      ...      ...      ...     ...                             ...    ...   \n",
+      "345  Sep 30   3:30pm      GBP  yellow             M4 Money Supply m/m    N/A   \n",
+      "346  Sep 30   3:30pm      GBP  yellow              Mortgage Approvals    N/A   \n",
+      "347  Sep 30   3:30pm      GBP  yellow  Net Lending to Individuals m/m    N/A   \n",
+      "348  Sep 30  All Day      CAD    gray                    Bank Holiday    N/A   \n",
+      "349  Sep 30   8:45pm      USD  orange                     Chicago PMI    N/A   \n",
       "\n",
-      "    actual forecast previous  \n",
-      "0      N/A      N/A      N/A  \n",
-      "1      N/A      N/A      N/A  \n",
-      "2      N/A      N/A      N/A  \n",
-      "3      N/A      N/A      N/A  \n",
-      "4      N/A      N/A      N/A  \n",
-      "..     ...      ...      ...  \n",
-      "340    N/A      N/A      N/A  \n",
-      "341    N/A      N/A      N/A  \n",
-      "342    N/A      N/A      N/A  \n",
-      "343    N/A      N/A      N/A  \n",
-      "344    N/A      N/A      N/A  \n",
+      "    forecast previous  \n",
+      "0       9.6%     6.8%  \n",
+      "1       49.5     49.5  \n",
+      "2        N/A     0.4%  \n",
+      "3        N/A    -2.7%  \n",
+      "4       2.4%    -6.4%  \n",
+      "..       ...      ...  \n",
+      "345      N/A      N/A  \n",
+      "346      N/A      N/A  \n",
+      "347      N/A      N/A  \n",
+      "348      N/A      N/A  \n",
+      "349      N/A      N/A  \n",
       "\n",
-      "[345 rows x 8 columns]\n"
+      "[350 rows x 8 columns]\n"
      ]
     }
    ],
-   "execution_count": 9
-  },
-  {
-   "metadata": {},
-   "cell_type": "code",
-   "outputs": [],
-   "execution_count": null,
-   "source": "",
-   "id": "a30fbac402f1f183"
-  },
-  {
-   "metadata": {},
-   "cell_type": "code",
-   "outputs": [],
-   "execution_count": null,
-   "source": "",
-   "id": "112a3905b457c827"
-  },
-  {
-   "metadata": {},
-   "cell_type": "code",
-   "outputs": [],
-   "execution_count": null,
-   "source": "",
-   "id": "1ff9d72f3dfdbcf6"
-  },
-  {
-   "metadata": {},
-   "cell_type": "code",
-   "outputs": [],
-   "execution_count": null,
-   "source": "",
-   "id": "75af32506cee39c1"
+   "execution_count": 3
   },
   {
    "metadata": {},
    "cell_type": "markdown",
-   "source": " # Enhance with automation processing to download multiple months",
+   "source": "# Enhance with automation processing to download multiple months",
    "id": "2fb5f43b3350e1c2"
   },
   {
@@ -534,7 +502,7 @@
  ],
  "metadata": {
   "kernelspec": {
-   "display_name": "Python 3 (ipykernel)",
+   "display_name": "Python 3",
    "language": "python",
    "name": "python3"
   },
