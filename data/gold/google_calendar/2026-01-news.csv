@@ -1,0 +1,34 @@
+Subject,Start Date,Start Time,End Date,End Time,Description,Location
+ISM Services PMI,01/07/2026,22:00,01/07/2026,23:00,Forecast: 52.2 | Actual: 54.4 | Previous: 52.6 | TZ: Asia/Ho_Chi_Minh,USD
+JOLTS Job Openings,01/07/2026,22:00,01/07/2026,23:00,Forecast: 7.61M | Actual: 7.15M | Previous: 7.45M | TZ: Asia/Ho_Chi_Minh,USD
+ADP Non-Farm Employment Change,01/07/2026,20:15,01/07/2026,21:15,Forecast: 49K | Actual: 41K | Previous: -29K | TZ: Asia/Ho_Chi_Minh,USD
+Unemployment Claims,01/08/2026,20:30,01/08/2026,21:30,Forecast: 213K | Actual: 208K | Previous: 200K | TZ: Asia/Ho_Chi_Minh,USD
+Prelim UoM Consumer Sentiment,01/09/2026,22:00,01/09/2026,23:00,Forecast: 53.5 | Actual: 54.0 | Previous: 52.9 | TZ: Asia/Ho_Chi_Minh,USD
+Prelim UoM Inflation Expectations,01/09/2026,22:00,01/09/2026,23:00,Forecast: N/A | Actual: 4.2% | Previous: 4.2% | TZ: Asia/Ho_Chi_Minh,USD
+Average Hourly Earnings m/m,01/09/2026,20:30,01/09/2026,21:30,Forecast: 0.3% | Actual: 0.3% | Previous: 0.1% | TZ: Asia/Ho_Chi_Minh,USD
+Non-Farm Employment Change,01/09/2026,20:30,01/09/2026,21:30,Forecast: 66K | Actual: 50K | Previous: 56K | TZ: Asia/Ho_Chi_Minh,USD
+Unemployment Rate,01/09/2026,20:30,01/09/2026,21:30,Forecast: 4.5% | Actual: 4.4% | Previous: 4.6% | TZ: Asia/Ho_Chi_Minh,USD
+CPI m/m,01/13/2026,22:00,01/13/2026,23:00,Forecast: 0.3% | Actual: 0.3% | Previous: 0.3% | TZ: Asia/Ho_Chi_Minh,USD
+CPI y/y,01/13/2026,22:00,01/13/2026,23:00,Forecast: 2.7% | Actual: 2.7% | Previous: 2.7% | TZ: Asia/Ho_Chi_Minh,USD
+Core CPI y/y,01/13/2026,22:00,01/13/2026,23:00,Forecast: 2.7% | Actual: 2.6% | Previous: 2.6% | TZ: Asia/Ho_Chi_Minh,USD
+Core Retail Sales m/m,01/14/2026,22:00,01/14/2026,23:00,Forecast: 0.4% | Actual: 0.5% | Previous: 0.2% | TZ: Asia/Ho_Chi_Minh,USD
+PPI m/m,01/14/2026,22:00,01/14/2026,23:00,Forecast: 0.2% | Actual: 0.2% | Previous: 0.1% | TZ: Asia/Ho_Chi_Minh,USD
+Retail Sales m/m,01/14/2026,22:00,01/14/2026,23:00,Forecast: 0.5% | Actual: 0.6% | Previous: -0.1% | TZ: Asia/Ho_Chi_Minh,USD
+Unemployment Claims,01/15/2026,20:30,01/15/2026,21:30,Forecast: 215K | Actual: 198K | Previous: 207K | TZ: Asia/Ho_Chi_Minh,USD
+BOE Gov Bailey Speaks,01/20/2026,16:45,01/20/2026,17:45,Forecast: N/A | Actual: N/A | Previous: N/A | TZ: Asia/Ho_Chi_Minh,GBP
+President Trump Speaks,01/21/2026,20:30,01/21/2026,21:30,Forecast: N/A | Actual: N/A | Previous: N/A | TZ: Asia/Ho_Chi_Minh,USD
+Core PCE Price Index m/m,01/22/2026,22:00,01/22/2026,23:00,Forecast: 0.2% | Actual: 0.2% | Previous: 0.2% | TZ: Asia/Ho_Chi_Minh,USD
+Final GDP q/q,01/22/2026,20:30,01/22/2026,21:30,Forecast: 4.3% | Actual: 4.4% | Previous: 4.3% | TZ: Asia/Ho_Chi_Minh,USD
+Unemployment Claims,01/22/2026,20:30,01/22/2026,21:30,Forecast: 209K | Actual: 200K | Previous: 199K | TZ: Asia/Ho_Chi_Minh,USD
+Retail Sales m/m,01/23/2026,14:00,01/23/2026,15:00,Forecast: 0.0% | Actual: 0.4% | Previous: -0.1% | TZ: Asia/Ho_Chi_Minh,GBP
+German Flash Manufacturing PMI,01/23/2026,15:30,01/23/2026,16:30,Forecast: 47.8 | Actual: 48.7 | Previous: 47.0 | TZ: Asia/Ho_Chi_Minh,EUR
+German Flash Services PMI,01/23/2026,15:30,01/23/2026,16:30,Forecast: 52.6 | Actual: 53.3 | Previous: 52.7 | TZ: Asia/Ho_Chi_Minh,EUR
+Flash Manufacturing PMI,01/23/2026,16:30,01/23/2026,17:30,Forecast: 50.6 | Actual: 51.6 | Previous: 50.6 | TZ: Asia/Ho_Chi_Minh,GBP
+Flash Services PMI,01/23/2026,16:30,01/23/2026,17:30,Forecast: 51.7 | Actual: 54.3 | Previous: 51.4 | TZ: Asia/Ho_Chi_Minh,GBP
+Flash Manufacturing PMI,01/23/2026,21:45,01/23/2026,22:45,Forecast: 51.9 | Actual: 51.9 | Previous: 51.8 | TZ: Asia/Ho_Chi_Minh,USD
+Flash Services PMI,01/23/2026,21:45,01/23/2026,22:45,Forecast: 52.9 | Actual: 52.5 | Previous: 52.5 | TZ: Asia/Ho_Chi_Minh,USD
+FOMC Statement,01/29/2026,22:30,01/29/2026,23:30,Forecast: N/A | Actual: N/A | Previous: N/A | TZ: Asia/Ho_Chi_Minh,USD
+FOMC Press Conference,01/29/2026,02:30,01/29/2026,03:30,Forecast: N/A | Actual: N/A | Previous: N/A | TZ: Asia/Ho_Chi_Minh,USD
+Unemployment Claims,01/29/2026,20:30,01/29/2026,21:30,Forecast: 206K | Actual: 209K | Previous: 210K | TZ: Asia/Ho_Chi_Minh,USD
+Core PPI m/m,01/30/2026,20:30,01/30/2026,21:30,Forecast: 0.2% | Actual: 0.7% | Previous: 0.0% | TZ: Asia/Ho_Chi_Minh,USD
+PPI m/m,01/30/2026,20:30,01/30/2026,21:30,Forecast: 0.2% | Actual: 0.5% | Previous: 0.2% | TZ: Asia/Ho_Chi_Minh,USD

@@ -1,0 +1,19 @@
+{
+  "year": 2026,
+  "month": "08",
+  "layer": "bronze_landing",
+  "source_timezone": "Asia/Novosibirsk",
+  "coverage": "red+orange+yellow",
+  "rows": 293,
+  "impact_counts": {
+    "yellow": 249,
+    "red": 23,
+    "orange": 21
+  },
+  "raw_files": [
+    "/Users/datpro/Documents/gitdatpro/ff-transform-data/data/bronze/raw/calendar/2026/08_red.html",
+    "/Users/datpro/Documents/gitdatpro/ff-transform-data/data/bronze/raw/calendar/2026/08_orange.html",
+    "/Users/datpro/Documents/gitdatpro/ff-transform-data/data/bronze/raw/calendar/2026/08_yellow.html"
+  ],
+  "ingested_at": "2026-09-03T06:58:48Z"
+}

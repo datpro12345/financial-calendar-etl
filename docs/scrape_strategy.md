@@ -1,0 +1,23 @@
+# Scrape strategy — Forex Factory + Cloudflare
+
+Canonical playbook. Implemented in `scripts/extract/client.py` + `config.py`. Experiments: `docs/LOG.md`.
+
+## Decision (reuse this)
+
+1. **Egress first.** VN residential IP is TLS-reset on `www.forexfactory.com`. Open **Cloudflare WARP → Traffic and DNS (UDP)** (or residential proxy `FF_HTTP_PROXY`). Confirm FF HTML 200 before fetching months.
+2. **This week only:** `https://nfs.faireconomy.media/ff_calendar_thisweek.{csv,xml,json}` — no WARP, no HTML. Rate-limit ~2 / 5 min. CLI: `scripts/extract/fetch_weekly.py`.
+3. **Historical / YTD:** HTML calendar, **three URLs per month** (`impacts=3|2|1` = red|orange|yellow). `curl_cffi` + `impersonate=firefox135`. Pace `--gap 45` + jitter 2–5s. Save `.html`. Parse with `parse_calendar_html`.
+4. **Do not** depend on dated XML (`ff_calendar_monthddyyyy.xml`) — CDN 404. **Do not** expect CloudScraper / undetected-chrome / UA rotation to unstick a TLS-reset IP.
+
+## Fetch stack (`strategy=auto`)
+
+`curl_cffi` → `cloudscraper` → Playwright → optional undetected-chrome. For YTD with WARP up, use `--strategy http` (stop after curl_cffi/cloudscraper).
+
+## Commands
+
+```bash
+.venv/bin/python scripts/extract/fetch_weekly.py --fmt csv
+.venv/bin/python scripts/extract/fetch_bronze_months.py --year 2026 --months jan feb mar --gap 45 --strategy http
+```
+
+Stop on TLS reset / persistent 403. Rebuild offline: `build_month_from_markdown.py` (HTML or markdown dumps).
