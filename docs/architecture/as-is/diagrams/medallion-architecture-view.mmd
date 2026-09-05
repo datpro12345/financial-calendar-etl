@@ -1,0 +1,23 @@
+%% Medallion Architecture View — roles mapped from the logical model.
+%% Syntax: Mermaid flowchart (MIT): https://github.com/mermaid-js/mermaid
+%% No file paths or job names. Physical mapping is a separate diagram.
+
+flowchart TB
+    publisher[Publisher calendar]
+    subgraph bronze [Bronze — source preserve]
+        dump[Immutable dump]
+        landing[Parse without consumer filter]
+    end
+    subgraph silver [Silver — conformed occurrence]
+        ssot[Release occurrence SSOT]
+    end
+    subgraph gold [Gold — consumer products]
+        attention[Operator attention]
+        mart[Analytical occurrence]
+    end
+
+    publisher --> dump
+    dump --> landing
+    landing --> ssot
+    ssot -->|lossy filter and operator clock| attention
+    ssot -->|full grain dimensions| mart

@@ -18,6 +18,7 @@ Canonical playbook. Implemented in `scripts/extract/client.py` + `config.py`. Ex
 ```bash
 .venv/bin/python scripts/extract/fetch_weekly.py --fmt csv
 .venv/bin/python scripts/extract/fetch_bronze_months.py --year 2026 --months jan feb mar --gap 45 --strategy http
+.venv/bin/python scripts/run_medallion.py --year 2026   # bronze raw → silver → gold + mart
 ```
 
 Stop on TLS reset / persistent 403. Rebuild offline: `build_month_from_markdown.py` (HTML or markdown dumps).

@@ -1,0 +1,17 @@
+%% Conceptual Data Diagram — business entities only.
+%% Syntax: Mermaid flowchart (MIT): https://github.com/mermaid-js/mermaid
+%% No tables, folders, vendors, or Medallion roles.
+
+flowchart TB
+    currency[Currency]
+    indicator[Economic indicator]
+    impact[Market-impact class]
+    instant[Publication instant]
+    release[Calendar release]
+    reading[Release reading]
+
+    currency -->|subject of| release
+    indicator -->|published as| release
+    impact -->|classifies| release
+    instant -->|when| release
+    release -->|carries| reading

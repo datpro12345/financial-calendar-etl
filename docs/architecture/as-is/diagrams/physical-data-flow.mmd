@@ -1,0 +1,23 @@
+%% Physical data flow — implementation of Medallion roles in this repo.
+%% Syntax: Mermaid flowchart (MIT): https://github.com/mermaid-js/mermaid
+%% Solid edges: evidenced jobs/files. Dashed: assumed or unknown consumers.
+
+flowchart LR
+    ff["www.forexfactory.com HTML"]
+    nfs["nfs.faireconomy.media thisweek"]
+    raw["bronze/raw/calendar HTML or MD"]
+    land["bronze/landing/calendar_events CSV"]
+    silver["silver/calendar_events CSV"]
+    gcal["gold/google_calendar CSV"]
+    mart["gold/mart dim and fact CSV"]
+    cal["Google Calendar"]
+    looker["Looker Studio"]
+
+    ff -->|fetch_bronze_months| raw
+    nfs -->|fetch_weekly| raw
+    raw -->|build_month parse| land
+    land -->|to_silver| silver
+    silver -->|to_google_calendar| gcal
+    silver -->|to_kimball| mart
+    gcal -.->|CSV import not in repo| cal
+    mart -.->|feed unknown| looker

@@ -1,0 +1,27 @@
+%% Logical Data Diagram — vendor-neutral components and kinds.
+%% Syntax: Mermaid flowchart (MIT): https://github.com/mermaid-js/mermaid
+%% No folders, jobs, or Bronze/Silver/Gold.
+
+flowchart LR
+    subgraph vocab [Reference vocabulary]
+        currency[Currency master]
+        indicator[Indicator master]
+        impact[Impact class reference]
+    end
+
+    subgraph occurrence [Release occurrence]
+        event[Calendar release event]
+        reading[Reading attributes]
+    end
+
+    subgraph products [Projections]
+        attention[Operator attention analytical]
+        star[Analytical occurrence]
+    end
+
+    currency -->|classifies| event
+    indicator -->|classifies| event
+    impact -->|classifies| event
+    event --> reading
+    event -->|lossy filter and operator clock| attention
+    event -->|full grain dimensions| star

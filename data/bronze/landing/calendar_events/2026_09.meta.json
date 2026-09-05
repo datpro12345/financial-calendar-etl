@@ -11,9 +11,10 @@
     "orange": 22
   },
   "raw_files": [
+    "/Users/datpro/Documents/gitdatpro/ff-transform-data/data/bronze/raw/calendar/2026/09_all.md",
     "/Users/datpro/Documents/gitdatpro/ff-transform-data/data/bronze/raw/calendar/2026/09_red.html",
     "/Users/datpro/Documents/gitdatpro/ff-transform-data/data/bronze/raw/calendar/2026/09_orange.html",
     "/Users/datpro/Documents/gitdatpro/ff-transform-data/data/bronze/raw/calendar/2026/09_yellow.html"
   ],
-  "ingested_at": "2026-09-03T07:00:34Z"
+  "ingested_at": "2026-09-03T07:55:34Z"
 }

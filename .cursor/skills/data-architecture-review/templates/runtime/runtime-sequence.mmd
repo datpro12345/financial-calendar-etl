@@ -1,0 +1,10 @@
+%% Local evidence placeholder; syntax based on Mermaid sequence diagram documentation (MIT): https://github.com/mermaid-js/mermaid
+%% Use only evidenced calls, events, and failure handling.
+sequenceDiagram
+    autonumber
+    participant S as Source
+    participant J as Job
+    participant D as Data store
+    S->>J: [trigger / input]
+    J->>D: [write / transform]
+    D-->>J: [result / acknowledgement]

@@ -1,0 +1,24 @@
+%% As-is system context for ff-transform-data (2026-09-05).
+%% Syntax based on Mermaid flowchart documentation (MIT): https://github.com/mermaid-js/mermaid
+%% Solid edges: repository evidence. Dashed edges: assumption or unknown — not implementation truth.
+%% This diagram is a context boundary only. It does not describe bronze/silver/gold internals.
+
+flowchart LR
+    operator[Operator / local CLI]
+    ff["Forex Factory calendar\nwww.forexfactory.com"]
+    nfs["Weekly export CDN\nnfs.faireconomy.media"]
+    egress["Egress: WARP or HTTP proxy"]
+    sys[ff-transform-data]
+    gcalFiles["Gold CSV files\ngold/google_calendar"]
+    martFiles["Gold CSV files\ngold/mart"]
+    gcal["Google Calendar"]
+    looker["Looker Studio report"]
+
+    operator -->|runs fetch and rebuild scripts| sys
+    ff -->|"HTML month permalinks impacts=3,2,1"| egress
+    egress -->|curl_cffi / optional proxy| sys
+    nfs -->|"thisweek csv, xml, json"| sys
+    sys -->|writes import-shaped CSV| gcalFiles
+    sys -->|writes dim and fact CSV| martFiles
+    gcalFiles -.->|CSV import not evidenced in repo| gcal
+    martFiles -.->|report URL in README; feed unknown| looker
