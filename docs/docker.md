@@ -24,6 +24,7 @@ Mở `.env` và điền:
 | `LLM_PROVIDER` | Có | `openrouter` (mặc định) |
 | `OPENROUTER_MODEL` | Không | `inclusionai/ling-3.0-flash-fin:free` — dự phòng `minimax/minimax-m3:free` |
 | `GEMINI_API_KEY` / `GEMINI_MODEL` | Chỉ khi `LLM_PROVIDER=google` | Key tại [Google AI Studio](https://aistudio.google.com/app/apikey) |
+| `REPORT_LANG` | Không | `en` (mặc định trên Docker) hoặc `vi`. CLI: `--lang en` |
 | `TZ` | Không | `Asia/Ho_Chi_Minh` (compose đã set) |
 | `FF_HTTP_PROXY` | Không | Chỉ khi cần proxy residential. Weekly export **không** cần |
 
@@ -32,7 +33,7 @@ Không commit file `.env`. Không dán key vào image.
 Kiểm tra nhanh (chưa gọi LLM):
 
 ```bash
-docker compose run --rm weekly python scripts/run_weekly_abcd.py --fmt csv --skip-report
+docker compose run --rm -e REPORT_LANG=en weekly python scripts/run_weekly_abcd.py --fmt csv --skip-report
 ```
 
 ---
@@ -58,7 +59,7 @@ docker compose run --rm weekly python scripts/run_weekly_abcd.py --fmt csv --ski
 4. Chạy tuần này (fetch + báo cáo):
 
    ```powershell
-   docker compose run --rm weekly
+   docker compose run --rm -e REPORT_LANG=en weekly
    ```
 
 5. Kết quả trên máy host:
@@ -119,7 +120,7 @@ rsync -av --exclude .venv --exclude .git ./ ubuntu@<vm-ip>:~/ff-transform-data/
 ```bash
 cd ~/ff-transform-data
 docker compose build
-docker compose run --rm weekly
+docker compose run --rm -e REPORT_LANG=en weekly
 ```
 
 1 GB RAM Always Free đủ cho weekly (mart ~3k rows). Nếu `pip`/`compose build` bị OOM trên Micro: thêm swap 2G rồi build lại.
@@ -138,7 +139,7 @@ crontab -e
 ```
 
 ```cron
-0 0 * * 0 cd /home/ubuntu/ff-transform-data && docker compose run --rm weekly >> /home/ubuntu/ff-transform-data/logs/abcd.log 2>&1
+0 0 * * 0 cd /home/ubuntu/ff-transform-data && docker compose run --rm -e REPORT_LANG=en weekly >> /home/ubuntu/ff-transform-data/logs/abcd.log 2>&1
 ```
 
 Tạo thư mục log một lần: `mkdir -p ~/ff-transform-data/logs`.
@@ -149,16 +150,16 @@ Tạo thư mục log một lần: `mkdir -p ~/ff-transform-data/logs`.
 
 ```bash
 # Full ABCD (A fetch → D outlook). Feed ~2 request / 5 phút — chỉ CSV một lần.
-docker compose run --rm weekly
+docker compose run --rm -e REPORT_LANG=en weekly
 
 # Chỉ ingest lại bronze đã có, không đụng mạng FF
-docker compose run --rm weekly python scripts/run_weekly_abcd.py --skip-fetch
+docker compose run --rm -e REPORT_LANG=en weekly python scripts/run_weekly_abcd.py --skip-fetch
 
 # Fact Pack + prompt, không gọi LLM
-docker compose run --rm weekly python scripts/run_weekly_abcd.py --skip-fetch --dry-run
+docker compose run --rm -e REPORT_LANG=en weekly python scripts/run_weekly_abcd.py --skip-fetch --dry-run
 
-# Đổi model (không sửa .env)
-docker compose run --rm weekly python scripts/run_weekly_abcd.py --model 'minimax/minimax-m3:free'
+# Đổi model / ngôn ngữ (không sửa .env)
+docker compose run --rm weekly python scripts/run_weekly_abcd.py --lang vi --model 'minimax/minimax-m3:free'
 
 # Shell trong container
 docker compose run --rm --entrypoint bash weekly
@@ -194,6 +195,6 @@ Volume `./data` và `./reports` ghi thẳng ra host — xóa container không m�
 
 - `Dockerfile` — Python 3.12 slim, user `app`
 - `docker-compose.yml` — service `weekly`
-- `requirements-runtime.txt` — không Playwright
+- `requirements.txt` — runtime + pytest (không Playwright)
 - `.env.template` — copy thành `.env`
 - `scripts/run_weekly_abcd.py` — entry mặc định

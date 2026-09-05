@@ -20,11 +20,10 @@ from scripts.extract.config import (
     BRONZE_LANDING_COLUMNS,
     BRONZE_LANDING_DIR,
     BRONZE_WEEKLY_DIR,
-    GOLD_GCAL_DIR,
     GOLD_MART_DIR,
     SILVER_EVENTS_DIR,
 )
-from scripts.transform.to_google_calendar import DEFAULT_SOURCE_TZ, silver_to_google_calendar
+from scripts.transform.to_google_calendar import DEFAULT_SOURCE_TZ, rebuild_monthly_gcals
 from scripts.transform.to_kimball import silver_to_kimball
 from scripts.transform.to_silver import _parse_clock, _parse_event_date, landing_to_silver
 
@@ -204,14 +203,15 @@ def ingest_weekly_bronze(
     )
     logger.info("Weekly silver %s rows → %s", len(silver_df), silver_final)
 
-    gcal_path = None
+    gcal_paths: list[str] = []
     if write_gcal:
-        GOLD_GCAL_DIR.mkdir(parents=True, exist_ok=True)
-        gcal_path = silver_to_google_calendar(
-            silver_final,
-            year=iso_year,
-            output=GOLD_GCAL_DIR / f"{week_label}-news.csv",
+        months = sorted(
+            {str(day)[:7] for day in silver_df["event_date"] if str(day).strip()}
         )
+        gcal_paths = [
+            str(path)
+            for path in rebuild_monthly_gcals(silver_dest_dir, months=months)
+        ]
 
     mart_paths: dict[str, str] = {}
     if rebuild_mart:
@@ -228,7 +228,7 @@ def ingest_weekly_bronze(
         "rows": int(len(silver_df)),
         "landing": str(landing_final),
         "silver": str(silver_final),
-        "gold_gcal": str(gcal_path) if gcal_path else None,
+        "gold_gcal": gcal_paths,
         "mart": mart_paths,
         "impact_counts": silver_df["impact"].value_counts().to_dict(),
         "source_timezone": source_timezone,

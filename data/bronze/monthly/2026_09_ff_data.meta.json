@@ -1,9 +1,0 @@
-{
-  "year": 2026,
-  "month": "09",
-  "source_timezone": "America/Chicago",
-  "rows": 431,
-  "red_rows": 54,
-  "all_markdown": "tests/fixtures/calendar_sep2026_all.md",
-  "red_markdown": "tests/fixtures/calendar_sep2026_red.md"
-}

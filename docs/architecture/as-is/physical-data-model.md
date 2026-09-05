@@ -23,7 +23,7 @@ Map logical components and Medallion **roles** onto the **actual** stores, forma
 | Fetch HTML months | Ingestion job | — | `scripts/extract/fetch_bronze_months.py` | scrape_strategy |
 | Fetch this week | Ingestion job | — | `scripts/extract/fetch_weekly.py` → `nfs.faireconomy.media` | config + tests |
 | Rebuild year | Orchestration | bronze→silver→gold, **no network** | `scripts/run_medallion.py --year 2026` | docstring |
-| Legacy monthly folders | Deprecated | — | `data/bronze/monthly`, `data/silver/monthly` | `config.py` comments; `DEPRECATED.md` |
+| Legacy monthly folders | Removed | — | — | Cut; SSOT is landing / `calendar_events` / mart |
 
 **Format (all current layers):** CSV (and source HTML/Markdown). No Parquet, Delta, or database. **Partitioning:** one file per calendar month (and impact-layer dumps in raw). **Runtime:** local Python CLI; owner is the repository operator. **No** CI, compose, or `scripts/load/`.
 

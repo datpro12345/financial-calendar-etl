@@ -1,23 +1,67 @@
 Subject,Start Date,Start Time,End Date,End Time,Description,Location
-ADP Non-Farm Employment Change,06/03/2026,19:15,06/03/2026,20:15,Forecast: 118K | Actual: 122K | Previous: 105K | TZ: Asia/Ho_Chi_Minh,USD
-ISM Services PMI,06/03/2026,21:00,06/03/2026,22:00,Forecast: 53.7 | Actual: 54.5 | Previous: 53.6 | TZ: Asia/Ho_Chi_Minh,USD
-BOE Gov Bailey Speaks,06/04/2026,22:40,06/04/2026,23:40,Forecast: N/A | Actual: N/A | Previous: N/A | TZ: Asia/Ho_Chi_Minh,GBP
-Average Hourly Earnings m/m,06/05/2026,22:40,06/05/2026,23:40,Forecast: 0.3% | Actual: 0.3% | Previous: 0.2% | TZ: Asia/Ho_Chi_Minh,USD
-Non-Farm Employment Change,06/05/2026,22:40,06/05/2026,23:40,Forecast: 85K | Actual: 172K | Previous: 179K | TZ: Asia/Ho_Chi_Minh,USD
-Unemployment Rate,06/05/2026,22:40,06/05/2026,23:40,Forecast: 4.3% | Actual: 4.3% | Previous: 4.3% | TZ: Asia/Ho_Chi_Minh,USD
-CPI m/m,06/10/2026,22:40,06/10/2026,23:40,Forecast: 0.5% | Actual: 0.5% | Previous: 0.6% | TZ: Asia/Ho_Chi_Minh,USD
-CPI y/y,06/10/2026,22:40,06/10/2026,23:40,Forecast: 4.2% | Actual: 4.2% | Previous: 3.8% | TZ: Asia/Ho_Chi_Minh,USD
-Core CPI y/y,06/10/2026,22:40,06/10/2026,23:40,Forecast: 2.9% | Actual: 2.9% | Previous: 2.8% | TZ: Asia/Ho_Chi_Minh,USD
-Core PPI m/m,06/11/2026,19:30,06/11/2026,20:30,Forecast: 0.5% | Actual: 0.4% | Previous: 0.7% | TZ: Asia/Ho_Chi_Minh,USD
-PPI m/m,06/11/2026,19:30,06/11/2026,20:30,Forecast: 0.7% | Actual: 1.1% | Previous: 1.1% | TZ: Asia/Ho_Chi_Minh,USD
-ECB Press Conference,06/11/2026,19:45,06/11/2026,20:45,Forecast: N/A | Actual: N/A | Previous: N/A | TZ: Asia/Ho_Chi_Minh,EUR
-Monetary Policy Statement,06/11/2026,21:30,06/11/2026,22:30,Forecast: N/A | Actual: N/A | Previous: N/A | TZ: Asia/Ho_Chi_Minh,EUR
-Claimant Count Change,06/18/2026,13:00,06/18/2026,14:00,Forecast: 25.8K | Actual: 31.2K | Previous: 8.3K | TZ: Asia/Ho_Chi_Minh,GBP
-FOMC Press Conference,06/18/2026,01:30,06/18/2026,02:30,Forecast: N/A | Actual: N/A | Previous: N/A | TZ: Asia/Ho_Chi_Minh,USD
-FOMC Economic Projections,06/18/2026,13:30,06/18/2026,14:30,Forecast: N/A | Actual: N/A | Previous: N/A | TZ: Asia/Ho_Chi_Minh,USD
-FOMC Statement,06/18/2026,13:30,06/18/2026,14:30,Forecast: N/A | Actual: N/A | Previous: N/A | TZ: Asia/Ho_Chi_Minh,USD
-MPC Official Bank Rate Votes,06/18/2026,18:00,06/18/2026,19:00,Forecast: 1-0-8 | Actual: 2-0-7 | Previous: 1-0-8 | TZ: Asia/Ho_Chi_Minh,GBP
-Monetary Policy Summary,06/18/2026,18:00,06/18/2026,19:00,Forecast: N/A | Actual: N/A | Previous: N/A | TZ: Asia/Ho_Chi_Minh,GBP
-Official Bank Rate,06/18/2026,18:00,06/18/2026,19:00,Forecast: 3.75% | Actual: 3.75% | Previous: 3.75% | TZ: Asia/Ho_Chi_Minh,GBP
-Core PCE Price Index m/m,06/25/2026,19:30,06/25/2026,20:30,Forecast: 0.3% | Actual: 0.3% | Previous: 0.3% | TZ: Asia/Ho_Chi_Minh,USD
-Final GDP q/q,06/25/2026,19:30,06/25/2026,20:30,Forecast: 1.6% | Actual: 2.1% | Previous: 1.6% | TZ: Asia/Ho_Chi_Minh,USD
+ADP Non-Farm Employment Change,06/03/2026,19:15,06/03/2026,20:15,"Việc làm phi nông nghiệp Mỹ (NFP). Số việc mới — trụ labor, quyết định bias USD.
+F 118K · P 105K · A 122K
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+ISM Services PMI,06/03/2026,21:00,06/03/2026,22:00,"PMI dịch vụ Mỹ. Khối lớn hơn sản xuất; so forecast.
+F 53.7 · P 53.6 · A 54.5
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+BOE Gov Bailey Speaks,06/04/2026,22:40,06/04/2026,23:40,"Thống đốc BOE nói. Red GBP — không có số thì không chấm hawk/dove.
+F — · P — · A —
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",GBP
+Average Hourly Earnings m/m,06/05/2026,22:40,06/05/2026,23:40,"Lương giờ Mỹ. Nóng hơn forecast = áp lực giá / Fed khó nới.
+F 0.3% · P 0.2% · A 0.3%
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+Non-Farm Employment Change,06/05/2026,22:40,06/05/2026,23:40,"Việc làm phi nông nghiệp Mỹ (NFP). Số việc mới — trụ labor, quyết định bias USD.
+F 85K · P 179K · A 172K
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+Unemployment Rate,06/05/2026,22:40,06/05/2026,23:40,"Tỷ lệ thất nghiệp. Cao hơn forecast = labor yếu hơn consensus.
+F 4.3% · P 4.3% · A 4.3%
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+CPI m/m,06/10/2026,22:40,06/10/2026,23:40,"Giá tiêu dùng. Nóng hơn forecast = lạm phát cao hơn consensus.
+F 0.5% · P 0.6% · A 0.5%
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+CPI y/y,06/10/2026,22:40,06/10/2026,23:40,"Giá tiêu dùng. Nóng hơn forecast = lạm phát cao hơn consensus.
+F 4.2% · P 3.8% · A 4.2%
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+Core CPI y/y,06/10/2026,22:40,06/10/2026,23:40,"CPI lõi (bỏ thực phẩm/năng lượng). Lạm phát dai — trụ Fed.
+F 2.9% · P 2.8% · A 2.9%
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+Core PPI m/m,06/11/2026,19:30,06/11/2026,20:30,"PPI lõi. Giá sản xuất, đường ống trước CPI.
+F 0.5% · P 0.7% · A 0.4%
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+PPI m/m,06/11/2026,19:30,06/11/2026,20:30,"Giá sản xuất. Pipeline, chưa phải giá tiêu dùng.
+F 0.7% · P 1.1% · A 1.1%
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+ECB Press Conference,06/11/2026,19:45,06/11/2026,20:45,"Họp báo ECB. Giải thích lãi EUR; cửa sổ red.
+F — · P — · A —
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",EUR
+Monetary Policy Statement,06/11/2026,21:30,06/11/2026,22:30,"Tuyên bố NHTW (thường ECB). Văn bản policy — đứng ngoài lệnh mới.
+F — · P — · A —
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",EUR
+FOMC Press Conference,06/18/2026,01:30,06/18/2026,02:30,"Họp báo FOMC. Giải thích quyết định; đứng ngoài lệnh mới.
+F — · P — · A —
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+Claimant Count Change,06/18/2026,13:00,06/18/2026,14:00,"Thay đổi số người nhận trợ cấp thất nghiệp Anh. Labor GBP.
+F 25.8K · P 8.3K · A 31.2K
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",GBP
+FOMC Economic Projections,06/18/2026,13:30,06/18/2026,14:30,"Dự phóng kinh tế FOMC (dot plot / SEP). Path lãi — đừng bịa số.
+F — · P — · A —
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+FOMC Statement,06/18/2026,13:30,06/18/2026,14:30,"Tuyên bố FOMC. Lời Fed — không có số trong pack thì đừng chấm tone.
+F — · P — · A —
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+MPC Official Bank Rate Votes,06/18/2026,18:00,06/18/2026,19:00,"Phiếu MPC (BOE). Lệch phiếu = bất đồng trong hội đồng.
+F 1-0-8 · P 1-0-8 · A 2-0-7
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",GBP
+Monetary Policy Summary,06/18/2026,18:00,06/18/2026,19:00,"Tóm tắt chính sách BOE. Văn bản, không chấm điểm tone nếu pack trống.
+F — · P — · A —
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",GBP
+Official Bank Rate,06/18/2026,18:00,06/18/2026,19:00,"Lãi điều hành BOE. A vs F là bất ngờ, không phải path họp sau.
+F 3.75% · P 3.75% · A 3.75%
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",GBP
+Core PCE Price Index m/m,06/25/2026,19:30,06/25/2026,20:30,"PCE lõi — thước lạm phát Fed ưu tiên. Trụ dual mandate.
+F 0.3% · P 0.3% · A 0.3%
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+Final GDP q/q,06/25/2026,19:30,06/25/2026,20:30,"GDP lần cuối của quý. Ít bất ngờ hơn advance.
+F 1.6% · P 1.6% · A 2.1%
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD

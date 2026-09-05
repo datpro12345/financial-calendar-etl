@@ -1,10 +1,8 @@
+# Weekly ABCD, Docker, and tests. Do not add Playwright here —
+# historical HTML scrape is optional and not the default path.
 pandas>=2.0
 beautifulsoup4>=4.12
 lxml>=5.0
 curl_cffi>=0.7
 cloudscraper>=1.2.71
-playwright>=1.40
-# Optional last-resort browser stealth (pip install when needed):
-# undetected-chromedriver>=3.5
 pytest>=8.0
-setuptools>=69.0

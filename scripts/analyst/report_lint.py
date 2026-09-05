@@ -171,6 +171,8 @@ def _time_allowed(clock: str, allowed_times: set[str]) -> bool:
 
 def lint_report(report: str, pack: dict[str, Any]) -> list[str]:
     report = re.sub(r"<!--.*?-->", " ", report, flags=re.S)
+    report = re.sub(r"model:\s*`[^`]+`", " ", report, flags=re.I)
+    report = re.sub(r"`[^`]+`", " ", report)
     allowed = allowed_from_pack(pack)
     issues: list[str] = []
 

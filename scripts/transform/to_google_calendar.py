@@ -17,6 +17,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from scripts.extract.config import GOLD_GCAL_DIR, SILVER_EVENTS_DIR
+from scripts.transform.gcal_blurbs import format_gcal_description
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
@@ -83,14 +84,20 @@ def silver_to_google_calendar(
             f"No gold rows after filter currency={currencies} impact={impact} from {silver_path}"
         )
 
+    if output:
+        output_path = Path(output)
+    else:
+        year_month = filtered["event_date"].astype(str).str.slice(0, 7).iloc[0]
+        GOLD_GCAL_DIR.mkdir(parents=True, exist_ok=True)
+        output_path = GOLD_GCAL_DIR / f"{year_month}-news.csv"
+    return _write_gcal_csv(filtered, output_path)
+
+
+def _write_gcal_csv(filtered: pd.DataFrame, output_path: Path) -> Path:
     records = []
     for _, row in filtered.iterrows():
         start_hcm = datetime.fromisoformat(row["event_datetime_hcm"])
         end_hcm = start_hcm + timedelta(hours=1)
-        description = (
-            f"Forecast: {row['forecast'] or 'N/A'} | Actual: {row['actual'] or 'N/A'} | "
-            f"Previous: {row['previous'] or 'N/A'} | TZ: Asia/Ho_Chi_Minh"
-        )
         records.append(
             {
                 "Subject": row["event"],
@@ -98,23 +105,66 @@ def silver_to_google_calendar(
                 "Start Time": start_hcm.strftime("%H:%M"),
                 "End Date": end_hcm.strftime("%m/%d/%Y"),
                 "End Time": end_hcm.strftime("%H:%M"),
-                "Description": description,
+                "Description": format_gcal_description(
+                    event=str(row.get("event", "")),
+                    currency=str(row.get("currency", "")),
+                    forecast=str(row.get("forecast", "")),
+                    previous=str(row.get("previous", "")),
+                    actual=str(row.get("actual", "")),
+                ),
                 "Location": row["currency"],
             }
         )
-
-    out_df = pd.DataFrame(records, columns=GOOGLE_CALENDAR_COLUMNS)
-    if output:
-        output_path = Path(output)
-    else:
-        year_month = filtered["event_date"].astype(str).str.slice(0, 7).iloc[0]
-        GOLD_GCAL_DIR.mkdir(parents=True, exist_ok=True)
-        output_path = GOLD_GCAL_DIR / f"{year_month}-news.csv"
-
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    out_df.to_csv(output_path, index=False)
-    logger.info("Gold Google Calendar saved %s rows → %s", len(out_df), output_path)
+    out = pd.DataFrame(records, columns=GOOGLE_CALENDAR_COLUMNS)
+    stamp = pd.to_datetime(
+        out["Start Date"] + " " + out["Start Time"],
+        format="%m/%d/%Y %H:%M",
+        errors="coerce",
+    )
+    out = out.assign(_sort=stamp).sort_values(["_sort", "Location", "Subject"]).drop(columns=["_sort"])
+    out.to_csv(output_path, index=False)
+    logger.info("Gold Google Calendar saved %s rows → %s", len(records), output_path)
     return output_path
+
+
+def _filter_gcal_rows(df: pd.DataFrame) -> pd.DataFrame:
+    return df[
+        (df["currency"].isin(TARGET_CURRENCIES))
+        & (df["impact"].str.lower() == "red")
+        & (df["event_datetime_hcm"].astype(str).str.len() > 0)
+    ].copy()
+
+
+def rebuild_monthly_gcals(
+    silver_dir: Path | str = SILVER_EVENTS_DIR,
+    *,
+    months: list[str] | None = None,
+    out_dir: Path | str = GOLD_GCAL_DIR,
+) -> list[Path]:
+    """Rebuild ``YYYY-MM-news.csv`` from silver (weekly files own overlapping dates).
+
+    Google Calendar stays monthly — never write a week-named file.
+    """
+    from scripts.transform.to_kimball import _load_silver
+
+    silver_dir = Path(silver_dir)
+    out_dir = Path(out_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    df = _load_silver(silver_dir)
+    filtered = _filter_gcal_rows(df)
+    if filtered.empty:
+        raise RuntimeError(f"No red USD/GBP/EUR timed rows in {silver_dir}")
+
+    filtered["year_month"] = filtered["event_date"].astype(str).str.slice(0, 7)
+    if months:
+        wanted = set(months)
+        filtered = filtered[filtered["year_month"].isin(wanted)]
+
+    paths: list[Path] = []
+    for year_month, group in filtered.groupby("year_month", sort=True):
+        paths.append(_write_gcal_csv(group, out_dir / f"{year_month}-news.csv"))
+    return paths
 
 
 # Back-compat wrappers used by older call sites / tests
@@ -164,9 +214,20 @@ def main() -> int:
     )
     parser.add_argument("--output", help="Optional gold CSV path")
     parser.add_argument("--year", type=int, default=datetime.now().year)
+    parser.add_argument(
+        "--rebuild-months",
+        action="store_true",
+        help="Rebuild all YYYY-MM-news.csv from silver dir (weekly wins on overlap)",
+    )
     args = parser.parse_args()
 
     try:
+        if args.rebuild_months:
+            paths = rebuild_monthly_gcals()
+            print("OK")
+            for path in paths:
+                print(f"  {path}")
+            return 0
         path = silver_to_google_calendar(args.input, year=args.year, output=args.output)
     except Exception as exc:  # noqa: BLE001
         logger.error("Gold Google Calendar export failed: %s", exc)

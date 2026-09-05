@@ -1,0 +1,74 @@
+# Short Vietnamese blurbs for red Google Calendar alarms (USD/GBP/EUR only).
+# Matched by substring on the event name. No LLM — edit this file to change copy.
+
+fallback: "Tin red {currency}. Đứng ngoài lệnh mới quanh giờ này."
+
+items:
+  - match: Non-Farm Employment Change
+    text: Việc làm phi nông nghiệp Mỹ (NFP). Số việc mới — trụ labor, quyết định bias USD.
+  - match: Average Hourly Earnings
+    text: Lương giờ Mỹ. Nóng hơn forecast = áp lực giá / Fed khó nới.
+  - match: Unemployment Rate
+    text: Tỷ lệ thất nghiệp. Cao hơn forecast = labor yếu hơn consensus.
+  - match: ADP Non-Farm
+    text: ADP — việc làm tư nhân Mỹ, warmup trước NFP. Không thay NFP.
+  - match: Unemployment Claims
+    text: Đơn xin thất nghiệp Mỹ hàng tuần. Labor sớm, ít nặng hơn NFP.
+  - match: JOLTS
+    text: Vị trí tuyển dụng Mỹ. Labor cầu phía doanh nghiệp.
+  - match: ISM Manufacturing PMI
+    text: PMI sản xuất Mỹ. Trên/dưới 50 = mở rộng/co; so forecast mới là bất ngờ.
+  - match: ISM Services PMI
+    text: PMI dịch vụ Mỹ. Khối lớn hơn sản xuất; so forecast.
+  - match: Core CPI
+    text: CPI lõi (bỏ thực phẩm/năng lượng). Lạm phát dai — trụ Fed.
+  - match: CPI Flash
+    text: CPI nhanh Eurozone. Ước lượng sớm, chưa phải print cuối.
+  - match: CPI
+    text: Giá tiêu dùng. Nóng hơn forecast = lạm phát cao hơn consensus.
+  - match: Core PCE
+    text: PCE lõi — thước lạm phát Fed ưu tiên. Trụ dual mandate.
+  - match: Core PPI
+    text: PPI lõi. Giá sản xuất, đường ống trước CPI.
+  - match: PPI
+    text: Giá sản xuất. Pipeline, chưa phải giá tiêu dùng.
+  - match: Advance GDP
+    text: GDP Mỹ lần 1. Tăng trưởng sớm, sẽ được sửa.
+  - match: Prelim GDP
+    text: GDP sơ bộ. Ước lượng giữa kỳ.
+  - match: Final GDP
+    text: GDP lần cuối của quý. Ít bất ngờ hơn advance.
+  - match: GDP
+    text: Tăng trưởng sản lượng. Nóng hơn forecast = growth mạnh hơn.
+  - match: Core Retail Sales
+    text: Bán lẻ lõi (bỏ xăng/ôtô). Nhu cầu nội địa.
+  - match: Retail Sales
+    text: Doanh số bán lẻ. Tiêu dùng — trụ tăng trưởng.
+  - match: FOMC Statement
+    text: Tuyên bố FOMC. Lời Fed — không có số trong pack thì đừng chấm tone.
+  - match: FOMC Press Conference
+    text: Họp báo FOMC. Giải thích quyết định; đứng ngoài lệnh mới.
+  - match: FOMC Economic Projections
+    text: Dự phóng kinh tế FOMC (dot plot / SEP). Path lãi — đừng bịa số.
+  - match: Fed Chairman
+    text: Chủ tịch Fed phát biểu. Tone policy; không có số thì chỉ phòng thủ.
+  - match: Official Bank Rate
+    text: Lãi điều hành BOE. A vs F là bất ngờ, không phải path họp sau.
+  - match: MPC Official Bank Rate Votes
+    text: Phiếu MPC (BOE). Lệch phiếu = bất đồng trong hội đồng.
+  - match: Monetary Policy Summary
+    text: Tóm tắt chính sách BOE. Văn bản, không chấm điểm tone nếu pack trống.
+  - match: BOE Monetary Policy Report
+    text: Báo cáo chính sách BOE. Bối cảnh lạm phát / tăng trưởng.
+  - match: BOE Gov Bailey
+    text: Thống đốc BOE nói. Red GBP — không có số thì không chấm hawk/dove.
+  - match: Main Refinancing Rate
+    text: Lãi tái cấp vốn ECB. A vs F là bất ngờ policy EUR.
+  - match: Monetary Policy Statement
+    text: Tuyên bố NHTW (thường ECB). Văn bản policy — đứng ngoài lệnh mới.
+  - match: ECB Press Conference
+    text: Họp báo ECB. Giải thích lãi EUR; cửa sổ red.
+  - match: Claimant Count Change
+    text: Thay đổi số người nhận trợ cấp thất nghiệp Anh. Labor GBP.
+  - match: Prelim Benchmark Payrolls
+    text: Sửa benchmark việc làm Mỹ. Điều chỉnh lịch sử, không phải NFP tháng này.

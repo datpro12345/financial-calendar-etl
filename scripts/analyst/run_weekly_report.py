@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import os
 import re
 import sys
 from datetime import date
@@ -16,6 +17,13 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from scripts.analyst.fact_pack import build_fact_pack, fact_pack_to_markdown
+from scripts.analyst.language import (
+    DEFAULT_LANG,
+    LanguageProfile,
+    apply_language,
+    report_suffix,
+    resolve_language,
+)
 from scripts.analyst.llm_client import complete, load_dotenv
 from scripts.analyst.report_lint import lint_report
 from scripts.extract.config import GOLD_MART_DIR
@@ -47,19 +55,19 @@ def load_control_lane() -> str:
     return "\n".join(chunks)
 
 
-def assemble_system_prompt(contract: str) -> str:
-    return contract.rstrip() + "\n\n---\n\n" + load_control_lane()
+def assemble_system_prompt(contract: str, profile: LanguageProfile) -> str:
+    localized = apply_language(contract, profile)
+    return localized.rstrip() + "\n\n---\n\n" + load_control_lane()
 
 
-def assemble_user_message(pack: dict, pack_md: str) -> str:
+def assemble_user_message(pack: dict, pack_md: str, profile: LanguageProfile) -> str:
     return (
-        "Dưới đây là Fact Pack đã tính sẵn từ gold/mart. "
-        "Mọi số đếm, tỷ trọng, giờ HCM và fact_id đều đã xác minh. "
-        "Viết toàn bộ báo cáo bằng tiếng Việt. "
-        "Kết luận tách Chính (USD/EUR/GBP/JPY) và Phụ. "
-        "Sau khi review tuần hiện tại, viết mục nhìn tuần tới chỉ từ khối next_week. "
-        "Mục VIII: gợi ý swing Soros — không đặt lệnh chính lúc tin red. "
-        "Không tự tính lại số.\n\n"
+        "The Fact Pack below is pre-computed from gold/mart. "
+        "Every count, share, HCM clock, and fact_id is already verified. "
+        f"{profile.user_preamble} "
+        "After reviewing this week, write the next-week look-ahead only from the next_week block. "
+        "Section VIII: Soros swing rules — no new primary entries in red windows. "
+        "Do not recalculate numbers.\n\n"
         f"{pack_md}\n\n"
         "## Fact Pack JSON\n\n"
         "```json\n"
@@ -68,14 +76,14 @@ def assemble_user_message(pack: dict, pack_md: str) -> str:
     )
 
 
-CLOSING_LINE = (
-    "Hết báo cáo. Không thêm mục, không checklist daily, không tín hiệu vào lệnh. "
-    "Toàn bộ tiếng Việt."
-)
-
-
-def attach_model_credit(text: str, *, model: str) -> str:
+def attach_model_credit(
+    text: str,
+    *,
+    model: str,
+    language: str | None = DEFAULT_LANG,
+) -> str:
     """Keep a single closing line; append model: slug (no extra heading)."""
+    profile = resolve_language(language)
     credit = f" model: `{model}`"
     body = text.rstrip()
     body = re.sub(
@@ -88,17 +96,16 @@ def attach_model_credit(text: str, *, model: str) -> str:
         raw = lines[i].strip()
         if not raw:
             continue
-        if "Hết báo cáo" in raw:
+        if any(marker in raw for marker in profile.closing_markers):
             core = raw.strip("*").rstrip()
             core = re.sub(r"\s*model:\s*`[^`]+`\s*$", "", core, flags=re.I)
             core = re.sub(r"\s*model:\s*\S+\s*$", "", core, flags=re.I)
-            if not core.endswith("Toàn bộ tiếng Việt."):
-                if CLOSING_LINE not in core:
-                    core = CLOSING_LINE
+            if not any(marker in core for marker in profile.closing_markers):
+                core = profile.closing_line
             lines[i] = core + credit
             return "\n".join(lines).rstrip()
         break
-    return body + "\n" + CLOSING_LINE + credit
+    return body + "\n" + profile.closing_line + credit
 
 
 def write_report(
@@ -109,14 +116,15 @@ def write_report(
     provider: str,
     model: str,
     dry_run: bool,
+    language: str | None = DEFAULT_LANG,
 ) -> None:
     header = (
         f"<!-- generated: {week_label} | provider={provider} | model={model} "
-        f"| dry_run={dry_run} -->\n\n"
+        f"| lang={resolve_language(language).code} | dry_run={dry_run} -->\n\n"
     )
     body = text.rstrip()
     if not dry_run:
-        body = attach_model_credit(body, model=model)
+        body = attach_model_credit(body, model=model, language=language)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(header + body + "\n")
 
@@ -134,16 +142,16 @@ def run_outlook(
     timeout: int = 180,
     suffix: str | None = None,
     skip_lint: bool = False,
+    lang: str = DEFAULT_LANG,
 ) -> dict:
     """C+D — Fact Pack then LLM outlook. Returns paths and lint status."""
+    profile = resolve_language(lang)
     pack = build_fact_pack(year, week, mart_dir)
     pack_md = fact_pack_to_markdown(pack)
-    system = assemble_system_prompt(prompt.read_text())
-    user = assemble_user_message(pack, pack_md)
+    system = assemble_system_prompt(prompt.read_text(), profile)
+    user = assemble_user_message(pack, pack_md, profile)
     week_label = pack["week_label"]
-    stem = f"{week_label}-macro-outlook"
-    if suffix:
-        stem = f"{stem}.{suffix}"
+    stem = f"{week_label}-macro-outlook.{report_suffix(profile.code, suffix)}"
 
     pack_json_path = reports_dir / f"{week_label}-fact-pack.json"
     pack_md_path = reports_dir / f"{week_label}-fact-pack.md"
@@ -161,6 +169,7 @@ def run_outlook(
         "report": None,
         "provider": provider,
         "model": model,
+        "lang": profile.code,
         "exit_code": 0,
     }
 
@@ -173,6 +182,7 @@ def run_outlook(
             provider=provider or "none",
             model=model or "none",
             dry_run=True,
+            language=profile.code,
         )
         logger.info("Dry-run prompt written to %s", out_path)
         result["report"] = str(out_path)
@@ -193,6 +203,7 @@ def run_outlook(
         provider=used_provider,
         model=used_model,
         dry_run=False,
+        language=profile.code,
     )
     logger.info("Report written to %s (%s / %s)", out_path, used_provider, used_model)
     result["report"] = str(out_path)
@@ -237,6 +248,11 @@ def main() -> int:
         help="Append to output stem, e.g. ling-fin → 2026-W36-macro-outlook.ling-fin.md",
     )
     parser.add_argument("--skip-lint", action="store_true", help="Do not lint the generated report")
+    parser.add_argument(
+        "--lang",
+        default=os.environ.get("REPORT_LANG", DEFAULT_LANG),
+        help="Report language: vi, en, or any name (ja, es, …). Default: vi or REPORT_LANG",
+    )
     args = parser.parse_args()
     result = run_outlook(
         year=args.year,
@@ -250,6 +266,7 @@ def main() -> int:
         timeout=args.timeout,
         suffix=args.suffix,
         skip_lint=args.skip_lint,
+        lang=args.lang,
     )
     return int(result["exit_code"])
 

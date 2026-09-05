@@ -1,56 +1,79 @@
-[Final Dashboard on Looker](https://lookerstudio.google.com/reporting/eef5b556-a5d4-4d54-be00-27cbc59f30d2)
+# Forex calendar → Kimball mart → weekly macro outlook
 
-### Project Description
+Deterministic ETL for the Forex Factory calendar, plus a **linted** weekly brief for swing trading USD / EUR / GBP / JPY.
 
-This project focuses on two key goals:
+The LLM never invents the calendar. Python computes the Fact Pack. The model only reasons. A linter rejects numbers that are not in the pack.
 
-1. **ETL (Extract, Transform, Load):**
-   - The project automates the extraction of financial calendar data related to major currencies (USD, GBP, EUR). It then transforms this data to a structured format, filtering for high-impact events. Finally, it loads the cleaned data into a database or file for further analysis.
+**Samples:** [English](reports/weekly/2026-W36-macro-outlook.en.md) · [Tiếng Việt](reports/weekly/2026-W36-macro-outlook.vi.md)
 
-2. **Transform Raw Data to Google CSV Format:** (Done)
-   - The project processes raw financial event data and converts it into a CSV format that is specifically structured for import into Google Calendar. This ensures the data is ready to be used in Google Calendar for scheduling and tracking important financial events.
--------------
+```text
+nfs.faireconomy.media (this week, no WARP)
+        │
+        ▼
+ bronze → silver SSOT → gold Kimball mart
+        │
+        ▼
+ Fact Pack (counts, clashes, HCM clocks, fact_id)
+        │
+        ▼
+ LLM outlook (--lang en|vi|…)  →  report lint
+```
 
-### Project Phases for Task 1: ETL (Extract, Transform, Load)
+## What you get
 
-This project is structured to efficiently manage the ETL process, converting raw financial calendar data into a structured format suitable for analysis and reporting. The ETL process is broken down into several key phases:
+- **Medallion + Kimball** — bronze landing, silver events, gold dims/facts, optional Google Calendar CSV
+- **ABCD weekly job** — fetch → ingest → Fact Pack → outlook. Fail-stop: no LLM if fetch/transform fails
+- **Soros contract** — hypothesis + falsification; no new primary swing entries in red windows
+- **Language flag** — `--lang en`, `--lang vi`, or any language name
 
-#### **Phase 1: Data Ingestion (Extract)**
-- **Objective:** Collect raw data from the source, such as Forex Factory, and store it in the raw data layer (`bronze` layer).
-- **Current Status:** The project currently contains raw data files in the `data/bronze/monthly` folder, indicating that data ingestion has been successfully implemented.
-- **Next Steps:**
-  - Refactor the extraction logic into a dedicated script under `scripts/extract`.
-  - Automate the extraction process to fetch new data at regular intervals (e.g., monthly or weekly).
+## Quick start
 
-#### **Phase 2: Data Transformation**
-- **Objective:** Clean, filter, and transform the raw data to prepare it for analysis. This includes filtering for relevant currencies, handling missing values, and formatting dates.
-- **Current Status:** Transformation logic is currently implemented within a single notebook. This phase is in progress.
-- **Next Steps:**
-  - Modularize the transformation code by breaking it down into smaller, reusable functions or scripts. These scripts should be stored in the `scripts/transform` directory.
-  - Automate the transformation steps, ensuring they can be executed independently and efficiently.
-  - Store the transformed data in the intermediate `silver` layer, which is already set up with directories such as `silver/monthly` and `silver/weekly`.
+```bash
+cp .env.template .env          # set OPENROUTER_API_KEY
+docker compose build
+docker compose run --rm -e REPORT_LANG=en weekly
+```
 
-#### **Phase 3: Data Loading**
-- **Objective:** Load the transformed data into the final storage or destination for analysis, visualization, or reporting.
-- **Current Status:** The project includes a `final_transformed_data.csv` file in the `silver` directory, indicating the beginning of this phase.
-- **Next Steps:**
-  - Finalize the data transformation, ensuring the dataset is ready for analysis or integration into tools such as Google Sheets or a data warehouse.
-  - Save the final data products in the `silver` layer or prepare for a `gold` layer if necessary.
-  - Organize the data loading scripts within the `scripts/load` directory for better maintainability.
+Without Docker:
 
-#### **Phase 4: Validation and Testing**
-- **Objective:** Validate the ETL pipeline to ensure it processes data accurately and reliably.
-- **Current Status:** The validation phase has not been fully implemented yet.
-- **Next Steps:**
-  - Develop unit tests for each transformation function to verify correctness. Store these tests in the `tests` directory.
-  - Implement data validation checks at each stage of the ETL pipeline to ensure data quality.
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.template .env
+python scripts/run_weekly_abcd.py --fmt csv --lang en
+```
 
-### Summary of Current Phase and Next Steps
+Output: `reports/weekly/{YYYY}-W{WW}-macro-outlook.{lang}.md`
 
-**Current Phase:** The project is primarily in **Phase 2 (Data Transformation)**, with initial steps completed in **Phase 1 (Data Ingestion)** and **Phase 3 (Data Loading)**.
+| You fill in | Where |
+|---|---|
+| `OPENROUTER_API_KEY` | [openrouter.ai/keys](https://openrouter.ai/keys) |
+| `OPENROUTER_MODEL` | default `inclusionai/ling-3.0-flash-fin:free` (fallback MiniMax M3) |
+| `REPORT_LANG` | optional, `en` or `vi` |
 
-**Next Steps:**
-1. **Refactor the existing notebook into modular scripts**, distributing them across `scripts/extract`, `scripts/transform`, and `scripts/load`.
-2. **Automate the ETL pipeline** to ensure each step is executable independently and seamlessly.
-3. **Enhance testing and validation** by implementing unit tests and data validation checks to ensure the pipeline's accuracy and robustness.
+Deploy on Windows Docker Desktop or an Oracle Always Free VM: **[docs/docker.md](docs/docker.md)**.
 
+## Layout
+
+```text
+scripts/extract/     fetch this-week + Cloudflare playbook
+scripts/transform/   landing → silver → Kimball
+scripts/analyst/     Fact Pack, lint, language, LLM client
+scripts/run_weekly_abcd.py
+data/{bronze,silver,gold}/
+reports/weekly/      sample outlooks (en / vi)
+docs/analyst/        prompt + Control Lane semantics
+```
+
+## Tests
+
+```bash
+pip install -r requirements.txt
+python -m pytest -q -m "not integration"
+```
+
+## Docs
+
+[Index](docs/INDEX.md) · [Scrape strategy](docs/scrape_strategy.md) · [Analyst roadmap](docs/analyst-roadmap.md) · [Docker](docs/docker.md)
+
+MIT — see [LICENSE](LICENSE). Do not commit `.env`.

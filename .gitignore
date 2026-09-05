@@ -1,29 +1,42 @@
-# Python
-*.pyc
-__pycache__/
+# Secrets — never commit
+.env
+.env.*
+!.env.template
 
-# Virtual Environment
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
 .venv/
 venv/
 
-# IDEs and Editors
-.vscode/
+# Tests / coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Tools / IDE
 .idea/
+.vscode/
+.cursor/
+*.swp
+*.swo
+*.bak
 
-# Logs
-logs/
-*.log
-
-# OS Files
+# OS
 .DS_Store
 Thumbs.db
 
-# Environment variables
-.env
+# Runtime
+logs/
+*.log
 
-# Backup files
-*.bak
-*.swp
-
-# ignore dir
+# Local leftovers (never part of the product)
 forex_factory_calendar_news_scraper-main/
+mage-quickstart/

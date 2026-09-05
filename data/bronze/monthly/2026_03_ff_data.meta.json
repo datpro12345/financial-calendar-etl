@@ -1,9 +1,0 @@
-{
-  "year": 2026,
-  "month": "03",
-  "source_timezone": "America/Los_Angeles",
-  "rows": 71,
-  "red_rows": 71,
-  "all_markdown": "None",
-  "red_markdown": "tests/fixtures/ff_md_2026/mar_red.md"
-}

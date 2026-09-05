@@ -1,10 +1,28 @@
 Subject,Start Date,Start Time,End Date,End Time,Description,Location
-CPI m/m,08/12/2026,12:30,08/12/2026,13:30,Forecast: 0.1% | Actual: 0.1% | Previous: -0.4% | TZ: Asia/Ho_Chi_Minh,USD
-CPI y/y,08/12/2026,12:30,08/12/2026,13:30,Forecast: 3.4% | Actual: 3.4% | Previous: 3.5% | TZ: Asia/Ho_Chi_Minh,USD
-Core CPI y/y,08/12/2026,12:30,08/12/2026,13:30,Forecast: 2.5% | Actual: 2.5% | Previous: 2.6% | TZ: Asia/Ho_Chi_Minh,USD
-Core PPI m/m,08/13/2026,19:30,08/13/2026,20:30,Forecast: 0.3% | Actual: 0.2% | Previous: 0.4% | TZ: Asia/Ho_Chi_Minh,USD
-PPI m/m,08/13/2026,19:30,08/13/2026,20:30,Forecast: 0.2% | Actual: 0.0% | Previous: -0.1% | TZ: Asia/Ho_Chi_Minh,USD
-Core PCE Price Index m/m,08/26/2026,19:30,08/26/2026,20:30,Forecast: 0.2% | Actual: 0.2% | Previous: 0.1% | TZ: Asia/Ho_Chi_Minh,USD
-Prelim GDP q/q,08/26/2026,19:30,08/26/2026,20:30,Forecast: 1.5% | Actual: 1.5% | Previous: 1.5% | TZ: Asia/Ho_Chi_Minh,USD
-Fed Chairman Warsh Speaks,08/28/2026,21:00,08/28/2026,22:00,Forecast: N/A | Actual: N/A | Previous: N/A | TZ: Asia/Ho_Chi_Minh,USD
-Prelim Benchmark Payrolls Revision,08/28/2026,21:00,08/28/2026,22:00,Forecast: N/A | Actual: -79K | Previous: -911K | TZ: Asia/Ho_Chi_Minh,USD
+CPI m/m,08/12/2026,12:30,08/12/2026,13:30,"Giá tiêu dùng. Nóng hơn forecast = lạm phát cao hơn consensus.
+F 0.1% · P -0.4% · A 0.1%
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+CPI y/y,08/12/2026,12:30,08/12/2026,13:30,"Giá tiêu dùng. Nóng hơn forecast = lạm phát cao hơn consensus.
+F 3.4% · P 3.5% · A 3.4%
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+Core CPI y/y,08/12/2026,12:30,08/12/2026,13:30,"CPI lõi (bỏ thực phẩm/năng lượng). Lạm phát dai — trụ Fed.
+F 2.5% · P 2.6% · A 2.5%
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+Core PPI m/m,08/13/2026,19:30,08/13/2026,20:30,"PPI lõi. Giá sản xuất, đường ống trước CPI.
+F 0.3% · P 0.4% · A 0.2%
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+PPI m/m,08/13/2026,19:30,08/13/2026,20:30,"Giá sản xuất. Pipeline, chưa phải giá tiêu dùng.
+F 0.2% · P -0.1% · A 0.0%
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+Core PCE Price Index m/m,08/26/2026,19:30,08/26/2026,20:30,"PCE lõi — thước lạm phát Fed ưu tiên. Trụ dual mandate.
+F 0.2% · P 0.1% · A 0.2%
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+Prelim GDP q/q,08/26/2026,19:30,08/26/2026,20:30,"GDP sơ bộ. Ước lượng giữa kỳ.
+F 1.5% · P 1.5% · A 1.5%
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+Fed Chairman Warsh Speaks,08/28/2026,21:00,08/28/2026,22:00,"Chủ tịch Fed phát biểu. Tone policy; không có số thì chỉ phòng thủ.
+F — · P — · A —
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD
+Prelim Benchmark Payrolls Revision,08/28/2026,21:00,08/28/2026,22:00,"Sửa benchmark việc làm Mỹ. Điều chỉnh lịch sử, không phải NFP tháng này.
+F — · P -911K · A -79K
+Đứng ngoài lệnh mới quanh cửa sổ red. Asia/Ho_Chi_Minh",USD

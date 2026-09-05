@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import os
 import sys
 from pathlib import Path
 
@@ -22,6 +23,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
+from scripts.analyst.language import DEFAULT_LANG
 from scripts.analyst.llm_client import load_dotenv
 from scripts.analyst.run_weekly_report import current_iso_week, run_outlook
 from scripts.extract.config import GOLD_MART_DIR
@@ -52,6 +54,7 @@ def run_abcd(
     suffix: str | None = None,
     reports_dir: Path | None = None,
     mart_dir: Path = GOLD_MART_DIR,
+    lang: str = DEFAULT_LANG,
 ) -> dict:
     summary: dict = {"ok": False, "stopped_at": None}
 
@@ -110,6 +113,7 @@ def run_abcd(
         timeout=timeout,
         suffix=suffix,
         skip_lint=skip_lint,
+        lang=lang,
     )
     summary["C"] = {
         "fact_pack_json": outlook["fact_pack_json"],
@@ -154,6 +158,11 @@ def main() -> int:
     parser.add_argument("--model")
     parser.add_argument("--timeout", type=int, default=180)
     parser.add_argument("--suffix")
+    parser.add_argument(
+        "--lang",
+        default=os.environ.get("REPORT_LANG", DEFAULT_LANG),
+        help="Report language: vi, en, or any name (ja, es, …). Default: vi or REPORT_LANG",
+    )
     parser.add_argument("--reports-dir", type=Path)
     parser.add_argument("--mart-dir", type=Path, default=GOLD_MART_DIR)
     args = parser.parse_args()
@@ -175,6 +184,7 @@ def main() -> int:
             model=args.model,
             timeout=args.timeout,
             suffix=args.suffix,
+            lang=args.lang,
             reports_dir=args.reports_dir,
             mart_dir=args.mart_dir,
         )

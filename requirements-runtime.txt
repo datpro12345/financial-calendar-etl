@@ -1,6 +1,0 @@
-# Runtime for Docker weekly ABCD (no Playwright browsers).
-pandas>=2.0
-beautifulsoup4>=4.12
-lxml>=5.0
-curl_cffi>=0.7
-cloudscraper>=1.2.71
