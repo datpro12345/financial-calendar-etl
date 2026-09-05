@@ -42,6 +42,11 @@ def _parse_event_date(date_str: str, year: int) -> datetime | None:
     text = _clean_value(date_str)
     for fmt in ("%b %d %Y", "%B %d %Y"):
         try:
+            return datetime.strptime(text, fmt)
+        except ValueError:
+            continue
+    for fmt in ("%b %d %Y", "%B %d %Y"):
+        try:
             return datetime.strptime(f"{text} {year}", fmt)
         except ValueError:
             continue

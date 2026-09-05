@@ -27,6 +27,39 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 logger = logging.getLogger(__name__)
 
 
+def fetch_this_week(
+    *,
+    fmt: str = "csv",
+    out_raw: Path | None = None,
+    out_csv: Path | None = None,
+    fallback: bool = True,
+) -> dict:
+    """A — this-week export → bronze raw + bronze weekly CSV. No WARP."""
+    body, method = fetch_weekly_export(fmt=fmt, fallback=fallback)
+    used_fmt = method.rsplit(":", 1)[-1]
+
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    raw_dir = BRONZE_RAW_CALENDAR_DIR / "weekly"
+    raw_dir.mkdir(parents=True, exist_ok=True)
+    raw_path = out_raw or (raw_dir / f"thisweek_{stamp}.{used_fmt}")
+    raw_path.write_text(body)
+    logger.info("Raw dump → %s via %s (%s bytes)", raw_path, method, len(body))
+
+    rows = parse_weekly_export(body, used_fmt)
+    frame = rows_to_dataframe(rows)
+    BRONZE_WEEKLY_DIR.mkdir(parents=True, exist_ok=True)
+    csv_path = out_csv or (BRONZE_WEEKLY_DIR / "thisweek.csv")
+    frame.to_csv(csv_path, index=False)
+
+    return {
+        "method": method,
+        "raw": str(raw_path),
+        "csv": str(csv_path),
+        "rows": int(len(frame)),
+        "impact_counts": frame["impact"].value_counts().to_dict() if len(frame) else {},
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Fetch FF this-week export → bronze")
     parser.add_argument("--fmt", choices=("csv", "xml", "json"), default="csv")
@@ -42,32 +75,18 @@ def main() -> int:
         default=None,
         help="Parsed bronze CSV (default: data/bronze/weekly/thisweek.csv)",
     )
+    parser.add_argument(
+        "--no-fallback",
+        action="store_true",
+        help="Do not try XML/JSON if CSV fails (saves the ~2/5 min quota)",
+    )
     args = parser.parse_args()
-
-    body, method = fetch_weekly_export(fmt=args.fmt)
-    # method looks like "curl_cffi:csv"
-    used_fmt = method.rsplit(":", 1)[-1]
-
-    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    raw_dir = BRONZE_RAW_CALENDAR_DIR / "weekly"
-    raw_dir.mkdir(parents=True, exist_ok=True)
-    out_raw = args.out_raw or (raw_dir / f"thisweek_{stamp}.{used_fmt}")
-    out_raw.write_text(body)
-    logger.info("Raw dump → %s via %s (%s bytes)", out_raw, method, len(body))
-
-    rows = parse_weekly_export(body, used_fmt)
-    frame = rows_to_dataframe(rows)
-    BRONZE_WEEKLY_DIR.mkdir(parents=True, exist_ok=True)
-    out_csv = args.out_csv or (BRONZE_WEEKLY_DIR / "thisweek.csv")
-    frame.to_csv(out_csv, index=False)
-
-    summary = {
-        "method": method,
-        "raw": str(out_raw),
-        "csv": str(out_csv),
-        "rows": len(frame),
-        "impact_counts": frame["impact"].value_counts().to_dict() if len(frame) else {},
-    }
+    summary = fetch_this_week(
+        fmt=args.fmt,
+        out_raw=args.out_raw,
+        out_csv=args.out_csv,
+        fallback=not args.no_fallback,
+    )
     print(json.dumps(summary, indent=2))
     return 0
 

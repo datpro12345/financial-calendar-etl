@@ -1,0 +1,93 @@
+# Control Lane interactions.
+# Textbook tensions — not pair forecasts, not entry rules.
+# Use to say which PILLAR / NARRATIVE is pressured, never which pair goes up.
+
+version: 1
+purpose: >
+  When one verified print moves, name what must loosen.
+  You cannot keep every story true at once.
+
+hard_ban:
+  - Do not write pair direction (EUR/USD up/down)
+  - Do not invent policy rates or Fed/ECB paths
+  - Do not invent thresholds; only A vs F/P on the same fact_id
+
+# --- Dual mandate (weekly, primary for USD/EUR/GBP) ---
+# A central bank cannot treat "max jobs" and "2% inflation" as both
+# fully satisfied when the two prints pull opposite ways.
+
+dual_mandate:
+  name: Employment vs price stability
+  applies_to: [USD, EUR, GBP]
+  pillars: [labor, inflation]
+  rule: >
+    If labor is hotter than consensus AND inflation is hotter than consensus,
+    the easing / "Fed/ECB done" story cannot stay intact.
+    If both are cooler than consensus, the hawkish-labor AND hawkish-inflation
+    stories cannot both stay intact.
+  interactions:
+    - when: labor_actual_above_forecast
+      tighten: labor_strength_narrative
+      loosen: imminent_easing_narrative
+    - when: labor_actual_below_forecast
+      tighten: labor_cooling_narrative
+      loosen: wage_overheat_narrative
+    - when: inflation_actual_above_forecast
+      tighten: inflation_stickiness_narrative
+      loosen: early_cut_narrative
+    - when: inflation_actual_below_forecast
+      tighten: disinflation_narrative
+      loosen: higher_for_longer_narrative
+    - when: labor_hot_and_inflation_hot
+      cannot_also_claim: policy_will_ease_this_week
+    - when: labor_cold_and_inflation_cold
+      cannot_also_claim: both_hawkish_labor_and_hawkish_inflation
+
+# --- Impossible trinity (Mundell-Fleming) ---
+# Useful for JPY / CNY / EUR policy weeks. Not a daily trading rule.
+
+impossible_trinity:
+  name: Mundell-Fleming trilemma
+  usable_in_this_repo: >
+    Yes, as a Control constraint when a PRIMARY currency has a POLICY red event.
+    No, as a weekly scorecard — mart has no FX regime flag, no capital-flow series,
+    no policy-rate path. Do not score the trinity with invented data.
+  cannot_have_all_three:
+    - independent_monetary_policy
+    - stable_or_fixed_fx
+    - free_capital_flows
+  pick_two: true
+  currency_notes:
+    JPY: >
+      BOJ policy red + USD labor/inflation the same week = trinity tension
+      (policy autonomy vs USDJPY stability). Describe the tension only.
+      Do not call FX intervention unless it is an event in the pack.
+    CNY: >
+      Secondary. Managed FX + policy prints → trinity is the textbook frame.
+      Do not invent PBoC actions.
+    EUR: >
+      ECB policy + EUR inflation in the same window = dual mandate first;
+      trinity only if the report claims both "ECB fully independent" and
+      "EUR tightly managed" — those two plus open capital markets cannot
+      all be absolute.
+    USD: >
+      Trinity is weaker as a weekly tool (USD is the reserve hub).
+      Prefer dual_mandate for USD labor/CPI weeks.
+  if_policy_red_on:
+    JPY: name the tradeoff (policy vs FX calm) — no pair call
+    EUR: prefer dual_mandate; trinity only as a check on over-claiming
+    USD: skip trinity; use dual_mandate
+
+# --- Relative FX (always true in this repo) ---
+relative_fx:
+  name: Pair is a difference
+  rule: >
+    A hotter USD labor print cannot by itself be a EUR story.
+    If only one PRIMARY currency has red, the quiet legs have no independent catalyst.
+  cannot_also_claim: all_four_primaries_have_their_own_narrative_this_week
+
+# --- How to write an interaction sentence ---
+sentence_template: >
+  Quan sát: {event} {clock} fact_id={id} A vs F = {direction}.
+  Trụ {pillar} siết. Câu chuyện {loosened} phải nới.
+  Không suy cặp tăng/giảm.

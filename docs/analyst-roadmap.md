@@ -144,24 +144,23 @@ Dựa trên dữ liệu thực tế đang có trong `data/gold/mart/` (`fact_cal
 
 ### Phase 1: Triển khai ngay (Ready Now - Đủ 100% dữ liệu)
 
-Hai output này có thể chạy ngay lập tức vì toàn bộ thông tin đã nằm trọn vẹn trong `gold/mart/`:
+Phase 1 **chỉ ship Weekly Outlook**. Daily Risk Flash **không làm**: Google Calendar gold export (`data/gold/google_calendar/`) đã cảnh báo red USD/GBP/EUR theo giờ HCM. Daily AI report trùng chức năng và nhiễu swing trader.
 
 #### 1. Output 1: `Weekly Macro & Reflexivity Outlook` (Báo cáo tuần - Giá trị cốt lõi)
 * **Tần suất:** 1 lần / tuần (Chủ Nhật hoặc sáng Thứ Hai).
 * **Trạng thái dữ liệu:** **Đủ 100%**. Lịch tuần tới, mốc giờ, currency, impact, forecast và previous đều đã có sẵn.
 * **Cấu trúc nội dung:**
-  1. *Weekly Exposure Matrix:* Bảng nhiệt lượng rủi ro theo đồng tiền (% Red USD vs EUR vs GBP vs JPY...).
+  1. *Weekly Exposure Matrix:* Tách **Chính (USD/EUR/GBP/JPY)** và **Phụ (AUD/NZD/CAD/CHF/CNY)**.
   2. *Tier-1 Catalyst Schedule (HCM Time):* Lịch các mốc giờ Big 4 trong 3 phiên Á - Âu - Mỹ.
   3. *Clash & Volatility Alerts:* Cảnh báo các mốc giờ trùng tin (VD: NFP Mỹ trùng giờ thất nghiệp Canada $\to$ bão quét 2 đầu `USD/CAD`).
-  4. *Soros Falsification Criteria:* Kịch bản điều kiện nào sẽ bẻ gãy xu hướng tuần.
-  5. *Swing Watchlist:* Đề xuất 2-3 cặp tiền có sự phân kỳ xúc tác vĩ mô rõ nét nhất.
+  4. *Soros Falsification Criteria:* Tách điều kiện hủy bias — Chính trước, Phụ sau.
+  5. *Swing Watchlist:* 2 cặp chính trong nhóm 4 đồng; 0–1 cặp phụ nếu lịch material.
+  6. *Next week look-ahead:* Snapshot tuần ISO kế từ mart (không viết báo cáo tuần thứ hai).
+  7. *Gợi ý swing (Soros):* Không đặt lệnh chính lúc tin red; red là bài test giả thuyết.
+  8. *Lint:* `scripts/analyst/report_lint.py` đối chiếu số/`fact_id` với Fact Pack sau khi sinh báo cáo.
 
-#### 2. Output 3: `Daily Risk Flash & Action Checklist` (Cảnh báo ngày)
-* **Tần suất:** Sáng các ngày có tin Red (07:30 sáng HCM).
-* **Trạng thái dữ liệu:** **Đủ 100%** (Chỉ là bộ lọc `WHERE date = TODAY AND impact = 'red'` từ mart).
-* **Cấu trúc nội dung:**
-  * Đúng 1 bảng checklist ngắn: Giờ tin ra, cặp tiền ảnh hưởng trực tiếp, kỳ vọng là gì.
-  * 1 quy tắc hành động: Mốc giờ cần dời SL về hòa vốn hoặc tránh vào lệnh mới.
+#### Daily Risk Flash — không implement
+* Google Calendar đã là operational alarm. Analyst layer chỉ làm strategic weekly brief.
 
 ---
 
@@ -196,10 +195,15 @@ Hai output này có thể chạy ngay lập tức vì toàn bộ thông tin đã
    * Script Python đọc `data/gold/mart/fact_calendar_release.csv` và các dim liên quan.
    * Tính toán sẵn: Đếm tin Red/Orange, gom nhóm theo Currency, phát hiện các tin cùng giờ (Clash), quy đổi giờ HCM.
    * Xuất ra payload JSON hoặc Markdown gọn gàng.
-2. **Bước 2 — Prompt Template Sorosian (`docs/analyst/prompts/weekly_prompt.md`):**
+2. **Bước 2 — Prompt Template Sorosian (`docs/analyst/prompts/weekly_soros_prompt.md`):**
    * Xây dựng prompt chứa đầy đủ Semantic Contract, Mental Model Soros, quy tắc Falsification và format báo cáo chuẩn.
-3. **Bước 3 — Lightweight Runner (`scripts/analyst/run_report.py`):**
+3. **Bước 3 — Lightweight Runner (`scripts/analyst/run_weekly_report.py`):**
    * Đọc cấu hình từ `.env` (Google AI Studio hoặc OpenRouter API key).
    * Ghép `Fact Pack` vào prompt, gửi tới model được chọn (miễn phí), ghi kết quả vào thư mục `reports/weekly/`.
 4. **Bước 4 — Chạy thử nghiệm & Kiểm thử (Validation):**
    * Chạy báo cáo cho tuần thực tế của năm 2026 trong dataset để đánh giá độ sắc bén của nhận định.
+5. **Bước 5 — Orchestrator ABCD (`scripts/run_weekly_abcd.py`):**
+   * A: `fetch_weekly` (nfs.faireconomy.media, không WARP, `strategy=http`, firefox135). Fail-stop nếu A/B lỗi — không gọi LLM.
+   * B: bronze this-week → landing → silver `YYYY_Www.csv` → rebuild Kimball (weekly thắng overlap).
+   * C+D: Fact Pack + outlook + lint. Tuần báo cáo lấy từ dữ liệu vừa fetch, không hard-code.
+   * Deploy: `docs/docker.md` (Docker Desktop Windows / Oracle Always Free).

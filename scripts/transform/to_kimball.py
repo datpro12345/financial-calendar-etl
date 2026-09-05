@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import logging
+import re
 import sys
 from pathlib import Path
 
@@ -21,17 +22,40 @@ logger = logging.getLogger(__name__)
 IMPACT_RANK = {"gray": 0, "yellow": 1, "orange": 2, "red": 3}
 
 
+WEEKLY_SILVER_NAME = re.compile(r"^\d{4}_W\d{2}\.csv$")
+
+
 def _load_silver(silver_dir: Path, pattern: str = "*.csv") -> pd.DataFrame:
     files = sorted(silver_dir.glob(pattern))
     if not files:
         raise FileNotFoundError(f"No silver files in {silver_dir}")
-    frames = [pd.read_csv(path, dtype=str).fillna("") for path in files]
-    df = pd.concat(frames, ignore_index=True)
-    df = df.drop_duplicates(
+    weekly = [path for path in files if WEEKLY_SILVER_NAME.match(path.name)]
+    monthly = [path for path in files if path not in weekly]
+    frames = [pd.read_csv(path, dtype=str).fillna("") for path in monthly]
+    if weekly:
+        weekly_df = pd.concat(
+            [pd.read_csv(path, dtype=str).fillna("") for path in weekly],
+            ignore_index=True,
+        )
+        owned_dates = set(weekly_df["event_date"].astype(str))
+        if frames:
+            monthly_df = pd.concat(frames, ignore_index=True)
+            monthly_df = monthly_df[~monthly_df["event_date"].astype(str).isin(owned_dates)]
+            df = pd.concat([monthly_df, weekly_df], ignore_index=True)
+        else:
+            df = weekly_df
+        logger.info(
+            "Weekly silver owns %s dates (%s rows); monthly remainder %s rows",
+            len(owned_dates),
+            len(weekly_df),
+            len(df) - len(weekly_df),
+        )
+    else:
+        df = pd.concat(frames, ignore_index=True)
+    return df.drop_duplicates(
         subset=["event_date", "time_raw", "currency", "event"],
         keep="last",
     )
-    return df
 
 
 def _build_dim_date(event_dates: pd.Series) -> pd.DataFrame:

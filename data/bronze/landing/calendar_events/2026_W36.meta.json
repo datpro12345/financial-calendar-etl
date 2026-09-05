@@ -1,0 +1,16 @@
+{
+  "layer": "bronze_landing",
+  "source": "weekly_export",
+  "source_file": "thisweek.csv",
+  "rows": 114,
+  "inferred_year": 2026,
+  "impact_counts": {
+    "yellow": 87,
+    "red": 15,
+    "orange": 11,
+    "gray": 1
+  },
+  "ingested_at": "2026-09-05T174448Z",
+  "week_label": "2026-W36",
+  "source_timezone": "America/New_York"
+}

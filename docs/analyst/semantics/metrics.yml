@@ -1,0 +1,123 @@
+# Metric dictionary for the weekly analyst.
+# Use these definitions. Do not invent units or extra thresholds.
+# Falsify only against forecast/previous on the SAME fact_id.
+
+version: 1
+source: gold/mart fact_calendar_release text fields
+rule: >
+  Numbers live in the Fact Pack. This file only explains meaning.
+  Never write a cutoff that is not F or P of that fact_id.
+
+fields:
+  forecast:
+    meaning: Consensus before release (prevailing bias)
+    role: number the market already priced
+  previous:
+    meaning: Last printed value
+    role: see if consensus already moved vs last print
+  actual:
+    meaning: Released print; may be empty
+    role: the test result — do not invent if blank
+
+pillars:
+  labor: Employment and wages
+  inflation: Prices
+  growth: Activity and output
+  policy: Central-bank decisions and communication
+
+metrics:
+  nfp:
+    match: ["Non-Farm Employment Change"]
+    pillar: labor
+    unit: K
+    read: Jobs added, thousands, US
+    vs_forecast: A > F = labor stronger than consensus
+    vs_previous: F vs P shows whether consensus already shifted
+    typical_currency: USD
+    do_not_invent_threshold: true
+
+  unemployment_rate:
+    match: ["Unemployment Rate"]
+    pillar: labor
+    unit: "%"
+    read: Share of labor force unemployed
+    vs_forecast: A > F = labor weaker than consensus
+    typical_currency: [USD, CAD, EUR, GBP]
+    do_not_invent_threshold: true
+
+  ahe:
+    match: ["Average Hourly Earnings"]
+    pillar: labor
+    unit: "%"
+    read: Wage growth; inflation-adjacent labor
+    vs_forecast: A > F = more wage pressure than consensus
+    typical_currency: USD
+    do_not_invent_threshold: true
+
+  employment_change:
+    match: ["Employment Change"]
+    pillar: labor
+    unit: K
+    read: Jobs change (non-US naming)
+    vs_forecast: A > F = labor stronger than consensus
+    typical_currency: [CAD, EUR, GBP, AUD, NZD]
+    do_not_invent_threshold: true
+
+  cpi:
+    match: ["CPI m/m", "CPI y/y", "Core CPI", "CPI Flash"]
+    pillar: inflation
+    unit: "%"
+    read: Consumer prices; core excludes food/energy
+    vs_forecast: A > F = inflation hotter than consensus
+    typical_currency: [USD, EUR, GBP, CHF]
+    do_not_invent_threshold: true
+
+  pce:
+    match: ["PCE", "Core PCE"]
+    pillar: inflation
+    unit: "%"
+    read: Fed preferred inflation gauge when present
+    vs_forecast: A > F = inflation hotter than consensus
+    typical_currency: USD
+    do_not_invent_threshold: true
+
+  ppi:
+    match: ["PPI m/m", "Core PPI"]
+    pillar: inflation
+    unit: "%"
+    read: Producer prices; pipeline, not CPI
+    vs_forecast: A > F = pipeline prices hotter than consensus
+    typical_currency: USD
+    do_not_invent_threshold: true
+
+  gdp:
+    match: ["GDP"]
+    pillar: growth
+    unit: "%"
+    read: Output growth
+    vs_forecast: A > F = growth stronger than consensus
+    do_not_invent_threshold: true
+
+  pmi:
+    match: ["PMI"]
+    pillar: growth
+    unit: index
+    read: "50 = expand/contract line in textbook; only use 50 if it appears in the pack"
+    vs_forecast: A > F = activity stronger than consensus
+    do_not_invent_threshold: true
+
+  policy_rate:
+    match: ["Official Cash Rate", "Overnight Rate", "Federal Funds", "Interest Rate"]
+    pillar: policy
+    unit: "%"
+    read: Policy rate print; A vs F is the surprise, not a forecast of the next meeting
+    vs_forecast: A > F = more hawkish than consensus
+    do_not_invent_threshold: true
+
+  policy_text:
+    match: ["Rate Statement", "Monetary Policy Statement", "Press Conference"]
+    pillar: policy
+    unit: none
+    read: No number in pack → do not invent tone scores or rate paths
+    vs_forecast: not applicable
+    do_not_invent_threshold: true

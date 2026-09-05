@@ -383,9 +383,11 @@ def fetch_calendar_html(url: str, strategy: FetchStrategy = "auto") -> tuple[str
     )
 
 
-def fetch_weekly_export(fmt: str = "csv") -> tuple[str, str]:
-    """Fetch this-week export. Prefer CSV (stable); falls back across formats."""
-    preferred = [fmt.lower()] + [f for f in FF_WEEKLY_EXPORT_FORMATS if f != fmt.lower()]
+def fetch_weekly_export(fmt: str = "csv", *, fallback: bool = True) -> tuple[str, str]:
+    """Fetch this-week export. Prefer CSV (stable); optionally fall back across formats."""
+    preferred = [fmt.lower()]
+    if fallback:
+        preferred += [f for f in FF_WEEKLY_EXPORT_FORMATS if f != fmt.lower()]
     last_error: Exception | None = None
     for candidate in preferred:
         url = build_weekly_export_url(candidate)

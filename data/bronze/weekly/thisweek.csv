@@ -84,9 +84,9 @@ Sep 3,7:50am,EUR,yellow,French Final Services PMI,N/A,48.4,48.4
 Sep 3,7:55am,EUR,yellow,German Final Services PMI,N/A,48.5,48.5
 Sep 3,8:00am,EUR,yellow,Final Services PMI,N/A,51.7,51.7
 Sep 3,8:30am,GBP,yellow,Final Services PMI,N/A,52.8,52.8
+Sep 3,8:43am,EUR,yellow,Spanish 10-y Bond Auction,N/A,N/A,3.54|2.4
+Sep 3,8:57am,EUR,yellow,French 10-y Bond Auction,N/A,N/A,3.86|3.7
 Sep 3,9:00am,EUR,yellow,PPI m/m,N/A,1.2%,-0.3%
-Sep 3,9:03am,EUR,yellow,Spanish 10-y Bond Auction,N/A,N/A,3.54|2.4
-Sep 3,9:18am,EUR,yellow,French 10-y Bond Auction,N/A,N/A,3.86|3.7
 Sep 3,9:30am,USD,yellow,Challenger Job Cuts y/y,N/A,N/A,-46.1%
 Sep 3,12:30pm,CAD,yellow,Labor Productivity q/q,N/A,0.7%,-0.5%
 Sep 3,12:30pm,CAD,yellow,Trade Balance,N/A,3.2B,3.9B
@@ -98,6 +98,7 @@ Sep 3,12:30pm,USD,yellow,Trade Balance,N/A,-89.4B,-73.3B
 Sep 3,1:45pm,USD,yellow,Final Services PMI,N/A,56.8,56.8
 Sep 3,2:00pm,USD,orange,ISM Services PMI,N/A,54.2,54.1
 Sep 3,2:30pm,USD,yellow,Natural Gas Storage,N/A,30B,15B
+Sep 3,3:00pm,GBP,yellow,MPC Member Pill Speaks,N/A,N/A,N/A
 Sep 3,7:00pm,USD,yellow,FOMC Member Hammack Speaks,N/A,N/A,N/A
 Sep 3,7:55pm,USD,yellow,FOMC Member Goolsbee Speaks,N/A,N/A,N/A
 Sep 3,11:30pm,JPY,yellow,Household Spending y/y,N/A,-1.6%,-3.3%
