@@ -74,7 +74,7 @@ Landing schema (minimal):
 | `source_file` | Path to raw dump |
 | `ingested_at` | UTC ISO timestamp |
 
-If only a red dump exists for a month, landing may contain only high-impact rows — still bronze, but **incomplete coverage**. Prefer full dump when available.
+If only a red dump exists for a month, landing may contain only high-impact rows — still bronze, but **incomplete coverage**. Prefer full dump when available. Monthly fetch must include `impacts=0` (gray / holiday); R/O/Y-only dumps omit bank holidays and therefore understate session closures.
 
 ### 2. Silver — Cleansed & conformed SSOT
 
@@ -112,7 +112,7 @@ Silver schema:
 
 | Product | Path | Rule |
 |---------|------|------|
-| Google Calendar import | `gold/google_calendar/{yyyy-mm}-news.csv` | Filter `impact=red` + `currency ∈ {USD,GBP,EUR}` + timed events; HCM wall clock; GCal columns |
+| Google Calendar import | `gold/google_calendar/{yyyy-mm}-news.csv` | Filter `impact=red` + `currency ∈ {USD,GBP,EUR}` + timed events; HCM wall clock; GCal columns. Holidays stay in Silver/mart (usually All Day, not this product). |
 | Kimball mart | `gold/mart/` | Star schema from Silver for BI / Looker |
 
 #### Kimball star (simple)

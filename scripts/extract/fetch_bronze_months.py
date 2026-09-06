@@ -14,7 +14,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from scripts.extract.client import fetch_month_impact_layers
-from scripts.extract.config import IMPACT_FETCH_GAP_SECONDS
+from scripts.extract.config import IMPACT_FETCH_GAP_SECONDS, IMPACT_LAYERS
 from scripts.extract.build_month_from_markdown import build_month
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
@@ -22,7 +22,9 @@ logger = logging.getLogger(__name__)
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Fetch R/O/Y bronze layers then build Medallion month")
+    parser = argparse.ArgumentParser(
+        description="Fetch R/O/Y/G (holiday) bronze layers then build Medallion month"
+    )
     parser.add_argument("--year", type=int, required=True)
     parser.add_argument(
         "--months",
@@ -59,6 +61,7 @@ def main() -> int:
                 red_md=saved.get("red"),
                 orange_md=saved.get("orange"),
                 yellow_md=saved.get("yellow"),
+                gray_md=saved.get("gray"),
                 write_gold_gcal=not args.no_gold,
             )
             entry["build"] = {
@@ -68,8 +71,13 @@ def main() -> int:
                 "landing": built.get("bronze_landing"),
             }
         results.append(entry)
-        if len(saved) < 3:
-            logger.error("Incomplete layers for %s (%s/3). Stopping.", month, len(saved))
+        if len(saved) < len(IMPACT_LAYERS):
+            logger.error(
+                "Incomplete layers for %s (%s/%s). Stopping.",
+                month,
+                len(saved),
+                len(IMPACT_LAYERS),
+            )
             print(json.dumps(results, indent=2))
             return 1
 

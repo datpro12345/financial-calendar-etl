@@ -6,7 +6,7 @@ Egress (must work before any library helps):
 
 What to fetch:
 - This week: nfs.faireconomy.media weekly export (CSV/XML/JSON). No HTML, no WARP.
-- Months: calendar HTML with impacts=3|2|1 (red|orange|yellow), paced gap+jitter.
+- Months: calendar HTML with impacts=3|2|1|0 (red|orange|yellow|gray/holiday), paced gap+jitter.
 
 HTTP stack (strategy=auto / http):
 1. curl_cffi + Firefox TLS impersonation + rotated headers (this is what YTD used).
@@ -72,7 +72,7 @@ def build_calendar_url(period: str) -> str:
 
 
 def build_impact_url(month_abbr: str, year: int, impact_id: int) -> str:
-    """Print/permalink view filtered to one impact id (3=red, 2=orange, 1=yellow)."""
+    """Print/permalink view filtered to one impact id (3=red, 2=orange, 1=yellow, 0=gray/holiday)."""
     month = month_abbr.lower()
     return (
         f"{FF_CALENDAR_URL}?month={month}.{year}"
@@ -411,7 +411,7 @@ def fetch_month_impact_layers(
     strategy: FetchStrategy = "auto",
     stop_on_fail: bool = True,
 ) -> dict[str, Path]:
-    """Fetch red/orange/yellow dumps for one month with pacing.
+    """Fetch red/orange/yellow/gray (holiday) dumps for one month with pacing.
 
     Returns map impact_label → saved raw file path.
     """

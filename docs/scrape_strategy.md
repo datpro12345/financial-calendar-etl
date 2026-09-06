@@ -6,7 +6,7 @@ Canonical playbook. Implemented in `scripts/extract/client.py` + `config.py`. Ex
 
 1. **Egress first.** VN residential IP is TLS-reset on `www.forexfactory.com`. Open **Cloudflare WARP → Traffic and DNS (UDP)** (or residential proxy `FF_HTTP_PROXY`). Confirm FF HTML 200 before fetching months.
 2. **This week only:** `https://nfs.faireconomy.media/ff_calendar_thisweek.{csv,xml,json}` — no WARP, no HTML. Rate-limit ~2 / 5 min. Export clocks are **UTC** (NFP `12:30pm` = 8:30am ET). CLI: `scripts/extract/fetch_weekly.py` or ABCD `scripts/run_weekly_abcd.py`.
-3. **Historical / YTD:** HTML calendar, **three URLs per month** (`impacts=3|2|1` = red|orange|yellow). `curl_cffi` + `impersonate=firefox135`. Pace `--gap 45` + jitter 2–5s. Save `.html`. Parse with `parse_calendar_html`.
+3. **Historical / YTD:** HTML calendar, **four URLs per month** (`impacts=3|2|1|0` = red|orange|yellow|gray/holiday). `curl_cffi` + `impersonate=firefox135`. Pace `--gap 45` + jitter 2–5s. Save `.html`. Parse with `parse_calendar_html`. Holiday rows (impact 0) are session closures; without them Silver/mart cannot flag thin-liquidity days per currency.
 4. **Do not** depend on dated XML (`ff_calendar_monthddyyyy.xml`) — CDN 404. **Do not** expect CloudScraper / undetected-chrome / UA rotation to unstick a TLS-reset IP.
 
 ## Fetch stack (`strategy=auto`)

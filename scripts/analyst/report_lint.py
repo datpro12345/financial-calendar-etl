@@ -87,7 +87,12 @@ def allowed_from_pack(pack: dict[str, Any]) -> dict[str, set[str]]:
         if re.fullmatch(r"\d+", blob):
             facts.add(blob)
 
-    for ev in pack.get("red_events", []) + pack.get("orange_events", []) + pack.get("tier1_events", []):
+    for ev in (
+        pack.get("red_events", [])
+        + pack.get("orange_events", [])
+        + pack.get("tier1_events", [])
+        + pack.get("liquidity_holidays", [])
+    ):
         facts.add(str(ev.get("fact_id", "")))
         for key in ("forecast", "previous", "actual", "clock_hcm"):
             val = ev.get(key) or ""
@@ -97,7 +102,11 @@ def allowed_from_pack(pack: dict[str, Any]) -> dict[str, set[str]]:
                 h, m = str(val).split(":")
                 times.add(f"{int(h):02d}:{m}")
     nxt = pack.get("next_week") or {}
-    for ev in nxt.get("red_events", []) + nxt.get("orange_events", []):
+    for ev in (
+        nxt.get("red_events", [])
+        + nxt.get("orange_events", [])
+        + nxt.get("liquidity_holidays", [])
+    ):
         facts.add(str(ev.get("fact_id", "")))
         for key in ("forecast", "previous", "actual"):
             val = ev.get(key) or ""

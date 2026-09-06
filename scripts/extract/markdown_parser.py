@@ -143,13 +143,22 @@ def parse_calendar_markdown(markdown: str, default_impact: str = "yellow") -> li
     return rows
 
 
+def is_holiday_event(event: str) -> bool:
+    """Name heuristic for markdown dumps that lost the gray impact icon."""
+    return "holiday" in (event or "").lower()
+
+
 def merge_impact_layers(
     yellow_rows: Iterable[dict[str, str]] | None = None,
     orange_rows: Iterable[dict[str, str]] | None = None,
     red_rows: Iterable[dict[str, str]] | None = None,
     gray_rows: Iterable[dict[str, str]] | None = None,
 ) -> list[dict[str, str]]:
-    """Merge impact-filtered extracts. Higher impact wins on duplicate keys."""
+    """Merge impact-filtered extracts. Higher impact wins on duplicate keys.
+
+    Gray/holiday is sticky: an unfiltered dump often repeats Bank Holiday rows as
+    yellow because markdown loses the icon. Do not upgrade those to yellow.
+    """
     merged: dict[tuple[str, str, str, str], dict[str, str]] = {}
     priority = {"gray": 0, "yellow": 1, "orange": 2, "red": 3}
 
@@ -163,7 +172,12 @@ def merge_impact_layers(
             key = (row["date"], row["time"], row["currency"], row["event"])
             row = {**row, "impact": impact}
             existing = merged.get(key)
-            if existing is None or priority[impact] >= priority[existing["impact"]]:
+            if existing is None:
+                merged[key] = row
+                continue
+            if existing["impact"] == "gray" and impact != "gray":
+                continue
+            if priority[impact] >= priority[existing["impact"]]:
                 merged[key] = row
 
     # Stable-ish order by date then time then currency

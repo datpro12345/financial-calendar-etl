@@ -7,8 +7,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from scripts.extract.client import build_calendar_url, build_weekly_export_url
-from scripts.extract.config import BRONZE_COLUMNS
+from scripts.extract.client import build_calendar_url, build_impact_url, build_weekly_export_url
+from scripts.extract.config import BRONZE_COLUMNS, IMPACT_LAYERS
+from scripts.extract.markdown_parser import is_holiday_event, merge_impact_layers
 from scripts.extract.parser import parse_calendar_html, rows_to_dataframe
 from scripts.extract.weekly_export import parse_weekly_csv, parse_weekly_export
 
@@ -22,6 +23,34 @@ def test_build_calendar_url_month_and_day():
     assert build_calendar_url("this") == "https://www.forexfactory.com/calendar?month=this"
     assert build_calendar_url("mar.2026") == "https://www.forexfactory.com/calendar?month=mar.2026"
     assert build_calendar_url("2026-03-02") == "https://www.forexfactory.com/calendar?day=2026-03-02"
+
+
+def test_impact_layers_include_holiday_gray():
+    assert IMPACT_LAYERS == (
+        ("red", 3),
+        ("orange", 2),
+        ("yellow", 1),
+        ("gray", 0),
+    )
+    assert "impacts=0" in build_impact_url("jan", 2026, 0)
+
+
+def test_merge_keeps_gray_holiday_when_unfiltered_dump_repeats_yellow():
+    holiday = {
+        "date": "Sep 7",
+        "time": "All Day",
+        "currency": "USD",
+        "event": "Bank Holiday",
+        "actual": "N/A",
+        "forecast": "N/A",
+        "previous": "N/A",
+    }
+    merged = merge_impact_layers(yellow_rows=[holiday], gray_rows=[holiday])
+    assert len(merged) == 1
+    assert merged[0]["impact"] == "gray"
+    assert is_holiday_event("Bank Holiday")
+    assert is_holiday_event("UK Bank Holiday")
+    assert not is_holiday_event("CPI m/m")
 
 
 def test_build_weekly_export_url():

@@ -7,6 +7,7 @@ import json
 import logging
 import shutil
 import sys
+from collections.abc import Iterable
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -22,6 +23,7 @@ from scripts.extract.config import (
     BRONZE_RAW_CALENDAR_DIR,
 )
 from scripts.extract.markdown_parser import (
+    is_holiday_event,
     merge_impact_layers,
     parse_calendar_markdown,
 )
@@ -83,6 +85,10 @@ def _load_layer(path: Path | None, impact: str, year: int, month_num: str) -> tu
     return rows, tz, [str(raw)]
 
 
+def _holiday_rows(rows: Iterable[dict[str, str]]) -> list[dict[str, str]]:
+    return [{**row, "impact": "gray"} for row in rows if is_holiday_event(row.get("event", ""))]
+
+
 def build_month(
     *,
     year: int,
@@ -91,11 +97,14 @@ def build_month(
     red_md: Path | None = None,
     orange_md: Path | None = None,
     yellow_md: Path | None = None,
+    gray_md: Path | None = None,
     write_gold_gcal: bool = True,
 ) -> dict:
     month_num = MONTH_MAP[month_abbr.lower()]
-    if not any([all_md, red_md, orange_md, yellow_md]):
-        raise ValueError("Provide at least one of --all-md / --red-md / --orange-md / --yellow-md")
+    if not any([all_md, red_md, orange_md, yellow_md, gray_md]):
+        raise ValueError(
+            "Provide at least one of --all-md / --red-md / --orange-md / --yellow-md / --gray-md"
+        )
 
     source_tz = "America/New_York"
     raw_paths: list[str] = []
@@ -106,7 +115,8 @@ def build_month(
     red_rows: list[dict[str, str]] = []
     gray_rows: list[dict[str, str]] = []
 
-    # Optional unfiltered dump — only used when dedicated yellow layer missing
+    # Unfiltered dump: yellow fallback + holiday names when dedicated gray is missing.
+    # Name heuristic only catches "*Holiday*" (e.g. Bank Holiday), not New Year's Day.
     if all_md and all_md.exists():
         raw_all = _copy_raw(all_md, year, month_num, "all")
         raw_paths.append(str(raw_all))
@@ -115,13 +125,16 @@ def build_month(
         all_rows, all_tz = _parse_dump(all_text, default_impact="yellow")
         if all_tz:
             source_tz = all_tz
+        gray_rows = _holiday_rows(all_rows)
         if yellow_md is None:
-            yellow_rows = all_rows
-            for row in yellow_rows:
-                if "holiday" in row["event"].lower():
-                    gray_rows.append({**row, "impact": "gray"})
+            yellow_rows = [row for row in all_rows if not is_holiday_event(row.get("event", ""))]
 
-    for impact, path in (("red", red_md), ("orange", orange_md), ("yellow", yellow_md)):
+    for impact, path in (
+        ("red", red_md),
+        ("orange", orange_md),
+        ("yellow", yellow_md),
+        ("gray", gray_md),
+    ):
         rows, tz, paths = _load_layer(path, impact, year, month_num)
         if tz:
             source_tz = tz
@@ -131,8 +144,10 @@ def build_month(
             red_rows = rows
         elif impact == "orange":
             orange_rows = rows
-        else:
+        elif impact == "yellow":
             yellow_rows = rows
+        else:
+            gray_rows = rows or gray_rows
 
     merged = merge_impact_layers(
         yellow_rows=yellow_rows,
@@ -212,6 +227,7 @@ def main() -> int:
     parser.add_argument("--red-md", type=Path)
     parser.add_argument("--orange-md", type=Path)
     parser.add_argument("--yellow-md", type=Path)
+    parser.add_argument("--gray-md", type=Path)
     parser.add_argument("--no-gold", action="store_true")
     args = parser.parse_args()
 
@@ -222,6 +238,7 @@ def main() -> int:
         red_md=args.red_md,
         orange_md=args.orange_md,
         yellow_md=args.yellow_md,
+        gray_md=args.gray_md,
         write_gold_gcal=not args.no_gold,
     )
     print(json.dumps(result, indent=2, default=str))

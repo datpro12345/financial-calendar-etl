@@ -101,8 +101,11 @@ USER_AGENTS = (
 
 # FF impact filter IDs → bronze impact label
 # https://www.forexfactory.com/calendar?...&impacts=3,2,1,0
+# 0 = holiday / non-economic (bank holidays, session closures). Required for
+# liquidity: a closed cash session thins FX even when no red print is scheduled.
 IMPACT_LAYERS = (
     ("red", 3),
     ("orange", 2),
     ("yellow", 1),
+    ("gray", 0),
 )

@@ -41,6 +41,9 @@ def test_week_36_counts_and_nfp_cad_clash():
     assert nfp["focus"] == "primary"
     assert pack["focus"]["primary_red"] >= 3
     assert pack["focus"]["secondary_red"] >= 9
+    gbp_holiday = next(e for e in pack["liquidity_holidays"] if e["event"] == "Bank Holiday")
+    assert gbp_holiday["currency"] == "GBP"
+    assert gbp_holiday["event_date"] == "2026-08-31"
     assert next_iso_week(2026, 36) == (2026, 37)
     nxt = pack["next_week"]
     assert nxt["available"] is True

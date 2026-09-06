@@ -24,7 +24,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 logger = logging.getLogger(__name__)
 
 NUM_TO_ABBR = {num: abbr for abbr, num in MONTH_MAP.items()}
-LAYER_FILES = ("red", "orange", "yellow", "all")
+LAYER_FILES = ("red", "orange", "yellow", "gray", "all")
 
 
 def _find_layer(raw_dir: Path, month_num: str, layer: str) -> Path | None:
@@ -61,6 +61,7 @@ def run_year(year: int, *, write_gold_gcal: bool = True) -> dict:
             red_md=_find_layer(raw_dir, month_num, "red"),
             orange_md=_find_layer(raw_dir, month_num, "orange"),
             yellow_md=_find_layer(raw_dir, month_num, "yellow"),
+            gray_md=_find_layer(raw_dir, month_num, "gray"),
             write_gold_gcal=write_gold_gcal,
         )
         results.append(

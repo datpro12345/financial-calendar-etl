@@ -215,6 +215,9 @@ def _week_core(week_df: pd.DataFrame, year: int, week: int) -> dict[str, Any]:
     monday, sunday = iso_week_bounds(year, week)
     red_events = [_event_row(r) for _, r in week_df[week_df["impact_code"] == "red"].iterrows()]
     orange_events = [_event_row(r) for _, r in week_df[week_df["impact_code"] == "orange"].iterrows()]
+    holiday_events = [
+        _event_row(r) for _, r in week_df[week_df["impact_code"] == "gray"].iterrows()
+    ]
     exposure = _currency_exposure(week_df)
     by_impact = (
         week_df.groupby("impact_code").size().reindex(["red", "orange", "yellow", "gray"], fill_value=0)
@@ -250,6 +253,10 @@ def _week_core(week_df: pd.DataFrame, year: int, week: int) -> dict[str, Any]:
         ),
         "red_events": sorted(red_events, key=lambda e: (e["datetime_hcm"], e["currency"])),
         "orange_events": sorted(orange_events, key=lambda e: (e["datetime_hcm"], e["currency"])),
+        "liquidity_holidays": sorted(
+            holiday_events,
+            key=lambda e: (e["event_date"], e["currency"], e["event"]),
+        ),
         "expectation_shifts": [
             e for e in red_events
             if e["forecast"] and e["previous"] and e["forecast"] != e["previous"]
@@ -285,6 +292,7 @@ def _next_week_snapshot(df: pd.DataFrame, year: int, week: int) -> dict[str, Any
         "currency_exposure_secondary": core["currency_exposure_secondary"],
         "clashes": core["clashes"],
         "red_events": core["red_events"],
+        "liquidity_holidays": core["liquidity_holidays"],
         "expectation_shifts": core["expectation_shifts"],
     }
 
@@ -312,6 +320,21 @@ def fact_pack_to_markdown(pack: dict[str, Any]) -> str:
         f"- Total events: {pack['coverage']['total_events']}",
         f"- By impact: {pack['coverage']['by_impact']}",
         f"- Event dates in mart: {pack['coverage']['event_date_min']} → {pack['coverage']['event_date_max']}",
+        "",
+        "## Liquidity holidays (gray / session closures)",
+        "Bank holidays and non-economic closures thin the session for that currency. Use these in Time & liquidity windows.",
+        "| Date | Weekday | CCY | Focus | Event | fact_id |",
+        "|---|---|---|---|---|---:|",
+    ]
+    holidays = pack.get("liquidity_holidays") or []
+    if not holidays:
+        lines.append("| — | — | — | — | None in this week | — |")
+    for ev in holidays:
+        lines.append(
+            f"| {ev['event_date']} | {ev['weekday']} | {ev['currency']} | {ev['focus']} "
+            f"| {ev['event']} | {ev['fact_id']} |"
+        )
+    lines += [
         "",
         f"## Focus split — primary {pack['focus']['primary']} vs secondary {pack['focus']['secondary']}",
         f"- Primary red (USD/EUR/GBP/JPY): {pack['focus']['primary_red']}",
@@ -413,6 +436,20 @@ def fact_pack_to_markdown(pack: dict[str, Any]) -> str:
                 f"| {ev['event_date']} | {ev['weekday']} | {ev['clock_hcm'] or '—'} | {ev['currency']} "
                 f"| {ev['focus']} | {ev['event']} | {ev['forecast'] or '—'} | {ev['previous'] or '—'} "
                 f"| {ev['actual'] or '—'} | {ev['fact_id']} |"
+            )
+        nxt_holidays = nxt.get("liquidity_holidays") or []
+        lines += [
+            "",
+            "### Next week liquidity holidays",
+            "| Date | Weekday | CCY | Focus | Event | fact_id |",
+            "|---|---|---|---|---|---:|",
+        ]
+        if not nxt_holidays:
+            lines.append("| — | — | — | — | None | — |")
+        for ev in nxt_holidays:
+            lines.append(
+                f"| {ev['event_date']} | {ev['weekday']} | {ev['currency']} | {ev['focus']} "
+                f"| {ev['event']} | {ev['fact_id']} |"
             )
         lines += ["", "### Next week clashes", ""]
         if not nxt["clashes"]:
