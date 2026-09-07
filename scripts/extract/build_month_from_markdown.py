@@ -28,12 +28,13 @@ from scripts.extract.markdown_parser import (
     parse_calendar_markdown,
 )
 from scripts.extract.parser import parse_calendar_html
+from scripts.transform.merge_silver import upsert_silver
 from scripts.transform.to_google_calendar import (
     parse_timezone_from_html,
     parse_timezone_from_markdown,
     silver_to_google_calendar,
 )
-from scripts.transform.to_silver import landing_to_silver
+from scripts.transform.to_silver import landing_to_silver_frame
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
@@ -99,6 +100,7 @@ def build_month(
     yellow_md: Path | None = None,
     gray_md: Path | None = None,
     write_gold_gcal: bool = True,
+    prune_missing: bool = False,
 ) -> dict:
     month_num = MONTH_MAP[month_abbr.lower()]
     if not any([all_md, red_md, orange_md, yellow_md, gray_md]):
@@ -200,7 +202,27 @@ def build_month(
         source_tz,
     )
 
-    silver_path = landing_to_silver(landing_path, year=year, source_timezone=source_tz)
+    silver_frame = landing_to_silver_frame(
+        landing_path,
+        year=year,
+        source_timezone=source_tz,
+    )
+    # The dump is authoritative only for its own month; never let a stray
+    # adjacent-month row trigger a refresh (and deletions) in another partition.
+    target_part = f"{year}_{month_num}"
+    in_month = silver_frame["event_date"].str.startswith(f"{year}-{month_num}")
+    if not bool(in_month.all()):
+        logger.warning(
+            "Dropping %s silver row(s) outside %s", int((~in_month).sum()), target_part
+        )
+    upsert = upsert_silver(
+        silver_frame[in_month],
+        mode="refresh",
+        source=f"monthly_html:{target_part}",
+        delete_missing=prune_missing,
+        scope_impacts=layers_present,
+    )
+    silver_path = Path(upsert["partitions"][target_part])
 
     gold_path = None
     if write_gold_gcal:
@@ -214,6 +236,10 @@ def build_month(
         "bronze_meta": str(meta_path),
         "bronze_raw": raw_paths,
         "silver": str(silver_path),
+        "silver_upsert": {
+            key: upsert[key] for key in ("inserted", "updated", "deleted", "unchanged")
+        },
+        "silver_changes": upsert["changes"],
         "gold_google_calendar": str(gold_path) if gold_path else None,
         **meta,
     }
@@ -229,6 +255,11 @@ def main() -> int:
     parser.add_argument("--yellow-md", type=Path)
     parser.add_argument("--gray-md", type=Path)
     parser.add_argument("--no-gold", action="store_true")
+    parser.add_argument(
+        "--prune",
+        action="store_true",
+        help="Delete silver rows this dump no longer lists (only for layers it carried)",
+    )
     args = parser.parse_args()
 
     result = build_month(
@@ -240,6 +271,7 @@ def main() -> int:
         yellow_md=args.yellow_md,
         gray_md=args.gray_md,
         write_gold_gcal=not args.no_gold,
+        prune_missing=args.prune,
     )
     print(json.dumps(result, indent=2, default=str))
     return 0

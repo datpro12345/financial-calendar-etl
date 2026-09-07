@@ -1,6 +1,8 @@
 from datetime import date
 from pathlib import Path
 
+import pandas as pd
+
 from scripts.extract.parser import rows_to_dataframe
 from scripts.extract.weekly_export import parse_weekly_csv
 from scripts.transform.weekly_ingest import (
@@ -42,13 +44,54 @@ def test_ingest_weekly_fixture(tmp_path):
         rebuild_mart=False,
         landing_dir=tmp_path / "landing",
         silver_dir=tmp_path / "silver",
+        changes_dir=tmp_path / "changes",
         mart_dir=tmp_path / "mart",
     )
     assert result["week_label"] == "2026-W36"
     assert result["rows"] == 6
-    silver = Path(result["silver"])
-    assert silver.name == "2026_W36.csv"
+
+    # Landing keeps the weekly audit file; silver is partitioned by event month.
+    assert Path(result["landing"]).name == "2026_W36.csv"
+    assert sorted(result["silver_partitions"]) == ["2026_09"]
+
+    silver = Path(result["silver_partitions"]["2026_09"])
+    assert silver.name == "2026_09.csv"
     text = silver.read_text()
     assert "Non-Farm Employment Change" in text
     assert "2026-09-04" in text
     assert "19:30" in text  # 8:30am ET → 19:30 HCM
+
+
+def test_weekly_upsert_never_blanks_a_stored_actual(tmp_path):
+    """The this-week export has no Actual column; it must not erase one."""
+    bronze = tmp_path / "thisweek.csv"
+    rows = parse_weekly_csv(FIXTURE.read_text())
+    rows_to_dataframe(rows).to_csv(bronze, index=False)
+
+    silver_dir = tmp_path / "silver"
+    kwargs = dict(
+        reference=date(2026, 9, 6),
+        export_clock_tz="America/New_York",
+        write_gcal=False,
+        rebuild_mart=False,
+        landing_dir=tmp_path / "landing",
+        silver_dir=silver_dir,
+        changes_dir=tmp_path / "changes",
+        mart_dir=tmp_path / "mart",
+    )
+    ingest_weekly_bronze(bronze, **kwargs)
+
+    partition = silver_dir / "2026_09.csv"
+    frame = pd.read_csv(partition, dtype=str).fillna("")
+    target = frame["event"] == "Non-Farm Employment Change"
+    assert target.any()
+    frame.loc[target, "actual"] = "22K"
+    frame.to_csv(partition, index=False)
+
+    result = ingest_weekly_bronze(bronze, **kwargs)
+
+    after = pd.read_csv(partition, dtype=str).fillna("")
+    kept = after.loc[after["event"] == "Non-Farm Employment Change", "actual"]
+    assert list(kept) == ["22K"]
+    assert result["silver_upsert"]["inserted"] == 0
+    assert result["silver_upsert"]["deleted"] == 0

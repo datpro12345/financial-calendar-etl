@@ -117,7 +117,7 @@ def _event_row(row: pd.Series) -> dict[str, Any]:
     hcm = "" if pd.isna(ts) else ts.tz_convert(TIMEZONE).isoformat()
     clock = "" if pd.isna(ts) else ts.tz_convert(TIMEZONE).strftime("%H:%M")
     return {
-        "fact_id": int(row["fact_id"]),
+        "fact_id": str(row["fact_id"]),
         "event_date": str(row["event_date"]),
         "weekday": str(row["weekday_name"]),
         "datetime_hcm": hcm,
@@ -297,7 +297,12 @@ def _next_week_snapshot(df: pd.DataFrame, year: int, week: int) -> dict[str, Any
     }
 
 
-def build_fact_pack(year: int, week: int, mart_dir: Path | None = None) -> dict[str, Any]:
+def build_fact_pack(
+    year: int,
+    week: int,
+    mart_dir: Path | None = None,
+    institutional: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     df = load_mart(mart_dir)
     week_df = df[(df["year"] == year) & (df["iso_week"] == week)].copy()
     if week_df.empty:
@@ -307,6 +312,8 @@ def build_fact_pack(year: int, week: int, mart_dir: Path | None = None) -> dict[
     pack["source"] = "data/gold/mart"
     pack["next_week"] = _next_week_snapshot(df, year, week)
     pack["generated_at"] = datetime.now().astimezone().isoformat(timespec="seconds")
+    if institutional:
+        pack["institutional"] = institutional
     return pack
 
 
@@ -464,6 +471,13 @@ def fact_pack_to_markdown(pack: dict[str, Any]) -> str:
                     f"  - [{ev['impact']}/{ev['focus']}] {ev['clock_hcm']} {ev['currency']} {ev['event']} "
                     f"(F {ev['forecast'] or '—'} / P {ev['previous'] or '—'}; fact_id={ev['fact_id']})"
                 )
+
+    inst = pack.get("institutional")
+    if inst:
+        from scripts.analyst.ict_fact_pack import ict_fact_pack_to_markdown
+
+        lines += ["", "## Institutional layer (pre-computed — do not recalculate)", ""]
+        lines.append(ict_fact_pack_to_markdown(inst).rstrip())
     return "\n".join(lines) + "\n"
 
 

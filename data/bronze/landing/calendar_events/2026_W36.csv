@@ -1,115 +1,115 @@
 date,time,currency,impact,event,actual,forecast,previous,source_file,ingested_at
-Aug 30 2026,11:15am,ALL,yellow,G20 Meetings,,,,thisweek.csv,2026-09-05T174448Z
-Aug 30 2026,7:50pm,JPY,yellow,Prelim Industrial Production m/m,,-0.7%,1.3%,thisweek.csv,2026-09-05T174448Z
-Aug 30 2026,7:50pm,JPY,yellow,Retail Sales y/y,,3.2%,0.5%,thisweek.csv,2026-09-05T174448Z
-Aug 30 2026,9:00pm,AUD,yellow,MI Inflation Gauge m/m,,,1.0%,thisweek.csv,2026-09-05T174448Z
-Aug 30 2026,9:00pm,NZD,yellow,ANZ Business Confidence,,,56.1,thisweek.csv,2026-09-05T174448Z
-Aug 30 2026,9:30pm,AUD,yellow,Company Operating Profits q/q,,2.0%,-1.3%,thisweek.csv,2026-09-05T174448Z
-Aug 30 2026,9:30pm,AUD,yellow,Private Sector Credit m/m,,0.7%,0.8%,thisweek.csv,2026-09-05T174448Z
-Aug 30 2026,9:30pm,CNY,yellow,Manufacturing PMI,,49.5,49.2,thisweek.csv,2026-09-05T174448Z
-Aug 30 2026,9:30pm,CNY,yellow,Non-Manufacturing PMI,,49.5,49.0,thisweek.csv,2026-09-05T174448Z
-Aug 31 2026,1:00am,JPY,yellow,Housing Starts y/y,,7.5%,18.6%,thisweek.csv,2026-09-05T174448Z
-Aug 31 2026,2:29am,EUR,orange,German Prelim CPI m/m,,0.3%,0.8%,thisweek.csv,2026-09-05T174448Z
-Aug 31 2026,3:00am,GBP,gray,Bank Holiday,,,,thisweek.csv,2026-09-05T174448Z
-Aug 31 2026,11:15am,ALL,yellow,G20 Meetings,,,,thisweek.csv,2026-09-05T174448Z
-Aug 31 2026,7:01pm,GBP,yellow,BRC Shop Price Index y/y,,0.9%,0.9%,thisweek.csv,2026-09-05T174448Z
-Aug 31 2026,7:50pm,JPY,yellow,Capital Spending q/y,,-0.2%,0.0%,thisweek.csv,2026-09-05T174448Z
-Aug 31 2026,8:30pm,JPY,yellow,Final Manufacturing PMI,,55.1,55.1,thisweek.csv,2026-09-05T174448Z
-Aug 31 2026,9:30pm,AUD,yellow,Building Approvals m/m,,-4.7%,7.2%,thisweek.csv,2026-09-05T174448Z
-Aug 31 2026,9:30pm,AUD,yellow,Current Account,,-29.7B,-27.1B,thisweek.csv,2026-09-05T174448Z
-Aug 31 2026,9:45pm,CNY,yellow,RatingDog Manufacturing PMI,,51.0,50.9,thisweek.csv,2026-09-05T174448Z
-Aug 31 2026,11:35pm,JPY,yellow,10-y Bond Auction,,,2.84|2.6,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,1:00am,JPY,yellow,Consumer Confidence,,35.3,34.9,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,2:00am,EUR,yellow,German Retail Sales m/m,,0.4%,-0.7%,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,2:00am,GBP,yellow,Nationwide HPI m/m,,0.1%,0.1%,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,2:30am,AUD,yellow,Commodity Prices y/y,,,15.4%,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,2:33am,CHF,yellow,Retail Sales y/y,,1.6%,1.5%,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,3:15am,EUR,yellow,Spanish Manufacturing PMI,,50.3,50.2,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,3:30am,CHF,yellow,Manufacturing PMI,,54.1,53.2,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,3:45am,EUR,yellow,Italian Manufacturing PMI,,51.4,51.3,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,3:50am,EUR,yellow,French Final Manufacturing PMI,,51.5,51.5,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,3:55am,EUR,yellow,German Final Manufacturing PMI,,54.1,54.1,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,4:00am,EUR,yellow,Final Manufacturing PMI,,52.8,52.8,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,4:30am,EUR,yellow,Italian Monthly Unemployment Rate,,5.6%,5.7%,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,4:30am,GBP,yellow,Final Manufacturing PMI,,51.5,51.5,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,4:30am,GBP,yellow,M4 Money Supply m/m,,0.9%,0.8%,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,4:30am,GBP,yellow,Mortgage Approvals,,59K,58K,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,4:30am,GBP,yellow,Net Lending to Individuals m/m,,7.2B,9.5B,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,5:00am,EUR,orange,Core CPI Flash Estimate y/y,,2.5%,2.5%,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,5:00am,EUR,orange,CPI Flash Estimate y/y,,3.3%,2.9%,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,5:00am,EUR,yellow,Italian Prelim CPI m/m,,0.5%,0.2%,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,5:00am,EUR,yellow,Unemployment Rate,,6.3%,6.3%,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,8:30am,EUR,yellow,German Buba President Nagel Speaks,,,,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,9:05am,USD,yellow,FOMC Member Barr Speaks,,,,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,9:30am,CAD,yellow,Manufacturing PMI,,,53.5,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,9:45am,USD,yellow,Final Manufacturing PMI,,53.3,53.2,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,10:00am,USD,red,ISM Manufacturing PMI,,55.2,55.6,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,10:00am,USD,orange,ISM Manufacturing Prices,,70.5,71.1,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,10:00am,USD,orange,JOLTS Job Openings,,7.33M,7.36M,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,10:00am,USD,yellow,Construction Spending m/m,,0.0%,-0.1%,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,10:04am,USD,yellow,RCM/TIPP Economic Optimism,,46.2,45.1,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,10:15am,USD,yellow,Omdia Total Vehicle Sales,,16.3M,16.3M,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,11:15am,ALL,yellow,G20 Meetings,,,,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,11:25am,NZD,yellow,GDT Price Index,,,2.3%,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,4:30pm,USD,yellow,API Weekly Statistical Bulletin,,,,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,6:45pm,NZD,yellow,Building Consents m/m,,,-3.6%,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,7:50pm,JPY,yellow,Monetary Base y/y,,-13.5%,-13.8%,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,9:30pm,AUD,red,GDP q/q,,0.3%,0.3%,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,10:00pm,NZD,red,Official Cash Rate,,2.75%,2.50%,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,10:00pm,NZD,red,RBNZ Monetary Policy Statement,,,,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,10:00pm,NZD,red,RBNZ Rate Statement,,,,thisweek.csv,2026-09-05T174448Z
-Sep 1 2026,11:00pm,NZD,red,RBNZ Press Conference,,,,thisweek.csv,2026-09-05T174448Z
-Sep 2 2026,2:45am,EUR,yellow,French Gov Budget Balance,,,-106.8B,thisweek.csv,2026-09-05T174448Z
-Sep 2 2026,3:00am,EUR,yellow,Spanish Unemployment Change,,15.4K,19.5K,thisweek.csv,2026-09-05T174448Z
-Sep 2 2026,8:15am,USD,orange,ADP Non-Farm Employment Change,,47K,44K,thisweek.csv,2026-09-05T174448Z
-Sep 2 2026,9:45am,CAD,red,BOC Rate Statement,,,,thisweek.csv,2026-09-05T174448Z
-Sep 2 2026,9:45am,CAD,red,Overnight Rate,,2.25%,2.25%,thisweek.csv,2026-09-05T174448Z
-Sep 2 2026,10:00am,USD,yellow,Factory Orders m/m,,0.7%,-0.3%,thisweek.csv,2026-09-05T174448Z
-Sep 2 2026,10:30am,CAD,red,BOC Press Conference,,,,thisweek.csv,2026-09-05T174448Z
-Sep 2 2026,10:30am,USD,yellow,Crude Oil Inventories,,-0.4M,0.1M,thisweek.csv,2026-09-05T174448Z
-Sep 2 2026,2:00pm,USD,yellow,Beige Book,,,,thisweek.csv,2026-09-05T174448Z
-Sep 2 2026,4:10pm,NZD,orange,RBNZ Gov Breman Speaks,,,,thisweek.csv,2026-09-05T174448Z
-Sep 2 2026,6:45pm,NZD,yellow,Overseas Trade Index q/q,,-2.1%,-2.0%,thisweek.csv,2026-09-05T174448Z
-Sep 2 2026,9:00pm,NZD,yellow,ANZ Commodity Prices m/m,,,-3.9%,thisweek.csv,2026-09-05T174448Z
-Sep 2 2026,9:15pm,AUD,yellow,RBA Assist Gov Jones Speaks,,,,thisweek.csv,2026-09-05T174448Z
-Sep 2 2026,9:30pm,AUD,yellow,Goods Trade Balance,,1.52B,1.93B,thisweek.csv,2026-09-05T174448Z
-Sep 2 2026,9:45pm,CNY,yellow,RatingDog Services PMI,,50.6,50.4,thisweek.csv,2026-09-05T174448Z
-Sep 2 2026,11:35pm,JPY,yellow,30-y Bond Auction,,,3.94|3.9,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,1:15am,AUD,yellow,RBA Assist Gov Hunter Speaks,,,,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,2:30am,CHF,orange,CPI m/m,,0.0%,-0.1%,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,3:00am,CHF,yellow,GDP q/q,,1.7%,0.7%,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,3:15am,EUR,yellow,Spanish Services PMI,,59.0,58.3,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,3:45am,EUR,yellow,Italian Services PMI,,53.6,52.5,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,3:50am,EUR,yellow,French Final Services PMI,,48.4,48.4,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,3:55am,EUR,yellow,German Final Services PMI,,48.5,48.5,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,4:00am,EUR,yellow,Final Services PMI,,51.7,51.7,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,4:30am,GBP,yellow,Final Services PMI,,52.8,52.8,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,4:43am,EUR,yellow,Spanish 10-y Bond Auction,,,3.54|2.4,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,4:57am,EUR,yellow,French 10-y Bond Auction,,,3.86|3.7,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,5:00am,EUR,yellow,PPI m/m,,1.2%,-0.3%,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,5:30am,USD,yellow,Challenger Job Cuts y/y,,,-46.1%,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,8:30am,CAD,yellow,Labor Productivity q/q,,0.7%,-0.5%,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,8:30am,CAD,yellow,Trade Balance,,3.2B,3.9B,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,8:30am,USD,orange,Unemployment Claims,,205K,203K,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,8:30am,USD,yellow,FOMC Member Waller Speaks,,,,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,8:30am,USD,yellow,Revised Nonfarm Productivity q/q,,1.4%,1.4%,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,8:30am,USD,yellow,Revised Unit Labor Costs q/q,,1.3%,1.3%,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,8:30am,USD,yellow,Trade Balance,,-89.4B,-73.3B,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,9:45am,USD,yellow,Final Services PMI,,56.8,56.8,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,10:00am,USD,orange,ISM Services PMI,,54.2,54.1,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,10:30am,USD,yellow,Natural Gas Storage,,30B,15B,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,11:00am,GBP,yellow,MPC Member Pill Speaks,,,,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,3:00pm,USD,yellow,FOMC Member Hammack Speaks,,,,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,3:55pm,USD,yellow,FOMC Member Goolsbee Speaks,,,,thisweek.csv,2026-09-05T174448Z
-Sep 3 2026,7:30pm,JPY,yellow,Household Spending y/y,,-1.6%,-3.3%,thisweek.csv,2026-09-05T174448Z
-Sep 4 2026,2:00am,EUR,yellow,German Factory Orders m/m,,0.3%,3.1%,thisweek.csv,2026-09-05T174448Z
-Sep 4 2026,4:00am,EUR,yellow,Italian Retail Sales m/m,,0.2%,-0.1%,thisweek.csv,2026-09-05T174448Z
-Sep 4 2026,4:30am,GBP,yellow,Construction PMI,,45.8,44.7,thisweek.csv,2026-09-05T174448Z
-Sep 4 2026,4:50am,GBP,red,BOE Gov Bailey Speaks,,,,thisweek.csv,2026-09-05T174448Z
-Sep 4 2026,5:00am,EUR,yellow,Retail Sales m/m,,0.3%,-0.3%,thisweek.csv,2026-09-05T174448Z
-Sep 4 2026,8:30am,CAD,red,Employment Change,,15.1K,75.1K,thisweek.csv,2026-09-05T174448Z
-Sep 4 2026,8:30am,CAD,red,Unemployment Rate,,6.4%,6.4%,thisweek.csv,2026-09-05T174448Z
-Sep 4 2026,8:30am,USD,red,Average Hourly Earnings m/m,,0.3%,0.1%,thisweek.csv,2026-09-05T174448Z
-Sep 4 2026,8:30am,USD,red,Non-Farm Employment Change,,55K,-23K,thisweek.csv,2026-09-05T174448Z
-Sep 4 2026,8:30am,USD,red,Unemployment Rate,,4.1%,4.1%,thisweek.csv,2026-09-05T174448Z
-Sep 4 2026,10:00am,CAD,orange,Ivey PMI,,56.2,55.1,thisweek.csv,2026-09-05T174448Z
+Aug 30 2026,11:15am,ALL,yellow,G20 Meetings,,,,thisweek.csv,2026-09-07T060118Z
+Aug 30 2026,7:50pm,JPY,yellow,Prelim Industrial Production m/m,,-0.7%,1.3%,thisweek.csv,2026-09-07T060118Z
+Aug 30 2026,7:50pm,JPY,yellow,Retail Sales y/y,,3.2%,0.5%,thisweek.csv,2026-09-07T060118Z
+Aug 30 2026,9:00pm,AUD,yellow,MI Inflation Gauge m/m,,,1.0%,thisweek.csv,2026-09-07T060118Z
+Aug 30 2026,9:00pm,NZD,yellow,ANZ Business Confidence,,,56.1,thisweek.csv,2026-09-07T060118Z
+Aug 30 2026,9:30pm,AUD,yellow,Company Operating Profits q/q,,2.0%,-1.3%,thisweek.csv,2026-09-07T060118Z
+Aug 30 2026,9:30pm,AUD,yellow,Private Sector Credit m/m,,0.7%,0.8%,thisweek.csv,2026-09-07T060118Z
+Aug 30 2026,9:30pm,CNY,yellow,Manufacturing PMI,,49.5,49.2,thisweek.csv,2026-09-07T060118Z
+Aug 30 2026,9:30pm,CNY,yellow,Non-Manufacturing PMI,,49.5,49.0,thisweek.csv,2026-09-07T060118Z
+Aug 31 2026,1:00am,JPY,yellow,Housing Starts y/y,,7.5%,18.6%,thisweek.csv,2026-09-07T060118Z
+Aug 31 2026,2:29am,EUR,orange,German Prelim CPI m/m,,0.3%,0.8%,thisweek.csv,2026-09-07T060118Z
+Aug 31 2026,3:00am,GBP,gray,Bank Holiday,,,,thisweek.csv,2026-09-07T060118Z
+Aug 31 2026,11:15am,ALL,yellow,G20 Meetings,,,,thisweek.csv,2026-09-07T060118Z
+Aug 31 2026,7:01pm,GBP,yellow,BRC Shop Price Index y/y,,0.9%,0.9%,thisweek.csv,2026-09-07T060118Z
+Aug 31 2026,7:50pm,JPY,yellow,Capital Spending q/y,,-0.2%,0.0%,thisweek.csv,2026-09-07T060118Z
+Aug 31 2026,8:30pm,JPY,yellow,Final Manufacturing PMI,,55.1,55.1,thisweek.csv,2026-09-07T060118Z
+Aug 31 2026,9:30pm,AUD,yellow,Building Approvals m/m,,-4.7%,7.2%,thisweek.csv,2026-09-07T060118Z
+Aug 31 2026,9:30pm,AUD,yellow,Current Account,,-29.7B,-27.1B,thisweek.csv,2026-09-07T060118Z
+Aug 31 2026,9:45pm,CNY,yellow,RatingDog Manufacturing PMI,,51.0,50.9,thisweek.csv,2026-09-07T060118Z
+Aug 31 2026,11:35pm,JPY,yellow,10-y Bond Auction,,,2.84|2.6,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,1:00am,JPY,yellow,Consumer Confidence,,35.3,34.9,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,2:00am,EUR,yellow,German Retail Sales m/m,,0.4%,-0.7%,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,2:00am,GBP,yellow,Nationwide HPI m/m,,0.1%,0.1%,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,2:30am,AUD,yellow,Commodity Prices y/y,,,15.4%,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,2:33am,CHF,yellow,Retail Sales y/y,,1.6%,1.5%,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,3:15am,EUR,yellow,Spanish Manufacturing PMI,,50.3,50.2,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,3:30am,CHF,yellow,Manufacturing PMI,,54.1,53.2,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,3:45am,EUR,yellow,Italian Manufacturing PMI,,51.4,51.3,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,3:50am,EUR,yellow,French Final Manufacturing PMI,,51.5,51.5,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,3:55am,EUR,yellow,German Final Manufacturing PMI,,54.1,54.1,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,4:00am,EUR,yellow,Final Manufacturing PMI,,52.8,52.8,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,4:30am,EUR,yellow,Italian Monthly Unemployment Rate,,5.6%,5.7%,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,4:30am,GBP,yellow,Final Manufacturing PMI,,51.5,51.5,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,4:30am,GBP,yellow,M4 Money Supply m/m,,0.9%,0.8%,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,4:30am,GBP,yellow,Mortgage Approvals,,59K,58K,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,4:30am,GBP,yellow,Net Lending to Individuals m/m,,7.2B,9.5B,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,5:00am,EUR,orange,Core CPI Flash Estimate y/y,,2.5%,2.5%,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,5:00am,EUR,orange,CPI Flash Estimate y/y,,3.3%,2.9%,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,5:00am,EUR,yellow,Italian Prelim CPI m/m,,0.5%,0.2%,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,5:00am,EUR,yellow,Unemployment Rate,,6.3%,6.3%,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,8:30am,EUR,yellow,German Buba President Nagel Speaks,,,,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,9:05am,USD,yellow,FOMC Member Barr Speaks,,,,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,9:30am,CAD,yellow,Manufacturing PMI,,,53.5,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,9:45am,USD,yellow,Final Manufacturing PMI,,53.3,53.2,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,10:00am,USD,red,ISM Manufacturing PMI,,55.2,55.6,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,10:00am,USD,orange,ISM Manufacturing Prices,,70.5,71.1,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,10:00am,USD,orange,JOLTS Job Openings,,7.33M,7.36M,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,10:00am,USD,yellow,Construction Spending m/m,,0.0%,-0.1%,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,10:04am,USD,yellow,RCM/TIPP Economic Optimism,,46.2,45.1,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,10:15am,USD,yellow,Omdia Total Vehicle Sales,,16.3M,16.3M,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,11:15am,ALL,yellow,G20 Meetings,,,,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,11:25am,NZD,yellow,GDT Price Index,,,2.3%,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,4:30pm,USD,yellow,API Weekly Statistical Bulletin,,,,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,6:45pm,NZD,yellow,Building Consents m/m,,,-3.6%,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,7:50pm,JPY,yellow,Monetary Base y/y,,-13.5%,-13.8%,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,9:30pm,AUD,red,GDP q/q,,0.3%,0.3%,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,10:00pm,NZD,red,Official Cash Rate,,2.75%,2.50%,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,10:00pm,NZD,red,RBNZ Monetary Policy Statement,,,,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,10:00pm,NZD,red,RBNZ Rate Statement,,,,thisweek.csv,2026-09-07T060118Z
+Sep 1 2026,11:00pm,NZD,red,RBNZ Press Conference,,,,thisweek.csv,2026-09-07T060118Z
+Sep 2 2026,2:45am,EUR,yellow,French Gov Budget Balance,,,-106.8B,thisweek.csv,2026-09-07T060118Z
+Sep 2 2026,3:00am,EUR,yellow,Spanish Unemployment Change,,15.4K,19.5K,thisweek.csv,2026-09-07T060118Z
+Sep 2 2026,8:15am,USD,orange,ADP Non-Farm Employment Change,,47K,44K,thisweek.csv,2026-09-07T060118Z
+Sep 2 2026,9:45am,CAD,red,BOC Rate Statement,,,,thisweek.csv,2026-09-07T060118Z
+Sep 2 2026,9:45am,CAD,red,Overnight Rate,,2.25%,2.25%,thisweek.csv,2026-09-07T060118Z
+Sep 2 2026,10:00am,USD,yellow,Factory Orders m/m,,0.7%,-0.3%,thisweek.csv,2026-09-07T060118Z
+Sep 2 2026,10:30am,CAD,red,BOC Press Conference,,,,thisweek.csv,2026-09-07T060118Z
+Sep 2 2026,10:30am,USD,yellow,Crude Oil Inventories,,-0.4M,0.1M,thisweek.csv,2026-09-07T060118Z
+Sep 2 2026,2:00pm,USD,yellow,Beige Book,,,,thisweek.csv,2026-09-07T060118Z
+Sep 2 2026,4:10pm,NZD,orange,RBNZ Gov Breman Speaks,,,,thisweek.csv,2026-09-07T060118Z
+Sep 2 2026,6:45pm,NZD,yellow,Overseas Trade Index q/q,,-2.1%,-2.0%,thisweek.csv,2026-09-07T060118Z
+Sep 2 2026,9:00pm,NZD,yellow,ANZ Commodity Prices m/m,,,-3.9%,thisweek.csv,2026-09-07T060118Z
+Sep 2 2026,9:15pm,AUD,yellow,RBA Assist Gov Jones Speaks,,,,thisweek.csv,2026-09-07T060118Z
+Sep 2 2026,9:30pm,AUD,yellow,Goods Trade Balance,,1.52B,1.93B,thisweek.csv,2026-09-07T060118Z
+Sep 2 2026,9:45pm,CNY,yellow,RatingDog Services PMI,,50.6,50.4,thisweek.csv,2026-09-07T060118Z
+Sep 2 2026,11:35pm,JPY,yellow,30-y Bond Auction,,,3.94|3.9,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,1:15am,AUD,yellow,RBA Assist Gov Hunter Speaks,,,,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,2:30am,CHF,orange,CPI m/m,,0.0%,-0.1%,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,3:00am,CHF,yellow,GDP q/q,,1.7%,0.7%,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,3:15am,EUR,yellow,Spanish Services PMI,,59.0,58.3,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,3:45am,EUR,yellow,Italian Services PMI,,53.6,52.5,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,3:50am,EUR,yellow,French Final Services PMI,,48.4,48.4,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,3:55am,EUR,yellow,German Final Services PMI,,48.5,48.5,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,4:00am,EUR,yellow,Final Services PMI,,51.7,51.7,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,4:30am,GBP,yellow,Final Services PMI,,52.8,52.8,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,4:43am,EUR,yellow,Spanish 10-y Bond Auction,,,3.54|2.4,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,4:57am,EUR,yellow,French 10-y Bond Auction,,,3.86|3.7,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,5:00am,EUR,yellow,PPI m/m,,1.2%,-0.3%,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,5:30am,USD,yellow,Challenger Job Cuts y/y,,,-46.1%,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,8:30am,CAD,yellow,Labor Productivity q/q,,0.7%,-0.5%,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,8:30am,CAD,yellow,Trade Balance,,3.2B,3.9B,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,8:30am,USD,orange,Unemployment Claims,,205K,203K,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,8:30am,USD,yellow,FOMC Member Waller Speaks,,,,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,8:30am,USD,yellow,Revised Nonfarm Productivity q/q,,1.4%,1.4%,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,8:30am,USD,yellow,Revised Unit Labor Costs q/q,,1.3%,1.3%,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,8:30am,USD,yellow,Trade Balance,,-89.4B,-73.3B,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,9:45am,USD,yellow,Final Services PMI,,56.8,56.8,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,10:00am,USD,orange,ISM Services PMI,,54.2,54.1,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,10:30am,USD,yellow,Natural Gas Storage,,30B,15B,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,11:00am,GBP,yellow,MPC Member Pill Speaks,,,,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,3:00pm,USD,yellow,FOMC Member Hammack Speaks,,,,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,3:55pm,USD,yellow,FOMC Member Goolsbee Speaks,,,,thisweek.csv,2026-09-07T060118Z
+Sep 3 2026,7:30pm,JPY,yellow,Household Spending y/y,,-1.6%,-3.3%,thisweek.csv,2026-09-07T060118Z
+Sep 4 2026,2:00am,EUR,yellow,German Factory Orders m/m,,0.3%,3.1%,thisweek.csv,2026-09-07T060118Z
+Sep 4 2026,4:00am,EUR,yellow,Italian Retail Sales m/m,,0.2%,-0.1%,thisweek.csv,2026-09-07T060118Z
+Sep 4 2026,4:30am,GBP,yellow,Construction PMI,,45.8,44.7,thisweek.csv,2026-09-07T060118Z
+Sep 4 2026,4:50am,GBP,red,BOE Gov Bailey Speaks,,,,thisweek.csv,2026-09-07T060118Z
+Sep 4 2026,5:00am,EUR,yellow,Retail Sales m/m,,0.3%,-0.3%,thisweek.csv,2026-09-07T060118Z
+Sep 4 2026,8:30am,CAD,red,Employment Change,,15.1K,75.1K,thisweek.csv,2026-09-07T060118Z
+Sep 4 2026,8:30am,CAD,red,Unemployment Rate,,6.4%,6.4%,thisweek.csv,2026-09-07T060118Z
+Sep 4 2026,8:30am,USD,red,Average Hourly Earnings m/m,,0.3%,0.1%,thisweek.csv,2026-09-07T060118Z
+Sep 4 2026,8:30am,USD,red,Non-Farm Employment Change,,55K,-23K,thisweek.csv,2026-09-07T060118Z
+Sep 4 2026,8:30am,USD,red,Unemployment Rate,,4.1%,4.1%,thisweek.csv,2026-09-07T060118Z
+Sep 4 2026,10:00am,CAD,orange,Ivey PMI,,56.2,55.1,thisweek.csv,2026-09-07T060118Z

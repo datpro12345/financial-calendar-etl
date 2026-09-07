@@ -3,12 +3,13 @@
   "month": "09",
   "layer": "bronze_landing",
   "source_timezone": "Asia/Novosibirsk",
-  "coverage": "red+orange+yellow",
-  "rows": 318,
+  "coverage": "red+orange+yellow+gray",
+  "rows": 326,
   "impact_counts": {
     "yellow": 255,
     "red": 41,
-    "orange": 22
+    "orange": 22,
+    "gray": 8
   },
   "raw_files": [
     "/Users/datpro/Documents/gitdatpro/ff-transform-data/data/bronze/raw/calendar/2026/09_all.md",
@@ -16,5 +17,5 @@
     "/Users/datpro/Documents/gitdatpro/ff-transform-data/data/bronze/raw/calendar/2026/09_orange.html",
     "/Users/datpro/Documents/gitdatpro/ff-transform-data/data/bronze/raw/calendar/2026/09_yellow.html"
   ],
-  "ingested_at": "2026-09-03T07:55:34Z"
+  "ingested_at": "2026-09-07T13:46:57Z"
 }

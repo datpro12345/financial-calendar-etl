@@ -13,6 +13,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
+from scripts.extract.backfill_actuals import existing_layers
 from scripts.extract.client import fetch_month_impact_layers
 from scripts.extract.config import IMPACT_FETCH_GAP_SECONDS, IMPACT_LAYERS
 from scripts.extract.build_month_from_markdown import build_month
@@ -41,6 +42,12 @@ def main() -> int:
     )
     parser.add_argument("--fetch-only", action="store_true")
     parser.add_argument("--no-gold", action="store_true")
+    parser.add_argument(
+        "--layers",
+        nargs="+",
+        choices=[label for label, _ in IMPACT_LAYERS],
+        help="Only fetch these impact layers, e.g. --layers gray to backfill holidays",
+    )
     args = parser.parse_args()
 
     results = []
@@ -52,16 +59,22 @@ def main() -> int:
             gap_seconds=args.gap,
             strategy=args.strategy,
             stop_on_fail=True,
+            layers=args.layers,
         )
         entry = {"month": month, "saved": {k: str(v) for k, v in saved.items()}}
         if not args.fetch_only and saved:
+            # A --layers run only refreshes some layers; rebuild the month from
+            # every dump on disk so landing keeps full coverage.
+            layers = existing_layers(args.year, month)
+            layers.update(saved)
             built = build_month(
                 year=args.year,
                 month_abbr=month,
-                red_md=saved.get("red"),
-                orange_md=saved.get("orange"),
-                yellow_md=saved.get("yellow"),
-                gray_md=saved.get("gray"),
+                all_md=layers.get("all"),
+                red_md=layers.get("red"),
+                orange_md=layers.get("orange"),
+                yellow_md=layers.get("yellow"),
+                gray_md=layers.get("gray"),
                 write_gold_gcal=not args.no_gold,
             )
             entry["build"] = {
@@ -71,12 +84,13 @@ def main() -> int:
                 "landing": built.get("bronze_landing"),
             }
         results.append(entry)
-        if len(saved) < len(IMPACT_LAYERS):
+        requested = args.layers or [label for label, _ in IMPACT_LAYERS]
+        if len(saved) < len(requested):
             logger.error(
                 "Incomplete layers for %s (%s/%s). Stopping.",
                 month,
                 len(saved),
-                len(IMPACT_LAYERS),
+                len(requested),
             )
             print(json.dumps(results, indent=2))
             return 1

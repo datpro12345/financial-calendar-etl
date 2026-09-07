@@ -1,8 +1,9 @@
-"""B — bronze this-week CSV → landing → silver weekly file → Kimball mart.
+"""B — bronze this-week CSV → landing → silver monthly partitions → Kimball mart.
 
-Weekly silver is named ``YYYY_Www.csv`` so lexical sort places it after monthly
-``YYYY_MM.csv``; Kimball ``drop_duplicates(..., keep="last")`` then prefers the
-fresh weekly row on overlap.
+The this-week export carries no ``Actual``, so it is upserted with
+``mode="merge"``: it inserts newly scheduled events and refreshes forecasts, but
+an empty incoming value never overwrites an actual already stored in the monthly
+partition. Landing keeps a ``YYYY_Www.csv`` file as the audit trail of the fetch.
 """
 
 from __future__ import annotations
@@ -21,11 +22,17 @@ from scripts.extract.config import (
     BRONZE_LANDING_DIR,
     BRONZE_WEEKLY_DIR,
     GOLD_MART_DIR,
+    SILVER_CHANGES_DIR,
     SILVER_EVENTS_DIR,
 )
+from scripts.transform.merge_silver import upsert_silver
 from scripts.transform.to_google_calendar import DEFAULT_SOURCE_TZ, rebuild_monthly_gcals
 from scripts.transform.to_kimball import silver_to_kimball
-from scripts.transform.to_silver import _parse_clock, _parse_event_date, landing_to_silver
+from scripts.transform.to_silver import (
+    _parse_clock,
+    _parse_event_date,
+    landing_to_silver_frame,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -156,11 +163,13 @@ def ingest_weekly_bronze(
     rebuild_mart: bool = True,
     landing_dir: Path | None = None,
     silver_dir: Path | None = None,
+    changes_dir: Path | None = None,
     mart_dir: Path | None = None,
 ) -> dict:
-    """Landing → silver ``YYYY_Www.csv`` → optional GCal → Kimball rebuild."""
+    """Landing → coalesce upsert into silver ``YYYY_MM.csv`` → GCal → Kimball rebuild."""
     landing_dest_dir = Path(landing_dir) if landing_dir else BRONZE_LANDING_DIR
     silver_dest_dir = Path(silver_dir) if silver_dir else SILVER_EVENTS_DIR
+    changes_dest_dir = Path(changes_dir) if changes_dir else SILVER_CHANGES_DIR
     landing_dest_dir.mkdir(parents=True, exist_ok=True)
     silver_dest_dir.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
@@ -174,13 +183,11 @@ def ingest_weekly_bronze(
     )
     year = int(landing_meta["inferred_year"])
 
-    silver_tmp = landing_to_silver(
+    silver_df = landing_to_silver_frame(
         landing_path,
         year=year,
         source_timezone=source_timezone,
-        output=silver_dest_dir / f"weekly_ingest_{stamp}.csv",
     )
-    silver_df = pd.read_csv(silver_tmp, dtype=str).fillna("")
     if silver_df.empty:
         raise ValueError("Silver weekly convert produced 0 rows — check bronze dates")
 
@@ -189,19 +196,29 @@ def ingest_weekly_bronze(
     dest_name = f"{iso_year}_W{iso_week:02d}.csv"
 
     landing_final = landing_dest_dir / dest_name
-    silver_final = silver_dest_dir / dest_name
     Path(landing_path).replace(landing_final)
     meta_tmp = Path(landing_path).with_suffix(".meta.json")
     if meta_tmp.exists():
         meta_tmp.replace(landing_final.with_suffix(".meta.json"))
-    Path(silver_tmp).replace(silver_final)
+
+    upsert = upsert_silver(
+        silver_df,
+        mode="merge",
+        source=f"weekly_export:{week_label}",
+        silver_dir=silver_dest_dir,
+        changes_dir=changes_dest_dir,
+    )
 
     landing_meta["week_label"] = week_label
     landing_meta["source_timezone"] = source_timezone
     landing_final.with_suffix(".meta.json").write_text(
         json.dumps(landing_meta, indent=2) + "\n"
     )
-    logger.info("Weekly silver %s rows → %s", len(silver_df), silver_final)
+    logger.info(
+        "Weekly silver %s rows → partitions %s",
+        len(silver_df),
+        sorted(upsert["partitions"]),
+    )
 
     gcal_paths: list[str] = []
     if write_gcal:
@@ -227,7 +244,11 @@ def ingest_weekly_bronze(
         "iso_week": iso_week,
         "rows": int(len(silver_df)),
         "landing": str(landing_final),
-        "silver": str(silver_final),
+        "silver_partitions": upsert["partitions"],
+        "silver_upsert": {
+            key: upsert[key] for key in ("inserted", "updated", "deleted", "unchanged")
+        },
+        "silver_changes": upsert["changes"],
         "gold_gcal": gcal_paths,
         "mart": mart_paths,
         "impact_counts": silver_df["impact"].value_counts().to_dict(),

@@ -6,8 +6,46 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 BRONZE_RAW_CALENDAR_DIR = REPO_ROOT / "data" / "bronze" / "raw" / "calendar"
 BRONZE_LANDING_DIR = REPO_ROOT / "data" / "bronze" / "landing" / "calendar_events"
 SILVER_EVENTS_DIR = REPO_ROOT / "data" / "silver" / "calendar_events"
+SILVER_CHANGES_DIR = REPO_ROOT / "data" / "silver" / "calendar_event_changes"
 GOLD_GCAL_DIR = REPO_ROOT / "data" / "gold" / "google_calendar"
 GOLD_MART_DIR = REPO_ROOT / "data" / "gold" / "mart"
+
+# ICT Institutional Layer (Phase 2) — public zero-key sources
+BRONZE_RAW_CFTC_DIR = REPO_ROOT / "data" / "bronze" / "raw" / "cftc"
+BRONZE_RAW_BINANCE_DIR = REPO_ROOT / "data" / "bronze" / "raw" / "binance"
+BRONZE_RAW_STOOQ_DIR = REPO_ROOT / "data" / "bronze" / "raw" / "stooq"
+BRONZE_RAW_YAHOO_DIR = REPO_ROOT / "data" / "bronze" / "raw" / "yahoo"
+SILVER_COT_DIR = REPO_ROOT / "data" / "silver" / "cot_positions"
+SILVER_OHLCV_DIR = REPO_ROOT / "data" / "silver" / "ohlcv"
+GOLD_ICT_DIR = REPO_ROOT / "data" / "gold" / "ict"
+
+CFTC_SODA_URL = "https://data.cftc.gov/resource/6dca-aqww.json"
+CFTC_CONTRACT_CODES = {
+    "XAUUSD": "088691",
+    "EURUSD": "099741",
+    "DXY": "098662",
+    "BTCUSDT": "133741",
+}
+BINANCE_KLINES_URL = "https://api.binance.com/api/v3/klines"
+STOOQ_DAILY_URL = "https://stooq.com/q/d/l/"
+YFINANCE_TICKERS = {
+    "DXY": "DX-Y.NYB",
+    "EURUSD": "EURUSD=X",
+    "GBPUSD": "GBPUSD=X",
+    "XAUUSD": "GC=F",
+    "XAGUSD": "SI=F",
+    "ES": "ES=F",
+    "NQ": "NQ=F",
+    "YM": "YM=F",
+    "US10Y": "^TNX",
+}
+STOOQ_SYMBOLS = {
+    "XAUUSD": "xauusd",
+    "DXY": "dx.f",
+}
+SEASONAL_CACHE_MAX_AGE_DAYS = 7
+YAHOO_SLEEP_SECONDS = 1.5
+COT_FETCH_WEEKS = 157  # 156w lookback + 1 prior week for reversal
 
 # Legacy paths (pre-medallion; do not write new files here)
 LEGACY_BRONZE_MONTHLY_DIR = REPO_ROOT / "data" / "bronze" / "monthly"
@@ -43,6 +81,7 @@ BRONZE_COLUMNS = [
 ]
 
 SILVER_COLUMNS = [
+    "event_uid",
     "event_date",
     "time_raw",
     "event_datetime_utc",
@@ -54,7 +93,22 @@ SILVER_COLUMNS = [
     "forecast",
     "previous",
     "source_timezone",
+    "first_seen_at",
     "updated_at",
+]
+
+# Append-only audit of every silver change (late-arriving actual, revisions).
+SILVER_CHANGES_COLUMNS = [
+    "changed_at",
+    "source",
+    "change_type",
+    "event_uid",
+    "event_date",
+    "currency",
+    "event",
+    "field",
+    "old_value",
+    "new_value",
 ]
 
 ALLOWED_CURRENCIES = frozenset(

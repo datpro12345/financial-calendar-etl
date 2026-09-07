@@ -1,0 +1,16 @@
+changed_at,source,change_type,event_uid,event_date,currency,event,field,old_value,new_value
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,update,a17c1f213ccfb21e,2026-08-31,AUD,Company Operating Profits q/q,previous,-1.5%,-1.3%
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,dc594ff2d105336a,2026-08-30,ALL,G20 Meetings,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,95fa85e0239fc9ce,2026-08-30,JPY,Prelim Industrial Production m/m,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,21d9d6e86ea34582,2026-08-30,JPY,Retail Sales y/y,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,5bac7004a135e1fc,2026-08-31,ALL,G20 Meetings,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,92a0a25193fb16fe,2026-08-31,JPY,10-y Bond Auction,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,b22793414582b6c4,2026-08-31,EUR,German Prelim CPI m/m,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,1ce36c9a5aaacc30,2026-08-31,GBP,Bank Holiday,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,609fc4fbded8d4e1,2026-08-31,GBP,BRC Shop Price Index y/y,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,67ec658567b769f3,2026-08-31,JPY,Capital Spending q/y,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,923c5ecfc7e9fcea,2026-08-31,JPY,Final Manufacturing PMI,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,1fcc2cbe60c17629,2026-08-31,AUD,Building Approvals m/m,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,c15f082b9a11f444,2026-08-31,AUD,Current Account,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,246b909222b82fc0,2026-08-31,CNY,RatingDog Manufacturing PMI,,,
+2026-09-07T13:43:21Z,monthly_html:2026_08,update,a17c1f213ccfb21e,2026-08-31,AUD,Company Operating Profits q/q,previous,-1.3%,-1.5%

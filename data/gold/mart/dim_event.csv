@@ -1,382 +1,382 @@
 event_key,event_name
-1,1-y Loan Prime Rate
-2,10-y Bond Auction
-3,30-y Bond Auction
-4,5-y Loan Prime Rate
-5,ADP Non-Farm Employment Change
-6,ADP Weekly Employment Change
-7,ANZ Business Confidence
-8,ANZ Commodity Prices m/m
-9,ANZ Job Advertisements m/m
-10,API Weekly Statistical Bulletin
-11,Advance GDP Price Index q/q
-12,Advance GDP q/q
-13,Annual Budget Release
-14,Average Cash Earnings y/y
-15,Average Earnings Index 3m/y
-16,Average Hourly Earnings m/m
-17,BOC Business Outlook Survey
-18,BOC Financial System Review
-19,BOC Gov Macklem Speaks
-20,BOC Monetary Policy Report
-21,BOC Press Conference
-22,BOC Rate Statement
-23,BOC Summary of Deliberations
-24,BOE Credit Conditions Survey
-25,BOE Financial Stability Report
-26,BOE Gov Bailey Speaks
-27,BOE Inflation Letter
-28,BOE Monetary Policy Report
-29,BOJ Core CPI y/y
-30,BOJ Gov Ueda Speaks
-31,BOJ Outlook Report
-32,BOJ Policy Rate
-33,BOJ Press Conference
-34,BOJ Summary of Opinions
-35,BRC Retail Sales Monitor y/y
-36,BRC Shop Price Index y/y
-37,BSI Manufacturing Index
-38,Bank Holiday
-39,Bank Lending y/y
-40,Bank Stress Test Results
-41,Beige Book
-42,Belgian NBB Business Climate
-43,Building Approvals m/m
-44,Building Consents m/m
-45,Building Permits
-46,Building Permits m/m
-47,Business Inventories m/m
-48,BusinessNZ Manufacturing Index
-49,BusinessNZ Services Index
-50,CB Consumer Confidence
-51,CB Leading Index m/m
-52,CBI Industrial Order Expectations
-53,CBI Realized Sales
-54,CPI Flash Estimate y/y
-55,CPI m/m
-56,CPI y/y
-57,Capacity Utilization Rate
-58,Capital Spending q/y
-59,Cash Rate
-60,Challenger Job Cuts y/y
-61,Chicago PMI
-62,Claimant Count Change
-63,Cleveland Fed Inflation Expectations
-64,Commodity Prices y/y
-65,Common CPI y/y
-66,Company Operating Profits q/q
-67,Construction Output m/m
-68,Construction PMI
-69,Construction Spending m/m
-70,Construction Work Done q/q
-71,Consumer Confidence
-72,Consumer Credit m/m
-73,Consumer Inflation Expectations
-74,Core CPI Flash Estimate y/y
-75,Core CPI m/m
-76,Core CPI y/y
-77,Core Durable Goods Orders m/m
-78,Core Machinery Orders m/m
-79,Core PCE Price Index m/m
-80,Core PPI m/m
-81,Core Retail Sales m/m
-82,Corporate Profits q/q
-83,Credit Card Spending y/y
-84,Crude Oil Inventories
-85,Current Account
-86,Durable Goods Orders m/m
-87,ECB Economic Bulletin
-88,ECB Financial Stability Review
-89,ECB Monetary Policy Meeting Accounts
-90,ECB President Lagarde Speaks
-91,ECB Press Conference
-92,ECOFIN Meetings
-93,EU Economic Forecasts
-94,Economy Watchers Sentiment
-95,Empire State Manufacturing Index
-96,Employment Change
-97,Employment Cost Index q/q
-98,Euro Summit
-99,Eurogroup Meetings
-100,Existing Home Sales
-101,FOMC Economic Projections
-102,FOMC Financial Stability Report
-103,FOMC Member Barkin Speaks
-104,FOMC Member Barr Speaks
-105,FOMC Member Bostic Speaks
-106,FOMC Member Bowman Speaks
-107,FOMC Member Collins Speaks
-108,FOMC Member Cook Speaks
-109,FOMC Member Daly Speaks
-110,FOMC Member Goolsbee Speaks
-111,FOMC Member Hammack Speaks
-112,FOMC Member Jefferson Speaks
-113,FOMC Member Kashkari Speaks
-114,FOMC Member Logan Speaks
-115,FOMC Member Miran Speaks
-116,FOMC Member Musalem Speaks
-117,FOMC Member Paulson Speaks
-118,FOMC Member Schmid Speaks
-119,FOMC Member Waller Speaks
-120,FOMC Member Williams Speaks
-121,FOMC Press Conference
-122,FOMC Statement
-123,FPC Meeting Minutes
-124,FPC Statement
-125,FPI m/m
-126,Factory Orders m/m
-127,Fed Chairman Warsh Speaks
-128,Fed Chairman Warsh Testifies
-129,Fed Monetary Policy Report
-130,Federal Budget Balance
-131,Final CPI y/y
-132,Final Core CPI y/y
-133,Final Employment Change q/q
-134,Final GDP Price Index q/q
-135,Final GDP Price Index y/y
-136,Final GDP q/q
-137,Final Manufacturing PMI
-138,Final Services PMI
-139,Final Wholesale Inventories m/m
-140,Fixed Asset Investment ytd/y
-141,Flash Employment Change q/q
-142,Flash GDP q/q
-143,Flash Manufacturing PMI
-144,Flash Services PMI
-145,Foreign Currency Reserves
-146,Foreign Direct Investment ytd/y
-147,Foreign Securities Purchases
-148,French 10-y Bond Auction
-149,French Consumer Spending m/m
-150,French Final CPI m/m
-151,French Final Manufacturing PMI
-152,French Final Private Payrolls q/q
-153,French Final Services PMI
-154,French Flash GDP q/q
-155,French Flash Manufacturing PMI
-156,French Flash Services PMI
-157,French Gov Budget Balance
-158,French Industrial Production m/m
-159,French Prelim CPI m/m
-160,French Prelim GDP q/q
-161,French Prelim Private Payrolls q/q
-162,French Trade Balance
-163,G20 Meetings
-164,GDP m/m
-165,GDP q/q
-166,GDP q/y
-167,GDT Price Index
-168,German 10-y Bond Auction
-169,German 30-y Bond Auction
-170,German Buba Monthly Report
-171,German Buba President Nagel Speaks
-172,German Factory Orders m/m
-173,German Final CPI m/m
-174,German Final GDP q/q
-175,German Final Manufacturing PMI
-176,German Final Services PMI
-177,German Flash Manufacturing PMI
-178,German Flash Services PMI
-179,German GfK Consumer Climate
-180,German Import Prices m/m
-181,German Industrial Production m/m
-182,German PPI m/m
-183,German Prelim CPI m/m
-184,German Prelim GDP q/q
-185,German Retail Sales m/m
-186,German Trade Balance
-187,German Unemployment Change
-188,German WPI m/m
-189,German ZEW Economic Sentiment
-190,German ifo Business Climate
-191,GfK Consumer Confidence
-192,Goods Trade Balance
-193,Gov Board Member Martin Speaks
-194,Gov Board Member Tschudin Speaks
-195,Gov Council Member Alexopoulos Speaks
-196,Gov Council Member Kozicki Speaks
-197,Gov Council Member Rogers Speaks
-198,Gov Council Member Vincent Speaks
-199,HPI m/m
-200,HPI y/y
-201,Household Spending m/m
-202,Household Spending y/y
-203,Housing Equity Withdrawal q/q
-204,Housing Starts
-205,Housing Starts y/y
-206,IPPI m/m
-207,ISM Manufacturing PMI
-208,ISM Manufacturing Prices
-209,ISM Services PMI
-210,Import Prices m/m
-211,Import Prices q/q
-212,Index of Services 3m/3m
-213,Industrial Production m/m
-214,Industrial Production y/y
-215,Inflation Expectations q/q
-216,Italian 10-y Bond Auction
-217,Italian Industrial Production m/m
-218,Italian Manufacturing PMI
-219,Italian Monthly Unemployment Rate
-220,Italian Prelim CPI m/m
-221,Italian Prelim GDP q/q
-222,Italian Quarterly Unemployment Rate
-223,Italian Retail Sales m/m
-224,Italian Services PMI
-225,Italian Trade Balance
-226,Ivey PMI
-227,JOLTS Job Openings
-228,KOF Economic Barometer
-229,Labor Cost Index q/q
-230,Labor Productivity q/q
-231,Leading Indicators
-232,Lloyds HPI m/m
-233,Loan Officer Survey
-234,M2 Money Stock y/y
-235,M2 Money Supply y/y
-236,M3 Money Supply y/y
-237,M4 Money Supply m/m
-238,MI Inflation Expectations
-239,MI Inflation Gauge m/m
-240,MI Leading Index m/m
-241,MPC Member Breeden Speaks
-242,MPC Member Dhingra Speaks
-243,MPC Member Greene Speaks
-244,MPC Member Lombardelli Speaks
-245,MPC Member Mann Speaks
-246,MPC Member Pill Speaks
-247,MPC Member Ramsden Speaks
-248,MPC Member Taylor Speaks
-249,MPC Official Bank Rate Votes
-250,Main Refinancing Rate
-251,Manufacturing PMI
-252,Manufacturing Production m/m
-253,Manufacturing Sales m/m
-254,Manufacturing Sales q/q
-255,Median CPI y/y
-256,Monetary Base y/y
-257,Monetary Policy Meeting Minutes
-258,Monetary Policy Report Hearings
-259,Monetary Policy Statement
-260,Monetary Policy Summary
-261,Mortgage Approvals
-262,Mortgage Delinquencies
-263,NAB Business Confidence
-264,NAB Quarterly Business Confidence
-265,NAHB Housing Market Index
-266,NBS Press Conference
-267,NFIB Small Business Index
-268,NHPI m/m
-269,NZIER Business Confidence
-270,National Core CPI y/y
-271,Nationwide HPI m/m
-272,Natural Gas Storage
-273,Net Lending to Individuals m/m
-274,New Home Prices m/m
-275,New Home Sales
-276,New Loans
-277,Non-Farm Employment Change
-278,Non-Manufacturing PMI
-279,Official Bank Rate
-280,Official Cash Rate
-281,Omdia Total Vehicle Sales
-282,Overnight Rate
-283,Overseas Trade Index q/q
-284,PPI Input m/m
-285,PPI Input q/q
-286,PPI Output m/m
-287,PPI Output q/q
-288,PPI m/m
-289,PPI q/q
-290,PPI y/y
-291,Pending Home Sales m/m
-292,Personal Income m/m
-293,Personal Spending m/m
-294,Philly Fed Manufacturing Index
-295,Prelim Benchmark Payrolls Revision
-296,Prelim Business Investment q/q
-297,Prelim Flash GDP q/q
-298,Prelim GDP Price Index q/q
-299,Prelim GDP Price Index y/y
-300,Prelim GDP q/q
-301,Prelim Industrial Production m/m
-302,Prelim Machine Tool Orders y/y
-303,Prelim Nonfarm Productivity q/q
-304,Prelim Unit Labor Costs q/q
-305,Prelim UoM Consumer Sentiment
-306,Prelim UoM Inflation Expectations
-307,Prelim Wholesale Inventories m/m
-308,President Trump Speaks
-309,Private Capital Expenditure q/q
-310,Private Loans y/y
-311,Private Sector Credit m/m
-312,Public Sector Net Borrowing
-313,RBA Assist Gov Hunter Speaks
-314,RBA Assist Gov Jones Speaks
-315,RBA Assist Gov Kent Speaks
-316,RBA Bulletin
-317,RBA Deputy Gov Hauser Speaks
-318,RBA Financial Stability Review
-319,RBA Gov Bullock Speaks
-320,RBA Monetary Policy Statement
-321,RBA Press Conference
-322,RBA Rate Statement
-323,RBNZ Financial Stability Report
-324,RBNZ Gov Breman Speaks
-325,RBNZ Monetary Policy Statement
-326,RBNZ Press Conference
-327,RBNZ Rate Statement
-328,RCM/TIPP Economic Optimism
-329,RICS House Price Balance
-330,RMPI m/m
-331,RPI y/y
-332,RatingDog Manufacturing PMI
-333,RatingDog Services PMI
-334,Retail Sales m/m
-335,Retail Sales q/q
-336,Retail Sales y/y
-337,Revised Business Investment q/q
-338,Revised GDP q/q
-339,Revised Industrial Production m/m
-340,Revised Nonfarm Productivity q/q
-341,Revised Unit Labor Costs q/q
-342,Revised UoM Consumer Sentiment
-343,Revised UoM Inflation Expectations
-344,Richmond Manufacturing Index
-345,Rightmove HPI m/m
-346,S&P/CS Composite-20 HPI y/y
-347,SECO Consumer Climate
-348,SECO Economic Forecasts
-349,SNB Chairman Schlegel Speaks
-350,SNB Financial Stability Report
-351,SNB Monetary Policy Assessment
-352,SNB Policy Rate
-353,SNB Press Conference
-354,SNB Quarterly Bulletin
-355,SPPI y/y
-356,Sentix Investor Confidence
-357,Spanish 10-y Bond Auction
-358,Spanish Flash CPI y/y
-359,Spanish Flash GDP q/q
-360,Spanish Manufacturing PMI
-361,Spanish Services PMI
-362,Spanish Unemployment Change
-363,Spanish Unemployment Rate
-364,Summary of Monetary Policy Discussions
-365,TIC Long-Term Purchases
-366,Tankan Manufacturing Index
-367,Tankan Non-Manufacturing Index
-368,Tertiary Industry Activity m/m
-369,Tokyo Core CPI y/y
-370,Trade Balance
-371,Treasury Sec Bessent Speaks
-372,Trimmed CPI y/y
-373,Trimmed Mean CPI m/m
-374,UBS Economic Expectations
-375,USD-Denominated Trade Balance
-376,Unemployment Claims
-377,Unemployment Rate
-378,Visitor Arrivals m/m
-379,Westpac Consumer Sentiment
-380,Wholesale Sales m/m
-381,ZEW Economic Sentiment
+cb2f8610d23b,1-y Loan Prime Rate
+f190d3218986,10-y Bond Auction
+7545d00961ec,30-y Bond Auction
+5f88e2a92b27,5-y Loan Prime Rate
+0046ab046a80,ADP Non-Farm Employment Change
+0bafab40f861,ADP Weekly Employment Change
+4a78e1e1b8b5,ANZ Business Confidence
+4ce63802a2de,ANZ Commodity Prices m/m
+651fa902f068,ANZ Job Advertisements m/m
+268701d5ff41,API Weekly Statistical Bulletin
+3ee0af171f04,Advance GDP Price Index q/q
+46c741794f18,Advance GDP q/q
+095e7c83c046,Annual Budget Release
+0ef27ea44319,Average Cash Earnings y/y
+d4bc0ec0b5ff,Average Earnings Index 3m/y
+bff6b3a536f8,Average Hourly Earnings m/m
+b236de356c82,BOC Business Outlook Survey
+4848ecdfddcc,BOC Financial System Review
+87f870d4cddf,BOC Gov Macklem Speaks
+f75ad31ccae3,BOC Monetary Policy Report
+4daa3974038c,BOC Press Conference
+1b42ea85c2fc,BOC Rate Statement
+8bfedea8870d,BOC Summary of Deliberations
+ba725240b8e9,BOE Credit Conditions Survey
+209486ccac91,BOE Financial Stability Report
+bc56a7a5c626,BOE Gov Bailey Speaks
+545fa7485cc3,BOE Inflation Letter
+b7ca149a0cd9,BOE Monetary Policy Report
+c16b7ddcaa8f,BOJ Core CPI y/y
+0926e77184ca,BOJ Gov Ueda Speaks
+ed12e0991c0f,BOJ Outlook Report
+cc1cedf7f622,BOJ Policy Rate
+bb13746ae53e,BOJ Press Conference
+0d41acc3b527,BOJ Summary of Opinions
+27a66a76c692,BRC Retail Sales Monitor y/y
+d053f5125821,BRC Shop Price Index y/y
+48f8d0c6b344,BSI Manufacturing Index
+8a7b95e03afb,Bank Holiday
+334c5b721210,Bank Lending y/y
+916d40dcb1a4,Bank Stress Test Results
+b57275a41939,Beige Book
+625d80c7c3c4,Belgian NBB Business Climate
+483487a063cf,Building Approvals m/m
+a2e7c83d5cae,Building Consents m/m
+57ee0155e268,Building Permits
+05eaab24e1ff,Building Permits m/m
+c0c342c5ed19,Business Inventories m/m
+de0108170c2c,BusinessNZ Manufacturing Index
+9a488b5df010,BusinessNZ Services Index
+3141f6a6c3ad,CB Consumer Confidence
+51da56f48b1b,CB Leading Index m/m
+dc920865e7b7,CBI Industrial Order Expectations
+23b94e88da1f,CBI Realized Sales
+d5919fc94180,CPI Flash Estimate y/y
+a57d1190cb13,CPI m/m
+c24beb31c5f1,CPI y/y
+c18894c3f761,Capacity Utilization Rate
+17191d3d0ec6,Capital Spending q/y
+8c869ac22381,Cash Rate
+7f5928c46ec3,Challenger Job Cuts y/y
+49a9683ce136,Chicago PMI
+b7efe8ae5ae8,Claimant Count Change
+cf1d9f970ec7,Cleveland Fed Inflation Expectations
+a6e655241381,Commodity Prices y/y
+7fda51a3ddd1,Common CPI y/y
+ecc274d1fc62,Company Operating Profits q/q
+401dd57b1b63,Construction Output m/m
+b2652523717a,Construction PMI
+7be3eb1f5b37,Construction Spending m/m
+a32d4d84860f,Construction Work Done q/q
+6bcfbb956259,Consumer Confidence
+dac66b99da08,Consumer Credit m/m
+23a0acbce462,Consumer Inflation Expectations
+aeb845b295cf,Core CPI Flash Estimate y/y
+25f728694a93,Core CPI m/m
+3607e4e6c0df,Core CPI y/y
+c52052ea4af7,Core Durable Goods Orders m/m
+b2ea4a16b900,Core Machinery Orders m/m
+fcb292bd80f1,Core PCE Price Index m/m
+621762eb1852,Core PPI m/m
+7ed0ace8e718,Core Retail Sales m/m
+d44973e6ca41,Corporate Profits q/q
+a8e7bb68a23d,Credit Card Spending y/y
+11d5363d3fef,Crude Oil Inventories
+89f0651874fd,Current Account
+bf207f0d3d57,Durable Goods Orders m/m
+8917a3eba9eb,ECB Economic Bulletin
+ed998dde4ff2,ECB Financial Stability Review
+f80ddd189812,ECB Monetary Policy Meeting Accounts
+1e0666d818ac,ECB President Lagarde Speaks
+45b257f8b860,ECB Press Conference
+694d9ccb86a5,ECOFIN Meetings
+6de018b16318,EU Economic Forecasts
+be25bb1f8908,Economy Watchers Sentiment
+22bb1dae3fb4,Empire State Manufacturing Index
+b39439ab8ae8,Employment Change
+7a0221db20f2,Employment Cost Index q/q
+a3e19ca345c7,Euro Summit
+7e2c3912b70b,Eurogroup Meetings
+509cf05bd5af,Existing Home Sales
+bc7548f78009,FOMC Economic Projections
+fd7ba56c1928,FOMC Financial Stability Report
+4c66b846df9d,FOMC Member Barkin Speaks
+501aba17b2d2,FOMC Member Barr Speaks
+4bac41c3aa65,FOMC Member Bostic Speaks
+c793823f15d1,FOMC Member Bowman Speaks
+7a0174a9f92b,FOMC Member Collins Speaks
+d12aec05c99f,FOMC Member Cook Speaks
+f715bc8c9612,FOMC Member Daly Speaks
+8486c96584e3,FOMC Member Goolsbee Speaks
+463fca8ea773,FOMC Member Hammack Speaks
+fde37737a3b1,FOMC Member Jefferson Speaks
+8002c7ff7b87,FOMC Member Kashkari Speaks
+a3b1522a9758,FOMC Member Logan Speaks
+de8df0630b71,FOMC Member Miran Speaks
+68041abab90f,FOMC Member Musalem Speaks
+16c1890f8837,FOMC Member Paulson Speaks
+4d31da878e84,FOMC Member Schmid Speaks
+20a93d6c1488,FOMC Member Waller Speaks
+cbd0b8269896,FOMC Member Williams Speaks
+ca3ee3dfe042,FOMC Press Conference
+3a6c501990d0,FOMC Statement
+535b7059fe1a,FPC Meeting Minutes
+2372016f46f7,FPC Statement
+1673749c99dd,FPI m/m
+fc2d37f9acc9,Factory Orders m/m
+db1469342351,Fed Chairman Warsh Speaks
+d0fb05eaba1d,Fed Chairman Warsh Testifies
+0324a6ee0d87,Fed Monetary Policy Report
+a09c4c871e06,Federal Budget Balance
+d2c25d4d5e07,Final CPI y/y
+ebea33a6729e,Final Core CPI y/y
+0f6506c35e4a,Final Employment Change q/q
+01257b71730e,Final GDP Price Index q/q
+993ec391e565,Final GDP Price Index y/y
+4a046b1c7abd,Final GDP q/q
+730f32247fb9,Final Manufacturing PMI
+6d14e9cabef9,Final Services PMI
+5eee7cbcf848,Final Wholesale Inventories m/m
+885311738ef8,Fixed Asset Investment ytd/y
+011fa7fc2707,Flash Employment Change q/q
+43c701577836,Flash GDP q/q
+dc42221eb31c,Flash Manufacturing PMI
+d89897447128,Flash Services PMI
+d3d3a0263f14,Foreign Currency Reserves
+6344b7096374,Foreign Direct Investment ytd/y
+eafa4446ffb0,Foreign Securities Purchases
+253a17a7113c,French 10-y Bond Auction
+8e1c4064b5d2,French Consumer Spending m/m
+884efc829fa5,French Final CPI m/m
+ea9d05965ec0,French Final Manufacturing PMI
+bcdbc7808c32,French Final Private Payrolls q/q
+6ed819a77549,French Final Services PMI
+27997c953f55,French Flash GDP q/q
+f0e2089e28d1,French Flash Manufacturing PMI
+8bc779cb31dc,French Flash Services PMI
+4e1bc9d717c0,French Gov Budget Balance
+5492d29d8b1d,French Industrial Production m/m
+4701fb5ba10c,French Prelim CPI m/m
+b5d710ab0aa7,French Prelim GDP q/q
+da945ff309d3,French Prelim Private Payrolls q/q
+985d76894712,French Trade Balance
+d77fbe7eb9f2,G20 Meetings
+ae7686eeb3b3,GDP m/m
+9c94e859aa06,GDP q/q
+1b400ff59f69,GDP q/y
+905bc2ebd4c3,GDT Price Index
+c34815172ca7,German 10-y Bond Auction
+d1419779b8c4,German 30-y Bond Auction
+7c15621c268b,German Buba Monthly Report
+aebbe9df0e3d,German Buba President Nagel Speaks
+8c8ad231e226,German Factory Orders m/m
+fb25644cd3da,German Final CPI m/m
+3fb8c7bec8eb,German Final GDP q/q
+55b78a8adcfd,German Final Manufacturing PMI
+aaa97a424bd9,German Final Services PMI
+e6726c43f7a6,German Flash Manufacturing PMI
+4e76d0a092c3,German Flash Services PMI
+ee669a7acb12,German GfK Consumer Climate
+2177e36e5f77,German Import Prices m/m
+2e46786da4e5,German Industrial Production m/m
+5cc952fbb5fa,German PPI m/m
+b76760f086ec,German Prelim CPI m/m
+efb4bc9e6e60,German Prelim GDP q/q
+706bbfa4051b,German Retail Sales m/m
+da2042be6a94,German Trade Balance
+3d347306b4a6,German Unemployment Change
+c024e258d4ca,German WPI m/m
+db1c13643f99,German ZEW Economic Sentiment
+3317f5d9b425,German ifo Business Climate
+08858aa7c8a4,GfK Consumer Confidence
+86eaafa2d113,Goods Trade Balance
+c97202aef4c4,Gov Board Member Martin Speaks
+4eb2922d2cb4,Gov Board Member Tschudin Speaks
+25cd8ad1d453,Gov Council Member Alexopoulos Speaks
+dcc8ff92c812,Gov Council Member Kozicki Speaks
+2eab9cf18c99,Gov Council Member Rogers Speaks
+3d5eaaaa75f8,Gov Council Member Vincent Speaks
+c0ba20ac875a,HPI m/m
+86795c0336c3,HPI y/y
+1e846bde8d97,Household Spending m/m
+0cfe7e1db273,Household Spending y/y
+89394a6be894,Housing Equity Withdrawal q/q
+8061efb65660,Housing Starts
+cfec254cf7c6,Housing Starts y/y
+bb8ffe41b74a,IPPI m/m
+3b18fbd61511,ISM Manufacturing PMI
+354d2dede1ec,ISM Manufacturing Prices
+82d2444b007b,ISM Services PMI
+568117d6a83a,Import Prices m/m
+068af223b13b,Import Prices q/q
+2a4396b9f5f0,Index of Services 3m/3m
+f3015ad537e9,Industrial Production m/m
+733bd39ea8db,Industrial Production y/y
+cad75ba8f08d,Inflation Expectations q/q
+bc3b695d4c0c,Italian 10-y Bond Auction
+27ef46039c37,Italian Industrial Production m/m
+db4a3b839ef8,Italian Manufacturing PMI
+2aaf57af829b,Italian Monthly Unemployment Rate
+d6191776ed66,Italian Prelim CPI m/m
+2934888b823b,Italian Prelim GDP q/q
+4d44fae9457a,Italian Quarterly Unemployment Rate
+4d3a66066e7b,Italian Retail Sales m/m
+43b903d39426,Italian Services PMI
+1bb4770c1538,Italian Trade Balance
+157180c03a49,Ivey PMI
+60f1874a9beb,JOLTS Job Openings
+2670db00c25d,KOF Economic Barometer
+925ffdae1821,Labor Cost Index q/q
+9fdd5a6cb891,Labor Productivity q/q
+778898f277ab,Leading Indicators
+e748d1e8d507,Lloyds HPI m/m
+582aa97e0246,Loan Officer Survey
+4c7eef4169f2,M2 Money Stock y/y
+8b0834575222,M2 Money Supply y/y
+840475301a61,M3 Money Supply y/y
+9ce3b846fd9d,M4 Money Supply m/m
+3a3fc9327f69,MI Inflation Expectations
+df79d0b783e3,MI Inflation Gauge m/m
+7d93373ff0d0,MI Leading Index m/m
+f87279c9c681,MPC Member Breeden Speaks
+064ff5d817ff,MPC Member Dhingra Speaks
+4b1aea3af5ff,MPC Member Greene Speaks
+721de0da14e5,MPC Member Lombardelli Speaks
+e331c82ffff9,MPC Member Mann Speaks
+cdcd0afda8c0,MPC Member Pill Speaks
+3c6f23e460da,MPC Member Ramsden Speaks
+7577d831495e,MPC Member Taylor Speaks
+31f6a9b8eb41,MPC Official Bank Rate Votes
+af103fe93731,Main Refinancing Rate
+e08e775ed394,Manufacturing PMI
+ec902ca6b1e3,Manufacturing Production m/m
+d50cdcf293c4,Manufacturing Sales m/m
+c70e6149c02e,Manufacturing Sales q/q
+68ef30a47db4,Median CPI y/y
+aa8a30e6c029,Monetary Base y/y
+c6478db4a9c8,Monetary Policy Meeting Minutes
+cc4700459589,Monetary Policy Report Hearings
+30bcb2a527ce,Monetary Policy Statement
+c7db09966c9b,Monetary Policy Summary
+cc5848588fc0,Mortgage Approvals
+3f3c0836bab1,Mortgage Delinquencies
+4db82cf233d4,NAB Business Confidence
+4b57fa86ee0c,NAB Quarterly Business Confidence
+79c898dd1712,NAHB Housing Market Index
+d54439f82470,NBS Press Conference
+fcb6d8856578,NFIB Small Business Index
+a74e2ea3acc9,NHPI m/m
+530195ed267d,NZIER Business Confidence
+c59e5d0be1b9,National Core CPI y/y
+aaf70e0e3e60,Nationwide HPI m/m
+c2e274506f17,Natural Gas Storage
+0991f5dea88e,Net Lending to Individuals m/m
+5ab0fd78c63c,New Home Prices m/m
+7df8ce9fda07,New Home Sales
+e2c9778efa9d,New Loans
+2869cb565a71,Non-Farm Employment Change
+2b306da5a961,Non-Manufacturing PMI
+9d0ef69a4c7b,Official Bank Rate
+f6af52dfdab2,Official Cash Rate
+da12b473c915,Omdia Total Vehicle Sales
+8c6712ffbac0,Overnight Rate
+76746a55b6d4,Overseas Trade Index q/q
+14461c05c629,PPI Input m/m
+6ed63fd14071,PPI Input q/q
+7cfd4be36c6a,PPI Output m/m
+67322a2a4cf1,PPI Output q/q
+18ea4ff35fab,PPI m/m
+36115bafef37,PPI q/q
+3ae259658af0,PPI y/y
+c9e82735ae42,Pending Home Sales m/m
+164b1eb89b65,Personal Income m/m
+bdeeeecf3962,Personal Spending m/m
+bb248fb08a08,Philly Fed Manufacturing Index
+50772b5fafc6,Prelim Benchmark Payrolls Revision
+1351dd075509,Prelim Business Investment q/q
+b2b5e32950f0,Prelim Flash GDP q/q
+eb1765ed231d,Prelim GDP Price Index q/q
+1b36c58bb880,Prelim GDP Price Index y/y
+d37b17e5a567,Prelim GDP q/q
+a6c2ccecd58e,Prelim Industrial Production m/m
+33bcca4a210a,Prelim Machine Tool Orders y/y
+734f9ca41643,Prelim Nonfarm Productivity q/q
+f7f94e066f77,Prelim Unit Labor Costs q/q
+b3fc6aa06f1a,Prelim UoM Consumer Sentiment
+c76c6d2aa46a,Prelim UoM Inflation Expectations
+bc84e4c20189,Prelim Wholesale Inventories m/m
+03e5257c5ede,President Trump Speaks
+254d169da7a8,Private Capital Expenditure q/q
+75fc5eb56365,Private Loans y/y
+a313d5d2edf0,Private Sector Credit m/m
+41fdbcb862cb,Public Sector Net Borrowing
+e2681096bd0e,RBA Assist Gov Hunter Speaks
+84b34df2d59c,RBA Assist Gov Jones Speaks
+12aa771a2563,RBA Assist Gov Kent Speaks
+05f4970648c2,RBA Bulletin
+bae4b52629f2,RBA Deputy Gov Hauser Speaks
+192b8a8d69ea,RBA Financial Stability Review
+74e2d2ecbf5d,RBA Gov Bullock Speaks
+861b14d73089,RBA Monetary Policy Statement
+0b271f07e5bf,RBA Press Conference
+ea264d9dafce,RBA Rate Statement
+e4bffa363182,RBNZ Financial Stability Report
+177acbec7762,RBNZ Gov Breman Speaks
+f78f41478ffc,RBNZ Monetary Policy Statement
+36da04211889,RBNZ Press Conference
+a11a35029776,RBNZ Rate Statement
+1097497708f2,RCM/TIPP Economic Optimism
+bcfe92e63378,RICS House Price Balance
+03a1ac771839,RMPI m/m
+9560d70f726d,RPI y/y
+9335205bdf9d,RatingDog Manufacturing PMI
+2588b4a64d1d,RatingDog Services PMI
+31df74ceb903,Retail Sales m/m
+d7499f566e2b,Retail Sales q/q
+629f72978483,Retail Sales y/y
+d7a7f1b23332,Revised Business Investment q/q
+b68e99eaddda,Revised GDP q/q
+38e0b70c2eb1,Revised Industrial Production m/m
+a97edd576295,Revised Nonfarm Productivity q/q
+a70471a68dfc,Revised Unit Labor Costs q/q
+f51be2e6e8e2,Revised UoM Consumer Sentiment
+83e372590c07,Revised UoM Inflation Expectations
+0d789db4507d,Richmond Manufacturing Index
+892ab633465a,Rightmove HPI m/m
+62107444da68,S&P/CS Composite-20 HPI y/y
+76f0e246e146,SECO Consumer Climate
+35ef5f021e8d,SECO Economic Forecasts
+b20f547aa61e,SNB Chairman Schlegel Speaks
+71dab4aea9ec,SNB Financial Stability Report
+5884bf145f46,SNB Monetary Policy Assessment
+afe5811c28ba,SNB Policy Rate
+7ddcc50747b7,SNB Press Conference
+096462a1af5d,SNB Quarterly Bulletin
+8d79925d9d54,SPPI y/y
+fc63fad30799,Sentix Investor Confidence
+6475d0481e23,Spanish 10-y Bond Auction
+67a80c543e49,Spanish Flash CPI y/y
+b45b160ea9ee,Spanish Flash GDP q/q
+ea910df5aeba,Spanish Manufacturing PMI
+f00f9d4781cf,Spanish Services PMI
+67ffd5b135d1,Spanish Unemployment Change
+ddc756cbd951,Spanish Unemployment Rate
+bc7fc1846c6e,Summary of Monetary Policy Discussions
+083a7c123b7b,TIC Long-Term Purchases
+d35e7192486c,Tankan Manufacturing Index
+0b85b284cf30,Tankan Non-Manufacturing Index
+71643f93dd8d,Tertiary Industry Activity m/m
+31653b7004be,Tokyo Core CPI y/y
+fda768e7db2b,Trade Balance
+5605db7f9fb1,Treasury Sec Bessent Speaks
+a588d97ba8a5,Trimmed CPI y/y
+32402dcb04cf,Trimmed Mean CPI m/m
+e5c9c8e0343c,UBS Economic Expectations
+01f6e1a71409,USD-Denominated Trade Balance
+ee94c98e644a,Unemployment Claims
+5f512d942182,Unemployment Rate
+0676d6db5ba9,Visitor Arrivals m/m
+e8bb8b888d55,Westpac Consumer Sentiment
+47b41a061f83,Wholesale Sales m/m
+831ad29e3cda,ZEW Economic Sentiment

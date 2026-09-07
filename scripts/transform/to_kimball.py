@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import logging
 import re
 import sys
@@ -15,6 +16,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from scripts.extract.config import GOLD_MART_DIR, SILVER_EVENTS_DIR
+from scripts.transform.merge_silver import read_partition
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
@@ -25,36 +27,43 @@ IMPACT_RANK = {"gray": 0, "yellow": 1, "orange": 2, "red": 3}
 WEEKLY_SILVER_NAME = re.compile(r"^\d{4}_W\d{2}\.csv$")
 
 
+def _dim_key(kind: str, value: str) -> str:
+    """Content-derived dim key so adding a value never renumbers the others."""
+    digest = hashlib.sha1(f"{kind}|{value}".encode()).hexdigest()  # noqa: S324 - id, not crypto
+    return digest[:12]
+
+
 def _load_silver(silver_dir: Path, pattern: str = "*.csv") -> pd.DataFrame:
     files = sorted(silver_dir.glob(pattern))
     if not files:
         raise FileNotFoundError(f"No silver files in {silver_dir}")
-    weekly = [path for path in files if WEEKLY_SILVER_NAME.match(path.name)]
-    monthly = [path for path in files if path not in weekly]
-    frames = [pd.read_csv(path, dtype=str).fillna("") for path in monthly]
-    if weekly:
-        weekly_df = pd.concat(
-            [pd.read_csv(path, dtype=str).fillna("") for path in weekly],
-            ignore_index=True,
-        )
-        owned_dates = set(weekly_df["event_date"].astype(str))
-        if frames:
-            monthly_df = pd.concat(frames, ignore_index=True)
-            monthly_df = monthly_df[~monthly_df["event_date"].astype(str).isin(owned_dates)]
-            df = pd.concat([monthly_df, weekly_df], ignore_index=True)
-        else:
-            df = weekly_df
-        logger.info(
-            "Weekly silver owns %s dates (%s rows); monthly remainder %s rows",
-            len(owned_dates),
-            len(weekly_df),
-            len(df) - len(weekly_df),
-        )
-    else:
-        df = pd.concat(frames, ignore_index=True)
-    return df.drop_duplicates(
-        subset=["event_date", "time_raw", "currency", "event"],
-        keep="last",
+    frames = []
+    for path in files:
+        if WEEKLY_SILVER_NAME.match(path.name):
+            logger.warning(
+                "Skipping stale weekly silver file %s — silver is partitioned by event "
+                "month now. Upsert its rows into YYYY_MM.csv and delete it.",
+                path.name,
+            )
+            continue
+        frames.append(read_partition(path))
+    if not frames:
+        raise FileNotFoundError(f"No monthly silver partitions in {silver_dir}")
+    df = pd.concat(frames, ignore_index=True)
+
+    # One instant can be published on two different local dates, because the
+    # this-week export uses US Eastern while the monthly dump uses the scraping
+    # account's timezone. Such a row lands in two partitions under one uid, so
+    # keep the richest copy — never let an empty row hide a printed actual.
+    filled = sum(
+        df[column].map(lambda value: 1 if str(value).strip() else 0)
+        for column in ("actual", "forecast", "previous")
+    )
+    return (
+        df.assign(_filled=filled)
+        .sort_values(["_filled", "updated_at", "event_date"], kind="stable")
+        .drop_duplicates(subset=["event_uid"], keep="last")
+        .drop(columns="_filled")
     )
 
 
@@ -89,7 +98,7 @@ def _build_dim_currency(codes: pd.Series) -> pd.DataFrame:
     uniq = sorted({c.strip().upper() for c in codes if str(c).strip()})
     return pd.DataFrame(
         {
-            "currency_key": range(1, len(uniq) + 1),
+            "currency_key": [_dim_key("currency", c) for c in uniq],
             "currency_code": uniq,
         }
     )
@@ -102,7 +111,7 @@ def _build_dim_impact(codes: pd.Series) -> pd.DataFrame:
     ordered = [c for c in preferred if c in uniq] + [c for c in uniq if c not in preferred]
     return pd.DataFrame(
         {
-            "impact_key": range(1, len(ordered) + 1),
+            "impact_key": [_dim_key("impact", c) for c in ordered],
             "impact_code": ordered,
             "impact_rank": [IMPACT_RANK.get(c, -1) for c in ordered],
         }
@@ -113,7 +122,7 @@ def _build_dim_event(names: pd.Series) -> pd.DataFrame:
     uniq = sorted({n.strip() for n in names if str(n).strip()})
     return pd.DataFrame(
         {
-            "event_key": range(1, len(uniq) + 1),
+            "event_key": [_dim_key("event", n) for n in uniq],
             "event_name": uniq,
         }
     )
@@ -149,7 +158,9 @@ def silver_to_kimball(
 
     fact_out = pd.DataFrame(
         {
-            "fact_id": range(1, len(fact) + 1),
+            # Derived from the silver business key, so a rebuild that gains rows
+            # leaves every existing fact_id untouched.
+            "fact_id": fact["event_uid"],
             "date_key": fact["date_key"],
             "currency_key": fact["currency_key"],
             "impact_key": fact["impact_key"],
@@ -163,7 +174,7 @@ def silver_to_kimball(
             "source_timezone": fact["source_timezone"],
             "updated_at": fact["updated_at"],
         }
-    )
+    ).sort_values(["date_key", "event_datetime_utc", "currency_key", "fact_id"])
 
     paths = {
         "dim_date": out_dir / "dim_date.csv",

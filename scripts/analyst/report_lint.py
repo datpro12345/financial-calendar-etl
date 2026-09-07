@@ -26,7 +26,9 @@ UNIT_RE = re.compile(
     r"(?<![\w.])(-?\d+(?:[.,]\d+)?)\s*(%|[Bb][Pp]\b|[KkMm](?![A-Za-zÀ-ỹ]))"
 )
 TIME_RE = re.compile(r"\b(\d{1,2}:\d{2})\b")
-FACT_RE = re.compile(r"fact_id\s*=\s*(\d+)", re.I)
+# fact_id is a hex digest of the silver business key (see merge_silver.event_uid).
+FACT_RE = re.compile(r"fact_id\s*=\s*([0-9a-fA-F]+)", re.I)
+FACT_ID_BLOB_RE = re.compile(r"\d+|[0-9a-f]{12,16}")
 PRICE_RE = re.compile(r"\b(1\.\d{2,5})\b")
 BARE_DEC_RE = re.compile(r"(?<![\w.:])(-?\d+[.,]\d{1,2})(?!\d)")
 
@@ -84,7 +86,7 @@ def allowed_from_pack(pack: dict[str, Any]) -> dict[str, set[str]]:
             prices.add(match.group(1))
         for match in BARE_DEC_RE.finditer(blob):
             decimals.add(_norm_num(match.group(1)))
-        if re.fullmatch(r"\d+", blob):
+        if FACT_ID_BLOB_RE.fullmatch(blob):
             facts.add(blob)
 
     for ev in (
@@ -138,6 +140,44 @@ def allowed_from_pack(pack: dict[str, Any]) -> dict[str, set[str]]:
                 pct = round(red / prim_total * 100, 1)
                 units.add(f"{pct}%")
                 units.add(f"{int(pct)}%")
+
+    # ICT institutional layer — COT indexes / win-rates as %
+    inst = pack.get("institutional") or {}
+    for row in inst.get("cot") or []:
+        for key in ("cot_index_26w", "cot_index_52w", "cot_index_156w"):
+            val = row.get(key)
+            if val is None or val == "":
+                continue
+            num = _norm_num(str(val))
+            units.add(f"{num}%")
+            try:
+                units.add(f"{int(float(num))}%")
+            except ValueError:
+                pass
+        for key in ("commercial_net", "net_change_1w", "net_change_4w"):
+            val = row.get(key)
+            if val is None or val == "":
+                continue
+            decimals.add(_norm_num(str(val)))
+            # formatted with commas / signs appear as bare ints in report text
+            facts.add(str(abs(int(val))))
+    for row in inst.get("seasonal") or []:
+        wr = row.get("historical_win_rate_up")
+        if wr is not None and wr != "":
+            pct = round(float(wr) * 100, 1)
+            units.add(f"{pct}%")
+            units.add(f"{int(pct)}%")
+        wr15 = row.get("historical_win_rate_up_15y")
+        if wr15 is not None and wr15 != "":
+            pct = round(float(wr15) * 100, 1)
+            units.add(f"{pct}%")
+            units.add(f"{int(pct)}%")
+    q = inst.get("quarterly") or {}
+    for key in ("day_of_quarter", "days_elapsed", "days_remaining_in_phase"):
+        val = q.get(key)
+        if val is not None and val != "":
+            facts.add(str(int(val)))
+            decimals.add(str(int(val)))
 
     return {
         "units": units,

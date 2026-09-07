@@ -196,6 +196,7 @@ date_key,event_date,year,quarter,month,month_name,day,iso_week,weekday,weekday_n
 20260916,2026-09-16,2026,3,9,September,16,38,2,Wednesday,0
 20260917,2026-09-17,2026,3,9,September,17,38,3,Thursday,0
 20260918,2026-09-18,2026,3,9,September,18,38,4,Friday,0
+20260920,2026-09-20,2026,3,9,September,20,38,6,Sunday,1
 20260921,2026-09-21,2026,3,9,September,21,39,0,Monday,0
 20260922,2026-09-22,2026,3,9,September,22,39,1,Tuesday,0
 20260923,2026-09-23,2026,3,9,September,23,39,2,Wednesday,0

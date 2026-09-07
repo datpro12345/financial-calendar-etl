@@ -85,14 +85,57 @@ Rules:
 - Parse dates/times with known `source_timezone`
 - Convert to `event_datetime_utc` and `event_datetime_hcm`
 - Normalize nulls (`N/A`, blank → empty/null)
-- Deduplicate on natural key: `(event_date, time_raw, currency, event)`
+- Partition by **business time**: one file per event month, `calendar_events/YYYY_MM.csv`
+- Identify a row by the absolute release instant: `(event_datetime_utc, currency, event)`
 - Keep **all** currencies and impacts (no red-only / USD-only filter here)
 - Typed where practical; flat conformed table (star schema lives in Gold mart)
+
+#### Write strategy — coalesce upsert
+
+`actual` is a **late-arriving measure**: an event is published with an empty
+actual and only gets a value after the release. So silver is never overwritten,
+it is upserted field by field, and an empty incoming value never wins:
+
+```python
+actual   = new.actual   or old.actual
+forecast = new.forecast or old.forecast
+previous = new.previous or old.previous
+impact   = new.impact   or old.impact
+```
+
+A non-empty revision *does* overwrite — the rule is "empty never wins", not
+"old always wins". `updated_at` moves only on a real delta, so re-running the
+same input rewrites the file byte-for-byte and leaves the git diff empty.
+
+`scripts/transform/merge_silver.py` implements this with two modes:
+
+| Mode | Caller | Behaviour |
+|---|---|---|
+| `merge` | this-week export (step B) | Insert + coalesce only. The feed covers one week of a wider partition, so it must never delete. |
+| `refresh` | monthly HTML dump (step A2) | Same coalescing, and may prune with `delete_missing=True`. |
+
+Pruning is **opt-in** because a dump is only authoritative as of the moment it
+was captured: an older dump replayed today would otherwise delete rows a newer
+source has since added. When on, it is limited to the impact layers the dump
+actually carried, so a gray holiday row survives a red/orange/yellow refresh.
+
+Why the identity is the instant and not the published clock: the this-week
+export publishes US Eastern while the monthly dump publishes the scraping
+account's timezone. Across those two sources, a key containing `time_raw`
+matched **0** rows; the instant matched **91 of 92**. `time_raw` therefore only
+identifies untimed rows — `All Day`, `Tentative`, `Sep Data` — which carry no
+instant at all. `time_raw`, `source_timezone` and `event_datetime_hcm` are held
+immutable, since `time_raw` is meaningless apart from its own timezone.
+
+Every delta is appended to `silver/calendar_event_changes/YYYY_MM.csv`
+(`changed_at, source, change_type, event_uid, …, field, old_value, new_value`),
+which is the audit trail for a revised actual.
 
 Silver schema:
 
 | Column | Type / note |
 |--------|-------------|
+| `event_uid` | Hash of the row identity; becomes `fact_id` in the mart |
 | `event_date` | `YYYY-MM-DD` |
 | `time_raw` | Original clock string |
 | `event_datetime_utc` | ISO, nullable if no clock time |
@@ -104,7 +147,8 @@ Silver schema:
 | `forecast` | Cleaned string or empty |
 | `previous` | Cleaned string or empty |
 | `source_timezone` | IANA tz used for conversion |
-| `updated_at` | When silver row was built |
+| `first_seen_at` | When the row was first inserted (kept across upserts) |
+| `updated_at` | Last real change to a measure; unchanged on a no-op run |
 
 ### 3. Gold — Business / consumer products
 
@@ -113,7 +157,7 @@ Silver schema:
 | Product | Path | Rule |
 |---------|------|------|
 | Google Calendar import | `gold/google_calendar/{yyyy-mm}-news.csv` | Filter `impact=red` + `currency ∈ {USD,GBP,EUR}` + timed events; HCM wall clock; GCal columns. Holidays stay in Silver/mart (usually All Day, not this product). |
-| Kimball mart | `gold/mart/` | Star schema from Silver for BI / Looker |
+| Kimball mart | `gold/mart/` | Star schema from Silver for BI / Looker. Deterministic full rebuild: `fact_id` is the silver `event_uid` and every dim key is a hash of its business key, so gaining a row never renumbers the existing ones. Analyst prompts compare actual vs forecast on the **same `fact_id`**, which only holds if that id is stable. |
 
 #### Kimball star (simple)
 
@@ -179,14 +223,24 @@ Build: `python scripts/transform/to_kimball.py`
 
 ```text
 Forex Factory
-    → bronze/raw (dump)
-    → bronze/landing (parse, no filter)
-    → silver/calendar_events (clean, type, tz, dedupe)
+    → bronze/raw (dump, immutable, gzipped + retention)
+    → bronze/landing (parse, no filter, overwrite per partition)
+    → silver/calendar_events/YYYY_MM.csv (clean, type, tz, COALESCE UPSERT)
+        → silver/calendar_event_changes/YYYY_MM.csv (append-only delta log)
         → gold/google_calendar (GCal import)
-        → gold/mart (Kimball dims + fact)
+        → gold/mart (Kimball dims + fact, deterministic rebuild)
 ```
 
 Recompute rule: change Gold logic → rebuild from Silver. Change Silver logic → rebuild from Bronze landing/raw. Never scrape again unless Bronze is missing.
+
+Exception to "never scrape again": the this-week export carries **no** `Actual`
+column, so the monthly HTML dump is the only source of printed values. Step A2
+(`scripts/extract/backfill_actuals.py`) re-scrapes the current month — and the
+previous one during the first days of a new month — fetching all four impact
+layers including gray/`impacts=0`. It is non-fatal and skippable with
+`--skip-actual-backfill`. Dropping the gray layer is what left the mart with a
+single holiday across nine months, so `scripts/transform/validate_coverage.py`
+now warns when a partition is missing an impact layer.
 
 ---
 
@@ -195,7 +249,11 @@ Recompute rule: change Gold logic → rebuild from Silver. Change Silver logic �
 - No Delta Lake / Unity Catalog required
 - No separate “raw” vs “landing” databases — folders + CSV are enough for now
 - No numeric parsing of `1.2%` / `55K` yet (stay `*_txt` on fact)
-- Weekly forecast→actual delta can be a later fact or bridge table
+- No SCD Type 2 history on the fact. Revisions are captured as an append-only
+  delta log in `silver/calendar_event_changes/`, not as versioned fact rows.
+- No incremental Gold. At ~3k rows the mart rebuilds in under a second, and the
+  hash surrogate keys make that rebuild deterministic — revisit at ~1M silver
+  rows or a ~100MB mart.
 
 ---
 

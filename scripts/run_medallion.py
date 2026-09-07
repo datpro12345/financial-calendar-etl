@@ -44,9 +44,15 @@ def discover_months(year: int) -> list[str]:
     return found
 
 
-def run_year(year: int, *, write_gold_gcal: bool = True) -> dict:
+def run_year(
+    year: int,
+    *,
+    write_gold_gcal: bool = True,
+    prune_missing: bool = False,
+    months: list[str] | None = None,
+) -> dict:
     raw_dir = BRONZE_RAW_CALENDAR_DIR / str(year)
-    months = discover_months(year)
+    months = months or discover_months(year)
     if not months:
         raise FileNotFoundError(f"No bronze raw dumps in {raw_dir}")
 
@@ -63,6 +69,7 @@ def run_year(year: int, *, write_gold_gcal: bool = True) -> dict:
             yellow_md=_find_layer(raw_dir, month_num, "yellow"),
             gray_md=_find_layer(raw_dir, month_num, "gray"),
             write_gold_gcal=write_gold_gcal,
+            prune_missing=prune_missing,
         )
         results.append(
             {
@@ -72,6 +79,7 @@ def run_year(year: int, *, write_gold_gcal: bool = True) -> dict:
                 "impact_counts": built.get("impact_counts"),
                 "landing": built.get("bronze_landing"),
                 "silver": built.get("silver"),
+                "silver_upsert": built.get("silver_upsert"),
                 "gold_gcal": built.get("gold_google_calendar"),
             }
         )
@@ -88,8 +96,23 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Rebuild Medallion gold from bronze raw")
     parser.add_argument("--year", type=int, default=2026)
     parser.add_argument("--no-gcal", action="store_true")
+    parser.add_argument(
+        "--months",
+        nargs="+",
+        help="Month abbrs to rebuild, e.g. --months sep. Default: every month with a raw dump",
+    )
+    parser.add_argument(
+        "--prune",
+        action="store_true",
+        help="Delete silver rows the dumps no longer list (only for layers they carried)",
+    )
     args = parser.parse_args()
-    summary = run_year(args.year, write_gold_gcal=not args.no_gcal)
+    summary = run_year(
+        args.year,
+        write_gold_gcal=not args.no_gcal,
+        prune_missing=args.prune,
+        months=args.months,
+    )
     print(json.dumps(summary, indent=2, default=str))
     return 0
 

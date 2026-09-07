@@ -22,6 +22,7 @@ import logging
 import os
 import random
 import time
+from collections.abc import Iterable
 from pathlib import Path
 from typing import Literal
 from urllib.parse import urlparse
@@ -410,8 +411,13 @@ def fetch_month_impact_layers(
     gap_seconds: int = IMPACT_FETCH_GAP_SECONDS,
     strategy: FetchStrategy = "auto",
     stop_on_fail: bool = True,
+    layers: Iterable[str] | None = None,
 ) -> dict[str, Path]:
     """Fetch red/orange/yellow/gray (holiday) dumps for one month with pacing.
+
+    ``layers`` narrows the fetch to specific impact labels, which matters for
+    quota: backfilling only the missing gray layer of a month costs one request
+    instead of four.
 
     Returns map impact_label → saved raw file path.
     """
@@ -420,8 +426,13 @@ def fetch_month_impact_layers(
     out_dir = out_dir or (BRONZE_RAW_CALENDAR_DIR / str(year))
     out_dir.mkdir(parents=True, exist_ok=True)
 
+    wanted = None if layers is None else {label.lower() for label in layers}
+    todo = [item for item in IMPACT_LAYERS if wanted is None or item[0] in wanted]
+    if wanted and not todo:
+        raise ValueError(f"No known impact layer in {sorted(wanted)}")
+
     saved: dict[str, Path] = {}
-    for idx, (label, impact_id) in enumerate(IMPACT_LAYERS):
+    for idx, (label, impact_id) in enumerate(todo):
         if idx > 0 and gap_seconds > 0:
             jitter = human_delay(0.0, FETCH_JITTER_SECONDS[1])
             logger.info(

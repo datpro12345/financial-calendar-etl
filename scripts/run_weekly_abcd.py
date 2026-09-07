@@ -2,8 +2,12 @@
 """ABCD weekly pipeline: fetch this week → gold mart → Fact Pack → outlook.
 
 A  ``fetch_weekly.py`` — nfs.faireconomy.media this-week export (no WARP, no HTML).
-B  landing → silver ``YYYY_Www.csv`` → Kimball mart (weekly wins on overlap).
-C  Fact Pack from gold/mart.
+A2 ``backfill_actuals.py`` — monthly HTML re-scrape, the only source of printed
+   ``actual``. Four Cloudflare-paced requests per month (red/orange/yellow/gray).
+   Non-fatal: a failure leaves stored actuals untouched.
+B  landing → coalesce upsert into silver ``YYYY_MM.csv`` → Kimball mart.
+C0 ICT Institutional Layer (COT / SMT Sunday watchlist / Seasonal+Quarterly).
+C  Fact Pack from gold/mart (+ institutional merge).
 D  LLM outlook + lint. Fail-stop: A or B fail ⇒ do not call the LLM.
 
 Fetch settings match ``docs/scrape_strategy.md``: strategy=http, firefox135,
@@ -23,11 +27,14 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
+from scripts.analyst.ict_fact_pack import run_ict_pipeline
 from scripts.analyst.language import DEFAULT_LANG
 from scripts.analyst.llm_client import load_dotenv
 from scripts.analyst.run_weekly_report import current_iso_week, run_outlook
+from scripts.extract.backfill_actuals import backfill_actuals
 from scripts.extract.config import GOLD_MART_DIR
 from scripts.extract.fetch_weekly import fetch_this_week
+from scripts.transform.validate_coverage import check_impact_coverage
 from scripts.transform.to_google_calendar import DEFAULT_SOURCE_TZ
 from scripts.transform.weekly_ingest import WEEKLY_BRONZE_DEFAULT, ingest_weekly_bronze
 
@@ -48,6 +55,9 @@ def run_abcd(
     dry_run: bool = False,
     skip_report: bool = False,
     skip_lint: bool = False,
+    skip_ict: bool = False,
+    skip_actual_backfill: bool = False,
+    backfill_strategy: str = "http",
     provider: str | None = None,
     model: str | None = None,
     timeout: int = 180,
@@ -75,6 +85,32 @@ def run_abcd(
             summary["A"]["method"],
         )
 
+    # A2 must run before B so the mart rebuild at the end of B already sees the
+    # freshly backfilled actuals. Non-fatal by design: losing this month's
+    # scrape must not block the report, and stored actuals are never erased.
+    if skip_actual_backfill:
+        summary["A2"] = {"skipped": True}
+        logger.info("A2 skipped — silver keeps whatever actuals it already has")
+    else:
+        try:
+            logger.info("A2 — backfill printed actuals from monthly HTML")
+            summary["A2"] = backfill_actuals(
+                fetch=not skip_fetch,
+                strategy=backfill_strategy,
+                write_gold_gcal=write_gcal,
+            )
+            for month in summary["A2"]["months"]:
+                logger.info(
+                    "A2 %s.%s — coverage=%s upsert=%s",
+                    month.get("month"),
+                    month.get("year"),
+                    month.get("coverage"),
+                    month.get("silver_upsert"),
+                )
+        except Exception as exc:  # noqa: BLE001
+            logger.warning("A2 failed — continuing without fresh actuals: %s", exc)
+            summary["A2"] = {"ok": False, "error": str(exc)}
+
     logger.info("B — bronze weekly → silver → mart")
     summary["B"] = ingest_weekly_bronze(
         summary["A"].get("csv") or str(WEEKLY_BRONZE_DEFAULT),
@@ -90,15 +126,47 @@ def run_abcd(
         summary["B"]["rows"],
     )
 
+    summary["validate"] = check_impact_coverage()
+    if not summary["validate"]["ok"]:
+        logger.warning(
+            "B — %s partition(s) missing an impact layer; holidays will be under-reported",
+            len(summary["validate"]["warnings"]),
+        )
+
     iso_year = year if year is not None else int(summary["B"]["iso_year"])
     iso_week = week if week is not None else int(summary["B"]["iso_week"])
     summary["week_label"] = f"{iso_year}-W{iso_week:02d}"
+
+    reports = reports_dir or (REPO_ROOT / "reports" / "weekly")
+    institutional = None
+    if skip_ict:
+        summary["C0"] = {"skipped": True}
+        logger.info("C0 skipped — no ICT institutional layer")
+    else:
+        logger.info("C0 — ICT Institutional (COT / SMT / Seasonal)")
+        try:
+            ict = run_ict_pipeline(
+                iso_year,
+                iso_week,
+                skip_fetch=skip_fetch,
+                reports_dir=reports,
+            )
+            summary["C0"] = {k: v for k, v in ict.items() if k != "pack"}
+            institutional = ict.get("pack")
+            logger.info(
+                "C0 ok — %s / %s",
+                summary["C0"].get("ict_fact_pack_json"),
+                summary["C0"].get("institutional_md"),
+            )
+        except Exception as exc:  # noqa: BLE001
+            logger.warning("C0 failed (continuing without institutional): %s", exc)
+            summary["C0"] = {"ok": False, "error": str(exc)}
 
     if skip_report:
         summary["C"] = {"skipped": True}
         summary["D"] = {"skipped": True}
         summary["ok"] = True
-        summary["stopped_at"] = "B"
+        summary["stopped_at"] = "C0" if not skip_ict else "B"
         return summary
 
     logger.info("C+D — Fact Pack + outlook for %s", summary["week_label"])
@@ -106,7 +174,7 @@ def run_abcd(
         year=iso_year,
         week=iso_week,
         mart_dir=mart_dir,
-        reports_dir=reports_dir or (REPO_ROOT / "reports" / "weekly"),
+        reports_dir=reports,
         provider=provider,
         model=model,
         dry_run=dry_run,
@@ -114,6 +182,7 @@ def run_abcd(
         suffix=suffix,
         skip_lint=skip_lint,
         lang=lang,
+        institutional=institutional,
     )
     summary["C"] = {
         "fact_pack_json": outlook["fact_pack_json"],
@@ -152,7 +221,23 @@ def main() -> int:
     parser.add_argument("--year", type=int, help="Override report ISO year (default: from fetch)")
     parser.add_argument("--week", type=int, help="Override report ISO week (default: from fetch)")
     parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--skip-report", action="store_true", help="Stop after B (no LLM)")
+    parser.add_argument("--skip-report", action="store_true", help="Stop after B/C0 (no LLM)")
+    parser.add_argument(
+        "--skip-ict",
+        action="store_true",
+        help="Skip C0 ICT Institutional Layer (COT/SMT/Seasonal)",
+    )
+    parser.add_argument(
+        "--skip-actual-backfill",
+        action="store_true",
+        help="Skip A2 monthly HTML re-scrape (saves 4 Cloudflare-paced requests per month)",
+    )
+    parser.add_argument(
+        "--backfill-strategy",
+        choices=("auto", "http", "browser", "stealth"),
+        default="http",
+        help="Fetch strategy for A2. See docs/scrape_strategy.md",
+    )
     parser.add_argument("--skip-lint", action="store_true")
     parser.add_argument("--provider", choices=("openrouter", "google"))
     parser.add_argument("--model")
@@ -179,7 +264,10 @@ def main() -> int:
             week=args.week,
             dry_run=args.dry_run,
             skip_report=args.skip_report,
+            skip_ict=args.skip_ict,
             skip_lint=args.skip_lint,
+            skip_actual_backfill=args.skip_actual_backfill,
+            backfill_strategy=args.backfill_strategy,
             provider=args.provider,
             model=args.model,
             timeout=args.timeout,

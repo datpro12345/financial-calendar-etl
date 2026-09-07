@@ -22,6 +22,7 @@ from scripts.extract.config import (
     SILVER_COLUMNS,
     SILVER_EVENTS_DIR,
 )
+from scripts.transform.merge_silver import BUSINESS_KEY, add_event_uid, utc_stamp
 from scripts.transform.timeutils import to_hcm
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
@@ -61,16 +62,17 @@ def _parse_clock(time_str: str) -> datetime | None:
     return datetime.strptime(f"{match.group(1)}{match.group(2).lower()}", "%I:%M%p")
 
 
-def landing_to_silver(
+def landing_to_silver_frame(
     landing_path: Path | str,
     *,
     year: int,
     source_timezone: str,
-    output: Path | str | None = None,
-) -> Path:
+    now: str | None = None,
+) -> pd.DataFrame:
+    """Conform a bronze landing CSV into silver rows (no file written)."""
     landing_path = Path(landing_path)
     df = pd.read_csv(landing_path, dtype=str)
-    updated_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    updated_at = now or utc_stamp()
 
     records: list[dict[str, str]] = []
     for _, row in df.iterrows():
@@ -100,16 +102,32 @@ def landing_to_silver(
                 "forecast": _clean_value(row.get("forecast", "")),
                 "previous": _clean_value(row.get("previous", "")),
                 "source_timezone": source_timezone,
+                "first_seen_at": updated_at,
                 "updated_at": updated_at,
             }
         )
 
-    out = pd.DataFrame(records, columns=SILVER_COLUMNS)
+    out = add_event_uid(pd.DataFrame(records, columns=SILVER_COLUMNS).fillna(""))
     # Dedupe: keep last occurrence
-    out = out.drop_duplicates(
-        subset=["event_date", "time_raw", "currency", "event"],
-        keep="last",
-    ).sort_values(["event_date", "time_raw", "currency", "event"])
+    return out.drop_duplicates(subset=["event_uid"], keep="last").sort_values(
+        list(BUSINESS_KEY)
+    )
+
+
+def landing_to_silver(
+    landing_path: Path | str,
+    *,
+    year: int,
+    source_timezone: str,
+    output: Path | str | None = None,
+) -> Path:
+    """Write a standalone silver CSV. Prefer ``upsert_silver`` for the medallion path."""
+    landing_path = Path(landing_path)
+    out = landing_to_silver_frame(
+        landing_path,
+        year=year,
+        source_timezone=source_timezone,
+    )
 
     if output:
         output_path = Path(output)

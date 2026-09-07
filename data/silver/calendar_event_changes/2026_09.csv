@@ -1,0 +1,57 @@
+changed_at,source,change_type,event_uid,event_date,currency,event,field,old_value,new_value
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,update,26e2185ff24cf5a9,2026-09-01,EUR,German Retail Sales m/m,previous,0.0%,-0.7%
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,update,7077ac284ddee53f,2026-09-01,GBP,Nationwide HPI m/m,previous,-0.1%,0.1%
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,update,a5e44aed3b492437,2026-09-01,AUD,Commodity Prices y/y,previous,17.2%,15.4%
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,update,4f4a1de272e045bb,2026-09-01,CHF,Retail Sales y/y,previous,1.9%,1.5%
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,update,3b8e332ff8c21ace,2026-09-01,EUR,Italian Monthly Unemployment Rate,previous,5.8%,5.7%
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,update,788ddda060513849,2026-09-01,GBP,M4 Money Supply m/m,previous,0.9%,0.8%
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,update,bef18c7b076640b1,2026-09-01,EUR,Italian Prelim CPI m/m,previous,0.3%,0.2%
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,update,9fb1ba0aca87ce19,2026-09-01,EUR,Unemployment Rate,previous,6.4%,6.3%
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,update,8f6ee0dc37170a5b,2026-09-01,USD,Construction Spending m/m,previous,0.0%,-0.1%
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,update,e175b7c6c4161e0f,2026-09-01,USD,JOLTS Job Openings,previous,7.18M,7.36M
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,update,a43b6081e5037a18,2026-09-02,NZD,Building Consents m/m,previous,-3.7%,-3.6%
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,update,e97e1ea72ffcb8ed,2026-09-02,USD,Factory Orders m/m,previous,-0.2%,-0.3%
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,update,71b357cbba103a18,2026-09-03,CHF,GDP q/q,previous,0.6%,0.7%
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,update,cbdcdf04f2bdcd1e,2026-09-03,NZD,Overseas Trade Index q/q,previous,-1.9%,-2.0%
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,update,190f5b570ec24174,2026-09-03,NZD,ANZ Commodity Prices m/m,previous,-4.0%,-3.9%
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,update,04fffb0c8b569551,2026-09-03,AUD,Goods Trade Balance,previous,2.34B,1.93B
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,bc260cd7e4cbda85,2026-09-01,USD,ISM Manufacturing PMI,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,a13072238eb424da,2026-09-01,USD,Omdia Total Vehicle Sales,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,13b10737df9fd63e,2026-09-01,ALL,G20 Meetings,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,d8c70aad0442a326,2026-09-01,USD,API Weekly Statistical Bulletin,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,d0d890f70382b033,2026-09-01,EUR,CPI Flash Estimate y/y,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,3e664770b87eba83,2026-09-01,EUR,Core CPI Flash Estimate y/y,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,db2c8e055c2d995d,2026-09-01,AUD,GDP q/q,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,ca0e0c666c52b7c4,2026-09-02,USD,Beige Book,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,ca7fc4734b32f8e8,2026-09-02,NZD,RBNZ Gov Breman Speaks,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,c5443663742ef5e9,2026-09-02,USD,ADP Non-Farm Employment Change,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,35ea29dda1207d81,2026-09-03,GBP,MPC Member Pill Speaks,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,4a087a0c1e866a1f,2026-09-03,USD,FOMC Member Hammack Speaks,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,d62755b229f818b5,2026-09-03,EUR,Spanish 10-y Bond Auction,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,5b575bccf87d3e3b,2026-09-03,EUR,French 10-y Bond Auction,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,e3c748f550dfa55a,2026-09-04,CAD,Ivey PMI,,,
+2026-09-07T13:42:51Z,migration:2026-W36-weekly-partition,insert,7b596a88c9beb08c,2026-09-04,GBP,BOE Gov Bailey Speaks,,,
+2026-09-07T13:43:21Z,monthly_html:2026_09,update,26e2185ff24cf5a9,2026-09-01,EUR,German Retail Sales m/m,previous,-0.7%,0.0%
+2026-09-07T13:43:21Z,monthly_html:2026_09,update,7077ac284ddee53f,2026-09-01,GBP,Nationwide HPI m/m,previous,0.1%,-0.1%
+2026-09-07T13:43:21Z,monthly_html:2026_09,update,a5e44aed3b492437,2026-09-01,AUD,Commodity Prices y/y,previous,15.4%,17.2%
+2026-09-07T13:43:21Z,monthly_html:2026_09,update,4f4a1de272e045bb,2026-09-01,CHF,Retail Sales y/y,previous,1.5%,1.9%
+2026-09-07T13:43:21Z,monthly_html:2026_09,update,3b8e332ff8c21ace,2026-09-01,EUR,Italian Monthly Unemployment Rate,previous,5.7%,5.8%
+2026-09-07T13:43:21Z,monthly_html:2026_09,update,788ddda060513849,2026-09-01,GBP,M4 Money Supply m/m,previous,0.8%,0.9%
+2026-09-07T13:43:21Z,monthly_html:2026_09,update,bef18c7b076640b1,2026-09-01,EUR,Italian Prelim CPI m/m,previous,0.2%,0.3%
+2026-09-07T13:43:21Z,monthly_html:2026_09,update,9fb1ba0aca87ce19,2026-09-01,EUR,Unemployment Rate,previous,6.3%,6.4%
+2026-09-07T13:43:21Z,monthly_html:2026_09,update,8f6ee0dc37170a5b,2026-09-01,USD,Construction Spending m/m,previous,-0.1%,0.0%
+2026-09-07T13:43:21Z,monthly_html:2026_09,update,e175b7c6c4161e0f,2026-09-01,USD,JOLTS Job Openings,previous,7.36M,7.18M
+2026-09-07T13:43:21Z,monthly_html:2026_09,update,a43b6081e5037a18,2026-09-02,NZD,Building Consents m/m,previous,-3.6%,-3.7%
+2026-09-07T13:43:21Z,monthly_html:2026_09,update,e97e1ea72ffcb8ed,2026-09-02,USD,Factory Orders m/m,previous,-0.3%,-0.2%
+2026-09-07T13:43:21Z,monthly_html:2026_09,update,71b357cbba103a18,2026-09-03,CHF,GDP q/q,previous,0.7%,0.6%
+2026-09-07T13:43:21Z,monthly_html:2026_09,update,cbdcdf04f2bdcd1e,2026-09-03,NZD,Overseas Trade Index q/q,previous,-2.0%,-1.9%
+2026-09-07T13:43:21Z,monthly_html:2026_09,update,190f5b570ec24174,2026-09-03,NZD,ANZ Commodity Prices m/m,previous,-3.9%,-4.0%
+2026-09-07T13:43:21Z,monthly_html:2026_09,update,04fffb0c8b569551,2026-09-03,AUD,Goods Trade Balance,previous,1.93B,2.34B
+2026-09-07T13:43:21Z,monthly_html:2026_09,insert,2e56a364285afafa,2026-09-07,CAD,Bank Holiday,,,
+2026-09-07T13:43:21Z,monthly_html:2026_09,insert,1cd08f4f313f6948,2026-09-07,USD,Bank Holiday,,,
+2026-09-07T13:43:21Z,monthly_html:2026_09,insert,70dc7d0dd1ec0720,2026-09-20,JPY,Bank Holiday,,,
+2026-09-07T13:43:21Z,monthly_html:2026_09,insert,56871d1b647e6a71,2026-09-21,JPY,Bank Holiday,,,
+2026-09-07T13:43:21Z,monthly_html:2026_09,insert,c7809c6c870e1df1,2026-09-22,JPY,Bank Holiday,,,
+2026-09-07T13:43:21Z,monthly_html:2026_09,insert,e5e7f53764fcf450,2026-09-24,CNY,Bank Holiday,,,
+2026-09-07T13:43:21Z,monthly_html:2026_09,insert,a26d83243d733f6a,2026-09-30,CAD,Bank Holiday,,,
+2026-09-07T13:43:21Z,monthly_html:2026_09,insert,21ce5f2f23af5281,2026-09-30,CNY,Bank Holiday,,,
