@@ -143,10 +143,12 @@ def run_outlook(
     suffix: str | None = None,
     skip_lint: bool = False,
     lang: str = DEFAULT_LANG,
+    institutional: dict | None = None,
+    skip_llm: bool = False,
 ) -> dict:
     """C+D — Fact Pack then LLM outlook. Returns paths and lint status."""
     profile = resolve_language(lang)
-    pack = build_fact_pack(year, week, mart_dir)
+    pack = build_fact_pack(year, week, mart_dir, institutional=institutional)
     pack_md = fact_pack_to_markdown(pack)
     system = assemble_system_prompt(prompt.read_text(), profile)
     user = assemble_user_message(pack, pack_md, profile)
@@ -166,12 +168,17 @@ def run_outlook(
         "fact_pack_md": str(pack_md_path),
         "dry_run": dry_run,
         "lint": "skipped",
+        "llm": "skipped" if skip_llm else "executed",
         "report": None,
         "provider": provider,
         "model": model,
         "lang": profile.code,
         "exit_code": 0,
     }
+
+    if skip_llm:
+        logger.info("Fact pack ready (LLM outlook skipped: 100% deterministic mode)")
+        return result
 
     if dry_run:
         out_path = reports_dir / f"{stem}.dry-run.md"
@@ -249,6 +256,13 @@ def main() -> int:
     )
     parser.add_argument("--skip-lint", action="store_true", help="Do not lint the generated report")
     parser.add_argument(
+        "--skip-llm",
+        "--fact-pack-only",
+        dest="skip_llm",
+        action="store_true",
+        help="Build Fact Pack JSON & MD only (100% deterministic, skip LLM call)",
+    )
+    parser.add_argument(
         "--lang",
         default=os.environ.get("REPORT_LANG", DEFAULT_LANG),
         help="Report language: vi, en, or any name (ja, es, …). Default: vi or REPORT_LANG",
@@ -267,6 +281,7 @@ def main() -> int:
         suffix=args.suffix,
         skip_lint=args.skip_lint,
         lang=args.lang,
+        skip_llm=args.skip_llm,
     )
     return int(result["exit_code"])
 

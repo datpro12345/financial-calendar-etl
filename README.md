@@ -29,9 +29,8 @@ nfs.faireconomy.media (this week, no WARP)
 ## Quick start
 
 ```bash
-cp .env.template .env          # set OPENROUTER_API_KEY
 docker compose build
-docker compose run --rm -e REPORT_LANG=en weekly
+docker compose run --rm weekly
 ```
 
 Without Docker:
@@ -39,11 +38,18 @@ Without Docker:
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.template .env
-python scripts/run_weekly_abcd.py --fmt csv --lang en
+python scripts/run_weekly_abcd.py --fmt csv
 ```
 
-Output: `reports/weekly/{YYYY}-W{WW}-macro-outlook.{lang}.md`
+**100% Deterministic by default:** Generates Silver conformed partitions, Gold Kimball Mart, Google Calendar CSVs, and the weekly **Fact Pack** (`reports/weekly/{YYYY}-W{WW}-fact-pack.{json,md}`). Zero external LLM calls or API keys required.
+
+To run the optional LLM Outlook Report locally (or provide `.env` keys):
+```bash
+cp .env.template .env
+python scripts/run_weekly_abcd.py --fmt csv --with-llm --lang en
+```
+
+Output with `--with-llm`: `reports/weekly/{YYYY}-W{WW}-macro-outlook.{lang}.md`
 
 | You fill in | Where |
 |---|---|

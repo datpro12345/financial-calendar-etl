@@ -296,6 +296,14 @@ Step A: Bronze Landing                     Step A2: Bronze Landing
 2. **Coalesce Rule ("Empty never wins"):** An empty incoming value cannot overwrite a populated field (`merged = new.val or old.val`). When Weekly ingests first without actuals, a subsequent Monthly run fills in `actual` without dropping the row.
 3. **Partition Alignment:** Both pipelines partition strictly by business month (`YYYY_MM.csv`), eliminating cross-granularity week/month file clutter in Silver.
 
+### 3. Separation of Concerns: Deterministic Data Engine vs. LLM Analyst Layer
+
+To guarantee 100% deterministic reproducibility, zero token consumption during extraction/ETL, and modular architecture:
+- **This Repository (`ff-transform-data`):** Serves strictly as the **Deterministic Medallion & Fact Pack Engine**.
+  - Pipeline steps A (fetch), A2 (actuals backfill), B (Silver coalesce upsert + Gold Kimball mart rebuild), C0 (ICT metrics), and C (Fact Pack generation) run purely on deterministic Python/pandas logic.
+  - The final delivery artifact for analytics is the **Fact Pack** (`reports/weekly/YYYY-Www-fact-pack.json` & `.md`), pre-computing all counts, event clusters, liquidity holidays, and clash windows directly from the Gold Kimball mart.
+- **LLM Analyst Layer (Step D):** Paused by default in this repo (`--with-llm` flag required to opt-in). This layer is designed to be pushed/delegated to an external agent repository that consumes the pre-computed Fact Pack and Gold Mart as read-only inputs.
+
 ---
 
 ## What we deliberately skip (KISS)

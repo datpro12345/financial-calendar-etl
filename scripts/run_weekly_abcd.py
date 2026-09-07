@@ -27,7 +27,11 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from scripts.analyst.ict_fact_pack import run_ict_pipeline
+try:
+    from scripts.analyst.ict_fact_pack import run_ict_pipeline
+except ImportError:
+    run_ict_pipeline = None
+
 from scripts.analyst.language import DEFAULT_LANG
 from scripts.analyst.llm_client import load_dotenv
 from scripts.analyst.run_weekly_report import current_iso_week, run_outlook
@@ -54,6 +58,7 @@ def run_abcd(
     week: int | None = None,
     dry_run: bool = False,
     skip_report: bool = False,
+    with_llm: bool = False,
     skip_lint: bool = False,
     skip_ict: bool = False,
     skip_actual_backfill: bool = False,
@@ -139,9 +144,13 @@ def run_abcd(
 
     reports = reports_dir or (REPO_ROOT / "reports" / "weekly")
     institutional = None
-    if skip_ict:
-        summary["C0"] = {"skipped": True}
-        logger.info("C0 skipped — no ICT institutional layer")
+    if skip_ict or run_ict_pipeline is None:
+        summary["C0"] = {
+            "skipped": True,
+            "reason": "not_installed" if run_ict_pipeline is None else "skipped",
+        }
+        if run_ict_pipeline is not None and not skip_ict:
+            logger.info("C0 skipped — no ICT institutional layer")
     else:
         logger.info("C0 — ICT Institutional (COT / SMT / Seasonal)")
         try:
@@ -166,10 +175,10 @@ def run_abcd(
         summary["C"] = {"skipped": True}
         summary["D"] = {"skipped": True}
         summary["ok"] = True
-        summary["stopped_at"] = "C0" if not skip_ict else "B"
+        summary["stopped_at"] = "C0" if not (skip_ict or run_ict_pipeline is None) else "B"
         return summary
 
-    logger.info("C+D — Fact Pack + outlook for %s", summary["week_label"])
+    logger.info("C — Fact Pack for %s", summary["week_label"])
     outlook = run_outlook(
         year=iso_year,
         week=iso_week,
@@ -183,11 +192,25 @@ def run_abcd(
         skip_lint=skip_lint,
         lang=lang,
         institutional=institutional,
+        skip_llm=not with_llm and not dry_run,
     )
     summary["C"] = {
         "fact_pack_json": outlook["fact_pack_json"],
         "fact_pack_md": outlook["fact_pack_md"],
     }
+
+    if not with_llm and not dry_run:
+        summary["D"] = {
+            "skipped": True,
+            "reason": "LLM generation paused / delegated to external layer (enable with --with-llm)",
+        }
+        summary["ok"] = True
+        summary["stopped_at"] = "C"
+        logger.info(
+            "C ok — Fact Pack generated (D skipped: 100% deterministic pipeline, use --with-llm for LLM report)"
+        )
+        return summary
+
     summary["D"] = outlook
     summary["ok"] = outlook["exit_code"] == 0
     summary["stopped_at"] = "D"
@@ -221,7 +244,12 @@ def main() -> int:
     parser.add_argument("--year", type=int, help="Override report ISO year (default: from fetch)")
     parser.add_argument("--week", type=int, help="Override report ISO week (default: from fetch)")
     parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--skip-report", action="store_true", help="Stop after B/C0 (no LLM)")
+    parser.add_argument(
+        "--with-llm",
+        action="store_true",
+        help="Enable Step D: Call LLM to generate weekly macro outlook (default: False, pipeline is 100%% deterministic)",
+    )
+    parser.add_argument("--skip-report", action="store_true", help="Stop after B/C0 (no Fact Pack or LLM)")
     parser.add_argument(
         "--skip-ict",
         action="store_true",
@@ -264,6 +292,7 @@ def main() -> int:
             week=args.week,
             dry_run=args.dry_run,
             skip_report=args.skip_report,
+            with_llm=args.with_llm,
             skip_ict=args.skip_ict,
             skip_lint=args.skip_lint,
             skip_actual_backfill=args.skip_actual_backfill,
