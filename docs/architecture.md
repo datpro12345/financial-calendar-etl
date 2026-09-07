@@ -244,6 +244,60 @@ now warns when a partition is missing an impact layer.
 
 ---
 
+## Ingestion Coordination: Two-Pipeline Architecture
+
+To balance operational simplicity (no Cloudflare friction weekly) with complete historical depth (printed actuals and full holiday liquidity), the system coordinates two distinct pipelines that write into the **same Silver monthly partitions**:
+
+### 1. Pipeline Comparison
+
+| Criteria | Pipeline 1: Weekly ABCD (Primary Operational) | Pipeline 2: Monthly / Historical (Backfill & Archival) |
+|---|---|---|
+| **Main Scripts** | `scripts/run_weekly_abcd.py` | `scripts/extract/fetch_bronze_months.py` + `scripts/run_medallion.py` |
+| **Data Source** | CDN `nfs.faireconomy.media/ff_calendar_thisweek.{csv,xml,json}` | Web HTML `forexfactory.com/calendar?month=...&impacts=3,2,1,0` |
+| **Network Egress** | Direct network (no WARP required, no TLS blocks) | Requires Cloudflare WARP (UDP) or residential proxy (`FF_HTTP_PROXY`) |
+| **Actuals Coverage** | CDN has **no** `actual` field; automatically backfilled via Step A2 (`backfill_actuals.py`) | 100% full printed `actual` for all elapsed events |
+| **Holiday Coverage** | Includes Bank Holidays in this-week feed | Full `impacts=0` gray layer across the whole month |
+| **Silver Write Mode** | `mode="merge"` (insert new events, coalesce forecasts/actuals, never delete) | `mode="refresh"` (coalesce upsert, opt-in prune via `--prune`) |
+| **Operational Cadence** | Routine weekly execution (Sunday / Monday morning) | One-off historical backfill or deep reconciliation |
+
+### 2. Coordination & Deduplication Flow
+
+```text
+[Weekly CDN Export]                        [Monthly HTML Dump]
+(Fast, No WARP, Forecasts only)            (WARP/Proxy, 4 Layers, Has Actuals)
+         │                                          │
+         ▼                                          ▼
+Step A: Bronze Landing                     Step A2: Bronze Landing
+(data/bronze/landing/...)                  (data/bronze/landing/...)
+         │                                          │
+         └────────────────────┬─────────────────────┘
+                              ▼
+                Standardize to UTC Timestamp
+             event_datetime_utc = f(date, time)
+                              │
+                              ▼
+                     Derive `event_uid`
+      sha1(event_datetime_utc | currency | event)[:16]
+                              │
+                              ▼
+                 Coalesce Upsert into Silver
+            data/silver/calendar_events/YYYY_MM.csv
+             - Match on event_uid (Deduplication)
+             - Empty incoming never overwrites stored data
+             - Non-empty actuals update stored rows
+                              │
+                              ▼
+                    Audit Delta Logging
+         data/silver/calendar_event_changes/YYYY_MM.csv
+             (changed_at, source, field, old_val, new_val)
+```
+
+1. **Deterministic Identity (Deduplication):** Events from both pipelines map to UTC. Caching and deduplication use `event_uid`, preventing duplicate rows regardless of ingest order.
+2. **Coalesce Rule ("Empty never wins"):** An empty incoming value cannot overwrite a populated field (`merged = new.val or old.val`). When Weekly ingests first without actuals, a subsequent Monthly run fills in `actual` without dropping the row.
+3. **Partition Alignment:** Both pipelines partition strictly by business month (`YYYY_MM.csv`), eliminating cross-granularity week/month file clutter in Silver.
+
+---
+
 ## What we deliberately skip (KISS)
 
 - No Delta Lake / Unity Catalog required
